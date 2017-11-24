@@ -1,0 +1,704 @@
+/* SLIDER */
+
+.webkolm-slider, .wp_content .wpb_wrapper .webkolm-slider {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	@include mq($from:desktop){
+		margin-bottom: 5px;
+	}
+	@include mq($from:wide){
+		margin-bottom: 10px;
+	}
+
+
+	ul.slides {
+		width: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		height: auto;
+
+		li {
+			width: 100%;
+			height: 0;
+			padding:0;
+			padding-bottom:0%;
+			position: relative;
+			height: auto;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			&:before {
+				content: "";
+				display: none;
+			}
+
+			.slideimg {
+				display: block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 100%;
+				height: 0;
+				
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+
+				@include mq($from:tablet){
+					padding-bottom: 100vh;
+				}
+				@include mq($from:desktop){
+					padding-bottom: 100vh;
+				}
+				@include mq($from:wide){
+					padding-bottom: 100vh;
+				}
+
+			}
+
+			.testo_slide {
+				width: 100%;
+				position: relative;
+				padding: 10px;
+				padding-left:0vw;
+				padding-right:0vw;
+				text-align: left;
+				color:$nero;
+				box-sizing: border-box;
+
+
+				@include mq($to:tablet){
+					color: $color_2 !important;
+					padding-left: 5vw;
+					padding-right: 5vw;
+					padding-top: 5vh;
+				}
+
+				@include mq($from:tablet){
+					position: absolute;
+					width: auto;
+					max-width: 800px;
+					color: $bianco;
+				}
+
+
+				h1 {
+					color: $color_1 ;
+					font-size: 2rem;
+					line-height: 0.85em;
+					font-weight: bold;
+					
+
+
+					@include mq($from:tablet){
+						color: $bianco ;
+						text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+						font-size: 4rem;
+					}
+					@include mq($from:desktop){
+						font-size: 5rem;
+					}
+					@include mq($from:wide){
+						font-size: 6rem;
+					}
+				}
+
+				h6 {
+					font-weight: bold;
+					letter-spacing: normal;
+					word-spacing: normal;
+					color: lighten($color_1, 20%) ;
+					margin-top: 0.5em;
+					
+					@include mq($from:tablet){
+						font-weight: 100;
+						text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+						color: $bianco;
+						font-size:1.6rem;
+						
+					}
+					@include mq($from:desktop){
+						font-size: 1.7rem;
+					}
+					@include mq($from:wide){
+						font-size:1.8rem;
+					}
+
+				}
+
+				span {
+					font-size: 1.5em;
+					line-height: 1.2em;
+					font-weight: 300;
+					@include mq($from:tablet){
+						font-size: 1.7em;
+					}
+					@include mq($from:desktop){
+						font-size: 1.8em;
+					}
+					@include mq($from:wide){
+						font-size: 2em;
+					}
+				}
+
+
+
+				&.top-left {
+					text-align: left;
+
+					@include mq($from:tablet){
+						text-align: left;
+						left: 8vw;
+						top: 8vw;
+					}
+				}
+				&.top-center {
+					text-align: center;
+
+					@include mq($from:tablet){
+						text-align: center;
+						left: 50%;
+						transform:translateX(-50%);
+						top: 8vw;
+					}
+				}
+				&.top-right {
+					text-align: right;
+
+					@include mq($from:tablet){
+						text-align: right;
+						right: 8vw;
+						top: 8vw;
+					}
+				}
+				&.center-left {
+					text-align: left;
+
+					@include mq($from:tablet){
+						text-align: left;
+						left: 8vw;
+						transform:translateY(-50%);
+						top: 50%;
+					}
+				}
+				&.center-center {
+					text-align: center;
+					@include mq($from:tablet){
+						text-align: center;
+						left: 50%;
+						transform:translateX(-50%) translateY(-50%);
+						top: 50%;
+					}
+				}
+				&.center-right {
+					text-align: right;
+					@include mq($from:tablet){
+						text-align: right;
+						right: 8vw;
+						transform:translateY(-50%);
+						top: 50%;
+					}
+				}
+				&.bottom-left {
+					text-align: left;
+					@include mq($from:tablet){
+						text-align: left;
+						left: 8vw;
+						bottom: 8vw;
+					}
+				}
+				&.bottom-center {
+					text-align: center;
+					@include mq($from:tablet){
+						text-align: center;
+						left: 50%;
+						transform:translateX(-50%);
+						bottom: 8vw;
+					}
+				}
+				&.bottom-right {
+					text-align: right;
+					@include mq($from:tablet){
+						text-align: right;
+						bottom: 8vw;
+						right: 8vw;
+					}
+				}
+			}
+
+			.caption {
+				position: absolute;
+				max-width: 30px;
+				min-width: 30px;
+				min-height: 30px;
+				border-radius:15px;
+				background: rgba(255,255,255,0);
+				border:2px solid $bianco; 
+				overflow: hidden;
+				bottom:15px;
+				left: 15px;
+				color: $bianco;
+				transition:max-width .3s, background 0.3s, color .3s;
+				transition-delay:0.3s;
+
+				@include mq($from:tablet){
+					max-width: 48px;
+					min-width: 48px;
+					min-height: 48px;
+					border-radius:24px;
+					bottom: 24px;
+					left: 24px;
+				}
+
+				span {
+					display: block;
+					margin-left: 30px;
+					padding-top: 6px;
+					padding-bottom: 6px;
+					padding-right: 10px;
+					font-size: 11px;
+					line-height: 14px;
+					max-height: 26px;
+					min-width: 100px;
+					overflow: hidden;
+					transition-property:max-height;
+					transition-duration: 0.3s;
+					transition-delay:0s;
+
+					&::first-letter {text-transform: uppercase}
+
+					@include mq($from:tablet){
+						margin-left: 48px;
+						padding-top: 14px;
+						padding-bottom: 14px;
+						padding-right: 20px;
+						font-size: 12px;
+						line-height: 16px;
+						max-height: 36px;
+					}
+					@include mq($from:desktop){
+						padding-top: 13px;
+						padding-bottom: 13px;
+						font-size: 13px;
+						line-height: 17px;
+					}
+					@include mq($from:wide){
+						padding-top: 12px;
+						padding-bottom: 12px;
+						font-size: 14px;
+						line-height: 18px;
+					}
+				}
+
+				&:before {
+					display: block;
+					position: absolute;
+					text-align: center;
+					content: "i";
+					width: 30px;
+					height: 30px;
+					left: 0;
+					line-height: 100%;
+					font-size: 25px;
+					top: 50%;
+					margin-top: -12px;
+					left: -2px;
+					@include mq($from:tablet){
+						content: "i";
+						width: 48px;
+						height: 48px;
+						font-size: 30px;
+						top: 50%;
+						margin-top: -15px;
+					}
+				}
+			}
+
+			.caption.attivo {
+				max-width: calc( 100% - 30px ) !important;
+				background: $bianco !important;
+				color: $color_2 !important;
+				transition:max-width .3s, background 0.3s, color .3s;
+				transition-delay:0s !important;
+
+				&:before {
+					content: "x" !important;
+					font-size: 19px !important;
+					margin-top: -11px !important;
+					font-weight: 300 !important;
+					@include mq($from:tablet){
+						font-size: 25px !important;
+						margin-top: -15px !important;
+					}
+				}
+
+				span {
+				    max-height:90px !important;
+				    max-height:100% !important;
+				    transition-property:max-height !important;
+				    transition-duration: 0.3s !important;
+				    transition-delay:.2s !important;
+				  }
+			}
+
+
+		}
+	}
+}
+
+
+.flex-direction-nav {
+	@include mq($to:tablet){display: none !important;}
+}
+
+.notouch .webkolm-slider {
+	@include mq($from:tablet){
+		a.flex-prev, a.flex-next {
+			display:block;
+		}
+
+		.flex-direction-nav {
+			padding-top: 0;
+			padding-bottom: 0;
+
+			li {
+				&:before {
+					content: "";
+					display: none;
+				}
+			}
+		}
+
+		.flex-direction-nav li a {
+		  text-indent: -999999px;
+		  position: absolute;
+		  width: 10%;
+		  height: 80%;
+		  top: 10%;
+		  z-index: 9;
+		  cursor: pointer;
+		  background: url('/wp-content/themes/tognola17/img/cursor-left.png') no-repeat left 20% center;
+		  opacity: 0;
+		  left: 2%;
+
+
+		  &.flex-next {
+		  	left: inherit;
+		    right: 2%;
+		    background: url('/wp-content/themes/tognola17/img/cursor-right.png') no-repeat right 20% center;
+		  }
+		}
+	}
+}
+
+.notouch .webkolm-slider:hover {
+	@include mq($from:tablet){
+		.flex-direction-nav li a { opacity: 0.3; left:1%;}
+		.flex-direction-nav li a.flex-next { left:inherit; right: 1%;}
+		.flex-direction-nav li a:hover { opacity: 1; left: 0%;}
+		.flex-direction-nav li a.flex-next:hover { right: 0%; left: inherit;}
+	}
+}
+
+.notouch .wk_caption_inside .caption:hover {
+	max-width: calc( 100% - 30px ) !important;
+	background: $bianco !important;
+	color: $color_2 !important;
+	transition:max-width .3s, background 0.3s, color .3s;
+	transition-delay:0s !important;
+
+	span {
+	    max-height:90px !important;
+	    max-height:100% !important;
+	    transition-property:max-height !important;
+	    transition-duration: 0.3s !important;
+	    transition-delay:.2s !important;
+	  }
+}
+
+.notouch a.slidelink {
+	text-shadow:0px 0px 0px rgba(0,0,0,0);
+	transition: text-shadow .5s;
+
+	&:hover {
+		text-shadow:0px 0px 15px rgba(0,0,0,0.4);
+	}
+}
+
+
+.webkolm-slider.wk_vertical {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	ul.slides {
+		width: 100%;
+		height: auto;
+
+		li {
+			width: 100%;
+			height: auto;
+
+			.slideimg {
+				display: block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 132%;
+
+				@include mq($from:tablet){
+					padding-bottom: 132%;
+				}
+				@include mq($from:desktop){
+					padding-bottom: 132%;
+				}
+				@include mq($from:wide){
+					padding-bottom: 132%;
+				}
+			}
+
+		}
+	}
+}
+
+
+.webkolm-slider.wk_horizontal {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	ul.slides {
+		width: 100%;
+		height: auto;
+
+		li {
+			width: 100%;
+			height: auto;
+
+			.slideimg {
+				display: block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 60%;
+
+				@include mq($from:tablet){
+					padding-bottom: 60%;
+				}
+				@include mq($from:desktop){
+					padding-bottom: 60%;
+				}
+				@include mq($from:wide){
+					padding-bottom: 60%;
+				}
+			}
+
+		}
+	}
+}
+
+.webkolm-slider.wk_squared {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	ul.slides {
+		width: 100%;
+		height: auto;
+
+		li {
+			width: 100%;
+			height: auto;
+
+			.slideimg {
+				display: block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 100%;
+
+				@include mq($from:tablet){
+					padding-bottom: 100%;
+				}
+				@include mq($from:desktop){
+					padding-bottom: 100%;
+				}
+				@include mq($from:wide){
+					padding-bottom: 100%;
+				}
+			}
+
+		}
+	}
+}
+
+
+.webkolm-slider.wk_horizontal, .webkolm-slider.wk_vertical, .webkolm-slider.wk_squared {
+
+	.flex-control-nav {
+		width: 100%; 
+		position: absolute;  
+		text-align: right; 
+		display: block !important; 
+		z-index: 999; 
+		top: calc( 100% + 7px ); 
+		overflow: hidden;
+
+		@include mq($from:tablet){
+			top: calc( 100% + 12px );  
+		}
+	}
+	.flex-control-nav li {
+		padding: 0;
+
+		margin: 0 3px; 
+		display: inline-block; 
+		zoom: 1; 
+		*display: inline;
+		@include mq($from:tablet){
+			margin: 0 5px; 
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:before {
+			display: none !important;
+		}
+	}
+	.flex-control-paging li a {
+		display: block; 
+		width: 7px; 
+		height: 7px; 
+		background: none; 
+		border:1px solid $color_2; 
+		cursor: pointer; 
+		text-indent: 9999px; 
+		-webkit-border-radius: 20px; 
+		-moz-border-radius: 20px; 
+		-o-border-radius: 20px; 
+		border-radius: 20px; 
+		@include mq($from:tablet){
+			width: 11px; 
+			height: 11px; 
+		}
+	}
+	.flex-control-paging li a:hover { background: $color_2; }
+	.flex-control-paging li a.flex-active { background: $color_2; cursor: default; }	
+}
+
+.webkolm-slider.wk_horizontal.wk_caption_outside, .webkolm-slider.wk_vertical.wk_caption_outside, .webkolm-slider.wk_squared.wk_caption_outside {
+
+	.flex-control-nav {
+		padding-top: 0;
+		padding-bottom: 0;
+		top: calc( 100% - 93px ); 
+
+		@include mq($from:tablet){
+			top: calc( 100% - 88px );  
+		}
+
+		@include mq($to:tablet){
+			display: none !important; 
+		}
+
+	}
+}
+
+
+
+.webkolm-slider.wk_caption_outside {
+	
+	ul.slides {
+
+		li.out_caption {
+
+			padding-bottom: 100px;
+
+			.caption {
+				position: absolute;
+				max-width:70%;
+				border:0; 
+				overflow: auto;
+				top:100%;
+				left: 0;
+				color: $color_2;
+				transition:none;
+				font-size: 12px;
+				border-radius:0px !important;
+				line-height: 1.5em;
+			    overflow: visible;
+			    padding-top: 10px;
+
+				@include mq($from:tablet){
+					max-width: 100%;
+					bottom: 0px;
+					left: 0px;
+				}
+
+				span {
+					display: block;
+					position: relative;
+					margin-left: 0px;
+					padding-top: 1.4em;
+					padding-bottom: 0.7em;
+					padding-right: 0px;
+					font-size: 11px;
+					line-height: 1.5em !important;
+					max-height: inherit !important;
+					overflow: auto;
+					transition:none !important;
+					font-weight: 300;
+
+					@include mq($from:tablet){
+						font-size: 12px;
+					}
+					@include mq($from:desktop){
+						font-size: 13px;
+					}
+					@include mq($from:wide){
+						font-size: 14px;
+					}
+
+					&:before {
+						display: block;
+						position: absolute;
+						max-width: inherit;
+						max-height: inherit;
+						width: 40px;
+						height: 1px;
+						overflow: hidden;
+						line-height: 2px;
+						top:inherit;
+						bottom: 0;
+						margin-top: 0px;
+						left: 0px;
+						content: "" !important;
+						background: $color_2;
+
+						@include mq($from:tablet){
+							height: 2px;
+						}
+					}
+
+				}
+
+				&:before {
+					display: none !important;
+				}
+			}
+
+		}
+	}
+}
+
+.webkolm-slider.wk_contain ul li {
+	
+	background-color: darken($color_2, 30%)!important;
+
+	.slideimg{
+
+		background-size: contain !important;
+
+	}
+}

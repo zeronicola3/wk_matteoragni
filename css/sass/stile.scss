@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 
+Designed by Marco Tonet for ...
+*/
+
+/* SCSS VARS */
+
+@import "var/colors";
+@import "var/mq";
+@import "var/mixin";
+@import "var/textvar";
+
+/* SCSS CORE */
+
+@import "core/wordpress";
+
+/* SCSS TERZE PARTI */
+
+@import "third_parts/blueimpgallery";
+@import "third_parts/owlcarousel";
+
+/* SCSS LAYOUT */
+
+@import "layout/home";
+@import "layout/blog";
+@import "layout/footer";
+@import "layout/woocommerce";
+
+/* SCSS VISUAL COMPOSER */
+
+@import "layout/visualcomposer";

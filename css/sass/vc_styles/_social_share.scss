@@ -1,0 +1,61 @@
+
+
+/* SOCIAL ADD ON */
+
+.share_buttons {
+	width: 100%;
+	clear:both;
+	margin-top: 30px;
+	@include mq($from:desktop){ margin-top:50px;}
+
+	h6 {
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-size: 0.77em;
+	}
+
+	ul {
+		display: block;
+		padding: 0;
+		padding-top: 7px;
+
+		li {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-left: 10px;
+			
+			a {
+				opacity: 1;
+				color: $color_2;
+			}
+
+			a svg{
+				width: 16px;
+				height: 16px;
+				cursor: pointer;
+
+				path { 
+					@include transition();
+				}
+			}
+
+			a:hover {
+				opacity: 0.3;
+			}
+		}
+		li:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.social_share, .reseller_data {
+	text-align: left;
+}
+.social_share.wk-center, .reseller_data.wk-center {
+	text-align: center;
+}
+.social_share.wk-right, .reseller_data.wk-right {
+	text-align: right;
+}

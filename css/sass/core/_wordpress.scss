@@ -1,0 +1,192 @@
+/* WORDPRESS.SCSS */
+
+/* CONTACT FORM 7 */
+
+form.wpcf7-form {
+	input, textarea {
+		padding: 0;
+		display: block;
+		width: 100%;
+		border: 1px solid $color_1;
+		height: 30px;
+		line-height: 30px;
+		margin-bottom: 15px;
+		color: $color_1;
+		background: none !important;
+		font-style: italic;
+		padding: 10px;
+	}
+	textarea {
+		height: 150px;
+		padding-top: 15px;
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	    color:    $color_1;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:    $color_1;
+	   opacity:  1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:    $color_1;
+	   opacity:  1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color:    $color_1;
+	   line-height: 0 !important;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	   color:    $color_1;
+	    line-height: 0 !important;
+	}
+
+	input[type="submit"]{
+		text-align: center;
+		width: auto;
+		padding: 0;
+		padding-left: 30px;
+		padding-right: 30px;
+		text-transform: uppercase;
+		line-height: initial;
+		font-style: normal;
+		font-weight: bold;
+		color: $bianco;
+		border: 1px solid $color_1;
+		float: right;
+		background:$color_1 !important;
+		transition: all .4s;
+
+		&:hover {
+			background: $color_1 !important;
+			color: $color_1;
+			transition: all .4s;
+		}
+	}
+}
+
+/* PAGINAZIONE WOOCOMMERCE / WORDPRESS */
+
+nav.woocommerce-pagination {
+	display:block;
+	width:100%;
+	text-align:center;
+	padding-bottom:2em;
+	padding-top:2em;
+	float:left;
+	
+	ul {
+		display:block;
+		margin:0 auto;
+		list-style: none;
+		
+		li {
+			display:inline-block;
+			list-style: none;
+
+			&:before { display:none!important;}
+			&::before { display:none!important;}
+			
+			a, span {
+				display:block;
+				color:$color_1;
+				padding:4px;
+				padding-left:10px;
+				padding-right:10px;
+				font-weight: 400;
+				border-radius: 1px;
+
+				img.arrow{
+					margin-top: 4px; 
+					    display: block;
+					    position: relative;
+					    top: 2px;
+					    right: 0px;
+					    transition:right .4s;
+				}				
+			}
+
+			a.prev img.arrow{
+					    left: 0px;
+					    transition:left .4s;
+				}	
+
+			a:hover {
+				color:$color_1;
+			}	
+
+			a.next:hover {
+				img.arrow{
+					    right: -5px;
+					    transition:right .4s;
+				}	
+			}
+
+			a.prev:hover {
+				img.arrow{
+					    left: -5px;
+					    transition:left .4s;
+				}	
+			}	
+				
+			span {
+				font-weight: 300;
+				color: $color_1;}
+			}
+		}
+}
+
+/* GALLERY BLUEIMP */
+
+#links.galleria {
+	position: relative;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#links.galleria a {
+    display: flex;
+    align-content: center;
+    flex-basis: 1;
+    flex-grow:0;
+    margin: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 1;
+    transition: opacity .4s;
+    @include transition();
+
+    // maintain aspect ratio
+    width: 90px;
+    height: 90px;
+
+    @include mq($from:500px){
+    	width: 120px;
+    	height: 120px;
+    }
+    @include mq($from:desktop){
+    	width: 166px;
+    	height: 166px;
+    }
+
+    &:hover { 
+    	opacity: 0.5;
+    	transition: opacity .4s;
+    }
+}
+
+#links.galleria.thumblink {
+	width: 100%;  
+	a {
+	  width: 60%;
+	  padding-bottom: 65%;
+	  margin:0 auto;
+	  float:none;
+	}
+}
+		  
+		  /* FINE GALLERY */
+

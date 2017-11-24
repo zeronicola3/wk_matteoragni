@@ -1,0 +1,119 @@
+/* CUSTOMIZE VisualComposer OUTPUT*/
+
+body .vc_row {
+	position: relative;
+
+	/* FROM MAIN */
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+body .wpb_content_element {
+	margin-bottom:0;
+}
+
+
+body [class*='col-'] {
+   // padding: 0px;
+}
+
+
+.vc_row.wk_fixrow {
+	width: 100%;
+	margin: 0 auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	overflow-x: hidden;
+
+	@include mq($from:tablet){
+	width: 90%;
+	max-width: 1250px;
+	}
+}
+
+.vc_column_container>.vc_column-inner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.wk_linkedcolumn {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0px;
+	transition: all .4s;
+
+	&:hover{
+		cursor: pointer;
+		transition: all .4s;
+		box-shadow: 0 7px 30px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.21);
+	}
+}
+
+.wk_white_text {
+	color: $bianco !important;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $bianco !important;
+	}
+}
+
+.vc_row.wk_expand {
+
+	@include mq($from:tablet){
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	@include mq($from:desktop){
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	@include mq($from:wide){
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+}
+
+.wk_dxcolumn {
+	@include mq($from:tablet){
+		padding-left: 40px;
+	}
+	@include mq($from:desktop){
+		padding-left: 50px;
+	}
+	@include mq($from:wide){
+		padding-left: 60px;
+	}
+}
+
+.wk_collassa {
+    width: auto;
+    float: left;
+    width: 100%;
+    @include mq($from:600px) {
+    	width: 50%;
+    }
+    @include mq($from:wide) {
+    	width: 25%;
+    	margin-bottom: 0;
+    }
+}
+
+/* 100% SINGLE IMAGE */
+
+
+.wk_full_width {
+	width: 100%;
+
+	img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+@import "../vc_styles/videoframe";
+@import "../vc_styles/instagram_feed";
+@import "../vc_styles/social_share";

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* 
+Designed by Marco Tonet for ...
+*/
+
+@import "core/normalize";
+
+/* SCSS VARS */
+
+@import "var/colors";
+@import "var/textvar";
+@import "var/mixin";
+@import "var/mq";
+
+/* SCSS CORE */
+
+@import "core/cookie";
+@import "core/main";
+@import "core/grid";
+@import "core/mediavisibility";
+
+/* SCSS ESTERNI */
+
+@import "third_parts/flexslider";
+
+/* SCSS LAYOUT */
+
+@import "layout/tipografia";
+@import "layout/menumobile";
+@import "layout/header";
+@import "layout/menuwide";
+
+/* SCSS VC ELEMENT */
+
+@import "vc_styles/slider";
+
+
+
+/* PAGINE INTERNE --- PAGINE INTERNE --- PAGINE INTERNE */

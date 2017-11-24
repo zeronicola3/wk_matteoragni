@@ -1,0 +1,247 @@
+/* 
+	Theme Name: ...
+	Theme URL: ...
+	Description: Tema personalizzato
+	Author: Marco Tonet
+	Author URI: http://www.webkolm.com
+	Version: 1.0
+	Date: ...
+
+*/
+
+/* regole generali =========================================*/
+
+/* Neutralize styling: 
+   Elements we want to clean out entirely: */
+   
+html, body, form {margin: 0; padding: 0;}
+html {font-size:100%;}
+img {border:0;}
+label {cursor:auto}
+h1, h2, h3, h4 {margin: 0; padding: 0;}
+ul { list-style-type: none; margin:0; padding:0; }
+
+/* Miscellaneous conveniences: */
+fieldset { border: none;padding:0; margin:0}
+input, select, textarea { font: 11px 'MuseoSans100', Georgia, Times, serif; }
+.clear {clear:both;}
+br.clear {clear:both; line-height:0; height:0}
+.left {float:left}
+.right {float:right}
+.center {text-align:center}
+.nascosto {display:none;}
+
+.alignleft {float:left; margin-right:5px;}
+.alignright {float:right; margin-left:5px;}
+
+p { font-family: 'MuseoSlab300'; margin:1em 0; color: #666; font-size: 12px; text-align: justify; }
+
+
+/* Apply styles  ========================================= */
+body { font: 12px/1.3 'MuseoSans100', Garamond, Georgia, Times, serif; color:#000; text-align: center; background: url(images/bg_dash.gif) }
+
+/*link*/
+a { text-decoration:none; color: #666 }
+a:hover { text-decoration: none; outline:none; color: #000; }
+
+
+/* sidebar */
+h1 { width: 300px; font-size: 40px; font-weight: normal; line-height: auto; float: left }
+h1 a{ color: #000; font-family: 'MuseoSlab300'; }
+#sidebar p { font-size: 19px;font-family: 'MuseoSans100'; margin: 0 0 30px 0; padding: 0; color: #666; }
+#sidebar p#side_back{ font-size: 14px; font-family: 'MuseoSlab300'; margin: 140px 0 0 0 }
+h2 { font-size: 13px; height: 25px; line-height: 26px; background: #000; color: #ddd; text-indent: 7px; font-family: 'MuseoSlab300'; font-weight: normal }
+h2 a { color: #fff; }
+h2 a:hover { color: #fff; }
+h3 {  }
+
+
+/* struttura  */
+#wrapper { text-align:left; float: left; }
+#page { margin:0 10px; padding-top:10px; }
+#footer { margin-bottom:40px; height:50px;}
+
+#col { width: 600px; margin: 56px 0 0 56px; float:left; }
+#sidebar { width: 305px; height: 243px; padding: 0 0 0 56px; position: fixed; top: 56px; left: 656px; float: left; }
+#sidebar ul{ float: left; 
+ /*width: 355px; */
+  margin-top: 5px; }
+#sidebar ul li{ padding-right: 18px; float: left; }
+#sidebar ul#menu-menu-en li{ padding-right: 16px }
+#sidebar ul li.last, #sidebar ul #menu-menu-en li.last{ padding-right: 0; }
+#sidebar ul li a{ color: #999; font-size: 16px; font-family: 'MuseoSlab300'; }
+#sidebar ul li.current-menu-item a,
+#sidebar .qtrans_language_chooser p.active a span,
+#sidebar ul li a:hover,
+#sidebar .qtrans_language_chooser p a:hover span
+{ color: #333 }
+#sidebar ul#lang_menu{ margin-top: 5px }
+#sidebar ul#lang_menu li{ display: inline; font-size: 5px !important; }
+
+#sidebar .widget_qtranslate{ clear: both; width: 285px; float: left; padding: 0 0 5px 0; }
+#sidebar .widget_qtranslate .qtrans_language_chooser{ float: right }
+#sidebar .qtrans_language_chooser p, #sidebar .qtrans_language_chooser p a{ color: #999; font-size: 12px; font-family: 'MuseoSlab300'; margin: 0 }
+#sidebar .qtrans_language_chooser p{ float: left; text-transform: lowercase }
+p.lang-en span:after{ content: " /"; margin-right: .25em; }
+
+/************************************************
+*	Header  									*
+************************************************/
+
+
+/************************************************
+* POST    								        *
+*********************************************** */
+
+.post h2 { padding: 0 10px; background: #fff; text-indent: 0; float: left; display: block; margin: 0; position: absolute; bottom: 10px; left: 13px; font-size: 13px; height: 33px; line-height: 33px; }
+.post h2 a{ color: #000 }
+.post h2 strong{ font-weight: normal; font-family: 'MuseoSlab500' }
+.entry p, .entry li, .post p, .post li{ font-family: 'MuseoSans100'; font-size: 12px; }
+.post p strong{ font-weight: normal; font-family: 'MuseoSans500'; font-size: 14px; }
+.post p strong em{ font-weight: 900; font-style: normal; font-family: 'MuseoSans500'; font-size: 14px; }
+/* .page img{ border-bottom: 25px solid #000; } */
+
+.post { margin:0 0 25px 0; position: relative }
+
+
+/* taxonomies archive */
+
+div.type span.type,
+div.client span.client,
+div.year span.year
+{ /* background: #666; padding: 0 5px; color: #eee; */ font-weight: 900; /* color: #fff */ }
+
+
+/* search page */
+
+#search_page{ height: 200px; margin: 56px 0 0 0; padding: 43px 0 0 0 }
+#search_page h3{ font-size: 16px; float: left; clear: left; font-weight: normal; color: #666 }
+#search_page h3 strong{ font-weight: 900; }
+#search_page li{ font-size: 16px }
+#search_page ul{ float: left; margin: 0 0 0 18px; }
+
+#search_page p, #search_page label, #search_page input{ font-size: 16px !important; color: #666 !important }
+#search_page label{ font-weight: 900; }
+#search_page input{ border: none; background: none }
+#search_page input#searchsubmit{ display: none }
+
+/*
+
+.post h2 {font-size:24px; font-family:"Trebuchet MS", serif; line-height:1.2em; margin-bottom:3px;}
+.post h2 a {}
+.post .entry {line-height:1.4em;}
+.post .entry h3 {margin:1em 0;}
+.post .entry p {margin:1em 0;}
+.post .entry p a {font-weight:bold; text-decoration:underline;}
+
+.post .entry blockquote {margin:1.5em 1.3em 0.5em; line-height:150%; color:#666; font-style:italic;}
+.post .entry cite {text-align:right; display:block; padding-right:15px;}
+.post .entry code {display:block; margin:1em 1.3em; color:#444; font-family:"courier new";}
+.post .entry ul {margin:0 1.3em; list-style:none;}
+.post .entry ul li {background:url("images/dotS.gif") no-repeat 0 6px; padding-left:10px; margin-bottom:7px;}
+.post .entry ol {margin:0 1em 0 3em;}
+.post .entry ol li {margin:0 0 7px 0;}
+
+.postMeta { color:#000; font-size:11px; margin-top:5px; padding:15px 0 0;  background:url("images/dot.gif") repeat-x 0 6px; position:relative;}
+.postMetaTop {color:#666; font-size:11px;}
+.postMetaTop span.author {}
+.postMetaTop span.category a {font-weight:bold;}
+.postMeta a, .postMetaTop a {}
+.postMeta span.date {}
+.postMeta span.comments {position:absolute; right:0;}
+.postMeta span.tag {}
+
+*/
+
+
+/* commenti 
+h3#comments, h3#respond {font-size:15px; border-bottom:1px solid #ccc; margin:40px 0 10px; position:relative; }
+h3#comments span, h3#respond span {position:absolute; bottom:-10px; background:#fff; padding-right:3px;}
+
+#commentform {}
+#commentform label {display:block; color: #666; font-size:13px;}
+#commentform label small {color:#000;}
+#commentform p {padding: 6px 30px 0px 0;margin: 0px;}
+#commentform input {width: 200px; border: 1px solid #ccc;padding: 3px; margin-bottom: 6px;}
+#commentform textarea {width:500px; _width:506px; height:200px; border: 1px solid #ccc;padding: 2px; margin-top: 3px;}
+#commentform textarea:focus, #commentform input[type="text"]:focus {
+	background: #ffffff;}
+#commentform #buttInvia {width:506px; position:relative;}
+#commentform #submit {background: #aaa; border:#000 1px solid; width:auto; font: 14px Arial, Helvetica, sans-serif;color: #FFF;border: none; position:absolute; right:0; padding:3px 6px 1px; margin:4px 0;}
+
+.commentlist { margin: 10px 0px; padding:10px 0; padding-left: 20px; line-height: 130%; } 
+.commentlist li{ padding: 5px 10px; position: relative; border-bottom:1px solid #ccc; } 
+.commentlist .avatar { position: absolute; top: 5px; right: 5px; border: solid 1px #ededed; padding: 1px; background: #fff; } 
+.commentlist li p {padding-right:50px;}
+.commentlist .alt { background: #f2f2f2; } 
+.commentlist cite, .commentlist cite a, .commentlist cite a:visited { font-weight: bold; font-style: normal; font-size: 12px; color: #666; } 
+.commentlist small { margin-bottom: 5px; display: block; font-size: 87%; }
+
+*/
+
+
+/************************************************
+*	Sidebar      								*
+************************************************/
+
+
+
+/************************************************
+*	Footer      								*
+************************************************/
+
+
+
+/************************************************
+
+/* paginazione standard */
+.navigation {position:relative; padding:10px 0; height:18px; line-height:18px;}
+.navigation span.previous-entries {position:absolute; left:0;}
+.navigation span.next-entries {position:absolute; right:0;}
+
+
+/************************************************
+
+/* =Menu
+-------------------------------------------------------------- */
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+	
+	#sidebar { position: absolute; }
+	
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+
+	#sidebar { position: absolute; }
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+
+	#sidebar { position: absolute; }
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+
+	#sidebar { position: absolute; }
+
+}	

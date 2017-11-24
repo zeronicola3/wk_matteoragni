@@ -1,0 +1,105 @@
+.ce-banner{
+    position: fixed;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    background-color: $color_1;
+    opacity: 0.7;
+    padding: 1em;
+    color: $color_2;
+    font-size: 1em;
+    z-index: 99999;
+    font-size: 12px;
+    @include transition(0.7s);
+    @include flex-parent;
+
+    p { 
+        @include flex-child;
+        position: relative;
+    }
+
+    .cookie-text {
+        width: 80%;
+        height: 100%;
+        text-align: justify; 
+    }
+
+    .cookie-botton {
+        padding: 0 1em;
+        a { margin: 0 auto; }
+    }
+
+}
+.nascondibile {
+    bottom: 0;
+    @include transition(0.7s);
+}
+.ce-accept, .ce-dismiss, .ce-disable{
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: .6em 1em;
+    display: inline-block;
+    margin: 0 .5em;
+    padding: 10px;
+}
+
+.ce-disable{
+    background-color: #aaa;
+}
+
+.ce-accept:hover,
+.ce-dismiss:hover,
+.ce-disable:hover{
+    background-color: #48ea6b;
+    color: white;
+}
+
+/*
+.ce-accept{
+    background-color: #48ea6b;
+    color: #111;
+}
+*/
+
+a.ce-law { color: #fff; font-weight: bold;}
+
+.ce-dismiss,.ce-accept{
+    @include border-radius(5px);
+    font-size: .8em;
+    right: 1em;
+    top: 1em;
+    background-color: #ccc;
+    color: #333;
+}
+
+.ce-iframe-placeholder{
+    padding: 1em;
+    background-color: #eee;
+    margin: 1em 0;
+}
+
+.ce-iframe-placeholder p{
+    margin: 0;
+}
+
+.ce-iframe-placeholder { color:#000;}
+
+.ce-iframe-placeholder .ce-accept {
+    position: relative;
+    top: 10px;
+    left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.ce-iframe-placeholder .ce-law {
+    font-size: .8em;
+    right: 1em;
+    top: 1em;
+    color: #333;
+    position: relative;
+    top: 10px;
+    left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

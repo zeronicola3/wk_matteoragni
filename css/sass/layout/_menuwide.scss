@@ -1,0 +1,75 @@
+/* MENUWIDE.SCSS */
+
+/* MENU DESKTOP */
+nav.nomobile {
+
+	background-color: $color_1;
+
+	ul#menu_wide {
+		text-align: center;
+		margin-top: 20px;
+		display: inline-block;
+
+		li {
+			display: inline-block;
+			position: relative;
+			float: left;
+
+			a {
+				font-size: 13px;
+				color: $color_2;
+				letter-spacing: 0.1em;
+				word-spacing: 0.3em;
+				text-transform: uppercase;
+				padding-bottom: 7px;
+				padding-left: 4px;
+				padding-right: 4px;
+				margin-left:25px;
+				margin-right: 25px; 
+			}
+
+			ul.sub-menu {
+				position: relative;
+				text-align: left;
+				padding: 0px;
+				padding-left: 0px;
+				padding-top: 0px;
+				height: 0;
+				top:10px;
+				width: 100%;
+				opacity: 0;
+				overflow: hidden;
+				@include transition();
+
+				li {
+					width: 100%;
+					overflow-x:visible;
+					float: none;
+					display: block;
+				}
+
+				a {
+					font-size: 12px;
+					text-transform: none;
+				}
+			}
+		}
+
+		/* ATTIVO VOCI */
+			
+		li.current-menu-item a, li.current-page-item a,  li.current-menu-parent > a {
+			border-bottom: 1px solid $nerochiaro;
+			ul.sub-menu { opacity: 1;}
+		}
+
+		li:hover {
+			ul.sub-menu { opacity: 1;}
+		}
+
+		li a:hover {
+			opacity: 0.5;
+		}
+	}
+
+	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { height: 65px; opacity: 1; }
+}

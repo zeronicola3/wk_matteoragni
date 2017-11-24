@@ -1,0 +1,74 @@
+/* GRID.SCSS */
+
+/*-- our cleafix hack -- */ 
+.wkrow:before, 
+.wkrow:after {
+    content:"";
+      display: table ;
+    clear:both;
+}
+
+[class*='wkcol-'] {
+    float: left; 
+    min-height: 1px; 
+    width: 16.66%; 
+    /*-- our gutter -- */
+    padding: 15px; 
+    box-sizing: border-box;
+
+
+    img {
+    	max-width: 100%;
+    }
+}
+
+.wkcol-0{ width: 4.16%; }
+.wkcol-1{ width: 8.33%; }
+.wkcol-2{ width: 16.66%; }
+.wkcol-3{ width: 25%; }
+.wkcol-4{ width: 33.33%; }
+.wkcol-5{ width: 41.66%; }
+.wkcol-6{ width: 50%; }
+.wkcol-7{ width: 58.33%; }
+.wkcol-8{ width: 66.66%; }
+.wkcol-9{ width: 75%; }
+.wkcol-10{ width: 83.33%; }
+.wkcol-11{ width: 91.66%; }
+.wkcol-12{ width: 100%; }
+
+@include mq($to:tablet){
+	.wkcol-0{ width: 50%; }
+	.wkcol-1{ width: 50%; }
+	.wkcol-2{ width: 100%; }
+	.wkcol-3{ width: 100%; }
+	.wkcol-4{ width: 100%; }
+	.wkcol-5{ width: 100%; }
+	.wkcol-6{ width: 100%; }
+	.wkcol-7{ width: 100%; }
+	.wkcol-8{ width: 100%; }
+	.wkcol-9{ width: 100%; }
+	.wkcol-10{ width: 100%; }
+	.wkcol-11{ width: 100%; }
+	.wkcol-12{ width: 100%; }
+}
+
+.spaziatura {
+	padding: 0;
+	position: relative;
+	overflow: visible;
+	margin-bottom: 30px !important;
+
+	@include mq($from:tablet){
+		margin-bottom: 50px !important;
+	}
+	@include mq($from:desktop){
+		margin-bottom: 60px !important;
+	}
+	@include mq($from:wide){
+		margin-bottom: 70px !important;
+	}	
+}
+
+.overflow_visibile {
+	overflow: visible !important;
+}
