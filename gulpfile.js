@@ -56,7 +56,7 @@ gulp.task('deploy', function() {
   rsyncConf.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni_dev/'; // path where uploaded files go
   //rsyncConf.password = 'jg26sx7Thj82hgRf3';
 
-/* Default options for rsync in production side
+// Default options for rsync in production side
   rsyncConfProd = {
     progress: true,
     incremental: true,
@@ -70,7 +70,7 @@ gulp.task('deploy', function() {
   rsyncConfProd.hostname = '159.89.24.83'; // hostname
   rsyncConfProd.username = 'serverpilot'; // ssh username
   rsyncConfProd.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni/';
-*/
+
     // Use gulp-rsync to sync the files
   return gulp.src(rsyncPaths)
   .pipe(gulpif(
@@ -80,7 +80,7 @@ gulp.task('deploy', function() {
         default: false
       })
   ))
-  .pipe(rsync(rsyncConf));
+  .pipe(rsync(rsyncConfProd));
 
 });
 
@@ -111,7 +111,7 @@ function throwError(taskName, msg) {
         "last 1 version", "> 1%", "ie 8", "ie 7"
         ))
       .pipe(gulp.dest('./css'))
-      //.pipe(minifycss())
+//      .pipe(minifycss())
       .pipe(gulp.dest('./css'));
     });
 
@@ -125,6 +125,26 @@ function throwError(taskName, msg) {
 
     });
 
+/*
+
+    // compile all your Sass
+  gulp.task('sass', function (){
+    gulp.src(['./css/sass/*.scss', '!./css/sass/_*.scss', '!./css/stile.css'])
+      .pipe(plumber(plumberErrorHandler))
+      .pipe(sass({errLogToConsole: true}))
+      /*.pipe(plumber(plumberErrorHandler))
+      .pipe(sass({
+        includePaths: ['./css/sass'],
+        outputStyle: 'nasted'
+      }))
+      .pipe(prefix(
+        "last 1 version", "> 1%", "ie 8", "ie 7"
+        ))
+      //.pipe(gulp.dest('./css'))
+      .pipe(minifycss())
+      .pipe(gulp.dest('./css'));
+    });
+*/
 
 
 gulp.task('commit-changes', function () {
