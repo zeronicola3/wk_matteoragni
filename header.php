@@ -24,17 +24,17 @@
 
   <!-- JQUERY -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  
+
   <!-- FAVICON -->
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/img/favicon.ico">
 
 
   <title><?php wp_title(''); ?></title>
 
-    
+
   <!-- STYLE ABOVE THE FOLD -->
   <style><?php include 'css/atf.css'; ?></style>
-	
+
 
   <?php
 
@@ -48,6 +48,8 @@
 </head>
 
 <body class="<?php if(is_front_page()){ echo 'home';} ?>">
+
+	prova 1 2 3 4 
   <header>
     <div class="wrap">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="titolo_sito">
@@ -58,7 +60,7 @@
       <?php include("block_menumobile.php"); ?>
 
       <!-- MENU WIDE -->
-      <?php include("block_menuwide.php"); ?> 
+      <?php include("block_menuwide.php"); ?>
 
     </div>
   </header>
