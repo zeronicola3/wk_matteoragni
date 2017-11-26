@@ -49,7 +49,7 @@
 
 <body class="<?php if(is_front_page()){ echo 'home';} ?>">
 
-	prova 1 2 3 4 
+	prova 1 2 3 4
   <header>
     <div class="wrap">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="titolo_sito">

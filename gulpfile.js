@@ -56,7 +56,7 @@ gulp.task('deploy', function() {
   rsyncConf.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni_dev/'; // path where uploaded files go
   //rsyncConf.password = 'jg26sx7Thj82hgRf3';
 
-// Default options for rsync in production side
+/* Default options for rsync in production side
   rsyncConfProd = {
     progress: true,
     incremental: true,
@@ -70,7 +70,7 @@ gulp.task('deploy', function() {
   rsyncConfProd.hostname = '159.89.24.83'; // hostname
   rsyncConfProd.username = 'serverpilot'; // ssh username
   rsyncConfProd.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni/';
-
+*/
     // Use gulp-rsync to sync the files
   return gulp.src(rsyncPaths)
   .pipe(gulpif(
@@ -80,7 +80,7 @@ gulp.task('deploy', function() {
         default: false
       })
   ))
-  .pipe(rsync(rsyncConfProd));
+  .pipe(rsync(rsyncConf));
 
 });
 
