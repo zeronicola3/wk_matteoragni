@@ -1,0 +1,102 @@
+.wk-starter-text {
+
+    font-style: italic;
+    //text-align: justify;
+    padding-bottom: 1em;
+    font-size: 1rem;
+    line-height: 1.6em;
+
+	&.wk-capitalize:first-letter {
+		color: $nero;
+	    font-size: 4rem;
+	    font-weight: 700;
+	    display: block;
+	    float: left;
+	    line-height: 55%;
+	    padding-right: 15px;
+	    margin-top: 10px;
+	    margin-left: -10px;
+	    margin-bottom: 5px;
+	}
+} 
+
+.wk-main-text {
+	//text-align: justify;
+	line-height: 1.6em;
+
+	&.wk-capitalize:first-letter {
+		color: $nero;
+	    font-size: 4rem;
+	    font-weight: 700;
+	    display: block;
+	    float: left;
+	    line-height: 55%;
+	    padding-right: 15px;
+	    margin-top: 10px;
+	    margin-left: -10px;
+	    margin-bottom: 5px;
+	}
+
+	&.colonne-multiple {
+
+		@include mq($from: tablet) {
+			column-count: 2;
+			column-gap: 70px;
+		}
+		@include mq($from: wide) {
+			column-count: 3;
+			column-gap: 70px;
+		}
+		
+		p:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&.wk-centred {
+		margin: 0 auto;
+		max-width: 900px;
+	}
+	div {
+
+		max-width: 100%;
+	    position: relative;
+	    padding-bottom: 1.5em;
+
+		@include mq($from: tablet) {
+		    width: 900px !important;
+		    max-width: unset;
+		    left: 50%;
+		    transform: translateX(-50%);
+		}
+
+		img {
+			max-width: 100%;
+		}
+					    
+		p.wp-caption-text {
+			margin: 0;
+		    display: block;
+	        width: 100%;
+	        height: auto;
+	        padding-left: 7px;
+	        border-left: 3px solid $color_3;
+	        color: $nero;
+	        font-size: .722rem;
+	        font-weight: 300;
+	        line-height: 1.5em;
+	        @include testo_due;
+	        white-space: pre-line;
+
+	        @include mq($from: tablet) {
+	        	width: 50%;
+	        }
+	    }
+	}
+
+	p {
+		padding-bottom: 1em;
+	}
+	
+}
+

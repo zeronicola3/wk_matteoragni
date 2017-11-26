@@ -629,6 +629,7 @@
 				line-height: 1.5em;
 			    overflow: visible;
 			    padding-top: 10px;
+			    white-space: pre-line;
 
 				@include mq($from:tablet){
 					max-width: 100%;
@@ -700,5 +701,138 @@
 
 		background-size: contain !important;
 
+	}
+}
+
+
+
+
+
+.wk-slider {
+	height: calc(100vh - 91px);
+	overflow-x: hidden;
+
+	ul.slides {
+		display: block;
+		height: inherit;
+
+		li {
+			height: inherit;
+
+			div.slideimg {
+				height: inherit;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				&.gradient {
+					&::before {
+						content: " ";
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 8%;
+						bottom: 0;
+						left: 0;
+						background: linear-gradient(
+				            to bottom,
+				            rgba(0,0,0, 0),
+				            rgba(0,0,0, .8)
+				            );
+					}
+				}
+
+				.caption {
+
+				    display: block;
+				    position: absolute;
+				    width: 70%;
+				    height: auto;
+				    padding-left: 7px;
+				    border-left: 3px solid $color_3;
+				    left: 2%;
+				    bottom: 18px;
+				    color: white;
+				    font-size: .722rem;
+				    line-height: 1.5em;
+				    font-weight: 400;
+				    @include testo_due;
+
+				    @include mq($from: tablet) {
+				    	width: 40%;
+				    }
+
+				}
+			}
+		}
+	}
+	.flex-control-nav {
+		display: none;
+	}
+
+	.flex-direction-nav {
+		display: none;
+		@include mq($from: tablet){display: block !important;}
+	}
+	
+}
+
+
+
+
+.notouch .wk-slider {
+	@include mq($from:tablet){
+		a.flex-prev, a.flex-next {
+			display:block;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.flex-direction-nav {
+			padding-top: 0;
+			padding-bottom: 0;
+			display: block;
+			position: absolute;
+		    height: 100%;
+		    top: 0;
+		    width: 100%;
+
+		}
+
+		.flex-direction-nav li a {
+			//text-indent: -999999px;
+			color: transparent;
+			font-size: 0;
+			position: absolute;
+			width: 60px;
+			display: block;
+			height: 60px;
+			top: 50%;
+			margin-top: -30px;
+			z-index: 9;
+			cursor: pointer;
+			@include arrow("up",$bianco);
+			opacity: 1;
+			left: 4%;
+
+
+			&.flex-next {
+			  	left: unset;
+			    right: 4%;
+			    @include arrow("down",$bianco);
+			    height: 60px;
+			}	
+		}
+	}
+}
+
+.notouch .wk-slider:hover {
+	@include mq($from:tablet){
+		.flex-direction-nav li a { opacity: 0.3;}
+		.flex-direction-nav li a.flex-next { left:inherit; }
+		.flex-direction-nav li a:hover { opacity: 1; }
+		.flex-direction-nav li a.flex-next:hover {  left: inherit;}
 	}
 }

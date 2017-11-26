@@ -1,0 +1,13 @@
+
+.titolo-audiostoria {
+	width: 100%;
+	text-align: center;
+}
+
+.player-audiostoria {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $bianco;
+	margin-bottom: 50px;
+}

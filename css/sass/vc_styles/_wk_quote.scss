@@ -1,0 +1,79 @@
+.wk-quote {
+	
+	
+	position: relative;
+	overflow: hidden;
+	max-width: 900px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 10px;
+
+	&.wk-align-left {
+		text-align: left;
+	}
+	&.wk-align-center {
+		text-align: center;
+	}
+	&.wk-align-right {
+		text-align: right;
+	}
+
+	&.virgolette-grandi {
+		padding-top: 40px;
+		padding-bottom: 35px;
+
+		&::before {
+			content: '“';
+			font-size: 25.5rem;
+			color: $color_3;
+			display: block;
+			font-family: Georgia;
+			position: absolute;
+			line-height: 100%;
+			top: -40px;
+			left: 0px;
+			z-index: -1;
+			opacity: .3;
+		}
+
+		font-size: 1.333rem;
+		line-height: 1.667em;
+		font-style: italic;
+		color: $nerochiaro;
+	}
+
+	&.evidenziato-grande {
+		span.highlight {
+			@include testo_due;
+			font-size: 1.133rem;
+			line-height: 40px;
+			text-transform: uppercase;
+			font-weight: 400;
+			display: inline;
+			border-top: 10px solid $color_3;
+			border-bottom: 10px solid $color_3;
+			background-color: $color_3;
+			box-shadow: 10px 0 0 $color_3, -10px 0 0 $color_3;
+		}
+	}
+
+	&.testo-fino {
+		color: rgb(0,0,0);
+		@include montserrat;
+		font-size: 1.33rem;
+		line-height: 1.5em;
+		font-weight: 200;
+		text-transform: uppercase;
+		padding-bottom: 45px;
+
+		/* CASO 2 */
+		text-transform: none;
+
+		/* caso 3 */
+		//font-family: 'Exo', sans-serif;
+
+	}
+
+
+}
+
