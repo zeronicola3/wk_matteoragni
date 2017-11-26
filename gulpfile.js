@@ -4,14 +4,13 @@ var gutil = require('gulp-util');
 var git = require('gulp-git');
 var runSequence = require('run-sequence');
 
-
 // debugger
 
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
-  var concat = require('gulp-concat');
+var concat = require('gulp-concat');
 
 //var minifycss = require('gulp-minify-css');
 var prefix = require('gulp-autoprefixer');
@@ -41,7 +40,7 @@ gulp.task('fetch', function(){
 gulp.task('deploy', function() {
 //* Dirs and Files to sync
   rsyncPaths = ['sass', 'css', 'font', 'img', 'js', './*.php', './style.css'];
-// Default options for rsync
+// Default options for rsync in staging side
   rsyncConf = {
     progress: true,
     incremental: true,
@@ -54,8 +53,23 @@ gulp.task('deploy', function() {
 
   rsyncConf.hostname = '159.89.24.83'; // hostname
   rsyncConf.username = 'serverpilot'; // ssh username
-  rsyncConf.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni/'; // path where uploaded files go
+  rsyncConf.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni_dev/'; // path where uploaded files go
   //rsyncConf.password = 'jg26sx7Thj82hgRf3';
+
+// Default options for rsync in production side
+  rsyncConfProd = {
+    progress: true,
+    incremental: true,
+    relative: true,
+    emptyDirectories: true,
+    recursive: true,
+    clean: true,
+    exclude: ['gulpfile.js'],
+  };
+
+  rsyncConfProd.hostname = '159.89.24.83'; // hostname
+  rsyncConfProd.username = 'serverpilot'; // ssh username
+  rsyncConfProd.destination = '/srv/users/serverpilot/apps/matteoragni/public/wp-content/themes/wk_matteoragni/';
 
     // Use gulp-rsync to sync the files
   return gulp.src(rsyncPaths)
@@ -66,7 +80,7 @@ gulp.task('deploy', function() {
         default: false
       })
   ))
-  .pipe(rsync(rsyncConf));
+  .pipe(rsync(rsyncConfProd));
 
 });
 
