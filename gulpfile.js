@@ -5,7 +5,7 @@ var git = require('gulp-git');
 var runSequence = require('run-sequence');
 
 // debugger
-
+var minifycss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var uglify = require('gulp-uglify');
@@ -97,23 +97,23 @@ function throwError(taskName, msg) {
     })
   };
 
-// compile all your Sass
-  gulp.task('sass', function (){
-    gulp.src(['./css/sass/*.scss', '!./css/sass/_*.scss', '!./css/stile.css'])
-      //.pipe(plumber(plumberErrorHandler))
-      .pipe(sass({errLogToConsole: true}))
-      .pipe(plumber(plumberErrorHandler))
-      .pipe(sass({
-        includePaths: ['./css/sass'],
-        outputStyle: 'nasted'
-      }))
-      .pipe(prefix(
-        "last 1 version", "> 1%", "ie 8", "ie 7"
-        ))
-      .pipe(gulp.dest('./css'))
-//      .pipe(minifycss())
-      .pipe(gulp.dest('./css'));
-    });
+  // compile all your Sass
+gulp.task('sass', function (){
+  gulp.src(['./css/sass/*.scss', '!./css/sass/_*.scss', '!./css/stile.css'])
+    .pipe(plumber(plumberErrorHandler))
+    .pipe(sass({errLogToConsole: true}))
+    /*.pipe(plumber(plumberErrorHandler))
+    .pipe(sass({
+      includePaths: ['./css/sass'],
+      outputStyle: 'nasted'
+    }))*/
+    .pipe(prefix(
+      "last 1 version", "> 1%", "ie 8", "ie 7"
+      ))
+    //.pipe(gulp.dest('./css'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./css'));
+  });
 
   // Uglify JS
     gulp.task('uglify', function(){
