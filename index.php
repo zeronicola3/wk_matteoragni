@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Projects archive
+ * Template Name: homepage
  *
  */
 
