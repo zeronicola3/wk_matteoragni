@@ -321,4 +321,377 @@ function twentythirteen_paging_nav() {
 
 include('optimize.php');
 
+
+
+
+
+
+
+
+
+
+
+/*******    CUSTOM POST TYPES      ********/
+
+function wk_create_post_type() {
+  register_post_type('project',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects', "webkolm" ),
+        'singular_name' => __( 'Project', "webkolm" )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail'),
+    )
+  );
+
+  register_post_type( 'client',
+    array(
+      'labels' => array(
+        'name' => 'Clients',
+        'singular_name' => 'client'
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'thumbnail')
+    )
+  );
+}
+
+add_action( 'init', 'wk_create_post_type' );
+
+/*******    CUSTOM FIELDS       ********/
+
+
+
+/* Fire our meta box setup function on the post editor screen. */
+add_action( 'load-post.php', 'webkolm_post_meta_boxes_setup' );
+add_action( 'load-post-new.php', 'webkolm_post_meta_boxes_setup' );
+
+
+
+// Create one or more meta boxes to be displayed on the post editor screen.
+function webkolm_add_post_meta_boxes() {
+
+  add_meta_box(
+    'webkolm_latitude',      // Unique ID
+    esc_html__( 'Latitude', 'webkolm' ),    // Title
+    'webkolm_latitude_meta_box',   // Callback function
+     'post',         // Admin page (or post type)
+    'side',         // Context
+    'default'      // Priority
+  );
+
+  add_meta_box(
+    'webkolm_longitude',      // Unique ID
+    esc_html__( 'Longitude', 'webkolm' ),    // Title
+    'webkolm_longitude_meta_box',   // Callback function
+    'post',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_reading_time',      // Unique ID
+    esc_html__( 'Tempo di lettura', 'webkolm' ),    // Title
+    'webkolm_reading_time_meta_box',   // Callback function
+    'post',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_grid_item_dimension',      // Unique ID
+    esc_html__( 'grid item dimension', 'webkolm' ),    // Title
+    'webkolm_grid_item_dimension',   // Callback function
+    array('post','inserzione'),       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_sponsor_link',      // Unique ID
+    esc_html__( 'Link allo sponsor', 'webkolm' ),    // Title
+    'webkolm_sponsor_link_meta_box',   // Callback function
+    'inserzione',       // Admin page (or post type)
+    'normal',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_allow_hover_box',      // Unique ID
+    esc_html__( 'Abilita grid item hover', 'webkolm' ),    // Title
+    'webkolm_allow_hover_box',   // Callback function
+    'inserzione',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+
+  add_meta_box(
+    'webkolm_view_counter',      // Unique ID
+    esc_html__( 'Contatore visualizzazioni', 'webkolm' ),    // Title
+    'webkolm_view_counter_meta_box',   // Callback function
+    array('sponsor','inserzione'),        // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_credits',      // Unique ID
+    esc_html__( 'Credits', 'webkolm' ),    // Title
+    'webkolm_credits_meta_box',   // Callback function
+    'post',        // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+
+   add_meta_box(
+    'link_click_counter',      // Unique ID
+    esc_html__( 'Click counter', 'webkolm' ),    // Title
+    'webkolm_link_click_counter_meta_box',   // Callback function
+    'inserzione',        // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+    add_meta_box(
+     'webkolm_background_color',      // Unique ID
+     esc_html__( 'Colore di sfondo', 'webkolm' ),    // Title
+     'webkolm_background_color_meta_box',   // Callback function
+     array('inserzione','sponsor'),        // Admin page (or post type)
+     'side',         // Context
+     'default'         // Priority
+    );
+
+}
+
+
+// Display the post meta box.
+function webkolm_latitude_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_latitude_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_latitude"><?php _e( "", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_latitude" id="webkolm_latitude" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_latitude', true ) ); ?>" size="30" />
+  </p>
+<?php }
+
+// Display the post meta box. 
+function webkolm_longitude_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_longitude_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_longitude"><?php _e( "", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_longitude" id="webkolm_longitude" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_longitude', true ) ); ?>" size="30" />
+  </p>
+<?php }
+
+// Display the post meta box.
+function webkolm_reading_time_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_reading_time_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_reading_time"><?php _e( "Tempo di lettura del post (in minuti)", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_reading_time" id="webkolm_reading_time" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_reading_time', true ) ); ?>" />
+  </p>
+<?php }
+
+// Display the post meta box.
+function webkolm_grid_item_dimension( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_grid_item_dimension_nonce' ); ?>
+  <p>
+    <label for="webkolm_grid_item_dimension">Dimension: </label>
+
+    <?php   $options = array(
+                '1x1' => '',
+                '2x1' => 'grid-item--width2',
+                '1x2' => 'grid-item--height2',
+                '2x2' => 'grid-item--width2 grid-item--height2'
+            ); 
+            $meta = esc_attr( get_post_meta( $object->ID, 'webkolm_grid_item_dimension', true ) );
+    ?>
+
+     <select name='webkolm_grid_item_dimension' id='webkolm_grid_item_dimension'>
+
+<?php   foreach ($options as $key => $option) { 
+                if($meta == $option) { ?>
+                    <option value="<?php echo $option; ?>" selected><?php echo $key; ?></option>
+        <?php   } else { ?> 
+                    <option value="<?php echo $option; ?>"><?php echo $key; ?></option>
+        <?php   } 
+
+        }   ?>
+     </select>
+    </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_view_counter_meta_box( $object, $box ) { 
+
+    global $post;
+
+
+   // wp_nonce_field( basename( __FILE__ ), 'webkolm_view_counter_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_view_counter"><?php _e( "Contatore di visualizzazioni", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_view_counter" id="webkolm_view_counter" value="
+        <?php echo get_post_meta($post->ID, 'post_views_count', true); ?>" readonly/>
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_link_click_counter_meta_box( $object, $box ) { 
+
+    global $post;
+
+    wp_nonce_field( basename( __FILE__ ), 'link_click_counter_nonce' ); ?>
+
+  <p>
+    <label for="link_click_counter"><?php _e( "Contatore di click", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="link_click_counter" id="link_click_counter" value="<?php echo get_post_meta( $post->ID, 'link_click_counter', true ); ?>" readonly/>
+  </p>
+<?php }
+
+
+
+// ***************  Custom fields Inserzioni *****************
+
+// Display the post meta box.
+function webkolm_sponsor_link_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_sponsor_link_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_sponsor_link"><?php _e( "Link al sito dello sponsor. (es. 'https://www.google.it')", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" placeholder="https://" type="url" name="webkolm_sponsor_link" id="webkolm_sponsor_link" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_sponsor_link', true ) ); ?>" /> 
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_credits_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_credits_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_credits"><?php _e( "Credits personalizzati dell'intestazione del singolo post (Se vuoto: autocompletato)", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_credits" id="webkolm_credits" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_credits', true ) ); ?>" />
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_allow_hover_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_allow_hover_box_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_allow_box_title_nonce' ); ?>
+  <?php $meta = get_post_meta( $object->ID ) ;
+
+  //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
+
+  <p>
+    
+    <input class="widefat" type="checkbox" name="webkolm_allow_hover_box" id="webkolm_allow_hover_box" value="yes" <?php if ( isset ( $meta['webkolm_allow_hover_box'] ) ) checked( $meta['webkolm_allow_hover_box'][0], 'yes' ); ?> />
+    <?php _e( "Abilita hover", 'webkolm' ); ?>
+    <br/>
+    <input class="widefat" type="checkbox" name="webkolm_allow_box_title" id="webkolm_allow_box_title" value="yes" <?php if ( isset ( $meta['webkolm_allow_box_title'] ) ) checked( $meta['webkolm_allow_box_title'][0], 'yes' ); ?> />
+    <?php _e( "Visualizza titolo", 'webkolm' ); ?><br/>
+  </p>
+<?php }
+
+
+
+// Display the post meta box.
+function webkolm_background_color_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_background_color_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_background_color"><?php _e( "Colore di sfondo (default: bianco, es. #ffffff)", 'webkolm' ); ?></label>
+    <br />
+    <input class="widefat" type="text" name="webkolm_background_color" id="webkolm_background_color" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_background_color', true ) ); ?>" />
+  </p>
+<?php }
+
+
+
+
+// Meta box setup function.
+function webkolm_post_meta_boxes_setup() {
+
+  // Add meta boxes on the 'add_meta_boxes' hook.
+  add_action( 'add_meta_boxes', 'webkolm_add_post_meta_boxes' );
+  add_action( 'save_post', 'webkolm_save_metas', 10, 2 );
+ }
+
+
+function webkolm_save_metas($post_id, $post) {
+
+
+    $metas = array('webkolm_latitude','webkolm_longitude','webkolm_reading_time','webkolm_grid_item_dimension','webkolm_allow_hover_box', 'webkolm_allow_box_title','webkolm_sponsor_link','webkolm_credits', 'webkolm_background_color');
+
+    // Get the post type object. 
+    $post_type = get_post_type_object( $post->post_type );
+
+    // Check the current custom post type
+   // if (( 'post' == $_POST['post_type'])){
+        // Check if the current user has permission to edit the post. 
+        if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+            return $post_id;
+   // } else {
+  //      return $post_id;
+   // }
+
+    foreach($metas as $meta) {
+
+        $meta_nonce = $meta . '_nonce';
+    
+        // Verify the nonce before proceeding.
+        if ( !isset( $_POST[$meta_nonce] ) || !wp_verify_nonce( $_POST[$meta_nonce], basename( __FILE__ ) ) )
+        continue;
+
+        // Get the posted data and sanitize it for use as an HTML class.
+        $new_meta_value = ( isset( $_POST[$meta] ) ? $_POST[$meta]  : '' );
+
+        // Get the meta key. 
+        $meta_key = $meta;
+
+        // Get the meta value of the custom field key.
+        $meta_value = get_post_meta( $post_id, $meta_key, true );
+
+        // If a new meta value was added and there was no previous value, add it.
+        if ( $new_meta_value && '' == $meta_value )
+            add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+        // If the new meta value does not match the old value, update it. 
+        elseif ( $new_meta_value && $new_meta_value != $meta_value )
+            update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+        // If there is no new meta value but an old value exists, delete it. 
+        elseif ( '' == $new_meta_value && $meta_value )
+            delete_post_meta( $post_id, $meta_key, $meta_value );
+                    
+    }
+}
+
+
+
+
 ?>
