@@ -25,7 +25,7 @@ get_header(); ?>
 
                     <div class="project-container">
                         <div class="project-col">
-                            <h4><?php the_title(); ?></h4>
+                            <h4 class="project-title"><?php the_title(); ?></h4>
                             <?php
                                 echo $meta['webkolm_designer']['0'];
                                 echo $meta['webkolm_project_year']['0'];
