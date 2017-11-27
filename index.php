@@ -36,11 +36,11 @@ get_header(); ?>
                             <?php echo $meta['webkolm_prizes']['0']; ?>
                         </div>
 
-                        <div class="project-col">
+                        <div class="project-col project-content">
                             <?php the_content(); ?>
                         </div>
 
-                        <div class="project-col">
+                        <div class="project-col project-content-eng">
                             <?php the_content(); ?>
                         </div>
                         
