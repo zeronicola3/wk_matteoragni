@@ -32,10 +32,8 @@ get_header(); ?>
                             ?>
                         </div>
 
-                        <div class="project-col">
-                            <div class="project-prizes">
-                                <?php echo $meta['webkolm_prizes']['0']; ?>
-                            </div>
+                        <div class="project-col project-prizes">
+                            <?php echo $meta['webkolm_prizes']['0']; ?>
                         </div>
 
                         <div class="project-col">
