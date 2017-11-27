@@ -555,29 +555,16 @@ function webkolm_save_metas($post_id, $post) {
 
 
 // ****************   CORRELAZIONI POSTS
-/*
-function sponsor_to_insertions() {
+
+function projects_to_projects() {
     p2p_register_connection_type( array(
-        'name' => 'sponsor_to_insertions',
-        'from' => 'sponsor',
-        'to' => 'inserzione',
+        'name' => 'projects_to_projects',
+        'from' => 'project',
+        'to' => 'project',
         'reciprocal' => true,
     ) );
 }
-add_action( 'p2p_init', 'sponsor_to_insertions' );
+add_action( 'p2p_init', 'projects_to_projects' );
 
-
-function sponsor_to_posts() {
-    p2p_register_connection_type( array(
-        'name' => 'sponsor_to_posts',
-        'from' => 'sponsor',
-        'to' => 'post',
-        'reciprocal' => true,
-    ) );
-}
-add_action( 'p2p_init', 'sponsor_to_posts' );
-
-
-*/
 
 ?>
