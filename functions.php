@@ -466,13 +466,40 @@ function webkolm_gallery_meta_box( $object, $box ) {
 
     wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
     <?php $content = get_post_meta($object->ID, 'webkolm_gallery', true); 
-            $editor_id = "gallery_project";
+            $editor_id = "webkolm_gallery";
     ?>
 
   <p>
-    <?php wp_editor( $content, $editor_id, $settings ); ?>
+    <?php wp_editor( htmlspecialchars_decode($content), $editor_id, $settings ); ?>
   </p>
 <?php }
+
+
+function webkolm_gallery_save($post_id, $post, $update) {
+
+  //...
+
+  if (!empty($_POST['webkolm_gallery'])) {
+    $data=htmlspecialchars($_POST['webkolm_gallery']);
+    update_post_meta($post_id, 'webkolm_gallery', $data );
+  }
+
+
+  /**************** Theme:
+
+  <div class="blue">
+    <?php
+    $content = get_post_meta(get_the_ID(), 'webkolm_gallery' , true );
+      $content = htmlspecialchars_decode($content);
+      $content = wpautop( $content );
+      echo $content;
+    ?>
+  </div> 
+
+  *****************/
+}
+
+
 
 
 // ***************  Custom fields Clients *****************
@@ -499,6 +526,7 @@ function webkolm_post_meta_boxes_setup() {
   // Add meta boxes on the 'add_meta_boxes' hook.
   add_action( 'add_meta_boxes', 'webkolm_add_post_meta_boxes' );
   add_action( 'save_post', 'webkolm_save_metas', 10, 2 );
+  add_action('save_post', 'webkolm_gallery_save');
  }
 
 
