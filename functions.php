@@ -470,7 +470,7 @@ function webkolm_gallery_meta_box( $object, $box ) {
     ?>
 
   <p>
-    <?php wp_editor( htmlspecialchars_decode($content), $editor_id, $settings ); ?>
+    <?php wp_editor( $content, $editor_id, $settings ); ?>
   </p>
 <?php }
 
