@@ -12,13 +12,16 @@
 			border-top: 4px solid $nero;
 		}
 
-		.project-title {
-			margin: 0;
-			font-size: 1.111rem;
-			font-weight: bold;
-			line-height: 1.2em;
-			margin-top: 10px;
+		.project-header {
+			.project-title {
+				margin: 0;
+				font-weight: bold;
+				margin-top: 10px;
 
+			}
+
+			font-size: 1.111rem;
+			line-height: 1.2em;
 		}
 	}
 }
