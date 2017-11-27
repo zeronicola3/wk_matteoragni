@@ -48,19 +48,7 @@ get_header(); ?>
                         
                     </div>
 
-                   
-
-                    echo $meta['webkolm_project_year']['0'];
-
-                    echo $meta['webkolm_prizes']['0'];
-
-                    echo $meta['webkolm_designer']['0'];
-
-
-
-                    the_content();
-
-                endwhile;
+        <?php   endwhile;
             endif;
         ?>
         <?php twentythirteen_paging_nav();?>
