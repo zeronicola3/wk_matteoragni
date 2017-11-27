@@ -447,61 +447,28 @@ function webkolm_prizes_meta_box( $object, $box ) { ?>
 <?php }
 
 // Display the post meta box.
-function webkolm_reading_time_meta_box( $object, $box ) { ?>
+function webkolm_designer_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_reading_time_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_designer_nonce' ); ?>
 
   <p>
-    <label for="webkolm_reading_time"><?php _e( "Tempo di lettura del post (in minuti)", 'webkolm' ); ?></label>
+    <label for="webkolm_designer"><?php _e( "Name of designer", 'webkolm' ); ?></label>
     <br />
-    <input class="widefat" type="text" name="webkolm_reading_time" id="webkolm_reading_time" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_reading_time', true ) ); ?>" />
+    <input class="widefat" type="text" name="webkolm_designer" id="webkolm_designer" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_designer', true ) ); ?>" />
   </p>
 <?php }
 
+
 // Display the post meta box.
-function webkolm_grid_item_dimension( $object, $box ) { ?>
+function webkolm_gallery_meta_box( $object, $box ) { 
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_grid_item_dimension_nonce' ); ?>
-  <p>
-    <label for="webkolm_grid_item_dimension">Dimension: </label>
-
-    <?php   $options = array(
-                '1x1' => '',
-                '2x1' => 'grid-item--width2',
-                '1x2' => 'grid-item--height2',
-                '2x2' => 'grid-item--width2 grid-item--height2'
-            ); 
-            $meta = esc_attr( get_post_meta( $object->ID, 'webkolm_grid_item_dimension', true ) );
+    wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
+    <?php $content = get_post_meta($object->ID, 'webkolm_gallery', true); 
+            $editor_id = "gallery_project";
     ?>
 
-     <select name='webkolm_grid_item_dimension' id='webkolm_grid_item_dimension'>
-
-<?php   foreach ($options as $key => $option) { 
-                if($meta == $option) { ?>
-                    <option value="<?php echo $option; ?>" selected><?php echo $key; ?></option>
-        <?php   } else { ?> 
-                    <option value="<?php echo $option; ?>"><?php echo $key; ?></option>
-        <?php   } 
-
-        }   ?>
-     </select>
-    </p>
-<?php }
-
-
-// Display the post meta box.
-function webkolm_view_counter_meta_box( $object, $box ) { 
-
-    global $post;
-
-
-   // wp_nonce_field( basename( __FILE__ ), 'webkolm_view_counter_nonce' ); ?>
-
   <p>
-    <label for="webkolm_view_counter"><?php _e( "Contatore di visualizzazioni", 'webkolm' ); ?></label>
-    <br />
-    <input class="widefat" type="text" name="webkolm_view_counter" id="webkolm_view_counter" value="
-        <?php echo get_post_meta($post->ID, 'post_views_count', true); ?>" readonly/>
+    <?php wp_editor( $content, $editor_id, $settings ); ?>
   </p>
 <?php }
 
