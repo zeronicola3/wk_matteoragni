@@ -20,9 +20,35 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
 
-                    $meta = get_post_meta( $post->ID );
+                    $meta = get_post_meta( $post->ID ); ?>
 
-                    the_title();
+
+                    <div class="project-container">
+                        <div class="project-col">
+                            <h4><?php the_title(); ?></h4>
+                            <?php
+                                echo $meta['webkolm_designer']['0'];
+                                echo $meta['webkolm_project_year']['0'];
+                            ?>
+                        </div>
+
+                        <div class="project-col">
+                            <div class="project-prizes">
+                                <?php echo $meta['webkolm_prizes']['0']; ?>
+                            </div>
+                        </div>
+
+                        <div class="project-col">
+                            <?php the_content(); ?>
+                        </div>
+
+                        <div class="project-col">
+                            <?php the_content(); ?>
+                        </div>
+                        
+                    </div>
+
+                   
 
                     echo $meta['webkolm_project_year']['0'];
 
