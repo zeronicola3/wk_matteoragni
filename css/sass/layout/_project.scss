@@ -6,5 +6,10 @@
 		@include flex-child;
 		width: 50%;
 		height: auto;
+
+
+		.project-title {
+			margin: 0;
+		}
 	}
 }
