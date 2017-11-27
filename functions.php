@@ -375,121 +375,74 @@ add_action( 'load-post-new.php', 'webkolm_post_meta_boxes_setup' );
 function webkolm_add_post_meta_boxes() {
 
   add_meta_box(
-    'webkolm_latitude',      // Unique ID
-    esc_html__( 'Latitude', 'webkolm' ),    // Title
-    'webkolm_latitude_meta_box',   // Callback function
-     'post',         // Admin page (or post type)
+    'webkolm_project_year',      // Unique ID
+    esc_html__( 'Year', 'webkolm' ),    // Title
+    'webkolm_project_year_meta_box',   // Callback function
+    'project',         // Admin page (or post type)
     'side',         // Context
     'default'      // Priority
   );
 
   add_meta_box(
-    'webkolm_longitude',      // Unique ID
-    esc_html__( 'Longitude', 'webkolm' ),    // Title
-    'webkolm_longitude_meta_box',   // Callback function
-    'post',         // Admin page (or post type)
+    'webkolm_designer',      // Unique ID
+    esc_html__( 'Degigned by', 'webkolm' ),    // Title
+    'webkolm_designer_meta_box',   // Callback function
+    'project',         // Admin page (or post type)
     'side',         // Context
     'default'         // Priority
   );
 
   add_meta_box(
-    'webkolm_reading_time',      // Unique ID
-    esc_html__( 'Tempo di lettura', 'webkolm' ),    // Title
-    'webkolm_reading_time_meta_box',   // Callback function
-    'post',       // Admin page (or post type)
+    'webkolm_prizes',      // Unique ID
+    esc_html__( 'Prizes', 'webkolm' ),    // Title
+    'webkolm_prizes_meta_box',   // Callback function
+    'project',       // Admin page (or post type)
     'side',         // Context
     'default'         // Priority
   );
 
   add_meta_box(
-    'webkolm_grid_item_dimension',      // Unique ID
-    esc_html__( 'grid item dimension', 'webkolm' ),    // Title
-    'webkolm_grid_item_dimension',   // Callback function
-    array('post','inserzione'),       // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-
-  add_meta_box(
-    'webkolm_sponsor_link',      // Unique ID
-    esc_html__( 'Link allo sponsor', 'webkolm' ),    // Title
-    'webkolm_sponsor_link_meta_box',   // Callback function
-    'inserzione',       // Admin page (or post type)
+    'webkolm_gallery',      // Unique ID
+    esc_html__( 'Gallery', 'webkolm' ),    // Title
+    'webkolm_gallery',   // Callback function
+    'project',       // Admin page (or post type)
     'normal',         // Context
     'default'         // Priority
   );
 
   add_meta_box(
-    'webkolm_allow_hover_box',      // Unique ID
-    esc_html__( 'Abilita grid item hover', 'webkolm' ),    // Title
-    'webkolm_allow_hover_box',   // Callback function
-    'inserzione',       // Admin page (or post type)
-    'side',         // Context
+    'webkolm_client_link',      // Unique ID
+    esc_html__( 'Link', 'webkolm' ),    // Title
+    'webkolm_client_link_meta_box',   // Callback function
+    'client',       // Admin page (or post type)
+    'normal',         // Context
     'default'         // Priority
   );
-
-
-  add_meta_box(
-    'webkolm_view_counter',      // Unique ID
-    esc_html__( 'Contatore visualizzazioni', 'webkolm' ),    // Title
-    'webkolm_view_counter_meta_box',   // Callback function
-    array('sponsor','inserzione'),        // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-
-  add_meta_box(
-    'webkolm_credits',      // Unique ID
-    esc_html__( 'Credits', 'webkolm' ),    // Title
-    'webkolm_credits_meta_box',   // Callback function
-    'post',        // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-
-
-   add_meta_box(
-    'link_click_counter',      // Unique ID
-    esc_html__( 'Click counter', 'webkolm' ),    // Title
-    'webkolm_link_click_counter_meta_box',   // Callback function
-    'inserzione',        // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-
-    add_meta_box(
-     'webkolm_background_color',      // Unique ID
-     esc_html__( 'Colore di sfondo', 'webkolm' ),    // Title
-     'webkolm_background_color_meta_box',   // Callback function
-     array('inserzione','sponsor'),        // Admin page (or post type)
-     'side',         // Context
-     'default'         // Priority
-    );
 
 }
 
 
 // Display the post meta box.
-function webkolm_latitude_meta_box( $object, $box ) { ?>
+function webkolm_year_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_latitude_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_year_nonce' ); ?>
 
   <p>
-    <label for="webkolm_latitude"><?php _e( "", 'webkolm' ); ?></label>
+    <label for="webkolm_year"><?php _e( "Year", 'webkolm' ); ?></label>
     <br />
-    <input class="widefat" type="text" name="webkolm_latitude" id="webkolm_latitude" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_latitude', true ) ); ?>" size="30" />
+    <input type="text" name="webkolm_year" id="webkolm_year" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_year', true ) ); ?>" size="30" />
   </p>
 <?php }
 
 // Display the post meta box. 
-function webkolm_longitude_meta_box( $object, $box ) { ?>
+function webkolm_prizes_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_longitude_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_prizes_nonce' ); ?>
 
   <p>
-    <label for="webkolm_longitude"><?php _e( "", 'webkolm' ); ?></label>
+    <label for="webkolm_prizes"><?php _e( "", 'webkolm' ); ?></label>
     <br />
-    <input class="widefat" type="text" name="webkolm_longitude" id="webkolm_longitude" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_longitude', true ) ); ?>" size="30" />
+    <textarea name="webkolm_prizes" id="webkolm_prizes"><?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_prizes', true ) ); ?></textarea>
   </p>
 <?php }
 
