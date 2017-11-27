@@ -1,7 +1,7 @@
 .project-container {
 	@include flex-parent;
 	width: 100%;
-	line-height: 1.2em;
+	line-height: 1.25em;
 
 	.project-col {
 		@include flex-child;
