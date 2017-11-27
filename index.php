@@ -24,11 +24,11 @@ get_header(); ?>
 
                     the_title();
 
-                    echo $meta['0']['webkolm_project_year'];
+                 //   echo $meta['webkolm_project_year'];
 
-                    echo $meta['0']['webkolm_prizes'];
+                  //  echo $meta['webkolm_prizes'];
 
-                    echo $meta['0']['webkolm_designer'];
+                    print_r($meta['webkolm_designer']);
 
 
 
