@@ -1,6 +1,7 @@
 .project-container {
 	@include flex-parent;
 	width: 100%;
+	line-height: 1.2em;
 
 	.project-col {
 		@include flex-child;
@@ -15,7 +16,7 @@
 	}
 
 	.project-header {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 		line-height: 1.6em;
 
 		.project-title {
