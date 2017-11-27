@@ -470,34 +470,9 @@ function webkolm_gallery_meta_box( $object, $box ) {
     ?>
 
   <p>
-    <?php wp_editor( htmlspecialchars_decode($content), $editor_id); ?>
+    <?php wp_editor( $content, $editor_id); ?>
   </p>
 <?php }
-
-
-function webkolm_gallery_save($post_id, $post, $update) {
-
-  //...
-
-  if (!empty($_POST['webkolm_gallery_id'])) {
-    $data=htmlspecialchars($_POST['webkolm_gallery_id']);
-    update_post_meta($post_id, 'webkolm_gallery', $data );
-  }
-
-
-  /**************** Theme:
-
-  <div class="blue">
-    <?php
-    $content = get_post_meta(get_the_ID(), 'webkolm_gallery' , true );
-      $content = htmlspecialchars_decode($content);
-      $content = wpautop( $content );
-      echo $content;
-    ?>
-  </div> 
-
-  *****************/
-}
 
 
 
@@ -526,7 +501,6 @@ function webkolm_post_meta_boxes_setup() {
   // Add meta boxes on the 'add_meta_boxes' hook.
   add_action( 'add_meta_boxes', 'webkolm_add_post_meta_boxes' );
   add_action( 'save_post', 'webkolm_save_metas', 10, 2 );
-  add_action('save_post', 'webkolm_gallery_save');
  }
 
 
