@@ -17,3 +17,6 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 *.css
+css/atf.css
+css/stile.css
+*.css
