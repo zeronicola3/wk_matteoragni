@@ -404,7 +404,7 @@ function webkolm_add_post_meta_boxes() {
   add_meta_box(
     'webkolm_gallery',      // Unique ID
     esc_html__( 'Gallery', 'webkolm' ),    // Title
-    'webkolm_gallery',   // Callback function
+    'webkolm_gallery_meta_box',   // Callback function
     'project',       // Admin page (or post type)
     'normal',         // Context
     'default'         // Priority
