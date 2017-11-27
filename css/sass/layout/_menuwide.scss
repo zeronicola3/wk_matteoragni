@@ -11,11 +11,12 @@ nav.nomobile {
 		display: inline-block;
 		position: absolute;
     	right: 0;
+    	padding-left: 0;
 
 		li {
 			display: inline-block;
 			position: relative;
-			float: right;
+			float: left;
 
 			a {
 				font-size: 13px;
