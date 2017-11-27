@@ -8,11 +8,17 @@ get_header(); ?>
 <div id="contenuti">
 	<div class="wrapper">
 		<div class="wp_content">
-
         <?php
-            if ( have_posts() ) :
+            $args = array(
+                'post_type'  => 'project',
+                'posts_per_page' => '-1',
+            );
+
+            $query = new WP_Query($args);
+
+            if ( $query->have_posts() ) :
                 // Start the Loop.
-                while ( have_posts() ) : the_post();
+                while ( $query->have_posts() ) : $query->the_post();
 
                     the_content();
 
