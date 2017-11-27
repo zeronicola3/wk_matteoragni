@@ -425,14 +425,14 @@ function webkolm_add_post_meta_boxes() {
 // ***************  Custom fields Projects *****************
 
 // Display the post meta box.
-function webkolm_year_meta_box( $object, $box ) { ?>
+function webkolm_project_year_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_year_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_project_year_nonce' ); ?>
 
   <p>
-    <label for="webkolm_year"><?php _e( "Year", 'webkolm' ); ?></label>
+    <label for="webkolm_project_year"><?php _e( "Year", 'webkolm' ); ?></label>
     <br />
-    <input type="text" name="webkolm_year" id="webkolm_year" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_year', true ) ); ?>" size="30" />
+    <input type="text" name="webkolm_project_year" id="webkolm_project_year" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_project_year', true ) ); ?>" size="30" />
   </p>
 <?php }
 
