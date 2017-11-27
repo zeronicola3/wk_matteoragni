@@ -466,7 +466,7 @@ function webkolm_gallery_meta_box( $object, $box ) {
 
     wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
     <?php $content = get_post_meta($object->ID, 'webkolm_gallery', true); 
-            $editor_id = "webkolm_gallery";
+            $editor_id = "webkolm_gallery_id";
     ?>
 
   <p>
@@ -479,8 +479,8 @@ function webkolm_gallery_save($post_id, $post, $update) {
 
   //...
 
-  if (!empty($_POST['webkolm_gallery'])) {
-    $data=htmlspecialchars($_POST['webkolm_gallery']);
+  if (!empty($_POST['webkolm_gallery_id'])) {
+    $data=htmlspecialchars($_POST['webkolm_gallery_id']);
     update_post_meta($post_id, 'webkolm_gallery', $data );
   }
 
