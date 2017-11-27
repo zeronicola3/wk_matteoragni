@@ -1,0 +1,10 @@
+.project-conatiner {
+	@include flex-parent;
+	width: 100%;
+
+	.project-col {
+		@include flex-child;
+		width: 50%;
+		height: auto;
+	}
+}
