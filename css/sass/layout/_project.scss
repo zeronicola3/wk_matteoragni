@@ -8,7 +8,6 @@
 		height: auto;
 		margin-right: 95px;
 		margin-bottom: 100px;
-		
 
 		&:first-child {
 			border-top: 4px solid $nero;
@@ -25,5 +24,11 @@
 			margin-top: 10px;
 
 		}
+	}
+
+	.project-prizes {
+		font-weight: bold;
+		margin-top: 10px;
+		text-transform: underline;
 	}
 }
