@@ -20,6 +20,18 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
 
+                    $meta = get_post_meta( $post->ID );
+
+                    the_title();
+
+                    echo $meta['webkolm_project_year'];
+
+                    echo $meta['webkolm_prizes'];
+
+                    echo $meta['webkolm_designer'];
+
+                    
+
                     the_content();
 
                 endwhile;
