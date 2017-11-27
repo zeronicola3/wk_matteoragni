@@ -18,9 +18,9 @@ html, body {
 	font-weight: 400;
 	max-width: 100%;
 	@include transition(all, .4s, ease);
-	@include mq($from:tablet){font-size:14px;}
 	@include mq($from:tablet){font-size:15px;}
-	@include mq($from:tablet){font-size:16px;}
+	@include mq($from:desktop){font-size:16px;}
+	@include mq($from:wide){font-size:18px;}
 }
 
 body {
