@@ -4,8 +4,9 @@
 
 	.project-col {
 		@include flex-child;
-		width: 50%;
+		width: calc(50% - 95px);
 		height: auto;
+		margin-right: 95px;
 
 		&:first-child {
 			border-top: 4px solid $nero;
