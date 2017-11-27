@@ -1,9 +1,4 @@
 <?php 
-/**
- * Template Name: Projects archive
- *
- */
-
 get_header(); ?>
 <div id="contenuti">
 	<div class="wrapper">
@@ -19,7 +14,6 @@ get_header(); ?>
                 endwhile;
             endif;
         ?>
-        <?php twentythirteen_paging_nav();?>
         </div>
 	</div>
 </div>
