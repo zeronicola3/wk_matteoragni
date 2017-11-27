@@ -7,6 +7,9 @@
 		width: 50%;
 		height: auto;
 
+		&:first-child {
+			border-top: 4px solid $nero;
+		}
 
 		.project-title {
 			margin: 0;
