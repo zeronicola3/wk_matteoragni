@@ -6,6 +6,12 @@
 	}
 }
 
+
+.project-cover-gallery {
+    width: 100vw;
+    height: 100vh;
+}
+
 .project-container {
 	@include flex-parent;
 	align-items: flex-start;
