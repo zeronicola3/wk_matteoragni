@@ -466,7 +466,7 @@ function webkolm_gallery_meta_box( $object, $box ) {
 
     wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
     <?php $content = get_post_meta($object->ID, 'webkolm_gallery'); 
-            $editor_id = "webkolm_gallery_id";
+            $editor_id = "webkolm_gallery";
     ?>
 
   <p>
@@ -511,7 +511,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_gallery', 'webkolm_client_link');
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link');
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
