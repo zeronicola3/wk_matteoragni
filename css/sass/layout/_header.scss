@@ -15,15 +15,13 @@ header {
 
 #logo_sito {
 	display: block;
-	position: absolute;
-	right: -96px;
-	margin-right: 2%;
-	height: auto;
-	padding-bottom: 33.5%;
-	width: 200px;
-	overflow: visible;
-	vertical-align: middle; 
-	z-index: 99;
+    /* right: -96px; */
+    /* margin-right: 2%; */
+    height: 100%;
+    /* padding-bottom: 33.5%; */
+    width: 200px;
+    vertical-align: middle;
+    z-index: 99;
 
 	svg { 
 		overflow: visible;
@@ -45,18 +43,10 @@ header {
 
 	@include mq($from: tablet) {
 
-		right: -260px;
-		width: 358px;
-		height: 120px;
-		padding: 0;
-		left: 86%;
-		top: 2px;
 	}
 
 	@include mq($from: 1140px) {
-		left: 78%;
-		width: 418px;
-		height: 140px;
+
 	}
 
 }
