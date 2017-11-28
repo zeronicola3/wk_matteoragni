@@ -487,7 +487,6 @@ function wysiwyg_save_meta(){
 
         if(isset($_REQUEST[$editor_id]))
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
-
 }
 
 
