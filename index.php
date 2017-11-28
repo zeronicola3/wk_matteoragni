@@ -42,7 +42,7 @@ get_header(); ?>
                                     ?>
                                     <li class="project_slide-<?= $numslide; ?> slideimg">
                                         <style>
-                                          .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
+                                          .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
                                         </style>
                                     </li>
                                     <?php $numslide++;
