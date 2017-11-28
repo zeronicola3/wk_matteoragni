@@ -29,7 +29,7 @@ get_header(); ?>
                         <ul class="slides">
                         <?php
                             $numslide=1;
-                            $post_content = get_post_meta($object->ID, 'webkolm_gallery_test', true);
+                            $post_content = get_post_meta($post->ID, 'webkolm_gallery_test', true);
                             if($post_content != "") {
 
                                 preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
