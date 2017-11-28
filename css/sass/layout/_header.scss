@@ -37,8 +37,6 @@ header {
 
 	@media screen and (min-width:470px) and (max-width:767px) {
 
-		right:40px;
-
 	}
 
 	@include mq($from: tablet) {
@@ -55,8 +53,7 @@ header {
 header.attivo #logo_sito {
 	@include mq($from:tablet){
 		width: 200px;
-		height: 67px;
-		top:5px;
+
 	}
 }
 
