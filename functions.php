@@ -465,7 +465,7 @@ function webkolm_designer_meta_box( $object, $box ) { ?>
 function webkolm_gallery_meta_box( $object, $box ) { 
 
     wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
-    <?php $content = get_post_meta($object->ID, 'webkolm_gallery', true); 
+    <?php $content = get_post_meta($object->ID, 'webkolm_gallery'); 
             $editor_id = "webkolm_gallery_id";
     ?>
 
