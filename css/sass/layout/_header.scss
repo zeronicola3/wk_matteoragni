@@ -19,14 +19,13 @@ header {
     width: 200px;
     vertical-align: middle;
     z-index: 99;
-    position: relative;
 
 	svg { 
 		overflow: visible;
 		display: inline-block;
 		position: absolute;
 	    height: 100%;
-	    width: 100%;
+	    width: 200px;
 	    top: 0;
 	    left: 0;
 	}
