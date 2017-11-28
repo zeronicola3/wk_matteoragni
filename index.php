@@ -30,6 +30,9 @@ get_header(); ?>
                         <?php
                             $numslide=1;
                             $post_content = get_post_meta($post->ID, 'webkolm_gallery_test', true);
+
+
+
                             if($post_content != "") {
 
                                 preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
@@ -52,22 +55,9 @@ get_header(); ?>
                                     <?php $numslide++;
                                 }
 
-                            } else { 
+                            } 
 
-                            $big_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'large' );
-                            $mobile_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'medium' );
-
-                            ?>
-
-                            <li class="project_slide-<?= $numslide; ?> slideimg">
-                                <style>
-                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $mobile_img['0'] ?>');}
-
-                                    @media (min-width: 768px) {  .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $big_img['0'] ?>');}
-                                </style>
-                            </li>
-
-                    <?php } ?>
+                        } ?>
                           
                         </ul>
                     </div>
