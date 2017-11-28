@@ -46,18 +46,22 @@ get_header(); ?>
                                     ?>
                                     <li class="project_slide-<?= $numslide; ?> slideimg">
                                         <style>
-                                          .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
+                                            .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { 
+                                                background-image:url('<?php echo $url_small['0'] ?>');
+                                            }
 
-                                          @media (min-width: 768px) {  .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_big['0'] ?>');}
+                                            @media (min-width: 768px) {  
+                                                .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { 
+                                                    background-image:url('<?php echo $url_big['0'] ?>');
+                                                }
+                                            }
 
                                         </style>
                                     </li>
                                     <?php $numslide++;
                                 }
 
-                            } 
-
-                        } ?>
+                            }   ?>
                           
                         </ul>
                     </div>

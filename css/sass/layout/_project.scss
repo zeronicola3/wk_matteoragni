@@ -8,8 +8,9 @@
 
 
 .project-cover-gallery {
-    height: 100vh;
+    height: 90vh;
     margin-bottom: 60px;
+    overflow-y: hidden;
 
     ul.slides {
         position: absolute;
