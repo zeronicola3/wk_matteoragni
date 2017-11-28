@@ -21,15 +21,49 @@ get_header(); ?>
                 while ( $query->have_posts() ) : $query->the_post();
 
                     $meta = get_post_meta( $post->ID ); 
-                    $big_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'large' );
-                    $mobile_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'medium' );
-
                     $elem_number = rand(10,9999);
 
                     ?>
 
-                    <div class="project-cover project-cover-<?php echo $elem_number; ?>">
-                        <img src="<?php echo $big_img['0'] ?>" srcset="<?php echo $mobile_img['0'] ?> 768w, <?php echo $big_img['0'] ?> 1500w">
+                    <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?>">
+                        <ul class="slides">
+                        <?php
+
+                            $post_content = $gallery;
+                            if($post_content != "") {
+
+                                preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
+                                $array_id = explode(",", $ids[1]);
+
+                                $numslide=1;
+                                foreach ($array_id as &$item) {
+                                    $url_small = wp_get_attachment_image_src( $item, 'medium' );
+                                      
+                                    ?>
+                                    <li class="project_slide-<?= $numslide; ?> slideimg">
+                                        <style>
+                                          .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
+                                        </style>
+                                    </li>
+                                    <?php $numslide++;
+                                }
+
+                            } else { 
+
+                            $big_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'large' );
+                            $mobile_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'medium' );
+
+                            ?>
+
+                            <li class="project_slide-<?= $numslide; ?> slideimg">
+                                <style>
+                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
+                                </style>
+                            </li>
+
+                    <?php } ?>
+                          
+                        </ul>
                     </div>
 
 
