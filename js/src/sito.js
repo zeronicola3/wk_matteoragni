@@ -73,8 +73,8 @@ $(document).ready(function() {
 
 	/* SLIDER SITO */
 
-	if($(".gallery-container").length > 0){
-		$('.gallery-container').flexslider({
+	if($(".project-cover-gallery").length > 0){
+		$('.project-cover-gallery').flexslider({
 		    animation: "fade",
 		    animationLoop: true,
 		    slideshow: true,
