@@ -28,14 +28,14 @@ get_header(); ?>
                     <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?>">
                         <ul class="slides">
                         <?php
-
+                            $numslide=1;
                             $post_content = get_post_meta($object->ID, 'webkolm_gallery_test', true);
                             if($post_content != "") {
 
                                 preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
                                 $array_id = explode(",", $ids[1]);
 
-                                $numslide=1;
+                                
                                 foreach ($array_id as &$item) {
                                     $url_small = wp_get_attachment_image_src( $item, 'medium' );
                                       
