@@ -15,13 +15,11 @@ header {
 
 #logo_sito {
 	display: block;
-    /* right: -96px; */
-    /* margin-right: 2%; */
     height: 100%;
-    /* padding-bottom: 33.5%; */
     width: 200px;
     vertical-align: middle;
     z-index: 99;
+    position: relative;
 
 	svg { 
 		overflow: visible;
@@ -47,14 +45,6 @@ header {
 
 	}
 
-}
-
-
-header.attivo #logo_sito {
-	@include mq($from:tablet){
-		width: 200px;
-
-	}
 }
 
 
