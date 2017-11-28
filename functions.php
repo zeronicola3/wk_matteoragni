@@ -471,7 +471,7 @@ function webkolm_gallery_meta_box( $object, $box ) {
 
   <p>
 
-    echo $content;
+    <?php echo $content; ?>
     <?php wp_editor( $content, $editor_id); ?>
 
 
