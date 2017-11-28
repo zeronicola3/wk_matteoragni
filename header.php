@@ -51,7 +51,7 @@
 
   <header>
     <div class="wrap">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="titolo_sito">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="logo_sito" class="titolo_sito">
             <?php get_template_part('img/svg/matteoragni_logo.svg'); ?>
       </a>
 
