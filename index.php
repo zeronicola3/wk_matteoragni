@@ -57,7 +57,7 @@ get_header(); ?>
 
                             <li class="project_slide-<?= $numslide; ?> slideimg">
                                 <style>
-                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $url_small['0'] ?>');}
+                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $mobile_img['0'] ?>');}
                                 </style>
                             </li>
 
