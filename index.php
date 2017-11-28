@@ -38,7 +38,7 @@ get_header(); ?>
                                 
                                 foreach ($array_id as &$item) {
                                     $url_small = wp_get_attachment_image_src( $item, 'medium' );
-                                    $url_small = wp_get_attachment_image_src( $item, 'medium' );
+                                    $url_big = wp_get_attachment_image_src( $item, 'large' );
                                       
                                     ?>
                                     <li class="project_slide-<?= $numslide; ?> slideimg">
@@ -61,7 +61,9 @@ get_header(); ?>
 
                             <li class="project_slide-<?= $numslide; ?> slideimg">
                                 <style>
-                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $mobile_img['0'] ?>');}
+                                    .post_slide-<?= $numslide; ?> { background-image:url('<?php echo $big_img['0'] ?>');}
+
+                                    @media (min-width: 768px) {  .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { background-image:url('<?php echo $mobile_img['0'] ?>');}
                                 </style>
                             </li>
 
