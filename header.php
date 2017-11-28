@@ -52,7 +52,7 @@
   <header>
     <div class="wrap">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="titolo_sito">
-            <?php get_template_part('img/logo.svg'); ?>
+            <?php get_template_part('img/svg/matteomagni_logo.svg'); ?>
       </a>
 
       <!-- MENU MOBILE -->
