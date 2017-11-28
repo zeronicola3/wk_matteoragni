@@ -10,6 +10,12 @@
 .project-cover-gallery {
     width: 100vw;
     height: 100vh;
+
+    li.slideimg {
+        height: 100vh;
+        background-size: contain;
+        background-position: center;
+    }
 }
 
 .project-container {
