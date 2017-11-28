@@ -465,8 +465,9 @@ function webkolm_designer_meta_box( $object, $box ) { ?>
 function webkolm_gallery_meta_box( $object, $box ) { 
 
     wp_nonce_field( basename( __FILE__ ), 'webkolm_gallery_nonce' ); ?>
-    <?php $content = get_post_meta($object->ID, 'webkolm_gallery'); 
-            $editor_id = "webkolm_gallery";
+
+    <?php $content = get_post_meta($object->ID, 'webkolm_gallery_test', true); 
+            $editor_id = "webkolm_gallery_id";
     ?>
 
   <p>
@@ -477,6 +478,19 @@ function webkolm_gallery_meta_box( $object, $box ) {
 
   </p>
 <?php }
+
+
+
+add_action('save_post', 'wysiwyg_save_meta');
+function wysiwyg_save_meta(){
+
+        $editor_id = 'webkolm_gallery_id';
+        $meta_key = 'webkolm_gallery_test';
+
+        if(isset($_REQUEST[$editor_id]))
+                update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
+
+}
 
 
 
@@ -511,7 +525,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_gallery');
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link');
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
