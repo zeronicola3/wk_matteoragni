@@ -20,7 +20,18 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
 
-                    $meta = get_post_meta( $post->ID ); ?>
+                    $meta = get_post_meta( $post->ID ); 
+                    $big_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'large' );
+                    $mobile_img = wp_get_attachment_image_src(  get_post_thumbnail_id($post->ID), 'medium' );
+
+                    $elem_number = rand(10,9999);
+
+                    ?>
+
+                    <div class="project-cover project-cover-<?php echo $elem_number; ?>">
+                        <img src="<?php echo $big_img['0'] ?>" srcset="<?php echo $mobile_img['0'] ?> 768w, <?php echo $big_img['0'] ?> 1500w">
+                    </div>
+
 
 
                     <div class="project-container">
