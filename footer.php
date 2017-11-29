@@ -14,7 +14,6 @@
             <ol class="indicator"></ol>
         </div>
 
-
         <footer id="footer">
             <div class="wrapper">
                 <!-- FOOTER CONTENT -->
