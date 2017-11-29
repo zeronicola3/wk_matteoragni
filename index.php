@@ -5,6 +5,7 @@
  */
 
 get_header(); ?>
+
 <div id="contenuti">
 	<div class="wrapper">
 		<div class="wp_content">
