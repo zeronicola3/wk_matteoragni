@@ -26,8 +26,11 @@ body [class*='col-'] {
 	overflow-x: hidden;
 
 	@include mq($from:tablet){
-	width: 90%;
-	max-width: 1250px;
+		width: 90%;
+		max-width: 1060px;
+		margin-right: 0;
+		margin-left: 0;
+
 	}
 }
 
