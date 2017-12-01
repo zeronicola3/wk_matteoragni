@@ -385,7 +385,7 @@ function webkolm_add_post_meta_boxes() {
 
   add_meta_box(
     'webkolm_designer',      // Unique ID
-    esc_html__( 'Degigned by', 'webkolm' ),    // Title
+    esc_html__( 'Designed by', 'webkolm' ),    // Title
     'webkolm_designer_meta_box',   // Callback function
     'project',         // Admin page (or post type)
     'side',         // Context
