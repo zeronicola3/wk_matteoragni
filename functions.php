@@ -593,5 +593,5 @@ function projects_to_client() {
 }
 add_action( 'p2p_init', 'projects_to_client' );
 
-
+include('vc_addon.php');
 ?>
