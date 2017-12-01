@@ -82,10 +82,6 @@ get_header(); ?>
                         <div class="project-col project-content">
                             <?php the_content(); ?>
                         </div>
-
-                        <div class="project-col project-content-eng">
-                            <?php the_content(); ?>
-                        </div>
                         
                     </div>
 
