@@ -28,6 +28,7 @@ $(document).ready(function() {
             var imageName = images[i].src.substr(0, images[i].src.length - 4);
             imageName += "@x2" + imageType;
 
+
             //rename image
             images[i].src = imageName;
           }
