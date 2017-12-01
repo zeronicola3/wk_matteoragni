@@ -166,7 +166,7 @@ gulp.task('default', function () {
 
 gulp.task('changed', function(callback) {
   runSequence(
-      'deploy',
+     // 'deploy',
       'commit-changes',                              // <---
       'pull',                                        // <---    INIBITORE COMMIT
       'push-changes',                                // <---
