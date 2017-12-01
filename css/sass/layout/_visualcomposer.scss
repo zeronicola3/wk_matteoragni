@@ -36,8 +36,8 @@ body [class*='col-'] {
 
 .vc_column_container>.vc_column-inner {
     box-sizing: border-box;
-    padding-left: 0px;
-    padding-right: 95px;
+    padding-left: 0px !important;
+    padding-right: 95px !important;
     width: 100%;
 }
 
