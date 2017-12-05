@@ -37,7 +37,10 @@ header {
 	   	@include transition;
 
 	    #payoff, #barra {
-	    	opacity: 1;
+	    	opacity: 0;
+	    	@include mq($from: tablet) {
+	    		opacity: 1;
+	    	}
 	    }
 	    
 	}
