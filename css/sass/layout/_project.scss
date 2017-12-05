@@ -37,11 +37,15 @@
 	line-height: 1.3em;
 
 	.project-col {
+		width: 100%;
 		@include flex-child;
-		width: calc(50% - 95px);
 		height: auto;
 		margin-right: 95px;
 		margin-bottom: 100px;
+
+		@include mq($from: tablet) {
+			width: calc(50% - 95px);
+		}
 
 		p {
 			margin: 0;
