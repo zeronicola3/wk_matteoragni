@@ -8,10 +8,14 @@
 
 
 .project-cover-gallery {
-    height: 75vh;
+    height: 50vh;
     margin-bottom: 60px;
     overflow: hidden;
     position: relative;
+
+    @include mq($from: tablet) {
+    	height: 75vh;
+    }
 
     ul.slides {
         position: absolute;
