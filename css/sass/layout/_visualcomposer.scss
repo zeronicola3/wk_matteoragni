@@ -23,7 +23,7 @@ body [class*='col-'] {
 	margin: 0 auto;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	@include mq($from:tablet){
 		width: 100%;
