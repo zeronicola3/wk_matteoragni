@@ -477,16 +477,42 @@ function webkolm_gallery_meta_box( $object, $box ) {
   </p>
 <?php }
 
+// Display the post meta box.
+function webkolm_prizes_meta_box( $object, $box ) { 
+
+    wp_nonce_field( basename( __FILE__ ), 'webkolm_prizes_nonce' ); ?>
+
+    <?php $content = get_post_meta($object->ID, 'webkolm_prizes_test', true); 
+            $editor_id = "webkolm_prizes_id";
+    ?>
+
+  <p>
+    <?php wp_editor( $content, $editor_id); ?>
+
+
+  </p>
+<?php }
+
 
 
 add_action('save_post', 'wysiwyg_save_meta');
 function wysiwyg_save_meta(){
 
+        // GALLERY
         $editor_id = 'webkolm_gallery_id';
         $meta_key = 'webkolm_gallery_test';
 
         if(isset($_REQUEST[$editor_id]))
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
+
+        // PRIZES
+        $editor_id = 'webkolm_gallery_id';
+        $meta_key = 'webkolm_gallery_test';
+
+        if(isset($_REQUEST[$editor_id]))
+                update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
+
+
 }
 
 
