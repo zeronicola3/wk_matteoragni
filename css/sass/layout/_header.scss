@@ -72,13 +72,16 @@ header {
 }
 
 header.active {
-	#payoff, #barra {
-		opacity: 0 !important;
-	}
+	@include mq($from: tablet) {
+		#payoff, #barra {
+			opacity: 0 !important;
+		}
 
-	svg {
-		transform: translateY(12%);
-		@include transition;
+		svg {
+			
+			transform: translateY(12%);
+			@include transition;
+		}
 	}
 }
 
