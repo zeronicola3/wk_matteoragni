@@ -38,8 +38,12 @@ body [class*='col-'] {
 .vc_column_container>.vc_column-inner {
     box-sizing: border-box;
     padding-left: 0px !important;
-    padding-right: 95px !important;
+    padding-right: 0px !important;
     width: 100%;
+
+    @include mq($from:tablet){
+    	padding-right: 95px !important;
+    }
 }
 
 .wk_linkedcolumn {
