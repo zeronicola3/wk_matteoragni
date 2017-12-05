@@ -68,7 +68,7 @@ get_header(); ?>
 
 
 
-                    <div class="project-container">
+                    <div class="project-container wrapper">
                         <div class="project-col project-header">
                             <h4 class="project-title"><?php the_title(); ?></h4>
                             <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
