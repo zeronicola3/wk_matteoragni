@@ -93,12 +93,12 @@ body.nav-open a.mobile-menu {
 
 nav.onlymobile{
 	background:$sfondo_nav;
-	width: calc(100%); 
+	width: calc(100% - 48px); 
 	height: 100vh;
 	position: absolute;
 	z-index: 99999;
 	top: 0; 
-	right: -100%;
+	right: calc(-100% + 48px);
 	transition:all .4s;
 	
 	
