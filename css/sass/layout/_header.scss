@@ -41,8 +41,12 @@ header {
 	    width: 100%;
 	    top: 0;
 	    left: 0;
-	    opacity: 1;
-	    @include transition;
+
+	    #payoff, #barra {
+	    	opacity: 1;
+	    	@include transition;
+	    }
+	    
 	}
 	svg:not(:root) { overflow: visible; overflow-x:visible; overflow-y:visible;  }
 
