@@ -38,19 +38,12 @@ header {
 	    width: 100%;
 	    top: 0;
 	    left: 0;
-	   	@include transition;
-
-	   	@include mq($to: mobile) {
-	   		transform: translateY(22%);
-	   	}
+	    @include transition;
 
 	    #payoff, #barra {
-	    	opacity: 0;
-
-	    	@include mq($from: tablet) {
-	    		opacity: 1;
-	    	}
-	    }
+    		opacity: 1;
+    		@include transition;
+    	}
 	    
 	}
 	svg:not(:root) { overflow: visible; overflow-x:visible; overflow-y:visible;  }
@@ -71,13 +64,15 @@ header {
 }
 
 header.active {
-	#payoff, #barra {
-		opacity: 0 !important;
-	}
 
 	svg {
 		transform: translateY(12%);
 		@include transition;
+
+		#payoff, #barra {
+			opacity: 0 ;
+			@include transition;
+		}
 	}
 }
 
