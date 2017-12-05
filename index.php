@@ -76,7 +76,7 @@ get_header(); ?>
                         </div>
 
                         <div class="project-col project-prizes">
-                            <?php echo $meta['webkolm_prizes']['0']; ?>
+                            <?php echo $meta['webkolm_prizes_test']['0']; ?>
                         </div>
 
                         <div class="project-col project-content">
