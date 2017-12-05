@@ -6,7 +6,7 @@
 
 get_header(); ?>
 <div id="contenuti">
-	<div class="wrapper">
+
 		<div class="wp_content">
         <?php
             $args = array(
@@ -90,6 +90,5 @@ get_header(); ?>
         ?>
         <?php twentythirteen_paging_nav();?>
         </div>
-	</div>
 </div>
 <?php get_footer(); ?>
