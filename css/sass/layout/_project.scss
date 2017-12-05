@@ -62,7 +62,7 @@
 
 	.project-col .vc_column-inner  {
 		@include mq($to: mobile) {
-			padding-right: 0;
+			padding-right: 0 !important;
 		}
 	}
 
