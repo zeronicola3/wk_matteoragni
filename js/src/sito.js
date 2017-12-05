@@ -89,10 +89,10 @@ $(document).ready(function() {
 	}
 
 
-	$('body').waypoint(function(direction) {
+	$('#contenuti').waypoint(function(direction) {
 		$("header").toggleClass('active', direction === 'down');
 	}, {
-	    offset: '-1' // 
+	    offset: '90' // 
 	});
 
 
