@@ -40,6 +40,11 @@ header {
 	    left: 0;
 	   	@include transition;
 
+	   	@include mq($to: mobile) {
+	   		transform: translateY(22%);
+
+	   	}
+
 	    #payoff, #barra {
 	    	opacity: 0;
 
