@@ -14,13 +14,6 @@ header {
     	position: relative;
     	height: 100%;
 	}
-
-	&.active {
-		#payoff, #barra {
-			opacity: 0;
-			@include transition;
-		}
-	}
 }
 
 /* LOGO */
@@ -63,6 +56,13 @@ header {
 
 	}
 
+}
+
+header.active {
+	#payoff, #barra {
+		opacity: 0;
+		@include transition;
+	}
 }
 
 
