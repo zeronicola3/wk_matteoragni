@@ -89,7 +89,7 @@ $(document).ready(function() {
 	}
 
 
-	$('#contenuti').waypoint(function(direction) {
+	$('body').waypoint(function(direction) {
 		$("header").toggleClass('active', direction === 'down');
 	}, {
 	    offset: '-1' // 
