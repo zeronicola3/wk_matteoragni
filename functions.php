@@ -397,7 +397,7 @@ function webkolm_add_post_meta_boxes() {
     esc_html__( 'Prizes', 'webkolm' ),    // Title
     'webkolm_prizes_meta_box',   // Callback function
     'project',       // Admin page (or post type)
-    'side',         // Context
+    'normal',         // Context
     'default'         // Priority
   );
 
@@ -448,18 +448,6 @@ function webkolm_prizes_meta_box( $object, $box ) { ?>
   </p>
 <?php }
 
-// Display the post meta box.
-function webkolm_designer_meta_box( $object, $box ) { ?>
-
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_designer_nonce' ); ?>
-
-  <p>
-    <label for="webkolm_designer"><?php _e( "Name of designer", 'webkolm' ); ?></label>
-    <br />
-    <input class="widefat" type="text" name="webkolm_designer" id="webkolm_designer" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_designer', true ) ); ?>" />
-  </p>
-<?php }
-
 
 // Display the post meta box.
 function webkolm_gallery_meta_box( $object, $box ) { 
@@ -506,8 +494,8 @@ function wysiwyg_save_meta(){
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
 
         // PRIZES
-        $editor_id = 'webkolm_gallery_id';
-        $meta_key = 'webkolm_gallery_test';
+        $editor_id = 'webkolm_prizes_id';
+        $meta_key = 'webkolm_prizes_test';
 
         if(isset($_REQUEST[$editor_id]))
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
