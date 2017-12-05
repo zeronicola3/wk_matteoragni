@@ -60,6 +60,12 @@
 		}
 	}
 
+	.project-col .vc_column-inner  {
+		@include mq($to: mobile) {
+			padding-right: 0;
+		}
+	}
+
 	.project-header {
 		font-size: 1.25rem;
 		line-height: 1.4em;
