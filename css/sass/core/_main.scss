@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-	padding-top: 48px;
+	padding-top: 90px;
 
 	@include mq($from:tablet){
 		padding-top: 4em;
