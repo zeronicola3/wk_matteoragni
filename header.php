@@ -55,11 +55,12 @@
             <?php get_template_part('img/svg/matteoragni_logo.svg'); ?>
       </a>
 
-      <!-- MENU MOBILE -->
-      <?php include("block_menumobile.php"); ?>
-
       <!-- MENU WIDE -->
       <?php include("block_menuwide.php"); ?>
 
     </div>
+
+    
+      <!-- MENU MOBILE -->
+      <?php include("block_menumobile.php"); ?>
   </header>
