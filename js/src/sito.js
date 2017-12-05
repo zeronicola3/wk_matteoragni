@@ -92,7 +92,7 @@ $(document).ready(function() {
 	$('#contenuti').waypoint(function(direction) {
 		$("header").toggleClass('active', direction === 'down');
 	}, {
-	    offset: '-90' // 
+	    offset: '-1' // 
 	});
 
 
