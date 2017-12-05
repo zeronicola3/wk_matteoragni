@@ -20,11 +20,15 @@ header {
 
 #logo_sito {
 	display: block;
-    height: 90px;
+    height: 48px;
     width: 200px;
     vertical-align: middle;
     z-index: 99;
     position: relative;
+
+    @include mq($from: tablet) {
+    	height: 90px;
+    }
 
 	svg { 
 		overflow: visible;
@@ -38,6 +42,7 @@ header {
 
 	    #payoff, #barra {
 	    	opacity: 0;
+
 	    	@include mq($from: tablet) {
 	    		opacity: 1;
 	    	}
