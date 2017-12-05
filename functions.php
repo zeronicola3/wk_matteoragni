@@ -436,15 +436,16 @@ function webkolm_project_year_meta_box( $object, $box ) { ?>
   </p>
 <?php }
 
-// Display the post meta box. 
-function webkolm_prizes_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_prizes_nonce' ); ?>
+// Display the post meta box.
+function webkolm_designer_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_designer_nonce' ); ?>
 
   <p>
-    <label for="webkolm_prizes"><?php _e( "", 'webkolm' ); ?></label>
+    <label for="webkolm_designer"><?php _e( "Name of designer", 'webkolm' ); ?></label>
     <br />
-    <textarea name="webkolm_prizes" id="webkolm_prizes"><?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_prizes', true ) ); ?></textarea>
+    <input class="widefat" type="text" name="webkolm_designer" id="webkolm_designer" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_designer', true ) ); ?>" />
   </p>
 <?php }
 
