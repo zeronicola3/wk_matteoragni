@@ -78,6 +78,10 @@ header.active {
 	svg {
 		transform: translateY(12%);
 		@include transition;
+
+		@include mq($to: mobile) {
+			transform: translateY(22%);
+		}
 	}
 }
 
