@@ -27,7 +27,7 @@ body {
 	padding-top: 90px;
 
 	@include mq($from:tablet){
-		padding-top: 4em;
+		padding-top: 90epx;
 	}
 
 	&:after, &:before{
