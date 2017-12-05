@@ -38,13 +38,14 @@ header {
 	    width: 100%;
 	    top: 0;
 	    left: 0;
-	    transform: translateY(22%);
 	   	@include transition;
-	   	transform: translateY(0%);
-
 
 	    #payoff, #barra {
-	    	opacity: 1;
+	    	opacity: 0;
+
+	    	@include mq($from: tablet) {
+	    		opacity: 1;
+	    	}
 	    }
 	    
 	}
@@ -66,15 +67,13 @@ header {
 }
 
 header.active {
-	@include mq($from: tablet) {
-		#payoff, #barra {
-			opacity: 0 !important;
-		}
+	#payoff, #barra {
+		opacity: 0 !important;
+	}
 
-		svg {
-			transform: translateY(12%);
-			@include transition;
-		}
+	svg {
+		transform: translateY(12%);
+		@include transition;
 	}
 }
 
