@@ -17,7 +17,8 @@ header {
 
 	&.active {
 		#payoff, #barra {
-			display: none;
+			opacity: 0;
+			@include transition;
 		}
 	}
 }
