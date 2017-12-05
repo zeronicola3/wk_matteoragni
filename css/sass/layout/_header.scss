@@ -40,17 +40,11 @@ header {
 	    left: 0;
 	    transform: translateY(22%);
 	   	@include transition;
+	   	transform: translateY(0%);
 
-	   	@include mq($from: tablet) {
-	    	transform: translateY(0%);
-	    }
 
 	    #payoff, #barra {
-	    	opacity: 0;
-
-	    	@include mq($from: tablet) {
-	    		opacity: 1;
-	    	}
+	    	opacity: 1;
 	    }
 	    
 	}
