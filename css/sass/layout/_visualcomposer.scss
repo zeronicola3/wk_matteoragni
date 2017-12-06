@@ -43,7 +43,9 @@ body [class*='col-'] {
     width: 100%;
 
     @include mq($from:tablet){
-    	padding-right: 95px !important;
+    	//padding-right: 95px !important;
+    	padding-left: 15px;
+    	padding-right: 15px;
     }
 }
 
