@@ -28,6 +28,7 @@ get_header(); ?>
 
                     foreach ($connected as $conn) {
                         $client_id = $conn->ID;
+                        echo $conn->ID;
                         $client_name = $client_id->post_title;
                     }
 
