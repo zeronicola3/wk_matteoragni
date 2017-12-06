@@ -75,7 +75,7 @@ get_header(); ?>
                         <div class="project-col project-header">
                             <h4 class="project-title"><?php the_title(); ?></h4>
                             <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
-                            <span class="project-client"><?php echo $client_name; ?><br></span>
+                            <!--span class="project-client"><?php echo $client_name; ?><br></span-->
                             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
                         </div>
 
