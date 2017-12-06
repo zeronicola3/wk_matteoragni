@@ -68,8 +68,12 @@ header {
 header.active {
 
 	svg {
-		transform: translateY(12%);
+		transform: translateY(22%);
 		@include transition;
+
+		@include mq($from: tablet) {
+			transform: translateY(12%);
+		}
 
 		#payoff, #barra {
 			opacity: 0 !important;
