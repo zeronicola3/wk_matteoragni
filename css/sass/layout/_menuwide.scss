@@ -17,6 +17,7 @@ nav.nomobile {
 			display: inline-block;
 			position: relative;
 			float: left;
+			margin-left:50px;
 
 			a {
 				font-size: 13px;
@@ -25,10 +26,6 @@ nav.nomobile {
 				word-spacing: 0.3em;
 				text-transform: uppercase;
 				padding-bottom: 7px;
-				padding-left: 4px;
-				padding-right: 4px;
-				margin-left:50px;
-				margin-right: 0px; 
 				font-weight: bold;
 			}
 
