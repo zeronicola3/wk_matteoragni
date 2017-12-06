@@ -77,3 +77,12 @@ nav.nomobile {
 
 	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { height: 65px; opacity: 1; }
 }
+
+.notouch ul##menu_wide li a::after {
+	content: " ";
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 3px;
+	background-color: $nero;
+}
