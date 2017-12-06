@@ -84,5 +84,6 @@ nav.nomobile {
 	background-color: $nero;
 	display: inline-block;
 	left: 0;
-	opacity: 1;
+	opacity: 1 !important;
+	@include transition;
 }
