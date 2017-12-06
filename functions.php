@@ -601,8 +601,8 @@ add_action( 'p2p_init', 'projects_to_projects' );
 function projects_to_client() {
     p2p_register_connection_type( array(
         'name' => 'projects_to_client',
-        'from' => 'project',
-        'to' => 'client',
+        'from' => 'client',
+        'to' => 'project',
         'reciprocal' => true,
     ) );
 }
