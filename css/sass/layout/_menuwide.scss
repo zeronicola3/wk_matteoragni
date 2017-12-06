@@ -29,6 +29,19 @@ nav.nomobile {
 				font-weight: bold;
 			}
 
+			a::after {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 2px;
+				background-color: $nero;
+				display: inline-block;
+				left: 0;
+				opacity: 0;
+				@include transition;
+			}
+
 			ul.sub-menu {
 				position: relative;
 				text-align: left;
@@ -76,14 +89,6 @@ nav.nomobile {
 }
 
 .notouch ul#menu_wide li a:hover::after {
-	content: " ";
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	height: 2px;
-	background-color: $nero;
-	display: inline-block;
-	left: 0;
 	opacity: 1 !important;
 	@include transition;
 }
