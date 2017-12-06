@@ -38,8 +38,6 @@ get_header(); ?>
                             $numslide=1;
                             $post_content = get_post_meta($post->ID, 'webkolm_gallery_test', true);
 
-
-
                             if($post_content != "") {
 
                                 preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
@@ -67,9 +65,7 @@ get_header(); ?>
                                     </li>
                                     <?php $numslide++;
                                 }
-
                             }   ?>
-                          
                         </ul>
                     </div>
 
