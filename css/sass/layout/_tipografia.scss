@@ -20,6 +20,7 @@ a {
 a:hover {
 	text-decoration:none;
   outline:none !important;
+  opacity: 1 !important;
 }
 
 @mixin textexpand {
