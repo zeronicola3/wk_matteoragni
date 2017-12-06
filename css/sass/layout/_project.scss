@@ -92,9 +92,12 @@
 		line-height: 1.35em;
 		width: 100% !important;
 		margin-right: 0;
+		margin-left: 0;
 
 		@include mq($from: tablet) {
 			margin-bottom: 0;
+			margin-right: 0;
+			margin-left: 0;
 		}
 	}
 
