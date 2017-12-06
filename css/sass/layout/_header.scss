@@ -65,6 +65,15 @@ header {
 
 }
 
+.notouch #logo_sito:hover {
+	opacity: 1;
+
+	#barra {
+		opacity: 1;
+		@include transition;
+	}
+}
+
 header.active {
 
 	svg {
