@@ -23,6 +23,14 @@ get_header(); ?>
                     $meta = get_post_meta( $post->ID ); 
                     $elem_number = rand(10,9999);
 
+
+                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
+
+                    foreach ($connected as $conn) {
+                        $client_id = $conn->ID;
+                        $client_name = $client_id->post_title;
+                    }
+
                     ?>
 
                     <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?>">
@@ -72,6 +80,7 @@ get_header(); ?>
                         <div class="project-col project-header">
                             <h4 class="project-title"><?php the_title(); ?></h4>
                             <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
+                            <span class="project-client"><?php echo $client_name; ?><br></span>
                             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
                         </div>
 
