@@ -648,7 +648,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
 
               console.log(attachment.id);
 
-              $().attr()
+             // $().attr()
 
               // Hide the add image link
               addImgLink.addClass( 'hidden' );
