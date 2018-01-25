@@ -573,8 +573,6 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   // See if there's a media id already saved as post meta
   $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img', true );
 
-  print_r($your_img_id);
-
   // Get the image src
   $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
 
@@ -701,7 +699,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario' );
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
