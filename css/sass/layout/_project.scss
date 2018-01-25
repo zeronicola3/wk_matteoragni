@@ -62,6 +62,10 @@
 		padding-bottom: 0;
 	}
 
+	.wkcol-12 {
+		padding: 0;
+	}
+
 	.project-content .vc_column-inner  {
 		@include mq($to: mobile) {
 			padding-right: 0 !important;
