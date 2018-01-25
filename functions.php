@@ -10,7 +10,7 @@
 /* featured image */
 add_theme_support( 'post-thumbnails' );
 
-//wp_enqueue_media();
+wp_enqueue_media();
 
 
 add_filter('show_admin_bar', '__return_false');
