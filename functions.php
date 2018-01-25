@@ -637,6 +637,8 @@ function be_attachment_field_credit( $form_fields, $post ) {
         $checked = 'checked';
     }
 
+    echo $ischeck;
+
     $form_fields['image-bg-size'] = array(
         'label' => 'Immagine non tagliata:',
         'input' => 'html',
