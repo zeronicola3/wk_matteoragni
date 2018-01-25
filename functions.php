@@ -634,11 +634,11 @@ function be_attachment_field_credit( $form_fields, $post ) {
     $checked = ($ischeck) ? 'checked' : '';
 
     $form_fields['image-bg-size'] = array(
-        'label' => 'Fullwidth image:',
+        'label' => 'Immagine non tagliata:',
         'input' => 'html',
         'html' => "<input type='checkbox' {$checked} name='attachments[{$post->ID}][image-bg-size]' id='attachments[{$post->ID}][image-bg-size]' />",
         'value' => get_post_meta( $post->ID, 'image-bg-size', true ),
-        'helps' => 'If it is checked, that image take ',
+        'helps' => 'Se selezionato, l`immagine verrà visualizzata per intero',
     );
     
     return $form_fields;
