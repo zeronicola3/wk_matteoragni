@@ -657,7 +657,7 @@ add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
  * @return $post array, modified post data
  */
 function be_attachment_field_credit_save( $post, $attachment ) {
-    if( isset( $attachment['image-bg-size'] ) )
+    //if( isset( $attachment['image-bg-size'] ) )
         update_post_meta( $post['ID'], 'image-bg-size', $attachment['image-bg-size'] );
     
     return $post;
