@@ -634,11 +634,11 @@ function be_attachment_field_credit( $form_fields, $post ) {
     $checked = ($ischeck) ? 'checked' : '';
 
     $form_fields['image-bg-size'] = array(
-        'label' => 'Background size',
+        'label' => 'Fullwidth image:',
         'input' => 'html',
         'html' => "<input type='checkbox' {$checked} name='attachments[{$post->ID}][image-bg-size]' id='attachments[{$post->ID}][image-bg-size]' />",
         'value' => get_post_meta( $post->ID, 'image-bg-size', true ),
-        'helps' => 'Select background-size value for single image in the gallery',
+        'helps' => 'If it is checked, that image take ',
     );
     
     return $form_fields;
