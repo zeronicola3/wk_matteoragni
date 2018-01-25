@@ -49,7 +49,6 @@ get_header(); ?>
                                     $url_big = wp_get_attachment_image_src( $item, 'large' );
                                     //  image field TRUE = cover; FALSE = contain
                                     $is_covered = (bool) get_post_meta( $item, 'image-bg-size', true );
-                                    print_r( get_post_meta( $item, 'image-bg-size', true ));
                                       
                                     ?>
                                     <li class="project_slide-<?= $numslide; ?> slideimg">
