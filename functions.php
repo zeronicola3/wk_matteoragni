@@ -652,7 +652,7 @@ function be_attachment_field_credit_save( $post, $attachment ) {
     
     return $post;
 }
-add_filter( 'attachment_fields_to_save', 'be_attachment_field_credit_save', 10, 2
+add_filter( 'attachment_fields_to_save', 'be_attachment_field_credit_save', 10, 2);
 
 
 
