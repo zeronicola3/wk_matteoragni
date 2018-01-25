@@ -585,7 +585,8 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   <!-- Your image container, which can be manipulated with js -->
   <div class="custom-img-container">
       <?php if ( $you_have_img ) : ?>
-          <img src="<?php echo $your_img_src[0] ?>" alt="" style="max-width:100%;" />
+          <img src="<?php echo $your_img_src[0] ?>" alt="" style="max-width:100%;" /> 
+          <?php upload_post_meta($post->ID, 'webkolm_featured_img', $your_img_id ); ?>
       <?php endif; ?>
   </div>
 
