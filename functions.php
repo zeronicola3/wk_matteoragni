@@ -646,6 +646,8 @@ function webkolm_featured_img_box( $object, $box ) { ?>
               // Send the attachment id to our hidden input
               imgIdInput.val( attachment.id );
 
+              console.log(attachment.id);
+
               // Hide the add image link
               addImgLink.addClass( 'hidden' );
 
