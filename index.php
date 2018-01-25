@@ -23,8 +23,9 @@ get_header(); ?>
                     $meta = get_post_meta( $post->ID ); 
                     $elem_number = rand(10,9999);
 
-                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'from' )->get_connected( $post->ID );
+                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
 
+                    print_r($connected);
                     foreach ($connected as $conn) {
                         $client_id = $conn->ID;
                         $client_name = $client_id->post_title;
