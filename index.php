@@ -72,18 +72,18 @@ get_header(); ?>
 
 
                     <div class="project-container wrapper">
-                        <div class="project-col project-header">
+                        <div class="project-col wkcol-5 project-header">
                             <h4 class="project-title"><?php the_title(); ?></h4>
                             <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
                             <!--span class="project-client"><?php echo $client_name; ?><br></span-->
                             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
                         </div>
-
+                        <div class="project-col wkcol-1">></div>
                         <div class="project-col project-prizes">
                             <?php echo $meta['webkolm_prizes_test']['0']; ?>
                         </div>
-
-                        <div class="project-col project-content">
+                        <div class="project-col wkcol-1">></div>
+                        <div class="project-col project-content wkcol-12">
                             <?php the_content(); ?>
                         </div>
                         
