@@ -600,7 +600,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   </p>
 
   <!-- A hidden input to set and post the chosen image id -->
-  <input class="webkolm_featured_img" id="webkolm_featured_img" name="webkolm_featured_img" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />
+  <input class="webkolm_featured_img_input" name="webkolm_featured_img" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />
 
   <script>
         jQuery(function($){
@@ -611,7 +611,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
               addImgLink = metaBox.find('.upload-custom-img'),
               delImgLink = metaBox.find( '.delete-custom-img'),
               imgContainer = metaBox.find( '.custom-img-container'),
-              imgIdInput = metaBox.find( '#webkolm_featured_img' );
+              imgIdInput = metaBox.find( '.webkolm_featured_img_input' );
           
           // ADD IMAGE LINK
           addImgLink.on( 'click', function( event ){
