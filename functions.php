@@ -628,9 +628,15 @@ include('vc_addon.php');
  */
  
 function be_attachment_field_credit( $form_fields, $post ) {
+
+
+    $ischeck = (bool) get_post_meta($post->ID, 'image-bg-size', true);
+    $checked = ($ischeck) ? 'checked' : '';
+
     $form_fields['image-bg-size'] = array(
         'label' => 'Background size',
-        'input' => 'checkbox',
+        'input' => 'html',
+        'html' => "<input type='checkbox' {$checked} name='attachments[{$post->ID}][image-bg-size]' id='attachments[{$post->ID}][image-bg-size]' />",
         'value' => get_post_meta( $post->ID, 'image-bg-size', true ),
         'helps' => 'Select background-size value for single image in the gallery',
     );
