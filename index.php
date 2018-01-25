@@ -20,15 +20,16 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
 
+                    $client_name = $client_link = $client_id = $connected = "";
                     $meta = get_post_meta( $post->ID ); 
                     $elem_number = rand(10,9999);
 
-                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'from' )->get_connected( get_the_ID() );
+                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
 
-                    print_r($connected);
                     foreach ($connected as $conn) {
                         $client_id = $conn->ID;
-                        $client_name = $client_id->post_title;
+                        $client_name = $conn->post_name;
+                        $client_link = $conn->webkolm_client_link;
                     }
 
                     ?>
@@ -79,7 +80,9 @@ get_header(); ?>
                         <div class="project-col wkcol-5 project-header">
                             <h4 class="project-title"><?php the_title(); ?></h4>
                             <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
-                            <span class="project-client"><?php echo $client_name; ?><br></span>
+                        <?php if($client_id != ""){ ?>
+                            <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a><br></span>
+                        <?php } ?>
                             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
                         </div>
                         <div class="wkcol-1"></div>
@@ -93,7 +96,8 @@ get_header(); ?>
                         
                     </div>
 
-        <?php   endwhile;
+        <?php   
+                endwhile;
             endif;
         ?>
         <?php twentythirteen_paging_nav();?>

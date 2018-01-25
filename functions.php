@@ -10,6 +10,8 @@
 /* featured image */
 add_theme_support( 'post-thumbnails' );
 
+wp_enqueue_media();
+
 
 add_filter('show_admin_bar', '__return_false');
 
@@ -419,6 +421,24 @@ function webkolm_add_post_meta_boxes() {
     'default'         // Priority
   );
 
+  add_meta_box(
+    'webkolm_checkboxes',      // Unique ID
+    esc_html__( 'Post settings', 'webkolm' ),    // Title
+    'webkolm_checkboxes_box',   // Callback function
+    'project',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_featured_img',      // Unique ID
+    esc_html__( 'Secondary Feautured Image', 'webkolm' ),    // Title
+    'webkolm_featured_img_box',   // Callback function
+    'project',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
 }
 
 
@@ -522,6 +542,150 @@ function webkolm_client_link_meta_box( $object, $box ) { ?>
 <?php }
 
 
+// Display the post meta box.
+function webkolm_checkboxes_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_homepage_post_box_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_post_secondario_nonce' ); ?>
+  <?php $meta = get_post_meta( $object->ID ) ;
+
+  //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
+
+  <p>
+    
+    <input class="widefat" type="checkbox" name="webkolm_homepage_post_box" id="webkolm_homepage_post_box" value="yes" <?php if ( isset ( $meta['webkolm_homepage_post_box'] ) ) checked( $meta['webkolm_homepage_post_box'][0], 'yes' ); ?> />
+    <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
+    <br/><br/>
+    <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_sfigato'][0], 'yes' ); ?> />
+    <?php _e( "Post secondario", 'webkolm' ); ?><br/>
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_featured_img_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_feature_img_box_nonce' ); 
+  
+  global $post;
+
+  // Get WordPress' media upload URL
+  $upload_link = esc_url( get_upload_iframe_src( 'image', $post->ID ) );
+
+  // See if there's a media id already saved as post meta
+  $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img', true );
+
+  // Get the image src
+  $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
+
+  // For convenience, see if the array is valid
+  $you_have_img = is_array( $your_img_src );
+  ?>
+
+  <!-- Your image container, which can be manipulated with js -->
+  <div class="custom-img-container">
+      <?php if ( $you_have_img ) : ?>
+          <img src="<?php echo $your_img_src[0] ?>" alt="" style="max-width:100%;" />
+      <?php endif; ?>
+  </div>
+
+  <!-- Your add & remove image links -->
+  <p class="hide-if-no-js">
+      <a class="upload-custom-img <?php if ( $you_have_img  ) { echo 'hidden'; } ?>" 
+         href="<?php echo $upload_link ?>">
+          <?php _e('Set secondary image') ?>
+      </a>
+      <a class="delete-custom-img <?php if ( ! $you_have_img  ) { echo 'hidden'; } ?>" 
+        href="#">
+          <?php _e('Remove this image') ?>
+      </a>
+  </p>
+
+  <!-- A hidden input to set and post the chosen image id -->
+  <input class="webkolm_featured_img" name="webkolm_featured_img" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />
+
+  <script>
+        jQuery(function($){
+
+          // Set all variables to be used in scope
+          var frame,
+              metaBox = $('#webkolm_featured_img.postbox'), // Your meta box id here
+              addImgLink = metaBox.find('.upload-custom-img'),
+              delImgLink = metaBox.find( '.delete-custom-img'),
+              imgContainer = metaBox.find( '.custom-img-container'),
+              imgIdInput = metaBox.find( '.webkolm_featured_img' );
+          
+          // ADD IMAGE LINK
+          addImgLink.on( 'click', function( event ){
+            
+            event.preventDefault();
+            
+            // If the media frame already exists, reopen it.
+            if ( frame ) {
+              frame.open();
+              return;
+            }
+            
+            // Create a new media frame
+            frame = wp.media({
+              title: 'Secondary featured image',
+              button: {
+                text: 'Use this media'
+              },
+              multiple: false  // Set to true to allow multiple files to be selected
+            });
+
+            
+            // When an image is selected in the media frame...
+            frame.on( 'select', function() {
+              
+              // Get media attachment details from the frame state
+              var attachment = frame.state().get('selection').first().toJSON();
+
+              // Send the attachment URL to our custom image input field.
+              imgContainer.append( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
+
+              // Send the attachment id to our hidden input
+              imgIdInput.val( attachment.id );
+
+              // Hide the add image link
+              addImgLink.addClass( 'hidden' );
+
+              // Unhide the remove image link
+              delImgLink.removeClass( 'hidden' );
+            });
+
+            // Finally, open the modal on click
+            frame.open();
+          });
+          
+          
+          // DELETE IMAGE LINK
+          delImgLink.on( 'click', function( event ){
+
+            event.preventDefault();
+
+            // Clear out the preview image
+            imgContainer.html( '' );
+
+            // Un-hide the add image link
+            addImgLink.removeClass( 'hidden' );
+
+            // Hide the delete image link
+            delImgLink.addClass( 'hidden' );
+
+            // Delete the image id from the hidden input
+            imgIdInput.val( '' );
+
+          });
+
+        });
+  </script>
+
+<?php }
+
+
+
 
 
 
@@ -537,7 +701,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link');
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
@@ -582,6 +746,8 @@ function webkolm_save_metas($post_id, $post) {
                     
     }
 }
+
+
 
 
 
