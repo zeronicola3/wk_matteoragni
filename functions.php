@@ -607,7 +607,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
 
           // Set all variables to be used in scope
           var frame,
-              metaBox = $('#webkolm_featured_img'), // Your meta box id here
+              metaBox = $('#webkolm_featured_img.postbox'), // Your meta box id here
               addImgLink = metaBox.find('.upload-custom-img'),
               delImgLink = metaBox.find( '.delete-custom-img'),
               imgContainer = metaBox.find( '.custom-img-container'),
@@ -648,7 +648,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
 
               console.log(attachment.id);
 
-             // $().attr()
+              $().attr()
 
               // Hide the add image link
               addImgLink.addClass( 'hidden' );
