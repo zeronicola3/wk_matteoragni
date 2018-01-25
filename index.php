@@ -47,6 +47,8 @@ get_header(); ?>
                                 foreach ($array_id as &$item) {
                                     $url_small = wp_get_attachment_image_src( $item, 'medium' );
                                     $url_big = wp_get_attachment_image_src( $item, 'large' );
+                                    //  image field TRUE = cover; FALSE = contain
+                                    $is_covered = (bool) get_post_meta( get_post_thumbnail_id(), 'image-bg-size', true );
                                       
                                     ?>
                                     <li class="project_slide-<?= $numslide; ?> slideimg">
@@ -58,6 +60,7 @@ get_header(); ?>
                                             @media (min-width: 768px) {  
                                                 .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { 
                                                     background-image:url('<?php echo $url_big['0'] ?>');
+                                                    background-size: <?php if($is_covered) { echo 'cover' } else { 'contain' }?>;
                                                 }
                                             }
 
