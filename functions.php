@@ -573,6 +573,8 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   // See if there's a media id already saved as post meta
   $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img', true );
 
+  echo $your_img_id;
+
   // Get the image src
   $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
 
