@@ -46,7 +46,6 @@
 		margin-bottom: 50px;
 
 		@include mq($from: tablet) {
-			width: calc(50% - 30px);
 			margin-bottom: 100px;
 		}
 
