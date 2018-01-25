@@ -25,7 +25,7 @@ get_header(); ?>
 
                     $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_post() );
 
-                    print_r($connected);
+                    //print_r($connected);
                     foreach ($connected as $conn) {
                         $client_id = $conn->ID;
                         $client_name = $client_id->post_title;
