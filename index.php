@@ -78,11 +78,11 @@ get_header(); ?>
                             <!--span class="project-client"><?php echo $client_name; ?><br></span-->
                             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
                         </div>
-                        <div class="project-col wkcol-1">></div>
+                        <div class="project-col wkcol-1"></div>
                         <div class="project-col project-prizes">
                             <?php echo $meta['webkolm_prizes_test']['0']; ?>
                         </div>
-                        <div class="project-col wkcol-1">></div>
+                        <div class="project-col wkcol-1"></div>
                         <div class="project-col project-content wkcol-12">
                             <?php the_content(); ?>
                         </div>
