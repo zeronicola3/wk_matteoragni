@@ -630,8 +630,12 @@ include('vc_addon.php');
 function be_attachment_field_credit( $form_fields, $post ) {
 
 
-    $ischeck = (bool) get_post_meta($post->ID, 'image-bg-size', true);
-    $checked = ($ischeck) ? 'checked' : '';
+    $ischeck = get_post_meta($post->ID, 'image-bg-size', true);
+    if(($ischeck == 'off') || ($ischeck == '')) {
+        $checked = '';
+    } elseif($ischeck == 'on') {
+        $checked = 'checked';
+    }
 
     $form_fields['image-bg-size'] = array(
         'label' => 'Immagine non tagliata:',
