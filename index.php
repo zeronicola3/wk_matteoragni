@@ -60,7 +60,7 @@ get_header(); ?>
                                             @media (min-width: 768px) {  
                                                 .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { 
                                                     background-image:url('<?php echo $url_big['0'] ?>');
-                                                    background-size: <?php if($is_covered) { echo 'cover' } else { 'contain' }?>;
+                                                    background-size: <?php if($is_covered){ echo 'cover'; }else{ echo 'contain'; }?> ;
                                                 }
                                             }
 
