@@ -611,7 +611,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
               addImgLink = metaBox.find('.upload-custom-img'),
               delImgLink = metaBox.find( '.delete-custom-img'),
               imgContainer = metaBox.find( '.custom-img-container'),
-              imgIdInput = metaBox.find( '.webkolm_featured_img' );
+              imgIdInput = metaBox.find( '#webkolm_featured_img' );
           
           // ADD IMAGE LINK
           addImgLink.on( 'click', function( event ){
