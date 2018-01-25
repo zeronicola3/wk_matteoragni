@@ -573,8 +573,6 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   // See if there's a media id already saved as post meta
   $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img', true );
 
-  echo $your_img_id;
-
   // Get the image src
   $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
 
@@ -586,7 +584,6 @@ function webkolm_featured_img_box( $object, $box ) { ?>
   <div class="custom-img-container">
       <?php if ( $you_have_img ) : ?>
           <img src="<?php echo $your_img_src[0] ?>" alt="" style="max-width:100%;" /> 
-          <?php upload_post_meta($post->ID, 'webkolm_featured_img', $your_img_id ); ?>
       <?php endif; ?>
   </div>
 
