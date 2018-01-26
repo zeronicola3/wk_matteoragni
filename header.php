@@ -73,6 +73,7 @@
     });
 
     bar.animate(1.0).then(function() {
+        console.log('ready');
         $('#loader').addClass('ready');
     });  // Number from 0.0 to 1.0
   </script>
