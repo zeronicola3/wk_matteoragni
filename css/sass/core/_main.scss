@@ -47,8 +47,10 @@ body {
 	}
 }
 
+
 body.bloccoscroll {
   overflow: hidden;
+  position: fixed;
 }
 
 /* CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI  */
