@@ -23,6 +23,10 @@ header {
 	}
 }
 
+header.hidden {
+	transform: translateY('-100%');
+}
+
 /* LOGO */
 
 #logo_sito {
