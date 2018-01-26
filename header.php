@@ -73,7 +73,7 @@
       color: '#000',
       trailColor: '#FFF',
       trailWidth: 1,
-      svgStyle: {width: '100%', height: '3px'}
+      svgStyle: {width: '100%', height: '5px'}
     });
 
     bar.animate(1.0, function() {
@@ -110,6 +110,7 @@
     #loader .slogan-container #progressbar {
       width: 100%;
       position: absolute;
+      height: 5px;
     }
 
 
