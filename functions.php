@@ -430,7 +430,7 @@ function webkolm_add_post_meta_boxes() {
 
   add_meta_box(
     'webkolm_featured_img_input',      // Unique ID
-    esc_html__( 'Secondary Feautured Image', 'webkolm' ),    // Title
+    esc_html__( 'Immagine per slider homepage', 'webkolm' ),    // Title
     'webkolm_featured_img_box',   // Callback function
     'project',       // Admin page (or post type)
     'side',         // Context
