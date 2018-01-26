@@ -55,7 +55,11 @@
 <body class="<?php if(is_front_page()){ echo 'home';} ?>">
 
   <div id="loader">
-      <div id="progressbar"></div>
+      
+      <div class="slogan-container">
+          <span class="slogan">we design for better days</span>
+          <div id="progressbar"></div>
+      </div>
   </div>
 
   <script>
