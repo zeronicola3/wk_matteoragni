@@ -95,17 +95,14 @@
     }
 
     #loader .slogan-container {
-      width: auto;
       position: absolute;
-      display: inline-block;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
 
-    #loader .slogan-container {
-      display: inline-block;
-      font-size: 
+    #loader .slogan-container .slogan {
+      width: 100%;
     }
 
     #loader .slogan-container #progressbar {
