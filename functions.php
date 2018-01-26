@@ -429,7 +429,7 @@ function webkolm_add_post_meta_boxes() {
   );
 
   add_meta_box(
-    'webkolm_featured_img',      // Unique ID
+    'webkolm_featured_img_input',      // Unique ID
     esc_html__( 'Secondary Feautured Image', 'webkolm' ),    // Title
     'webkolm_featured_img_box',   // Callback function
     'project',       // Admin page (or post type)
@@ -561,34 +561,34 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
 
 
 // Display the post meta box.
-function webkolm_featured_img_box( $object, $box ) { ?>
+function webkolm_featured_img_box( $object, $box ) { 
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_feature_img_box_nonce' ); 
+    wp_nonce_field( basename( __FILE__ ), 'webkolm_featured_img_input_nonce' ); 
   
-  global $post;
+    global $post;
 
-  // Get WordPress' media upload URL
-  $upload_link = esc_url( get_upload_iframe_src( 'image', $post->ID ) );
+    // Get WordPress' media upload URL
+    $upload_link = esc_url( get_upload_iframe_src( 'image', $post->ID ) );
 
-  // See if there's a media id already saved as post meta
-  $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img', true );
+    // See if there's a media id already saved as post meta
+    $your_img_id = get_post_meta( $post->ID, 'webkolm_featured_img_input', true );
 
-  // Get the image src
-  $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
+    // Get the image src
+    $your_img_src = wp_get_attachment_image_src( $your_img_id, 'full' );
 
-  // For convenience, see if the array is valid
-  $you_have_img = is_array( $your_img_src );
-  ?>
+    // For convenience, see if the array is valid
+    $you_have_img = is_array( $your_img_src );
+    ?>
 
-  <!-- Your image container, which can be manipulated with js -->
-  <div class="custom-img-container">
+    <!-- Your image container, which can be manipulated with js -->
+    <div class="custom-img-container">
       <?php if ( $you_have_img ) : ?>
           <img src="<?php echo $your_img_src[0] ?>" alt="" style="max-width:100%;" /> 
       <?php endif; ?>
-  </div>
+    </div>
 
-  <!-- Your add & remove image links -->
-  <p class="hide-if-no-js">
+    <!-- Your add & remove image links -->
+    <p class="hide-if-no-js">
       <a class="upload-custom-img <?php if ( $you_have_img  ) { echo 'hidden'; } ?>" 
          href="<?php echo $upload_link ?>">
           <?php _e('Set secondary image') ?>
@@ -597,17 +597,17 @@ function webkolm_featured_img_box( $object, $box ) { ?>
         href="#">
           <?php _e('Remove this image') ?>
       </a>
-  </p>
+    </p>
 
-  <!-- A hidden input to set and post the chosen image id -->
-  <input class="webkolm_featured_img_input" name="webkolm_featured_img" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />
+    <!-- A hidden input to set and post the chosen image id -->
+    <input class="webkolm_featured_img_input" name="webkolm_featured_img_input" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />
 
-  <script>
+    <script>
         jQuery(function($){
 
           // Set all variables to be used in scope
           var frame,
-              metaBox = $('#webkolm_featured_img.postbox'), // Your meta box id here
+              metaBox = $('#webkolm_featured_img_input.postbox'), // Your meta box id here
               addImgLink = metaBox.find('.upload-custom-img'),
               delImgLink = metaBox.find( '.delete-custom-img'),
               imgContainer = metaBox.find( '.custom-img-container'),
@@ -678,7 +678,7 @@ function webkolm_featured_img_box( $object, $box ) { ?>
           });
 
         });
-  </script>
+    </script>
 
 <?php }
 

@@ -39,9 +39,13 @@ header {
 		position: absolute;
 	    height: 100%;
 	    width: 100%;
-	    top: 0;
+	    top: 22%;
 	    left: 0;
 	    @include transition;
+
+	    @include mq($from: tablet){
+	    	top: 12%;
+	    }
 
 	    #payoff, #barra {
     		opacity: 1;
@@ -76,13 +80,7 @@ header {
 header.active {
 
 	svg {
-		transform: translateY(22%);
-		@include transition;
-
-		@include mq($from: tablet) {
-			transform: translateY(12%);
-		}
-
+		//@include transition;
 		#payoff, #barra {
 			opacity: 0 !important;
 			@include transition;
