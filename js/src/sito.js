@@ -84,11 +84,10 @@ $(document).ready(function() {
 			if((direction === 'up') && ($('header').hasClass('hidden'))) {
 		  		$("header").removeClass('hidden');
 		  	}
-		    
-
 		  }
-		})
-	} 
+		}{
+	    offset: '-1' // 
+	});
 
 	/* SLIDER SITO */
 
