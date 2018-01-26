@@ -103,12 +103,13 @@
 
     #loader .slogan-container .slogan {
       width: 100%;
+      font-size: 2.3rem;
+      font-weight: 600;
     }
 
     #loader .slogan-container #progressbar {
       width: 100%;
       position: absolute;
-      height: 3px;
     }
 
 
