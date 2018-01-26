@@ -104,7 +104,7 @@
 
     #loader .slogan-container .slogan {
       width: 100%;
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
