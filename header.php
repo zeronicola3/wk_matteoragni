@@ -96,7 +96,7 @@
 
     #loader .slogan-container {
       position: absolute;
-      width: fil-content;
+      width: content;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
