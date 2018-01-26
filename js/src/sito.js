@@ -50,7 +50,7 @@ $(document).ready(function() {
 		$("a.mobile-menu").on('click', function (){
 		  $('body').toggleClass('nav-open');
 		  $("body").toggleClass("bloccoscroll");
-//	      $("html").toggleClass("bloccoscroll");
+	      $("html").toggleClass("bloccoscroll");
 		});
 		
 		$("nav.onlymobile .menu").on('click', 'li a', function(){
