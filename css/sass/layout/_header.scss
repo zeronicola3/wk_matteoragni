@@ -82,8 +82,6 @@ header {
 }
 
 header.active {
-	height: 45px;
-	@include transition;
 
 	svg {
 		//@include transition;
@@ -93,8 +91,9 @@ header.active {
 		}
 	}
 
-	@include mq($from: tablet) {
-		height: 90;
+	@include mq($to: tablet) {
+		height: 48px;
+		@include transition;
 	}
 }
 
