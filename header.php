@@ -63,7 +63,7 @@
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
     var bar = new ProgressBar.Line(progressbar, {
-      strokeWidth: 2,
+      strokeWidth: 4,
       easing: 'easeInOut',
       duration: 1400,
       color: '#000',
