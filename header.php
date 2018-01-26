@@ -94,6 +94,10 @@
       margin: 20px;
       width: 400px;
       height: 3px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transition: translateX(-50%) translateY(-50%);
 
     }
 
