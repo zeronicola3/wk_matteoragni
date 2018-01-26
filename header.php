@@ -70,12 +70,12 @@
       trailColor: '#FFF',
       trailWidth: 1,
       svgStyle: {width: '100%', height: '3px'}
-    });
-
-    bar.animate(1.0).then(function() {
+    }).then(function() {
         console.log('ready');
         $('#loader').addClass('ready');
-    });  // Number from 0.0 to 1.0
+    });  // Number from 0.0 to 1.0;
+
+    bar.animate(1.0);
   </script>
 
 
