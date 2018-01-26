@@ -23,7 +23,7 @@ header {
 	}
 }
 
-header.disattivato {
+header.disattivo {
 	transform: translateY(-100%) !important;
 	@include transition;
 }
