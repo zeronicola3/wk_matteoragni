@@ -73,7 +73,7 @@
       color: '#000',
       trailColor: '#FFF',
       trailWidth: 1,
-      svgStyle: {width: '100%', height: '4px'}
+      svgStyle: {width: '100%', height: '3px'}
     });
 
     bar.animate(1.0, function() {
