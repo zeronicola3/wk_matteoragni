@@ -25,6 +25,7 @@ header {
 
 header.hidden {
 	transform: translateY('-100%');
+	@include trasition;
 }
 
 /* LOGO */
