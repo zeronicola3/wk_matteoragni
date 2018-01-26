@@ -76,7 +76,7 @@ $(document).ready(function() {
 		// RICOMPARE ALLO SCROLL UP
 
 		var waypoint_mobile = new Waypoint({
-		  element: $('header'),
+		  element: $('body'),
 		  handler: function(direction){
 		  	if((direction === 'down') && (!$('header').hasClass('hidden'))) {
 		  		$("header").addClass('hidden');
