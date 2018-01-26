@@ -80,7 +80,7 @@ $(document).ready(function() {
 		  handler: function(direction){
 		  	
 		  },
-  		offset: 20 
+  			offset: 20,
 	});
 
 	/* SLIDER SITO */
