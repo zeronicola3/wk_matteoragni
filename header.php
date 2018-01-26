@@ -97,7 +97,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transition: translateX(-50%) translateY(-50%);
+      transition: translateX(200px) translateY(-50%);
 
     }
 
