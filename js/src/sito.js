@@ -84,7 +84,7 @@ $(document).ready(function() {
 			if((direction === 'up') && ($('header').hasClass('hidden'))) {
 		  		$("header").removeClass('hidden');
 		  	}
-		  }, offset: 20
+		  }, offset: -1
 		});
 
 	}
