@@ -75,6 +75,7 @@
     bar.animate(1.0, function() {
         $('#loader').fadeOut();
     });
+    
   </script>
 
 
@@ -87,9 +88,6 @@
       top: 0;
       left: 0;
       z-index: 999999;
-    }
-    #loader.ready {
-        opacity: ;
     }
 
     #loader #progressbar {
