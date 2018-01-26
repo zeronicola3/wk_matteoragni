@@ -3,7 +3,7 @@
 /* BODY */
 
 html {
-	overflow-y: scroll;
+	overflow: hidden;
 }
 
 html.bloccoscroll { overflow-y:hidden; }
