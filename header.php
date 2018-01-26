@@ -103,7 +103,7 @@
 
     #loader .slogan-container .slogan {
       width: 100%;
-      font-size: 2.3rem;
+      font-size: 2.35rem;
       font-weight: 600;
     }
 
