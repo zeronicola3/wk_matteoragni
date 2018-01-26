@@ -73,6 +73,15 @@
     bar.animate(1.0);  // Number from 0.0 to 1.0
   </script>
 
+
+  <style>
+    #loader {
+      margin: 20px;
+      width: 400px;
+      height: 8px;
+    }
+  </style>
+
   <header>
     <div class="wrapper">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="logo_sito" class="titolo_sito">
