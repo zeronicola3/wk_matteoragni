@@ -54,6 +54,8 @@
 
 <body class="<?php if(is_front_page()){ echo 'home';} ?>">
 
+  <div id="loader"></div>
+
   <header>
     <div class="wrapper">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="logo_sito" class="titolo_sito">
