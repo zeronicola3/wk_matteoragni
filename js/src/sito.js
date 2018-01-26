@@ -14,7 +14,7 @@ function is_touch_device() {
 	  
 $(document).ready(function() {
 
-	$('#loader')delay(1000).addClass('ready');
+	$('#loader')delay(1).addClass('ready');
     	
 	// OTTIMIZZAZIONE PER RETINA */
 	
