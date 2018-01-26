@@ -77,13 +77,8 @@ $(document).ready(function() {
 
 		var waypoint_mobile = new Waypoint({
 		  element: $('header'),
-		  handler: function(direction) {
-		  	if((direction === 'down') && (!$('header').hasClass('hidden'))) {
-		  		$("header").addClass('hidden');
-		  	}
-			if((direction === 'up') && ($('header').hasClass('hidden'))) {
-		  		$("header").removeClass('hidden');
-		  	}
+		  handler: function(direction){
+		  	
 		  },
   		offset: 20 
 	});
