@@ -111,7 +111,7 @@
       width: 100%;
       position: absolute;
       height: 5px;
-      margin-top: 5px;
+      margin-top: 0px;
     }
 
 
