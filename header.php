@@ -96,8 +96,7 @@
 
     #loader .slogan-container {
       position: absolute;
-      max-width: 90%;
-      min-width: 500px;
+      min-width: 90%;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
@@ -114,6 +113,12 @@
       position: absolute;
       height: 5px;
       margin-top: 0px;
+    }
+
+    @media screen and (min-width: 600px) {
+      #loader .slogan-container {
+        min-width: 500px;
+      }
     }
 
 
