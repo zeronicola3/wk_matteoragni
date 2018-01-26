@@ -3,10 +3,10 @@
 /* BODY */
 
 html {
-	overflow: hidden;
+	overflow-y: scroll;
 }
 
-html.bloccoscroll { overflow-y:hidden; }
+html.bloccoscroll { overflow: hidden; }
 
 html, body {
 	@mixin testo_uno {font-family: 'Poppins', sans-serif;}
