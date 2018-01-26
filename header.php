@@ -95,7 +95,7 @@
     }
 
     #loader .slogan-container {
-      width: 500px;
+      width: auto;
       position: absolute;
       display: inline-block;
       left: 50%;
