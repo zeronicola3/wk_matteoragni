@@ -54,13 +54,15 @@
 
 <body class="<?php if(is_front_page()){ echo 'home';} ?>">
 
-  <div id="loader"></div>
+  <div id="loader">
+      <div id="progressbar"></div>
+  </div>
 
   <script>
     // progressbar.js@1.0.0 version is used
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-    var bar = new ProgressBar.Line(loader, {
+    var bar = new ProgressBar.Line(progressbar, {
       strokeWidth: 4,
       easing: 'easeInOut',
       duration: 1400,
@@ -76,6 +78,14 @@
 
   <style>
     #loader {
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    #loader #progressbar {
       margin: 20px;
       width: 400px;
       height: 8px;
