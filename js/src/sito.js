@@ -46,7 +46,6 @@ $(document).ready(function() {
 		
 		/* PER SMARTPHONE */
 		
-		
 		/* TASTO PER APERTURA MENU */
 		$("a.mobile-menu").on('click', function (){
 		  $('body').toggleClass('nav-open');
@@ -70,6 +69,25 @@ $(document).ready(function() {
 		});
 		
 		$("nav.onlymobile .menu li.current-menu-ancestor > a").addClass("attivo");
+
+
+
+		// HEADER A SCOMPARSE DE SCROLL DOWN
+		// RICOMPARE ALLO SCROLL UP
+
+		var waypoint_mobile = new Waypoint({
+		  element: $('#contenuti'),
+		  handler: function(direction) {
+		  	if((direction === 'down') && (!element.hasClass('hidden')) {
+		  		$("header").addClass('hidden');
+		  	}
+			if((direction === 'up') && (element.hasClass('hidden'))) {
+		  		$("header").removeClass('hidden');
+		  	}
+		    
+
+		  }
+		})
 	} 
 
 	/* SLIDER SITO */
