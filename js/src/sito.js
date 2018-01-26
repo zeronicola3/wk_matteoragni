@@ -87,6 +87,8 @@ $(document).ready(function() {
 		  }
 		});
 
+	}
+
 	/* SLIDER SITO */
 
 	if($(".project-cover-gallery").length > 0){
