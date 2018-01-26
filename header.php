@@ -63,11 +63,11 @@
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
     var bar = new ProgressBar.Line(progressbar, {
-      strokeWidth: 4,
+      strokeWidth: 2,
       easing: 'easeInOut',
       duration: 1400,
-      color: '#FFEA82',
-      trailColor: '#eee',
+      color: '#000',
+      trailColor: '#FFF',
       trailWidth: 1,
       svgStyle: {width: '100%', height: '100%'}
     });
