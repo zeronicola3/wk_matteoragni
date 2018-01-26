@@ -72,7 +72,12 @@
       svgStyle: {width: '100%', height: '3px'}
     });
 
-    bar.animate(1.0);
+    (function(){
+
+    });
+    bar.animate(1.0, function() {
+        console.log('Animation has finished');
+    });
   </script>
 
 
