@@ -78,10 +78,10 @@ $(document).ready(function() {
 		var waypoint_mobile = new Waypoint({
 		  element: $('#contenuti'),
 		  handler: function(direction) {
-		  	if((direction === 'down') && (!element.hasClass('hidden'))) {
+		  	if((direction === 'down') && (!$('header').hasClass('hidden'))) {
 		  		$("header").addClass('hidden');
 		  	}
-			if((direction === 'up') && (element.hasClass('hidden'))) {
+			if((direction === 'up') && ($('header').hasClass('hidden'))) {
 		  		$("header").removeClass('hidden');
 		  	}
 		    
