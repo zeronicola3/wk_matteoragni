@@ -70,22 +70,36 @@ $(document).ready(function() {
 		
 		$("nav.onlymobile .menu li.current-menu-ancestor > a").addClass("attivo");
 
+		var lastScrollTop = 0;
+		var header=$("header");
 
+		// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+		window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+			var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 
-		// HEADER A SCOMPARSE DE SCROLL DOWN
-		// RICOMPARE ALLO SCROLL UP
+			if(st > 70){
+				if (st > lastScrollTop ){
+				console.log('down');
 
-		var waypoint_mobile = new Waypoint({
-		  element: $('body'),
-		  handler: function(direction){
-		  	if((direction === 'down') && (!$('header').hasClass('hidden'))) {
-		  		$("header").addClass('hidden');
-		  	}
-			if((direction === 'up') && ($('header').hasClass('hidden'))) {
-		  		$("header").removeClass('hidden');
-		  	}
-		  }, offset: -1
-		});
+				// downscroll code
+				if(!header.hasClass("disattivo")){
+					header.addClass("disattivo");
+				}
+			} else {
+				// upscroll code
+				console.log('up');
+				if(header.hasClass("disattivo")){
+					header.removeClass("disattivo");
+				}
+			}
+
+			}else{
+				if(header.hasClass("disattivo")){
+					header.removeClass("disattivo");
+				}
+			}
+			lastScrollTop = st;
+		}, false);
 
 	}
 
