@@ -73,7 +73,7 @@
     });
 
     bar.animate(1.0, function() {
-        $('#loader').addClass('ready');
+        $('#loader').fadeOut();
     });
   </script>
 
@@ -88,11 +88,17 @@
       left: 0;
       z-index: 999999;
     }
+    #loader.ready {
+        opacity: ;
+    }
+
     #loader #progressbar {
       margin: 20px;
       width: 400px;
       height: 8px;
     }
+
+
   </style>
 
   <header>
