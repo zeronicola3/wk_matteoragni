@@ -32,13 +32,13 @@ nav.nomobile {
 			a::after {
 				content: " ";
 				position: absolute;
-				width: 100%;
+				width: 0%;
 				bottom: 0;
 				height: 2px;
 				background-color: $nero;
 				display: inline-block;
 				left: 0;
-				opacity: 0;
+				opacity: 1;
 				@include transition;
 			}
 
@@ -89,6 +89,6 @@ nav.nomobile {
 }
 
 .notouch ul#menu_wide li a:hover::after {
-	opacity: 1 !important;
+	width: 100%;
 	@include transition;
 }
