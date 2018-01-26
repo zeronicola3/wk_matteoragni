@@ -7,9 +7,13 @@ header {
 	top: 0;
 	position: fixed;
 	width: 100%;
-	height: 90px;
+	height: 70px;
 	background-color: $bianco;
 	//background-color: $bianco;
+
+	@include mq($from: tablet){
+		height: 90;
+	}
 
 	.wrapper {
     	position: relative;
