@@ -104,7 +104,7 @@
 
     #loader .slogan-container .slogan {
       width: 100%;
-      font-size: 2.35rem;
+      font-size: 1.35rem;
       font-weight: 600;
     }
 
@@ -118,6 +118,10 @@
     @media screen and (min-width: 600px) {
       #loader .slogan-container {
         min-width: 500px;
+      }
+
+      #loader .slogan-container .slogan {
+        font-size: 2.35rem;
       }
     }
 
