@@ -72,7 +72,10 @@ nav.nomobile {
 		/* ATTIVO VOCI */
 			
 		li.current-menu-item a, li.current-page-item a,  li.current-menu-parent > a {
-			border-bottom: 1px solid $nerochiaro;
+			&::after {
+				width: 100%;
+				@include transition;
+			}
 			ul.sub-menu { opacity: 1;}
 		}
 
