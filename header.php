@@ -72,11 +72,8 @@
       svgStyle: {width: '100%', height: '3px'}
     });
 
-    (function(){
-
-    });
     bar.animate(1.0, function() {
-        console.log('Animation has finished');
+        $('#loader').addClass('ready');
     });
   </script>
 
