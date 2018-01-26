@@ -12,7 +12,7 @@ header {
 	//background-color: $bianco;
 
 	@include mq($from: tablet){
-		height: 90;
+		height: 90px;
 	}
 
 	.wrapper {
