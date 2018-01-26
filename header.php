@@ -56,6 +56,23 @@
 
   <div id="loader"></div>
 
+  <script>
+    // progressbar.js@1.0.0 version is used
+    // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+    var bar = new ProgressBar.Line(loader, {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+  </script>
+
   <header>
     <div class="wrapper">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="logo_sito" class="titolo_sito">
