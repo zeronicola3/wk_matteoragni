@@ -94,15 +94,23 @@
       z-index: 999999;
     }
 
-    #loader #progressbar {
-      margin: 20px;
-      width: 400px;
-      height: 3px;
+    #loader .slogan-container {
+      width: 500px;
       position: absolute;
+      display: inline-block;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
+    }
 
+    #loader .slogan-container {
+      display: inline-block;
+      font-size: 
+    }
+
+    #loader .slogan-container #progressbar {
+      width: 100%;
+      height: 3px;
     }
 
 
