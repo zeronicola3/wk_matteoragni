@@ -85,7 +85,7 @@ $(document).ready(function() {
 		  		$("header").removeClass('hidden');
 		  	}
 		  },
-	    	offset: '-1' // 
+  		offset: 20 
 	});
 
 	/* SLIDER SITO */
