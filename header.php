@@ -75,7 +75,7 @@
     bar.animate(1.0, function() {
         $('#loader').fadeOut();
     });
-    
+
   </script>
 
 
@@ -93,7 +93,8 @@
     #loader #progressbar {
       margin: 20px;
       width: 400px;
-      height: 8px;
+      height: 3px;
+
     }
 
 
