@@ -555,7 +555,7 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
     <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
     <br/><br/>
     <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_sfigato'][0], 'yes' ); ?> />
-    <?php _e( "Post secondario", 'webkolm' ); ?><br/>
+    <?php _e( "Visibile solo in timeline", 'webkolm' ); ?><br/>
   </p>
 <?php }
 
