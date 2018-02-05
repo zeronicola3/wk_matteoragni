@@ -94,10 +94,15 @@ header.active {
 
 	svg {
 		//@include transition;
-		#payoff, #barra {
+		#payoff {
 			opacity: 0 !important;
 			@include transition;
 		}
+
+		#barra rect {
+			width: 0;
+			@include transition;
+		}	
 	}
 
 	@include mq($to: tablet) {
