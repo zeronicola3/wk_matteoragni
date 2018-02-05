@@ -84,8 +84,8 @@ header.disattivo {
 }
 
 .notouch #logo_sito svg:hover {
-	#barra {
-		opacity: 1 !important;
+	#barra rect {
+		width: 100%;
 		@include transition;
 	}
 }
