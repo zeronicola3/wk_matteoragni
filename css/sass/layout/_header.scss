@@ -60,6 +60,10 @@ header.disattivo {
     		opacity: 1;
     		@include transition;
     	}
+
+    	#barra rect {
+    		height: 2px;
+    	}
 	    
 	}
 	svg:not(:root) { overflow: visible; overflow-x:visible; overflow-y:visible;  }
