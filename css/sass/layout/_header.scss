@@ -61,7 +61,7 @@ header.disattivo {
     		@include transition;
     	}
 
-    	&::after {
+    	&::before {
     		content: " ";
 			position: absolute;
 			width: 0%;
