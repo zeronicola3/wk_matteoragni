@@ -63,6 +63,7 @@ header.disattivo {
 
     	#barra rect {
     		height: 2px;
+    		@include transition;
     	}
 	    
 	}
