@@ -56,22 +56,13 @@ header.disattivo {
 	    	top: 12%;
 	    }
 
-	    #payoff {
+	    #payoff, #barra {
     		opacity: 1;
     		@include transition;
     	}
 
-    	&::before {
-    		content: " ";
-			position: absolute;
-			width: 0%;
-			bottom: 0;
-			height: 2px;
-			background-color: $nero;
-			display: inline-block;
-			left: 0;
-			opacity: 1;
-			@include transition;
+    	#barra rect {
+    		height: 2px;
     	}
 	    
 	}
@@ -93,8 +84,8 @@ header.disattivo {
 }
 
 .notouch #logo_sito svg:hover {
-	&::after {
-		width: 100%;
+	#barra {
+		opacity: 1 !important;
 		@include transition;
 	}
 }
