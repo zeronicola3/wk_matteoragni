@@ -814,7 +814,7 @@ function be_attachment_field_credit( $form_fields, $post ) {
 add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
 
 /**
- * Save values of Photographer Name and URL in media uploader
+ * Save values of attachment in media uploader
  *
  * @param $post array, the post data for database
  * @param $attachment array, attachment fields from $_POST form
