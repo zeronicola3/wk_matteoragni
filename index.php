@@ -28,7 +28,7 @@ get_header(); ?>
 
                     foreach ($connected as $conn) {
                         $client_id = $conn->ID;
-                        $client_name = $conn->post_name;
+                        $client_name = $conn->post_title;
                         $client_link = $conn->webkolm_client_link;
                     }
 
