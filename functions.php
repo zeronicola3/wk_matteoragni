@@ -13,7 +13,6 @@ add_theme_support( 'post-thumbnails' );
 
 add_filter('show_admin_bar', '__return_false');
 
-
 /* DATI DELL'IMMAGINE PASSANDO l'ID */
 
 function wp_get_attachment( $attachment_id ) {
@@ -28,6 +27,13 @@ function wp_get_attachment( $attachment_id ) {
         'title' => $attachment->post_title
     );
 }
+
+
+
+// GENERATORE E PARSER PER JSON TIMELINE
+include 'assets/timeline_functions.php';
+
+
 
 
 
@@ -554,7 +560,7 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
     <input class="widefat" type="checkbox" name="webkolm_homepage_post_box" id="webkolm_homepage_post_box" value="yes" <?php if ( isset ( $meta['webkolm_homepage_post_box'] ) ) checked( $meta['webkolm_homepage_post_box'][0], 'yes' ); ?> />
     <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
     <br/><br/>
-    <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_sfigato'][0], 'yes' ); ?> />
+    <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_secondario'][0], 'yes' ); ?> />
     <?php _e( "Visibile solo in timeline", 'webkolm' ); ?><br/>
   </p>
 <?php }
