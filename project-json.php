@@ -16,10 +16,10 @@ get_header(); ?>
 
 function primary_project_content($project) { ?>
 
-	<a href="<?php echo $project['url']; ?>">
+	<a href="<?php echo $project['url']; ?>" data-title="<?php echo $project['slug']; ?>>
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<div class="timeline-item">
+	<div class="timeline-item" data-image="<?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
@@ -47,7 +47,31 @@ function primary_project_content($project) { ?>
 
 function secondary_project_content($project) { ?>
 
-	<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+	<a href="<?php echo $project['url']; ?>" data-title="<?php echo $project['slug']; ?>>
+		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+	</a>
+	<div class="timeline-item" data-image="<?php echo $project['slug']; ?>">
+		<div class="timeline-item-img <?php echo $project['slug']; ?>">
+			<style>
+
+				.timeline-item-img.<?php echo $project['slug']; ?> {
+					background-image: url('<?php echo $project['img_urls']['medium']; ?>');
+				}
+
+				@media (min-width: 768px) {  
+	                .timeline-item-img .<?php echo $project['slug']; ?> {
+						background-image: url('<?php echo $project['img_urls']['large']; ?>');
+					}
+	            }
+	            
+			</style>
+		</div>
+		<div class="timeline-item-description">
+			<h4 class="project-title"><?php echo $project['title']; ?></h4>
+			<span class="project-client"><?php echo $project['description']; ?></span>
+			<span class="project-client"><?php echo $project['year']; ?></span>
+		</div>
+	</div>
 	
 <?php } 
 
