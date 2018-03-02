@@ -16,10 +16,10 @@ get_header(); ?>
 
 function primary_project_content($project) { ?>
 
-	<a href="<?php echo $project['url']; ?>" data-title="<?php echo $project['slug']; ?>">
+	<a data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<a class="timeline-item" data-image="<?php echo $project['slug']; ?>">
+	<a href="<?php echo $project['url']; ?>" class="timeline-item" data-image="<?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
@@ -47,10 +47,10 @@ function primary_project_content($project) { ?>
 
 function secondary_project_content($project) { ?>
 
-	<a href="<?php echo $project['url']; ?>" data-title="<?php echo $project['slug']; ?>">
+	<a data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<a class="timeline-item" data-image="<?php echo $project['slug']; ?>">
+	<a href="<?php echo $project['url']; ?>" class="timeline-item" data-image="<?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
