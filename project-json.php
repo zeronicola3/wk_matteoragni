@@ -25,12 +25,6 @@ function primary_project_content($project) { ?>
 
 				.timeline-item-img.<?php echo $project['slug']; ?> {
 					background-image: url('<?php echo $project['img_urls']['medium']; ?>');
-					background-position: center center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					width: 86%;
-					height: 0;
-					padding-top: 64%; 
 				}
 
 				@media (min-width: 768px) {  
