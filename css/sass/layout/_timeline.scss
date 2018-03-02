@@ -1,13 +1,24 @@
-.timeline-item-description {
-    padding: 20px 0;
-    border-top: 3px solid black;
-    margin-top: 20px;
-    font-size: 1.25rem;
-	line-height: 1.4em;
+.timeline-item {
+
 	width: 86%;
 
-    .project-title {
-    	margin: 0;
-    	font-weight: 700;
-    }
+	.timeline-item-description {
+	    padding: 20px 0;
+	    border-top: 3px solid black;
+	    margin-top: 20px;
+	    font-size: 1.25rem;
+		line-height: 1.4em;
+
+
+		@include mq($from: tablet){
+			font-size: 1.25rem;
+			line-height: 1.4em;
+		}
+
+	    .project-title {
+	    	margin: 0;
+	    	font-weight: 700;
+	    }
+	}
 }
+
