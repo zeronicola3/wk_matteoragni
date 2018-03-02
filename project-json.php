@@ -16,7 +16,7 @@ get_header(); ?>
 
 function primary_project_content($project) { ?>
 
-	<a data-title="<?php echo $project['slug']; ?>">
+	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?>">
