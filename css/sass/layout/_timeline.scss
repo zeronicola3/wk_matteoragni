@@ -2,6 +2,16 @@
 
 	width: 86%;
 
+
+	.timeline-item-img {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 0;
+		padding-top: 64%; 
+	}
+
 	.timeline-item-description {
 	    padding: 20px 0;
 	    border-top: 3px solid black;
