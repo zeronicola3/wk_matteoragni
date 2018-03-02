@@ -75,20 +75,21 @@ function secondary_project_content_without_img($project) {
 
 					<?php
 					foreach ($projects as $key => $project) { ?>
-						
-						<?php
+						<div class="timeline-item">
+							<?php
 
-						if($project['is_secondary']) {
-							// Check per progetti 
-							if($project['img_urls'] == "") { 
-								secondary_project_content_without_img($project);
-							} else { 
-								secondary_project_content($project);
-							} 
-						} else {
-							primary_project_content($project);
-						}
-						?>
+							if($project['is_secondary']) {
+								// Check per progetti 
+								if($project['img_urls'] == "") { 
+									secondary_project_content_without_img($project);
+								} else { 
+									secondary_project_content($project);
+								} 
+							} else {
+								primary_project_content($project);
+							}
+							?>
+						</div>
 
 					<?php } ?>
 
