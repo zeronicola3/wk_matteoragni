@@ -19,7 +19,7 @@ function primary_project_content($project) { ?>
 	<a href="<?php echo $project['url']; ?>" data-title="<?php echo $project['slug']; ?>>
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<div class="timeline-item" data-image="<?php echo $project['slug']; ?>">
+	<a class="timeline-item" data-image="<?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
@@ -40,7 +40,7 @@ function primary_project_content($project) { ?>
 			<span class="project-client"><?php echo $project['description']; ?></span>
 			<span class="project-client"><?php echo $project['year']; ?></span>
 		</div>
-	</div>
+	</a>
 
 <?php } 
 
