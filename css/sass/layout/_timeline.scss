@@ -10,6 +10,7 @@
 	overflow-y: hidden;
 	height: 0;
 	display: block;
+	@include transition;
 
 	.timeline-item-img {
 		background-position: center center;
@@ -43,4 +44,5 @@
 
 .timeline-item.active {
 	height: auto;
+	@include transition;
 }
