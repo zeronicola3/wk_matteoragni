@@ -19,31 +19,33 @@ function primary_project_content($project) { ?>
 	<a href="<?php echo $project['url']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<div class="timeline-item-img <?php echo $project['slug']; ?>">
-		<style>
+	<div class="timeline-item">
+		<div class="timeline-item-img <?php echo $project['slug']; ?>">
+			<style>
 
-			.timeline-item-img.<?php echo $project['slug']; ?> {
-				background-image: url('<?php echo $project['img_urls']['medium']; ?>');
-				background-position: center center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				width: 86%;
-				height: 0;
-				padding-top: 64%; 
-			}
-
-			@media (min-width: 768px) {  
-                .timeline-item-img .<?php echo $project['slug']; ?> {
-					background-image: url('<?php echo $project['img_urls']['large']; ?>');
+				.timeline-item-img.<?php echo $project['slug']; ?> {
+					background-image: url('<?php echo $project['img_urls']['medium']; ?>');
+					background-position: center center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 86%;
+					height: 0;
+					padding-top: 64%; 
 				}
-            }
-            
-		</style>
-	</div>
-	<div class="timeline-item-description">
-		<h4 class="project-title"><?php echo $project['title']; ?></h4>
-		<span class="project-client"><?php echo $project['description']; ?></span>
-		<span class="project-client"><?php echo $project['year']; ?></span>
+
+				@media (min-width: 768px) {  
+	                .timeline-item-img .<?php echo $project['slug']; ?> {
+						background-image: url('<?php echo $project['img_urls']['large']; ?>');
+					}
+	            }
+	            
+			</style>
+		</div>
+		<div class="timeline-item-description">
+			<h4 class="project-title"><?php echo $project['title']; ?></h4>
+			<span class="project-client"><?php echo $project['description']; ?></span>
+			<span class="project-client"><?php echo $project['year']; ?></span>
+		</div>
 	</div>
 
 <?php } 
@@ -75,21 +77,20 @@ function secondary_project_content_without_img($project) {
 
 					<?php
 					foreach ($projects as $key => $project) { ?>
-						<div class="timeline-item">
-							<?php
+						
+						<?php
 
-							if($project['is_secondary']) {
-								// Check per progetti 
-								if($project['img_urls'] == "") { 
-									secondary_project_content_without_img($project);
-								} else { 
-									secondary_project_content($project);
-								} 
-							} else {
-								primary_project_content($project);
-							}
-							?>
-						</div>
+						if($project['is_secondary']) {
+							// Check per progetti 
+							if($project['img_urls'] == "") { 
+								secondary_project_content_without_img($project);
+							} else { 
+								secondary_project_content($project);
+							} 
+						} else {
+							primary_project_content($project);
+						}
+						?>
 
 					<?php } ?>
 
