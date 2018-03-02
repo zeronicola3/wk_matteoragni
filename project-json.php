@@ -47,13 +47,13 @@ function primary_project_content($project) { ?>
 
 function secondary_project_content($project) { ?>
 
-	<h5 class="timeline-item-title"><?php echo $item['title']; ?></h5>
+	<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	
 <?php } 
 
 
 function secondary_project_content_without_img($project) {
-	echo '<h5 class="timeline-project-title">'. $project['title'] .'</h5>';
+	echo '<h5 class="timeline-item-title">'. $project['title'] .'</h5>';
 }	
 
 
