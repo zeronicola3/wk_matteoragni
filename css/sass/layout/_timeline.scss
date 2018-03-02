@@ -1,7 +1,9 @@
 .timeline-item {
 
 	width: 86%;
-
+	overflow-y: hidden;
+	height: 0;
+	
 	.timeline-item-img {
 		background-position: center center;
 		background-size: cover;
