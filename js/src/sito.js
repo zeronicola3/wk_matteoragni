@@ -95,13 +95,24 @@ $(document).ready(function() {
 				}
 			}
 
-			}else{
+			} else {
 				if(header.hasClass("disattivo")){
 					header.removeClass("disattivo");
 				}
 			}
 			lastScrollTop = st;
 		}, false);
+
+
+
+		$('.timeline-title-box').on('click', function(){
+			
+			$(".timeline-item.active").removeClass('active');
+
+			var slug = $(this).attr('data-title');
+
+			$(".timeline-item." + slug).addClass('active');
+		});
 
 	}
 
