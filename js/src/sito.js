@@ -124,7 +124,7 @@ $(document).ready(function() {
 		var container_bottom = container_top + $(".timeline-block").outerHeight();
 		
 
-		window.addEventListener("scroll", function(){	
+		$(document).on("scroll", function(e){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 
 			var abs_top = item_top - container_top;
