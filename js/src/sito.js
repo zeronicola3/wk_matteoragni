@@ -143,7 +143,9 @@ $(document).ready(function() {
 
 
 			if (st > lastScrollTop ){
-				console.log(sb + " " + item_top);
+
+				console.log(st + " " + item_top);
+
 				if(sb < container_top - 200) {
 					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
 				} else if((st == item_top - 200) && (sb <= container_bottom)){
