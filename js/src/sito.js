@@ -101,7 +101,6 @@ $(document).ready(function() {
 				}
 			}
 			lastScrollTop = st;
-			console.log(isOnScreen(".project-container"));
 
 		}, false);
 
