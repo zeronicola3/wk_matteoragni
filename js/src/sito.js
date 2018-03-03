@@ -148,7 +148,7 @@ $(document).ready(function() {
 			} else {
 
 				if(st < container_top - 200) {
-					$('.timeline-item').removeClass('fixed').css({top: "0px", right: "0px", bottom: "unset" }).fadeOut();
+					$('.timeline-item').removeClass('fixed').css({top: "0px", right: "0px", bottom: "unset" });
 				} else if((st <= item_top - 200)){
 					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px", bottom: "unset"  });
 				}
