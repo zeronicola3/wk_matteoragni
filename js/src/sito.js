@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 			if(isOnScreen(".timeline-block")) {
 				if(item_top <= (scroll_top + 200)) {
-					cnsole.log((scroll_top - container_top + 200) + "px");
+					console.log((scroll_top - container_top + 200) + "px");
 					$('.timeline-item').css({ top: ((scroll_top - container_top + 200) + "px") });
 				}
 				
