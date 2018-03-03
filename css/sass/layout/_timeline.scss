@@ -18,10 +18,13 @@
 
 	@include mq($from: tablet){
 		height: auto;
-		position: fixed;
+		position: absolute;
+		top: 0;
 		width: 600px;
+		right: 0;
 
 		&.fixed {
+			position: fixed;
 			top: 200px;
 		}
 
