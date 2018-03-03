@@ -46,7 +46,7 @@ function primary_project_content($project) { ?>
 
 
 function secondary_project_content($project) { ?>
-
+	
 	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
@@ -81,10 +81,10 @@ function secondary_project_content_without_img($project) {
 }	
 
 
+?>
 
-
-
-
+		<div class="timeline-block">
+<?php
 			$timeline = parse_json_file();
 
 			foreach ($timeline as $year => $projects) { ?>
@@ -117,6 +117,7 @@ function secondary_project_content_without_img($project) {
 			}
 
         ?>
+    	</div>
         </div>
 	</div>
 </div>
