@@ -150,7 +150,7 @@ $(document).ready(function() {
 	    var curPos = $(element).offset();
 	    var curTop = curPos.top;
 	    var curBottom = curPos.bottom;
-	    var screenHeight = $(window).height();
+	    var screenHeight = $(window).pageYOffset;
 
 	    console.log(curTop + " " + curBottom + " " + screenHeight);
 	    
