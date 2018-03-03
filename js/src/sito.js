@@ -184,7 +184,9 @@ $(document).ready(function() {
 	   // console.log(curTop + " " + curBottom + " " + screenBottom);
 	    
 	    if((screenBottom > curTop) && (screenBottom < curBottom)){
-	    	return true
+	    	return true;
+	    } else if( (screenTop < curBottom) && (screenTop > curTop) ) {
+	    	return true;
 	    }
 	    return false;
 	}
