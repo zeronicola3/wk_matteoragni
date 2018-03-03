@@ -150,7 +150,7 @@ $(document).ready(function() {
 				if(item_bottom >= container_bottom) {
 					$('.timeline-item').removeClass('fixed').css({top: + abs_top + "px", right: "0px" });
 				} else if((st >= item_top - 200) && (sb <= container_bottom)){
-					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
+					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px" });
 				}
 
 			} else {
