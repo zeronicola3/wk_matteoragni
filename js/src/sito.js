@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 			if(isOnScreen(".timeline-block")) {
 				if(item_top == (document.documentElement.scrollTop + 200)) {
-					$('.timeline-item').addClass('fixed');
+					$('.timeline-item').addClass('fixed').css({ top: (item_top + "px") });
 				}
 				
 			} else {
@@ -134,7 +134,7 @@ $(document).ready(function() {
 				if($('.timeline-item').hasClass('fixed')){
 					
 
-					$('.timeline-item').removeClass('fixed').css({ top: abs_top + "px" });
+					$('.timeline-item').removeClass('fixed').css({ top: (abs_top + "px") });
 
 				} 
 			}
