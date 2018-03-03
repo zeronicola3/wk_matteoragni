@@ -140,17 +140,17 @@ $(document).ready(function() {
 				var item_bottom = item_top + $('.timeline-item').outerHeight();
 
 				if(item_bottom >= container_bottom - 20) {
-					$('.timeline-item').removeClass('fixed').css({bottom: "0px", top: "unset", right: "0px" });
+					$('.timeline-item').removeClass('fixed').css({bottom: "0px", top: "unset", right: "0px" }).fadeOut();
 				} else if((st >= item_top - 200) && (sb <= container_bottom)){
-					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px", bottom: "unset" });
+					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px", bottom: "unset" }).fadeIn();
 				}
 
 			} else {
 
 				if(st < container_top - 200) {
-					$('.timeline-item').removeClass('fixed').css({top: "0px", right: "0px", bottom: "unset" });
+					$('.timeline-item').removeClass('fixed').css({top: "0px", right: "0px", bottom: "unset" }).fadeOut();
 				} else if((st <= item_top - 200)){
-					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px", bottom: "unset"  });
+					$('.timeline-item').addClass('fixed').css({top: "200px", right: + item_right + "px", bottom: "unset"  }).fadeIn();
 				}
 			}
 
