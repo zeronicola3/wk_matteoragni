@@ -101,6 +101,12 @@ $(document).ready(function() {
 				}
 			}
 			lastScrollTop = st;
+
+
+			if(isOnScreen(".timeline-year-2014")){
+				console.log("2014");
+			}
+
 		}, false);
 
 
@@ -138,6 +144,19 @@ $(document).ready(function() {
 	}, {
 	    offset: '-1' // 
 	});
+
+
+
+
+
+
+	function isOnScreen(element)
+	{
+	    var curPos = element.offset();
+	    var curTop = curPos.top;
+	    var screenHeight = $(window).height();
+	    return (curTop > screenHeight) ? false : true;
+	}
 
 
 	/* CAROUSEL POST
