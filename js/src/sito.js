@@ -150,10 +150,11 @@ $(document).ready(function() {
 	    var curPos = $(element).offset();
 	    var curTop = curPos.top;
 	    var curBottom = curTop + $(element).height();
-	    var screenHeight = document.documentElement.scrollTop;
+	    var screenBottom = document.documentElement.scrollTop + $(window).height();
 
 	    console.log(curTop + " " + curBottom + " " + screenHeight);
 	    
+	    if()
 	    return false;
 	}
 
