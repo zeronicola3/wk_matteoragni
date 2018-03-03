@@ -102,7 +102,7 @@ $(document).ready(function() {
 			}
 			lastScrollTop = st;
 
-		}, false);
+		}).scroll();
 
 
 
