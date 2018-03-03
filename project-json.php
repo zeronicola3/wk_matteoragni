@@ -84,6 +84,11 @@ function secondary_project_content_without_img($project) {
 ?>
 
 		<div class="timeline-block">
+			<style>
+				.timeline-block {
+					margin: 1000px 0;
+				}
+			</style>
 <?php
 			$timeline = parse_json_file();
 
