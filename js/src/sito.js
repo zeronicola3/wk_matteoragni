@@ -121,11 +121,11 @@ $(document).ready(function() {
 			var item_top = $('.timeline-item').offset().top;
 			var container_top = $(".timeline-block").offset().top;
 			var abs_top = item_top - container_top;
-
+			var scroll_top = document.documentElement.scrollTop;
 
 
 			if(isOnScreen(".timeline-block")) {
-				if(item_top == (document.documentElement.scrollTop + 200)) {
+				if(item_top == ( + 200)) {
 					$('.timeline-item').addClass('fixed').css({ top: "200px" });
 				}
 				
