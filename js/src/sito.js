@@ -101,7 +101,7 @@ $(document).ready(function() {
 				}
 			}
 			lastScrollTop = st;
-
+			console.log(isOnScreen(".timeline-year-2014"));
 
 		}, false);
 
@@ -153,7 +153,7 @@ $(document).ready(function() {
 	    return (curTop > screenHeight) ? false : true;
 	}
 
-	console.log(isOnScreen(".timeline-year-2014"));
+	
 	/* CAROUSEL POST
 
 	$('.owl-carousel').owlCarousel({
