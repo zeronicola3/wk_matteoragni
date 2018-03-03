@@ -103,9 +103,9 @@ $(document).ready(function() {
 			lastScrollTop = st;
 
 
-			if(isOnScreen(".timeline-year-2014")){
-				console.log("2014");
-			}
+
+				console.log(isOnScreen(".timeline-year-2014"));
+
 
 		}, false);
 
