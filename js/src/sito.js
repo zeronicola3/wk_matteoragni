@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 			if(isOnScreen(".timeline-block")) {
 				if(item_top == (document.documentElement.scrollTop + 200)) {
-					$('.timeline-item').addClass('fixed').css({ top: (item_top + "px") });
+					$('.timeline-item').addClass('fixed').css({ top: "200px" });
 				}
 				
 			} else {
