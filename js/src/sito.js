@@ -101,7 +101,7 @@ $(document).ready(function() {
 				}
 			}
 			lastScrollTop = st;
-			console.log(isOnScreen(".project-cover-gallery-9068"));
+			console.log(isOnScreen(".project-cover-gallery"));
 
 		}, false);
 
