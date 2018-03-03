@@ -120,11 +120,14 @@ $(document).ready(function() {
 		var lastScrollTop = 0;
 		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
 		var direction_scroll;
-		var container_top = $(".timeline-block").offset().top;
-		var container_bottom = container_top + $(".timeline-block").height();
+		
 
 		window.addEventListener("scroll", function(){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
+
+			var container_top = $(".timeline-block").offset().top;
+			var container_bottom = container_top + $(".timeline-block").outerHeight();
+
 			var screenheight = $(window).height();
 			var sb = st + screenheight;
 
@@ -142,11 +145,11 @@ $(document).ready(function() {
 			if (st > lastScrollTop ){
 				direction_scroll = 'down';
 			} else {
-				console.log(st + " " + container_top);
+				console.log(sb + " " + container_bottom);
 
-				if((st < container_top - 200) && (sb > container_bottom)) {
+				if(st < container_top - 200) {
 					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
-				} else if(st >= item_top - 200){
+				} else if((st >= item_top - 200) && (sb <= container_bottom)){
 					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
 				}
 			}
