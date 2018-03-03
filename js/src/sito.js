@@ -145,7 +145,7 @@ $(document).ready(function() {
 			}
 
 			
-
+/*
 
 			if(isOnScreen(".timeline-block")) {
 				if(item_top <= (scroll_top + 200)) {
@@ -162,6 +162,7 @@ $(document).ready(function() {
 
 				} 
 			}
+*/
 			lastScrollTop = st;
 		}, false);
 
