@@ -118,12 +118,14 @@ $(document).ready(function() {
 	} else {
 
 		var lastScrollTop = 0;
-		var container_top = $(".timeline-block").offset().top;
+		
 		var direction_scroll
 
 		window.addEventListener("scroll", function(){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 			var sb = st + screenheight;
+
+			var container_top = $(".timeline-block").offset().top;
 			var item_top = $('.timeline-item').offset().top;
 			var item_right = $('.timeline-item').offset().right;
 			var abs_top = item_top - container_top;
