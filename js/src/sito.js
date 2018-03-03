@@ -148,7 +148,7 @@ $(document).ready(function() {
 				console.log(sb + " " + item_top);
 
 				if(item_bottom >= container_bottom) {
-					$('.timeline-item').removeClass('fixed').css({top: + item_top + "px", right: "0px" });
+					$('.timeline-item').removeClass('fixed').css({top: + abs_top + "px", right: "0px" });
 				} else if((st >= item_top - 200) && (sb <= container_bottom)){
 					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
 				}
