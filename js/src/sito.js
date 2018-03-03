@@ -149,8 +149,15 @@ $(document).ready(function() {
 	function isOnScreen(element){
 	    var curPos = $(element).offset();
 	    var curTop = curPos.top;
+	    var curBottom = curPos.bottom;
 	    var screenHeight = $(window).height();
-	    return (curTop > screenHeight) ? false : true;
+
+	    if(curTop > screenHeight) {
+	    	if(curBottom < screenHeight){
+	    		return true;
+	    	}
+	    }
+	    return false;
 	}
 
 	
