@@ -23,6 +23,10 @@
 		width: 60%;
 		right: 0;
 
+		&.fixed {
+			position: fixed;
+		}
+
 	}
 
 	.timeline-item-img {
