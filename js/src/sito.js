@@ -131,7 +131,7 @@ $(document).ready(function() {
 				direction_scroll = 'down';
 			} else {
 				if(st == item_top - 200){
-					$('.timeline-item').addClass('fixed').css({ top: "200px", right: "200px" });
+					$('.timeline-item').addClass('fixed').css({ "top: 200px", "right: " + item_right + "px" });
 				}
 			}
 
@@ -141,7 +141,7 @@ $(document).ready(function() {
 			if(isOnScreen(".timeline-block")) {
 				if(item_top <= (scroll_top + 200)) {
 
-					$('.timeline-item').addClass('fixed').css({ top: "200px", right: "200px" });
+					$('.timeline-item').addClass('fixed').css({ top: "200px", right:  "px" });
 				}
 				
 			} else {
