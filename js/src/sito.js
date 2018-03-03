@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 			var container_top = $(".timeline-block").offset().top;
 			var item_top = $('.timeline-item').offset().top;
-			var item_right = $('.timeline-item').offset().left;// + $('.timeline-item').outerWidth();
+			var item_right = ($('.timeline-item').offset().left + $('.timeline-item').outerWidth()) - $(window).outerWidth();
 			var abs_top = item_top - container_top;
 
 			//var curBottom = curTop + $(element).height();
