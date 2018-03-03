@@ -101,7 +101,7 @@ $(document).ready(function() {
 				}
 			}
 			lastScrollTop = st;
-			console.log(isOnScreen(".timeline-year-2014"));
+			console.log(isOnScreen(".project-cover-gallery-9068"));
 
 		}, false);
 
