@@ -144,7 +144,7 @@ $(document).ready(function() {
 				if(st < container_top - 200) {
 					$('.timeline-item').removeClass('fixed');
 				} else if(st >= item_top - 200){
-					$('.timeline-item.fixed').css({right: + item_right + "px"});
+					console.log(item_right);
 					$('.timeline-item').addClass('fixed');
 				}
 			}
