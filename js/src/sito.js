@@ -142,9 +142,9 @@ $(document).ready(function() {
 				console.log(st + " " + container_top);
 
 				if(st < container_top - 200) {
-					$('.timeline-item').removeClass('fixed').css({right: + item_right + "px"});
+					$('.timeline-item').removeClass('fixed');
 				} else if(st >= item_top - 200){
-					$('.timeline-item').addClass('fixed');
+					$('.timeline-item').addClass('fixed').css({right: + item_right + "px"});
 				}
 			}
 
