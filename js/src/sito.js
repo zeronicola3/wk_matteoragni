@@ -115,6 +115,26 @@ $(document).ready(function() {
 			$(".timeline-item." + slug).addClass('active');
 		});
 
+	} else {
+
+		window.addEventListener("scroll", function(){
+
+			if(isOnScreen(".timeline-block")) {
+				$('.timeline-item').addClass('fixed');
+			} else {
+
+				if($('.timeline-item').hasClass('fixed')){
+					var item_top = $('.timeline-item').offset().top;
+					var container_top = $(".timeline-block").offset().top;
+					var abs_top = item_top - container_top;
+
+					$('.timeline-item').removeClass('fixed').css({ top: abs_top });
+
+				}
+			}
+
+		});
+
 	}
 
 	/* SLIDER SITO */
