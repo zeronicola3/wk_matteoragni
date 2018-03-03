@@ -143,9 +143,14 @@ $(document).ready(function() {
 
 
 			if (st > lastScrollTop ){
-				direction_scroll = 'down';
+				
+				if(sb < container_bottom) {
+					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
+				} else if((st >= item_top - 200) && (sb <= container_bottom)){
+					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
+				}
+
 			} else {
-				console.log(sb + " " + container_bottom);
 
 				if(st < container_top - 200) {
 					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
