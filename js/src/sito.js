@@ -143,7 +143,7 @@ $(document).ready(function() {
 			} else {
 				console.log(st + " " + container_top);
 
-				if((st < container_top - 200) && (sb > )) {
+				if((st < container_top - 200) && (sb > container_bottom)) {
 					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
 				} else if(st >= item_top - 200){
 					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
