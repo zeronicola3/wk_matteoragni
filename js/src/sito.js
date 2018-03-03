@@ -128,7 +128,7 @@ $(document).ready(function() {
 			var item_right = $('.timeline-item').offset().right;
 			var abs_top = item_top - container_top;
 
-			var curBottom = curTop + $(element).height();
+			//var curBottom = curTop + $(element).height();
 		    var screenTop = document.documentElement.scrollTop;
 		    var screenheight = $(window).height();
 		    
