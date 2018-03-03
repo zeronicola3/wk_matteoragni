@@ -119,13 +119,15 @@ $(document).ready(function() {
 
 		var lastScrollTop = 0;
 		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
-		var direction_scroll
+		var direction_scroll;
+		var container_top = $(".timeline-block").offset().top;
+		var container_bottom = container_top + $(".timeline-block").height();
 
 		window.addEventListener("scroll", function(){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 			var sb = st + screenheight;
 
-			var container_top = $(".timeline-block").offset().top;
+			
 			var item_top = $('.timeline-item').offset().top;
 			
 			var abs_top = item_top - container_top;
@@ -141,7 +143,7 @@ $(document).ready(function() {
 			} else {
 				console.log(st + " " + container_top);
 
-				if(st < container_top - 200) {
+				if((st < container_top - 200) && (sb > )) {
 					$('.timeline-item').removeClass('fixed').css({ right: "0px" });
 				} else if(st >= item_top - 200){
 					$('.timeline-item').addClass('fixed').css({ right: + item_right + "px" });
