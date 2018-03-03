@@ -117,12 +117,25 @@ $(document).ready(function() {
 
 	} else {
 
-		window.addEventListener("scroll", function(){
+		var lastScrollTop = 0;
+		var container_top = $(".timeline-block").offset().top;
+		var direction_scroll
+
+		window.addEventListener("scroll", function(){	
+			var st = window.pageYOffset || document.documentElement.scrollTop; 
 			var item_top = $('.timeline-item').offset().top;
 			var item_right = $('.timeline-item').offset().right;
-			var container_top = $(".timeline-block").offset().top;
 			var abs_top = item_top - container_top;
-			var scroll_top = document.documentElement.scrollTop;
+
+			if (st > lastScrollTop ){
+				direction_scroll = 'down';
+			} else {
+				if(st == item_top - 200){
+					$('.timeline-item').addClass('fixed').css({ top: "200px", right: "200px" });
+				}
+			}
+
+			
 
 
 			if(isOnScreen(".timeline-block")) {
@@ -140,8 +153,8 @@ $(document).ready(function() {
 
 				} 
 			}
-
-		});
+			lastScrollTop = st;
+		}, false);
 
 	}
 
