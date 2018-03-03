@@ -12,6 +12,12 @@
 	display: block;
 	@include transition;
 
+	@include mq($from: tablet){
+		height: auto;
+		position: absolute;
+		
+	}
+
 	.timeline-item-img {
 		background-position: center center;
 		background-size: cover;
