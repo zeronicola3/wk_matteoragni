@@ -131,7 +131,7 @@ $(document).ready(function() {
 				direction_scroll = 'down';
 			} else {
 				if(st == item_top - 200){
-					$('.timeline-item').addClass('fixed').css({ top: "200px", "right: " + item_right + "px" });
+					$('.timeline-item').addClass('fixed').css({ top: "200px", right: + item_right + "px" });
 				}
 			}
 
