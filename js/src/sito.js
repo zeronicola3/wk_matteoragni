@@ -128,7 +128,7 @@ $(document).ready(function() {
 			if(isOnScreen(".timeline-block")) {
 				if(item_top <= (scroll_top + 200)) {
 
-					$('.timeline-item').addClass('fixed').css({ top: "200px",right: item_right + "px" });
+					$('.timeline-item').addClass('fixed').css({ top: "200px", right: "200px" });
 				}
 				
 			} else {
