@@ -147,7 +147,7 @@ $(document).ready(function() {
 
 
 	function isOnScreen(element){
-	    var curPos = element.offset();
+	    var curPos = $(element).offset();
 	    var curTop = curPos.top;
 	    var screenHeight = $(window).height();
 	    return (curTop > screenHeight) ? false : true;
