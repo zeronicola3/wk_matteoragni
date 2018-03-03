@@ -118,7 +118,7 @@ $(document).ready(function() {
 	} else {
 
 		var lastScrollTop = 0;
-		
+		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
 		var direction_scroll
 
 		window.addEventListener("scroll", function(){	
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 			var container_top = $(".timeline-block").offset().top;
 			var item_top = $('.timeline-item').offset().top;
-			var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
+			
 			var abs_top = item_top - container_top;
 
 			//var curBottom = curTop + $(element).height();
