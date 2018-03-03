@@ -139,7 +139,7 @@ $(document).ready(function() {
 			} else {
 				if(st == item_top - 200){
 					$('.timeline-item').addClass('fixed').css({ top: "200px", right: + item_right + "px" });
-				} else if() {
+				} else if(st == container_top) {
 					$('.timeline-item').removeClass('fixed').css({ top: (abs_top + "px") });
 				}
 			}
