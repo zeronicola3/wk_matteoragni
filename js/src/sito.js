@@ -154,9 +154,11 @@ $(document).ready(function() {
 	    var screenheight = $(window).height();
 	    var screenBottom = screenTop + screenheight;
 
-	    console.log(curTop + " " + curBottom + " " + screenHeight);
+	    console.log(curTop + " " + curBottom + " " + screenBottom);
 	    
-	    if()
+	    if((screenBottom > curTop) && (screenBottom < curBottom)){
+	    	return true
+	    }
 	    return false;
 	}
 
