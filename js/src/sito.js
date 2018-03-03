@@ -125,6 +125,7 @@ $(document).ready(function() {
 
 		window.addEventListener("scroll", function(){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
+			var screenheight = $(window).height();
 			var sb = st + screenheight;
 
 			
@@ -134,7 +135,7 @@ $(document).ready(function() {
 
 			//var curBottom = curTop + $(element).height();
 		    var screenTop = document.documentElement.scrollTop;
-		    var screenheight = $(window).height();
+		    
 		    
 
 
