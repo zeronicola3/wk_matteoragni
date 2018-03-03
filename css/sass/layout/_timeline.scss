@@ -4,6 +4,10 @@
 	font-weight: 300;
 }
 
+.timeline-block {
+	position: relative;
+}
+
 .timeline-item {
 
 	width: 86%;
@@ -15,7 +19,8 @@
 	@include mq($from: tablet){
 		height: auto;
 		position: absolute;
-		
+		top: 0;
+
 	}
 
 	.timeline-item-img {
