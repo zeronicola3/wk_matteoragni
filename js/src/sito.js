@@ -153,7 +153,7 @@ $(document).ready(function() {
 	    var screenHeight = $(window).height();
 
 	    if(curTop > screenHeight) {
-	    	if(curBottom < screenHeight){
+	    	if(curBottom > screenHeight){
 	    		return true;
 	    	}
 	    }
