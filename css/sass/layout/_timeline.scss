@@ -14,7 +14,7 @@
 	overflow-y: hidden;
 	height: 0;
 	display: block;
-	@include transition;
+	//@include transition;
 
 	@include mq($from: tablet){
 		height: auto;
