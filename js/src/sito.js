@@ -122,16 +122,25 @@ $(document).ready(function() {
 		var direction_scroll
 
 		window.addEventListener("scroll", function(){	
-			var st = window.pageYOffset || document.documentElement.scrollTop; 
+			var st = window.pageYOffset || document.documentElement.scrollTop;
+			var sb = st + screenheight;
 			var item_top = $('.timeline-item').offset().top;
 			var item_right = $('.timeline-item').offset().right;
 			var abs_top = item_top - container_top;
+
+			var curBottom = curTop + $(element).height();
+		    var screenTop = document.documentElement.scrollTop;
+		    var screenheight = $(window).height();
+		    
+
 
 			if (st > lastScrollTop ){
 				direction_scroll = 'down';
 			} else {
 				if(st == item_top - 200){
 					$('.timeline-item').addClass('fixed').css({ top: "200px", right: + item_right + "px" });
+				} else if() {
+					$('.timeline-item').removeClass('fixed').css({ top: (abs_top + "px") });
 				}
 			}
 
