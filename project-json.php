@@ -19,7 +19,7 @@ function primary_project_content($project) { ?>
 	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?>">
+	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> ">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
@@ -50,7 +50,7 @@ function secondary_project_content($project) { ?>
 	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
 	</a>
-	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> <?php if($number == 0){ echo "active"; $number++; } ?>">
+	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
 
