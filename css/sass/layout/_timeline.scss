@@ -24,11 +24,8 @@
 		right: 0;
 		background-color: $bianco;
 		z-index: -1;
-
-		&.fixed {
-			position: fixed;
-			top: 200px;
-		}
+		position: fixed;
+		top: 200px;
 
 	}
 
