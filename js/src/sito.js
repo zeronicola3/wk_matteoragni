@@ -183,7 +183,7 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('active');
 	});
 
-	$('.timeline-item-title h5').on('hover', function(){
+	$('.timeline-item-title h5').hover(function(){
 		var item = $(this).parent('a.timeline-title-box').attr('data-title');
 		$('.timeline-item.active').removeClass('active');
 		$('.timeline-item.' + item).addClass('active');
