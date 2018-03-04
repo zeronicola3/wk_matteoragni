@@ -215,7 +215,7 @@ $(document).ready(function() {
 			//$('.timeline-item.active').css("top", -($('.timeline-item.active').offset().top * 13.5 - 40));
 		});
 
-
+/*
 		$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
 		var $el, 
 			speed = 20,    
@@ -228,7 +228,7 @@ $(document).ready(function() {
 			$("#mover").css("top", -($el.data("pos") * speed - 40));			
 		});
 
-
+*/
 
 
 
