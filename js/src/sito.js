@@ -199,7 +199,7 @@ $(document).ready(function() {
 			$(this).parent().addClass('active');
 		});
 */
-		$('.timeline-item-title').hover();
+		$('.timeline-item-title').hover(showPreview());
 
 
 	}
