@@ -215,7 +215,7 @@ $(document).ready(function() {
 			$('.timeline-item.active').css("top", -($('.timeline-item.active').offset().top * 13.5 - 40))
 		});
 
-
+/*
 		$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
 		var $el,
 		    speed = 13.5,    // needs to be manually tinkered with
@@ -238,7 +238,7 @@ $(document).ready(function() {
 		});
 
 
-
+*/
 
 
 
