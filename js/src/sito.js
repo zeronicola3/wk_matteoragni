@@ -181,10 +181,10 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		var st = window.pageYOffset || document.documentElement.scrollTop;
-		
+
 		var nextItem = $(".timeline-item-title.active").last().next();
 
-		if(nextItem.offset().top <= (st - (screenheight / 2))){
+		if(nextItem.offset().top <= (st + (screenheight / 2))){
 
 		}
 
