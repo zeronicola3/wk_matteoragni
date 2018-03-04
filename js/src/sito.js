@@ -174,10 +174,10 @@ $(document).ready(function() {
 
 				} 
 			}
-*/
+
 			lastScrollTop = st;
 		}).scroll();
-
+*/
 	}
 
 	/* SLIDER SITO */
