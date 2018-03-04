@@ -61,6 +61,10 @@
 .timeline-item.active {
 	height: auto;
 	//@include transition;
+
+	@include mq($from: tablet){
+		z-index: 999;
+	}
 }
 
 
