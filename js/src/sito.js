@@ -224,11 +224,8 @@ $(document).ready(function() {
 		items.each(function(i) {
 			$(this).attr("data-pos", i);
 		}).hover(function() {
-
-			$el = $(this);	
-			
-			$("#mover").css("top", -($el.data("pos") * speed - 40));
-								
+			$el = $(this);		
+			$("#mover").css("top", -($el.data("pos") * speed - 40));			
 		});
 
 
