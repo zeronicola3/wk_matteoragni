@@ -180,7 +180,7 @@ $(document).ready(function() {
 */
 
 	$('.timeline-year-box h4').on('click', function(){
-		$(this).toggleClass('active');
+		$('.timeline-year-box').toggleClass('active');
 	});
 
 
