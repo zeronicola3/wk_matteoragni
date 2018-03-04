@@ -23,6 +23,7 @@
 		width: 600px;
 		right: 0;
 		background-color: $bianco;
+		z-index: -1;
 
 		&.fixed {
 			position: fixed;

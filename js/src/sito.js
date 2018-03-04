@@ -120,12 +120,14 @@ $(document).ready(function() {
 		var lastScrollTop = 0;
 		var screenheight = $(window).height();
 		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
-		var container_top = $(".timeline-block").offset().top;
-		var container_bottom = container_top + $(".timeline-block").outerHeight();
+		
 		
 
 		$(window).scroll(function(e){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
+
+			var container_top = $(".timeline-block").offset().top;
+			var container_bottom = container_top + $(".timeline-block").outerHeight();
 
 			var abs_top = item_top - container_top;
 			var sb = st + screenheight;
