@@ -191,11 +191,11 @@ $(document).ready(function() {
 			}
 
 		}).scroll();
-
+*/
 		$('.timeline-year-box.active').(function(){
 			$(this).parent().addClass('active');
 		});
-*/
+
 		$('.timeline-item-title').hover(function(){
 			var item = $(this).parent('a.timeline-title-box').attr('data-title');
 			$('.timeline-item.active').removeClass('active');
