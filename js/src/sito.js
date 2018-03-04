@@ -179,7 +179,7 @@ $(document).ready(function() {
 		}).scroll();
 */
 
-	$('.timeline-year-box').on('click', function(){
+	$('.timeline-year-box h4').on('click', function(){
 		$(this).toggleClass('active');
 	});
 
