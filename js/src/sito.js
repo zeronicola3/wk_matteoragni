@@ -199,16 +199,13 @@ $(document).ready(function() {
 			$(this).parent().addClass('active');
 		});
 */
-		$('.timeline-item-title').hover(showPreview());
+		$('.timeline-item-title').hover(function(){
+			var item = $(this).parent('a.timeline-title-box').attr('data-title');
+			$('.timeline-item.active').removeClass('active');
+			$('.timeline-item.' + item).addClass('active'); 
+		});
 
 
-	}
-
-
-	function showPreview(){
-		var item = $(this).parent('a.timeline-title-box').attr('data-title');
-		$('.timeline-item.active').removeClass('active');
-		$('.timeline-item.' + item).addClass('active'); 
 	}
 
 	/* SLIDER SITO */
