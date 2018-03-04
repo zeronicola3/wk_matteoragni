@@ -179,8 +179,8 @@ $(document).ready(function() {
 		}).scroll();
 */
 
-	$('.timeline-year-box h4').on('click', function(){
-		$(this).parent().toggleClass('active');
+	$('.timeline-year-box h4').hover(function(){
+		$(this).parent().addClass('active');
 	});
 
 	$('.timeline-item-title').hover(function(){
