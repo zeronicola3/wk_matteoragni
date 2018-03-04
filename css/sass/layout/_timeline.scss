@@ -3,11 +3,11 @@
 	margin: 0;
 	text-transform: none;
 	font-weight: 300;
-	@include transition;
+	//@include transition;
 
 	&:hover {
 		font-weight: 700;
-		@include transition;
+		//@include transition;
 	}
 }
 
