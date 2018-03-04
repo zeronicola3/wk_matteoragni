@@ -217,8 +217,8 @@ $(document).ready(function() {
 
 
 		//$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
-		var speed = 13.5,    // needs to be manually tinkered with
-		    items = $('.timeline-title-box');
+		var speed = 13.5;    // needs to be manually tinkered with
+		var items = $('.timeline-title-box');
 		    				
 		$(items).each(function(i) {
 			$(this).attr("data-pos", i);
