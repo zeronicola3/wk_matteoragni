@@ -71,6 +71,7 @@
 
 .timeline-year-box.active {
     height: auto;
+    @include transition;
 }
 .timeline-year-box {
     height: 50px;
