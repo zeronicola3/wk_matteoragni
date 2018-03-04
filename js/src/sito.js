@@ -202,7 +202,7 @@ $(document).ready(function() {
 			$('.timeline-item.' + item).addClass('active'); 
 		});
 
-
+*/
 	}
 
 	/* SLIDER SITO */
