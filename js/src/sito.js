@@ -76,7 +76,7 @@ $(document).ready(function() {
 		var header=$("header");
 
 		// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-		$(window).scroll(function(){ // or window.addEventListener("scroll"....
+		window.addEventListener("scroll", function(){	 // or window.addEventListener("scroll"....
 			var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 
 			if(st > 70){
@@ -102,7 +102,7 @@ $(document).ready(function() {
 			}
 			lastScrollTop = st;
 
-		}).scroll();
+		},false);
 
 
 
@@ -124,7 +124,7 @@ $(document).ready(function() {
 		var container_bottom = container_top + $(".timeline-block").outerHeight();
 		
 
-		window.addEventListener("scroll", function(){	
+		$(window).scroll(function(){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 
 			var abs_top = item_top - container_top;
@@ -174,7 +174,7 @@ $(document).ready(function() {
 			}
 */
 			lastScrollTop = st;
-		}, false);
+		}).scroll();
 
 	}
 
