@@ -218,7 +218,7 @@ $(document).ready(function() {
 
 		$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
 		var $el,
-		    speed = 20,    // needs to be manually tinkered with
+		    speed = 25,    // needs to be manually tinkered with
 		    items = $('.timeline-title-box');
 		    				
 		items
