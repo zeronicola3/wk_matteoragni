@@ -194,8 +194,8 @@ $(document).ready(function() {
 				$(nextItem).addClass('active');
 			}
 
-			if($(nextItem + ' .timeline-item-title').offset().top == screenCenter){
-				var item = $(nextItem + ' .timeline-item-title').parent('a.timeline-title-box').attr('data-title');
+			if($(lastItem + ' .timeline-item-title').offset().top == screenCenter){
+				var item = $(lastItem + ' .timeline-item-title').parent('a.timeline-title-box').attr('data-title');
 				$('.timeline-item.active').removeClass('active');
 				$('.timeline-item.' + item).addClass('active'); 
 			}
