@@ -64,3 +64,13 @@
 	height: auto;
 	//@include transition;
 }
+
+
+
+.timeline-year-box:hover {
+    height: auto;
+}
+.timeline-year-box {
+    height: 50px;
+    overflow-y: hidden;
+}
