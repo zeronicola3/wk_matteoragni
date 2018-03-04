@@ -92,7 +92,7 @@ function secondary_project_content_without_img($project) {
 				
 				<!--div class="timeline-year-box timeline-year-<?php echo $year; if($number==0){ echo " active"; $number++;} ?> "-->
 					
-					<h4><?php echo $year; ?></h4>
+					<!--h4><?php echo $year; ?></h4-->
 
 					<?php
 					foreach ($projects as $key => $project) { ?>
