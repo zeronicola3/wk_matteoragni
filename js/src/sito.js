@@ -190,7 +190,7 @@ $(document).ready(function() {
 				$(nextItem).addClass('active');
 			}
 
-		}).scroll();
+		});
 /*
 		$('.timeline-year-box.active').(function(){
 			$(this).parent().addClass('active');
