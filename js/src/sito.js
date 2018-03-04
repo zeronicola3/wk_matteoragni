@@ -177,7 +177,10 @@ $(document).ready(function() {
 
 			lastScrollTop = st;
 		}).scroll();
+
+
 */
+		
 
 		$(window).scroll(function(){
 
