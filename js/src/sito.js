@@ -212,7 +212,7 @@ $(document).ready(function() {
 
 			$('.timeline-item.' + item).addClass('active'); 
 
-			$('.timeline-item.active').css("top", -($('.timeline-item.active').offset().top * 13.5 - 40));
+			//$('.timeline-item.active').css("top", -($('.timeline-item.active').offset().top * 13.5 - 40));
 		});
 
 
@@ -230,7 +230,7 @@ $(document).ready(function() {
 			$el = $(this);
 			$el.addClass("hover");	
 			
-			$("#mover").css("top", -($el.data("pos") * speed - 40));
+			$("#mover").css("top", -($el.data("pos") * speed - 100));
 			// 40 is the top padding for the fadeout
 								
 		}, function() {
