@@ -184,7 +184,7 @@ $(document).ready(function() {
 
 		var nextItem = $(".timeline-item-title.active").last().next();
 
-		if(nextItem.offset().top <= (st + (screenheight / 2))){
+		if($(nextItem).offset().top <= (st + (screenheight / 2))){
 
 		}
 
