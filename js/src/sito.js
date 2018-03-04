@@ -218,7 +218,7 @@ $(document).ready(function() {
 
 		$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
 		var $el,
-		    speed = 13.5,    // needs to be manually tinkered with
+		    speed = 20,    // needs to be manually tinkered with
 		    items = $('.timeline-title-box');
 		    				
 		items
@@ -230,7 +230,7 @@ $(document).ready(function() {
 			$el = $(this);
 			$el.addClass("hover");	
 			
-			$("#mover").css("top", -($el.data("pos") * speed - 100));
+			$("#mover").css("top", -($el.data("pos") * speed - 40));
 			// 40 is the top padding for the fadeout
 								
 		}, function() {
