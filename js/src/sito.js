@@ -181,7 +181,7 @@ $(document).ready(function() {
 
 		$(window).scroll(function(){
 
-			//var st = window.pageYOffset || document.documentElement.scrollTop;
+		/*	//var st = window.pageYOffset || document.documentElement.scrollTop;
 			//var screenCenter = st + (screenheight/2);
 			//var nextItem = $(".timeline-item-title.active").last().next();
 			var curTop = $(nextItem).offset().top;
@@ -199,7 +199,7 @@ $(document).ready(function() {
 		$('.timeline-item-title').hover(function(){
 			var item = $(this).parent('a.timeline-title-box').attr('data-title');
 			$('.timeline-item.active').removeClass('active');
-			$('.timeline-item.' + item).addClass('active');
+			$('.timeline-item.' + item).addClass('active'); */
 		});
 
 
