@@ -209,8 +209,39 @@ $(document).ready(function() {
 		$('.timeline-item-title').hover(function(){
 			var item = $(this).parent('a.timeline-title-box').attr('data-title');
 			$('.timeline-item.active').removeClass('active');
+
 			$('.timeline-item.' + item).addClass('active'); 
+
+			$('.timeline-item.active').css("top", -($('.timeline-item.active'). * 13.5 - 40))
 		});
+
+
+		$(".timeline-block").css("overflow", "hidden").wrapInner("<div id='mover' />");
+		var $el,
+		    speed = 13.5,    // needs to be manually tinkered with
+		    items = $('.timeline-item-title');
+		    				
+		items
+		.each(function(i) {
+			$(this).attr("data-pos", i);
+		})
+		.hover(function() {
+
+			$el = $(this);
+			$el.addClass("hover");	
+			
+			$("#mover").css("top", -($el.data("pos") * speed - 40));
+			// 40 is the top padding for the fadeout
+								
+		}, function() {
+			$(this).removeClass("hover");
+		});
+
+
+
+
+
+
 
 
 	}
