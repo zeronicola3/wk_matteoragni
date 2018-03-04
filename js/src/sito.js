@@ -224,6 +224,17 @@ $(document).ready(function() {
 		items
 		.each(function(i) {
 			$(this).attr("data-pos", i);
+		})
+		.hover(function() {
+
+			$el = $(this);
+			$el.addClass("hover");	
+			
+			$("#mover").css("top", -($el.data("pos") * speed - 40));
+			// 40 is the top padding for the fadeout
+								
+		}, function() {
+			$(this).removeClass("hover");
 		});
 
 
