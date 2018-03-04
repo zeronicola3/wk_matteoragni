@@ -230,7 +230,7 @@ $(document).ready(function() {
 			$el = $(this);
 			$el.addClass("hover");	
 			
-			$("#mover").css("top", -($el.data("pos") * speed - 100));
+			$("#mover").css("top", -($el.data("pos") * speed - 40));
 			// 40 is the top padding for the fadeout
 								
 		}, function() {
