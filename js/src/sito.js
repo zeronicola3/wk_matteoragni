@@ -122,7 +122,7 @@ $(document).ready(function() {
 		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
 		
 		
-
+/*
 		$(window).scroll(function(e){	
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -157,7 +157,7 @@ $(document).ready(function() {
 			}
 
 			
-/*
+
 
 			if(isOnScreen(".timeline-block")) {
 				if(item_top <= (scroll_top + 200)) {
