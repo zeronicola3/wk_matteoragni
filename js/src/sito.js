@@ -221,7 +221,7 @@ $(document).ready(function() {
 		var items = $('.timeline-title-box');
 		    				
 		$(items).each(function() {
-			$(this).attr("data-pos", i);
+			$(this).attr("data-pos");
 		});
 
 
