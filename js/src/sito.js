@@ -220,7 +220,7 @@ $(document).ready(function() {
 		var speed = 13.5;    // needs to be manually tinkered with
 		var items = $('.timeline-title-box');
 		    				
-		$(items).each(function(i) {
+		$(items).each(function() {
 			$(this).attr("data-pos", i);
 		});
 
