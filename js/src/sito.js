@@ -193,6 +193,12 @@ $(document).ready(function() {
 				$(nextItem).addClass('active');
 			}
 
+			if($('.timeline-item-title').offset().top <= screenCenter){
+				var item = $(this).parent('a.timeline-title-box').attr('data-title');
+				$('.timeline-item.active').removeClass('active');
+				$('.timeline-item.' + item).addClass('active'); 
+			}
+
 		});
 /*
 		$('.timeline-year-box.active').(function(){
