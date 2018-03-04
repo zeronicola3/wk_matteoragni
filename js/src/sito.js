@@ -179,7 +179,17 @@ $(document).ready(function() {
 		}).scroll();
 */
 
-	$('.timeline-year-box h4').hover(function(){
+	$(window).scroll(function(){
+		var st = window.pageYOffset || document.documentElement.scrollTop;
+		
+		var nextItem = $(".timeline-item-title.active").last().next();
+
+		if(nextItem.offset().top <= (st - (screenheight / 2))){
+
+		}
+
+	});
+	$('.timeline-year-box.active').(function(){
 		$(this).parent().addClass('active');
 	});
 
