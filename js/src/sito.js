@@ -182,7 +182,7 @@ $(document).ready(function() {
 		$(window).scroll(function(){
 
 			//var st = window.pageYOffset || document.documentElement.scrollTop;
-			var screenCenter = st + (screenheight/2);
+			//var screenCenter = st + (screenheight/2);
 			var nextItem = $(".timeline-item-title.active").last().next();
 			var curTop = $(nextItem).offset().top;
 
