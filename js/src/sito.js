@@ -225,13 +225,10 @@ $(document).ready(function() {
 			$(this).attr("data-pos", i);
 		}).hover(function() {
 
-			$el = $(this);
-			$el.addClass("hover");	
+			$el = $(this);	
 			
 			$("#mover").css("top", -($el.data("pos") * speed - 40));
 								
-		}, function() {
-			$(this).removeClass("hover");
 		});
 
 
