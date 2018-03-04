@@ -119,7 +119,7 @@ $(document).ready(function() {
 
 		var lastScrollTop = 0;
 		var screenheight = $(window).height();
-		var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
+	//	var item_right = $(document).outerWidth() - ($('.timeline-item').offset().left + $('.timeline-item').outerWidth());
 		
 		
 /*
