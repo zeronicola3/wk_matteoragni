@@ -179,7 +179,7 @@ $(document).ready(function() {
 		}).scroll();
 */
 
-		$(window).scroll(function(){
+//		$(window).scroll(function(){
 
 		/*	//var st = window.pageYOffset || document.documentElement.scrollTop;
 			//var screenCenter = st + (screenheight/2);
@@ -195,7 +195,7 @@ $(document).ready(function() {
 		$('.timeline-year-box.active').(function(){
 			$(this).parent().addClass('active');
 		});
-*/
+
 		$('.timeline-item-title').hover(function(){
 			var item = $(this).parent('a.timeline-title-box').attr('data-title');
 			$('.timeline-item.active').removeClass('active');
