@@ -178,6 +178,12 @@ $(document).ready(function() {
 			lastScrollTop = st;
 		}).scroll();
 */
+
+	$('.timeline-year-box').on('click', function(){
+		$(this).toggleClass('active');
+	});
+
+
 	}
 
 	/* SLIDER SITO */
