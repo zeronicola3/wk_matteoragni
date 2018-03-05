@@ -104,7 +104,9 @@ $(document).ready(function() {
 
 		},false);
 
-
+		$('.timeline-year-box').on('click', function(){
+			$(this).toggleClass('active');
+		});
 
 		$('.timeline-title-box').on('click', function(){
 			
