@@ -186,14 +186,14 @@ $(document).ready(function() {
 
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 			var screenCenter = st + ((screenheight*2)/3);
-			var lastItem = $(".timeline-year-box.active:last-child");
+			var lastItem = $(".timeline-year-box.active").last;
 			var nextItem = $(lastItem).next();
 			var curTop = $(nextItem).offset().top;
 
 			if(curTop <= screenCenter){
 				$(nextItem).addClass('active');
 			}
-			
+
 			var lasttop = $(lastItem + ' a .timeline-item-title').offset();
 			if(lasttop.top == screenCenter){
 				var item = $(lastItem + ' .timeline-item-title').parent('a.timeline-title-box').attr('data-title');
