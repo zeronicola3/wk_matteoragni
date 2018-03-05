@@ -105,7 +105,7 @@ $(document).ready(function() {
 		},false);
 
 		$('.timeline-year-box h4').on('click', function(){
-			$(this).parent().addClass('active');
+			$(this).parent().toggleClass('active');
 		});
 
 		$('.timeline-title-box').on('click', function(){
