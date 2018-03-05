@@ -193,7 +193,7 @@ $(document).ready(function() {
 			if(curTop <= screenCenter){
 				$(nextItem).addClass('active');
 			}
-			var lasttop = $(lastItem + ' .timeline-item-title').offset();
+			var lasttop = $(lastItem + ' a .timeline-item-title').offset();
 
 			if(lasttop.top == screenCenter){
 				var item = $(lastItem + ' .timeline-item-title').parent('a.timeline-title-box').attr('data-title');
