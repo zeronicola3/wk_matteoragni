@@ -193,9 +193,9 @@ $(document).ready(function() {
 			if(curTop <= screenCenter){
 				$(nextItem).addClass('active');
 			}
-			
-			var lasttop = $(lastItem + ' a .timeline-item-title').offset();
-			if(lasttop.top == screenCenter){
+
+			var lasttop = $(lastItem + ' a .timeline-item-title').scrollTop();
+			if(lasttop == screenCenter){
 				var item = $(lastItem + ' .timeline-item-title').parent('a.timeline-title-box').attr('data-title');
 				$('.timeline-item.active').removeClass('active');
 				$('.timeline-item.' + item).addClass('active'); 
