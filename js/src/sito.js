@@ -186,11 +186,11 @@ $(document).ready(function() {
 
 			var st = window.pageYOffset || document.documentElement.scrollTop;
 			var screenCenter = st + ((screenheight*2)/3);
-			//var lastItem = $(".timeline-year-box.active").last();
+			var lastItem = $(".timeline-year-box.active").last();
 			var nextItem = $(lastItem).next();
-			var curTop = $(nextItem).offset().top;
+			var curTop = $(nextItem).offset();
 
-			if(curTop <= screenCenter){
+			if(curTop.top <= screenCenter){
 				$(nextItem).addClass('active');
 			}
 /*
