@@ -80,17 +80,14 @@ function secondary_project_content_without_img($project) {
 	echo '<h5 class="timeline-item-title">'. $project['title'] .'</h5>';
 }	
 
-
 ?>
-
 		<div class="timeline-block">
-
 <?php
 			$timeline = parse_json_file();
 			$number = 0;
 			foreach ($timeline as $year => $projects) { ?>
 				
-				<div class="timeline-year-box timeline-year-<?php echo $year; if($number==0){ echo " active"; $number++;} ?> ">
+				<!--div class="timeline-year-box timeline-year-<?php echo $year; if($number==0){ echo " active"; $number++;} ?> "-->
 					
 					<h4><?php echo $year; ?></h4>
 
@@ -113,7 +110,7 @@ function secondary_project_content_without_img($project) {
 
 					<?php } ?>
 
-				</div>
+				<!--/div-->
 			<?php 
 			}
 
