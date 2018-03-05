@@ -123,7 +123,7 @@ function generate_projects_json() {
 
 /**
  *  Updates cloudinary content cache JSON file in current theme directory
- *  @return file ./results.json 
+ *  @return file ./timeline.json 
  **/
 function update_projects_json(){
 
@@ -135,7 +135,7 @@ function update_projects_json(){
 
 /**
  *  Gets array
- *  @return file ./results.json 
+ *  @return file ./timeline.json 
  **/
 function parse_json_file(){
     // Read JSON file
