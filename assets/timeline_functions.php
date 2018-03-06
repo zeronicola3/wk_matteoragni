@@ -102,11 +102,13 @@ function get_clients($post_id){
 			if($numero_correlati==0) { 
 
 			    foreach ($related as $conn) {
-			    	array_push($clients, array(
-			    		'ID' => $conn->ID,
-			    		'title' => $conn->post_title,
-			    		'url' => $conn->webkolm_client_link
-			    	));
+			    	if($conn->ID != null){
+			    		array_push($clients, array(
+				    		'ID' => $conn->ID,
+				    		'title' => $conn->post_title,
+				    		'url' => $conn->webkolm_client_link
+				    	));
+			    	}
 			    }
 			}
 
