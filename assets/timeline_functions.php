@@ -89,13 +89,13 @@ function get_clients($post_id){
     );
 
     $query = new WP_Query($args);
-
+   	$clients = array();
     if ( $query->have_posts() ) :
         // Start the Loop.
         while ( $query->have_posts() ) : $query->the_post();
 
 			$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
-			$clients = array();
+
 
 		    foreach ($connected as $conn) {
 		    	array_push($clients, array(
