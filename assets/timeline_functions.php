@@ -96,8 +96,6 @@ function get_clients($post_id){
         // Start the Loop.
         while ( $query->have_posts() ) : $query->the_post();
 
-        	the_title();
-
 			$related = p2p_type( 'projects_to_client' )->get_related( get_the_ID() );
 			$numero_correlati=$related->found_posts;
 
