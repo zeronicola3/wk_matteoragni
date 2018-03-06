@@ -81,19 +81,32 @@ function get_projects_by_year($year){
 
 function get_clients($post_id){
 
+	$args = array(
+        'post_type'  => 'project',
+        'posts_per_page' => 1,
+        'post_status' => 'publish',
+        'p' => $post_id,   // id of the post you want to query
+    );
 
-	
+    $query = new WP_Query($args);
 
-	$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post_id );
-	$clients = array();
+    if ( $query->have_posts() ) :
+        // Start the Loop.
+        while ( $query->have_posts() ) : $query->the_post();
 
-    foreach ($connected as $conn) {
-    	array_push($clients, array(
-    		'ID' => $conn->ID,
-    		'title' => $conn->post_title,
-    		'url' => $conn->webkolm_client_link
-    	));
-    }
+			$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
+			$clients = array();
+
+		    foreach ($connected as $conn) {
+		    	array_push($clients, array(
+		    		'ID' => $conn->ID,
+		    		'title' => $conn->post_title,
+		    		'url' => $conn->webkolm_client_link
+		    	));
+		    }
+
+		endwhile;
+	endif;
 
     return $clients;
 }
