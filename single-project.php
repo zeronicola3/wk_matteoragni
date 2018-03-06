@@ -126,7 +126,7 @@
 
 
 
-                    print_r(get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name));
+                   // print_r(get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name));
 
                     ?>
 
