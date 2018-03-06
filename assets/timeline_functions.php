@@ -81,6 +81,9 @@ function get_projects_by_year($year){
 
 function get_clients($post_id){
 
+
+	
+
 	$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post_id );
 	$clients = array();
 
