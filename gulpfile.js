@@ -39,7 +39,7 @@ gulp.task('fetch', function(){
 
 gulp.task('deploy', function() {
 //* Dirs and Files to sync
-  rsyncPaths = ['sass', 'css', 'font', 'img', 'js', './*.php', './style.css'];
+  rsyncPaths = ['sass','assets', 'css', 'font', 'img', 'js', './*.php', './style.css'];
 // Default options for rsync in staging side
   rsyncConf = {
     progress: true,
@@ -158,7 +158,7 @@ gulp.task('push-changes', function (cb) {
 });
 
 gulp.task('default', function () {
-  gulp.watch(['./*.php','./img/*'], ['changed']);
+  gulp.watch(['./*.php','./img/*', './assets/*'], ['changed']);
   gulp.watch(['./css/sass/*.scss','./css/sass/**/*.scss'], ['sass','changed']);
   gulp.watch('./js/src/*.js', ['uglify','changed']);
 

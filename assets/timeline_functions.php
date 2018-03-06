@@ -123,7 +123,7 @@ function generate_projects_json() {
 
 /**
  *  Updates cloudinary content cache JSON file in current theme directory
- *  @return file ./timeline.json 
+ *  @return file ./timezone_location_get().json 
  **/
 function update_projects_json(){
 
