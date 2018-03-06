@@ -81,6 +81,8 @@ function get_projects_by_year($year){
 
 function get_clients($post_id){
 
+	global $post;
+
 	$args = array(
         'post_type'  => 'project',
         'posts_per_page' => 1,
@@ -94,16 +96,19 @@ function get_clients($post_id){
         // Start the Loop.
         while ( $query->have_posts() ) : $query->the_post();
 
-			$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
+			$related = p2p_type( 'projects_to_client' )->get_related( get_queried_object() );
+			$numero_correlati=$related->found_posts;
 
+			if($numero_correlati==0) { 
 
-		    foreach ($connected as $conn) {
-		    	array_push($clients, array(
-		    		'ID' => $conn->ID,
-		    		'title' => $conn->post_title,
-		    		'url' => $conn->webkolm_client_link
-		    	));
-		    }
+			    foreach ($related as $conn) {
+			    	array_push($clients, array(
+			    		'ID' => $conn->ID,
+			    		'title' => $conn->post_title,
+			    		'url' => $conn->webkolm_client_link
+			    	));
+			    }
+			}
 
 		endwhile;
 	endif;
