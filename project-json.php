@@ -85,6 +85,9 @@ function secondary_project_content_without_img($project) {
 <?php
 			$timeline = parse_json_file();
 			$number = 0;
+
+			get_images(75);
+
 			foreach ($timeline as $year => $projects) { ?>
 				
 				<div class="timeline-year-box timeline-year-<?php echo $year; if($number==0){ echo " active"; $number++;} ?> ">
