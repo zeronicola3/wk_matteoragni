@@ -11,7 +11,7 @@ get_header(); ?>
         <?php
             $args = array(
                 'post_type'  => 'project',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
                 'meta_key'     => 'webkolm_homepage_post_box',
                 'meta_value'   => '1',
                 'meta_compare' => '==',
