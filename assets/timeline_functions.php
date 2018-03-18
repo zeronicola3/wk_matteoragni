@@ -135,7 +135,7 @@ function get_images($post_id) {
 */
 
 
-	$gallery = get_post_meta($post->ID, 'webkolm_gallery_test', true);
+	$gallery = get_post_meta($post_id, 'webkolm_gallery_test', true);
 	print_r($gallery);
 }
 
