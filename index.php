@@ -22,7 +22,7 @@ get_header(); ?>
             if ( $query->have_posts() ) :
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
-
+                    /*
                     $client_name = $client_link = $client_id = $connected = "";
                     $meta = get_post_meta( $post->ID ); 
                     $elem_number = rand(10,9999);
@@ -78,7 +78,7 @@ get_header(); ?>
                     </div>
 
 
-        <?php   
+        <?php   */
                 endwhile;
             endif;
         ?>
