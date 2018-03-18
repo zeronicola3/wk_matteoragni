@@ -88,6 +88,8 @@ function secondary_project_content_without_img($project) {
 
 			get_images(1828);
 
+			echo "test";
+
 			foreach ($timeline as $year => $projects) { ?>
 				
 				<div class="timeline-year-box timeline-year-<?php echo $year; if($number==0){ echo " active"; $number++;} ?> ">
