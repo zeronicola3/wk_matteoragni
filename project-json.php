@@ -86,7 +86,7 @@ function secondary_project_content_without_img($project) {
 			$timeline = parse_json_file();
 			$number = 0;
 
-			get_images(75);
+			get_images(1828);
 
 			foreach ($timeline as $year => $projects) { ?>
 				
