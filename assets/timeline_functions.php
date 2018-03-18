@@ -71,6 +71,8 @@ function get_projects_by_year($year){
 	    		'img_urls' => get_images($post->ID)
 	    	);
 
+	    	echo get_images($post->ID);
+
 	    endwhile;
 	endif;
 
@@ -137,7 +139,7 @@ function get_images($post_id) {
 			'large' => wp_get_attachment_image_src( $img_secondary_id, 'large' )[0],
 			'full' => wp_get_attachment_image_src( $img_secondary_id, 'full' )[0],
 		);
-		
+
 	} else {
 
 		$gallery = get_post_meta($post_id, 'webkolm_gallery_test', true);
