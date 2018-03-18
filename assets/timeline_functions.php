@@ -121,7 +121,7 @@ function get_clients($post_id){
 
 function get_images($post_id) {
 
-	$img_id = get_post_meta($post_id, 'webkolm_featured_img_input', true);
+	$img_id = get_post_thumbnail_id($post_id);
 
 	if($img_id != "") {
 		return array(
