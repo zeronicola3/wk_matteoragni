@@ -71,8 +71,6 @@ function get_projects_by_year($year){
 	    		'img_urls' => get_images($post->ID)
 	    	);
 
-	    	print_r(get_images($post->ID));
-
 	    endwhile;
 	endif;
 
