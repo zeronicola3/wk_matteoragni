@@ -29,6 +29,7 @@ get_header(); ?>
 
                             $item_id = get_the_ID();
 
+                            $image_id = get_post_meta($item_id, 'webkolm_featured_img_input', true);
                             $url_small = wp_get_attachment_image_src( $item_id, 'medium' );
                             $url_big = wp_get_attachment_image_src( $item_id, 'large' );
                             //  image field TRUE = cover; FALSE = contain
@@ -50,7 +51,7 @@ get_header(); ?>
 
                                 </style>
                             </li>
-                            
+
                 <?php $numslide++;
                    
                 endwhile;
