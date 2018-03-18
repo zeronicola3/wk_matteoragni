@@ -11,7 +11,10 @@ get_header(); ?>
         <?php
             $args = array(
                 'post_type'  => 'project',
-                'posts_per_page' => '-1',
+                'posts_per_page' => -1
+                'meta_key'     => 'webkolm_homepage_post_box',
+                'meta_value'   => '1',
+                'meta_compare' => '==',
             );
 
             $query = new WP_Query($args);
@@ -75,36 +78,10 @@ get_header(); ?>
                     </div>
 
 
-
-                    <div class="project-container wrapper">
-                        <div class="project-col wkcol-5 project-header">
-                            <h4 class="project-title"><?php the_title(); ?></h4>
-                        <?php if($meta['webkolm_designer']['0'] != ""){ ?>
-                            <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
-                        <?php } ?>
-                        <?php if($client_id != ""){ ?>
-                            <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a><br></span>
-                        <?php } ?>
-                        <?php if($meta['webkolm_project_year']['0'] != ""){ ?>
-                            <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
-                        <?php } ?>
-                        </div>
-                        <div class="wkcol-1"></div>
-                        <div class="project-col wkcol-5 project-prizes">
-                            <?php echo $meta['webkolm_prizes_test']['0']; ?>
-                        </div>
-                        <div class="wkcol-1"></div>
-                        <div class="project-col project-content wkcol-12">
-                            <?php the_content(); ?>
-                        </div>
-                        
-                    </div>
-
         <?php   
                 endwhile;
             endif;
         ?>
-        <?php twentythirteen_paging_nav();?>
         </div>
 </div>
 <?php get_footer(); ?>
