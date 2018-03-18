@@ -120,7 +120,7 @@ function get_clients($post_id){
 
 
 function get_images($post_id) {
-/*
+
 	$img_id = get_post_meta($post_id, 'webkolm_featured_img_input', true);
 
 	if($img_id != "") {
@@ -129,14 +129,24 @@ function get_images($post_id) {
 			'large' => wp_get_attachment_image_src( $img_id, 'large' )[0],
 			'full' => wp_get_attachment_image_src( $img_id, 'full' )[0],
 		);
-	} 
+	} else {
+
+		$gallery = get_post_meta($post_id, 'webkolm_gallery_test', true);
+
+		if($gallery != "") {
+
+	        preg_match('/\[gallery.*ids=.(.*).\]/', $gallery, $ids);
+	        $array_id = explode(",", $ids[1]);
+
+	        return array(
+				'medium' => wp_get_attachment_image_src( $array_id[0], 'medium' )[0],
+				'large' => wp_get_attachment_image_src( $array_id[0], 'large' )[0],
+				'full' => wp_get_attachment_image_src( $array_id[0], 'full' )[0],
+			);
+	    }
+	}
 	
 	return null;
-*/
-
-
-	$gallery = get_post_meta($post_id, 'webkolm_gallery_test', true);
-	print_r($gallery);
 }
 
 

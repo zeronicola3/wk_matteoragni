@@ -73,4 +73,8 @@ body.notouch.bloccoscroll {
 	width: 90%;
 	margin: 0 auto;
 	max-width: 1060px;
+
+	&.no-limitated {
+		max-width: unset;
+	}
 }
