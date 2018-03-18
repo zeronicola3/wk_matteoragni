@@ -22,6 +22,8 @@ get_header(); ?>
             if ( $query->have_posts() ) :
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
+
+                    the_title();
                     /*
                     $client_name = $client_link = $client_id = $connected = "";
                     $meta = get_post_meta( $post->ID ); 
