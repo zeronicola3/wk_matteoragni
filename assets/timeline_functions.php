@@ -120,7 +120,7 @@ function get_clients($post_id){
 
 
 function get_images($post_id) {
-
+/*
 	$img_id = get_post_meta($post_id, 'webkolm_featured_img_input', true);
 
 	if($img_id != "") {
@@ -132,6 +132,11 @@ function get_images($post_id) {
 	} 
 	
 	return null;
+*/
+
+
+	$gallery = get_post_meta($post_id, 'webkolm_gallery', true);
+	print_r($gallery);
 }
 
 
