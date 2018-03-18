@@ -12,9 +12,9 @@ get_header(); ?>
             $args = array(
                 'post_type'  => 'project',
                 'posts_per_page' => -1,
-                'meta_key'     => 'webkolm_homepage_post_box',
-                'meta_value'   => '1',
-                'meta_compare' => '==',
+               // 'meta_key'     => 'webkolm_homepage_post_box',
+               // 'meta_value'   => '1',
+                //'meta_compare' => '==',
             );
 
             $query = new WP_Query($args);
@@ -23,7 +23,7 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post();
 
-                    the_title();
+                   print_r(get_post_meta(get_the_ID(),'webkolm_homepage_post_box', true));
                     /*
                     $client_name = $client_link = $client_id = $connected = "";
                     $meta = get_post_meta( $post->ID ); 
