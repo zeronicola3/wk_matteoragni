@@ -246,7 +246,7 @@ $(document).ready(function() {
 		    animation: "fade",
 		    animationLoop: true,
 		    slideshow: true,
-		    slideshowSpeed : "2000",
+		    slideshowSpeed : "2500",
 		     pauseOnHover: true,
 		    multipleKeyboard: true,
 		    keyboard: true,
