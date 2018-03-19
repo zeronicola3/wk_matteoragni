@@ -135,6 +135,15 @@ nav.onlymobile{
 				font-weight: 300;
 			    text-transform: uppercase;
    	 			font-size: .875rem;
+
+   	 			&::after {
+   	 				content: " ";
+   	 				height: 4px;
+   	 				width: 0px;
+   	 				background-color: $bianco;
+   	 				@include transition;
+   	 				
+   	 			}
 			}	
 			/*
 			a:hover {
