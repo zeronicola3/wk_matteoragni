@@ -71,6 +71,7 @@ body.nav-open a.mobile-menu {
 		height:1px;
 		transform: rotate(22.5deg) skewX(22.5deg);
 		transition-delay: 0, .2s;
+		background-color: $bianco;
 	}
 
 	span:after {
@@ -78,6 +79,7 @@ body.nav-open a.mobile-menu {
 		height:1px;
 		transform: rotate(-22.5deg) skewX(-22.5deg);
 		transition-delay: 0, .2s;
+		background-color: $bianco;
 	}
 }
 
