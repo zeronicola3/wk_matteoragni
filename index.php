@@ -62,8 +62,10 @@ get_header(); ?>
                             $is_contain = (bool) get_post_meta( $image_id, 'image-bg-size', true );
 
                             ?>
-                            <a href="<?php echo get_the_permalink(); ?>">
+                            
                                 <li class="project_slide-<?php echo $numslide; ?> slideimg">
+                                    <a href="<?php echo get_the_permalink(); ?>">
+                                    </a>
                                     <style>
                                         .project-cover-gallery-<?php echo $elem_number; ?> .project_slide-<?php echo $numslide; ?> { 
                                             background-image:url('<?php echo $url_small['0'] ?>');
@@ -77,6 +79,7 @@ get_header(); ?>
                                         }
 
                                     </style>
+
                                 </li>
                             </a>
 
