@@ -187,7 +187,7 @@ nav.onlymobile{
 		}
 
 	} /* UL */
-	ul#menu-principale > li.current-menu-item > a {
+	ul li.current-menu-item a {
 		&::after {width: 100%; @include transition;}
 	}
 	
