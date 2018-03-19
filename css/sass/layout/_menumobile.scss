@@ -123,12 +123,12 @@ nav.onlymobile{
 			list-style: none;
 			
 			a  {
-				display: block;
-				width:100%;
+				display: inline-block;
+			    width: auto;
 				color:$color_nav;
 				outline: none;
 				letter-spacing: 1px;
-				padding: .5em .5em .5em 1em;
+				padding: .5em 0 .5em 0;
 				text-shadow: 0 0 1px rgba($ombra_nav,0.1);
 				border-bottom:1px solid $sfondo_nav;
 				box-sizing: border-box;
