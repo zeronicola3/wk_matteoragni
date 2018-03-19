@@ -115,6 +115,10 @@ nav.onlymobile{
 	}
 	
 	ul {
+
+		position: relative;
+	    top: 50px;
+
 		& > li {
 			list-style: none;
 			
@@ -123,13 +127,14 @@ nav.onlymobile{
 				width:100%;
 				color:$color_nav;
 				outline: none;
-				font-size:14px;
 				letter-spacing: 1px;
-				padding: 1em 0.5em 1em 1em;
+				padding: .5em .5em .5em 1em;
 				text-shadow: 0 0 1px rgba($ombra_nav,0.1);
 				border-bottom:1px solid $sfondo_nav;
 				box-sizing: border-box;
 				font-weight: 300;
+			    text-transform: uppercase;
+   	 			font-size: .875rem;
 			}	
 			/*
 			a:hover {
