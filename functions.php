@@ -42,38 +42,38 @@ include 'assets/timeline_functions.php';
 
 
 function custom_language_selector(){
-        $languages = icl_get_languages('skip_missing=0&orderby=code');
-        if(!empty($languages)){
-            foreach($languages as $l){
-                if(!$l['active'])
-                    {
-                        echo '<a class="selettore_lingua nomobile" href="'.$l['url'].'" >';
-                        echo $l['language_code'];
-                        echo '</a>';
-                    }
-            }
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        foreach($languages as $l){
+            if(!$l['active'])
+                {
+                    echo '<a class="selettore_lingua nomobile" href="'.$l['url'].'" >';
+                    echo $l['language_code'];
+                    echo '</a>';
+                }
         }
     }
+}
     
 
 function custom_language_selector_mobile(){
-        $languages = icl_get_languages('skip_missing=0&orderby=code');
-        if(!empty($languages)){
-            echo '<ul id="lingue_mobile" class="onlymobile" style="margin-top:0 !important;">';
-            foreach($languages as $l){
-                echo '<li class="nochild">';
-                if(!$l['active'])
-                    {
-                        echo '<a href="'.$l['url'].'">';
-                        echo $l['native_name'];
-                        echo '</a>';
-                    }
-                
-                echo '</li>';
-            }
-            echo '</ul>';
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        echo '<ul id="lingue_mobile" class="onlymobile" style="margin-top:0 !important;">';
+        foreach($languages as $l){
+            echo '<li class="nochild">';
+            if(!$l['active'])
+                {
+                    echo '<a href="'.$l['url'].'">';
+                    echo $l['native_name'];
+                    echo '</a>';
+                }
+            
+            echo '</li>';
         }
+        echo '</ul>';
     }
+}
 
 
 /* GESTIONE SVG */
@@ -435,6 +435,15 @@ function webkolm_add_post_meta_boxes() {
   );
 
   add_meta_box(
+    'webkolm_page_in_homepage',      // Unique ID
+    esc_html__( 'Post settings', 'webkolm' ),    // Title
+    'webkolm_page_in_homepage_box',   // Callback function
+    'page',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
     'webkolm_featured_img_input',      // Unique ID
     esc_html__( 'Immagine per slider homepage', 'webkolm' ),    // Title
     'webkolm_featured_img_box',   // Callback function
@@ -562,6 +571,22 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
     <br/><br/>
     <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_secondario'][0], 'yes' ); ?> />
     <?php _e( "Visibile solo in timeline", 'webkolm' ); ?><br/>
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_page_in_homepage_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_page_in_homepage_nonce' ); ?>
+  <?php $meta = get_post_meta( $object->ID ) ;
+
+  //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
+
+  <p>
+    
+    <input class="widefat" type="checkbox" name="webkolm_page_in_homepage" id="webkolm_page_in_homepage" value="yes" <?php if ( isset ( $meta['webkolm_page_in_homepage'] ) ) checked( $meta['webkolm_page_in_homepage'][0], 'yes' ); ?> />
+    <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
   </p>
 <?php }
 
@@ -705,7 +730,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input' );
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
