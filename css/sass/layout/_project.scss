@@ -118,4 +118,10 @@
 
 .homepage-gallery {
 	margin-bottom: 0;
+
+	.slides .slideimg a {
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	}
 }
