@@ -194,7 +194,7 @@ nav.onlymobile{
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li > a { background:lighten($sfondo_nav,20%); }
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu > li > a { background:lighten($sfondo_nav,30%); }
 
-	ul#menu-principale > li > ul.sub-menu > li.current-menu-item > a { color:$color_nav;}
+	ul#menu-principale > li > ul.sub-menu > li.current-menu-item > a { color:$color_nav; &::after {width: 100%;} }
 	
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li.current-menu-item > a { color:$color_nav; background: lighten($sfondo_nav, 50%);}
 	
