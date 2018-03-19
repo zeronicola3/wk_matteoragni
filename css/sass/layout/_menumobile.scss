@@ -187,6 +187,10 @@ nav.onlymobile{
 		}
 
 	} /* UL */
+	ul#menu-principale > li.current-menu-item > a {
+		&::after {width: 100%; @include transition;}
+	}
+	
 
 	ul#menu-principale > li > a { border-bottom:1px solid lighten($sfondo_nav,10%); height: 48px; text-transform: uppercase;}
 
