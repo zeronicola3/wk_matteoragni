@@ -84,8 +84,9 @@ body.nav-open a.mobile-menu {
 
  body.nav-open a.mobile-menu {
  	background-color: $sfondo_nav;
+ 	color: $bianco;
  	transition: all .4s;
- 	transform: translateX(-100%);
+ 	transform: translateX(100%);
  }
   
  body.nav-open nav.onlymobile {
