@@ -36,8 +36,8 @@ div#mover {
 
 	@include mq($from: tablet){
 		height: auto;
-	    width: 40%;
-    	right: 10%;
+	    width: 45%;
+    	right: 5%;
 		background-color: $bianco;
 		z-index: -1;
 		position: fixed;
