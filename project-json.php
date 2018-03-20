@@ -28,7 +28,7 @@ function primary_project_content($project) { ?>
 				}
 
 				@media (min-width: 768px) {  
-	                .timeline-item-img .<?php echo $project['slug']; ?> {
+	                .timeline-item-img.<?php echo $project['slug']; ?> {
 						background-image: url('<?php echo $project['img_urls']['large']; ?>');
 					}
 	            }
@@ -85,10 +85,6 @@ function secondary_project_content_without_img($project) {
 <?php
 			$timeline = parse_json_file();
 			$number = 0;
-
-			get_images(1828);
-
-			echo "test";
 
 			foreach ($timeline as $year => $projects) { ?>
 				

@@ -36,14 +36,18 @@ div#mover {
 
 	@include mq($from: tablet){
 		height: auto;
-		top: 0;
-		width: 600px;
-		right: 0;
+	    width: 40%;
+    	right: 10%;
 		background-color: $bianco;
 		z-index: -1;
 		position: fixed;
 		top: 200px;
 
+	}
+
+	@include mq($from: desktop){ 
+		width: 30%;
+    	right: 20%;
 	}
 
 	.timeline-item-img {
