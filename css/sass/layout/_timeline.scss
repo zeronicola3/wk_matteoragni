@@ -45,7 +45,7 @@ div#mover {
 
 	}
 
-	@include mq($from: desktop){ 
+	@include mq($from: 1060px){ 
 		width: 30%;
     	right: 20%;
 	}
