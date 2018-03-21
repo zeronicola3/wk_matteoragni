@@ -83,6 +83,10 @@ function get_clients($post_id){
 
 	global $post;
 
+	$post = get_post($post_id);
+
+	setup_postdata( $post ); 
+/*
 	$args = array(
         'post_type'  => 'project',
         'posts_per_page' => 1,
@@ -95,10 +99,8 @@ function get_clients($post_id){
     if ( $query->have_posts() ) :
         // Start the Loop.
         while ( $query->have_posts() ) : $query->the_post();
-
-			$related = p2p_type( 'projects_to_client' )->get_related( get_the_ID() );
-
-			//print_r($related);
+*/
+			$related = p2p_type( 'projects_to_client' )->get_related( $post->ID );
 
 			$numero_correlati=$related->found_posts;
 
@@ -115,8 +117,7 @@ function get_clients($post_id){
 			    }
 			}
 
-		endwhile;
-	endif;
+	wp_reset_postdata();
 
     return $clients;
 }
