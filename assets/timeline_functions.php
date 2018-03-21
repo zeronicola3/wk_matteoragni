@@ -86,6 +86,8 @@ function get_clients($post_id){
 	$post = get_post($post_id);
 
 	setup_postdata( $post ); 
+
+	$clients = array();
 /*
 	$args = array(
         'post_type'  => 'project',
@@ -95,7 +97,7 @@ function get_clients($post_id){
     );
 
     $query = new WP_Query($args);
-   	$clients = array();
+   	
     if ( $query->have_posts() ) :
         // Start the Loop.
         while ( $query->have_posts() ) : $query->the_post();
