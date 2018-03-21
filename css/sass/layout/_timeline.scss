@@ -43,6 +43,7 @@ div#mover {
     	right: 5%;
 		background-color: $bianco;
 		z-index: -1;
+		visibility: hidden;
 		position: fixed;
 		top: 200px;
 
@@ -90,6 +91,7 @@ div#mover {
 
 	@include mq($from: tablet){
 		z-index: 999;
+		visibility: hidden;
 	}
 }
 
