@@ -23,7 +23,10 @@ div#mover {
 
 .timeline-block {
 	position: relative;
-	margin: 50vh 0;
+
+	@include mq($from: tablet){
+		margin: 50vh 0;
+	}
 }
 
 .timeline-item {
@@ -102,5 +105,5 @@ div#mover {
     top: 0;
     @include mq($from: tablet){
     	width: 50%;
-   *
+   }
 }
