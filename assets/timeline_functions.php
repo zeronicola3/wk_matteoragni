@@ -67,8 +67,8 @@ function get_projects_by_year($year){
 	    		'url' => get_the_permalink($post->ID),
 	    		'is_secondary' => $is_secondary,
 	    		'year' => $year,
-	    		'clienti' => get_clients($post->ID),
 	    		'img_urls' => get_images($post->ID),
+	    		'clienti' => get_clients($post->ID),
 	    	);
 
 	    endwhile;
