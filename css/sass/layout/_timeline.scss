@@ -49,14 +49,15 @@ div#mover {
 		z-index: -1;
 		visibility: hidden;
 		position: fixed;
-		top: 200px;
+		top: 50%;
+		transform: translateY(-50%);
 
 	}
 
 	@include mq($from: 1060px){ 
 		width: 530px;
     	right: 50%;
-    	transform: translateX(100%);
+    	transform: translateX(100%) translateY(-50%);
 	}
 
 	.timeline-item-img {
