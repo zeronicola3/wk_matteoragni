@@ -43,13 +43,13 @@ nav.nomobile {
 			}
 
 			ul.sub-menu {
-				position: relative;
+				position: absolute;
 				text-align: left;
 				padding: 0px;
 				padding-left: 0px;
 				padding-top: 0px;
 				height: 0;
-				top:10px;
+				top:30px;
 				width: 100%;
 				opacity: 0;
 				overflow: hidden;
