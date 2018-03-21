@@ -100,5 +100,7 @@ div#mover {
     overflow-y: hidden;
     position: relative;
     top: 0;
-    width: 50%;
+    @include mq($from: tablet){
+    	width: 50%;
+   *
 }
