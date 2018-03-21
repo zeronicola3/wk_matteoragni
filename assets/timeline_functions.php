@@ -102,7 +102,7 @@ function get_clients($post_id){
 
 			$numero_correlati=$related->found_posts;
 
-			if($numero_correlati==0) { 
+			if($numero_correlati!=0) { 
 
 			    foreach ($related as $conn) {
 			    	if($conn->ID != null){
