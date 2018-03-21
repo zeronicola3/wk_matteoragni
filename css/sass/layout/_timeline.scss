@@ -4,7 +4,11 @@
 	text-transform: none;
 	font-weight: 300;
 	line-height: 30px;
-	//@include transition;
+	
+	@include mq($from: tablet){
+		margin-left: 20%;
+    	width: auto;
+	}
 
 	&:hover {
 		font-weight: 700;
