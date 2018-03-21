@@ -91,7 +91,7 @@ div#mover {
 
 	@include mq($from: tablet){
 		z-index: 999;
-		visibility: hidden;
+		visibility: visible;
 	}
 }
 
