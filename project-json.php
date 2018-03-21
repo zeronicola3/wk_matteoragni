@@ -43,7 +43,6 @@ function primary_project_content($project) { ?>
 		<div class="timeline-item-description">
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
 			<span class="project-client"><?php echo $project['description']; ?></span>
-			<span class="project-client"><a href="<?php echo get_the_permalink($project['cliente']['ID']); ?>"><?php echo $project['clente']['title']; ?></a></span>
 			<span class="project-client"><?php echo $project['year']; ?></span>
 		</div>
 	</a>
