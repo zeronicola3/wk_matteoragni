@@ -68,7 +68,7 @@ function get_projects_by_year($year){
 	    		'is_secondary' => $is_secondary,
 	    		'year' => $year,
 	    		'clienti' => get_clients($post->ID),
-	    		'img_urls' => get_images($post->ID)
+	    		'img_urls' => get_images($post->ID),
 	    	);
 
 	    endwhile;
