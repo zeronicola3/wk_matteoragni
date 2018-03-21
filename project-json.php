@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Json Project
+ * Template Name: Timeline
  *
  */
 
