@@ -88,37 +88,23 @@ function get_clients($post_id){
 	setup_postdata( $post ); 
 
 	$clients = array();
-/*
-	$args = array(
-        'post_type'  => 'project',
-        'posts_per_page' => 1,
-        'post_status' => 'publish',
-        'p' => $post_id,   // id of the post you want to query
-    );
 
-    $query = new WP_Query($args);
-   	
-    if ( $query->have_posts() ) :
-        // Start the Loop.
-        while ( $query->have_posts() ) : $query->the_post();
-*/
-			//$related = p2p_type( 'projects_to_client' )->get_related( $post->ID );
-        	$related = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
+	$related = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
 
-			$numero_correlati=$related->found_posts;
+	$numero_correlati=$related->found_posts;
 
-			if($numero_correlati!=0) { 
+	if($numero_correlati!=0) { 
 
-			    foreach ($related as $conn) {
-			    	if($conn->ID != null){
-			    		array_push($clients, array(
-				    		'ID' => $conn->ID,
-				    		'title' => $conn->post_title,
-				    		'url' => $conn->webkolm_client_link
-				    	));
-			    	}
-			    }
-			}
+	    foreach ($related as $conn) {
+	    	if($conn->ID != null){
+	    		array_push($clients, array(
+		    		'ID' => $conn->ID,
+		    		'title' => $conn->post_title,
+		    		'url' => $conn->webkolm_client_link
+		    	));
+	    	}
+	    }
+	}
 
 	wp_reset_postdata();
 
