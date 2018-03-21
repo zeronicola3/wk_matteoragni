@@ -44,7 +44,7 @@ function primary_project_content($project) { ?>
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
 			<span class="project-client"><?php echo $project['description']; ?></span>
 			<span class="project-client"><?php echo $project['year']; ?></span>
-			<span class="project-client"><?php print_r($project['clienti']); ?></span>
+			<span class="project-client"><?php echo $project['clienti'][0]['title']; ?></span>
 		</div>
 	</a>
 
