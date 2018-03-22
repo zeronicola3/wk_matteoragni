@@ -293,16 +293,13 @@ $(document).ready(function() {
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
-
-		$('.next-project').addClass('animated');
-
-		var timeout2 = setTimeout(function(){
+		
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		}, 300);
+		
 		
 		var timeout = setTimeout(function(){
-			$('.next-project').removeClass('animated').addClass('active');
-		}, 1000);
+			$('.next-project').addClass('active');
+		}, 700);
 
 		
 		//window.off( "scroll" );
