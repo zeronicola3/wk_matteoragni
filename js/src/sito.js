@@ -294,11 +294,12 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
+		$('.next-project').addClass('active').;
 		
-		$('.next-project').addClass('active');
 		
 		var timeout = setTimeout(function(){
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
+
 			resetScrollPos('.next-project');
 		}, 1000);
 
@@ -313,7 +314,16 @@ $(document).ready(function() {
 		//$('#contenuti').append(next_button);
 		//$('#contenuti').after(next_project)
 	});
-
+function resetScrollPos(selector) {
+  var divs = document.querySelectorAll(selector);
+  for (var p = 0; p < divs.length; p++) {
+    if (Boolean(divs[p].style.transform)) { //for IE(10) and firefox
+      divs[p].style.transform = 'translate3d(0px, 0px, 0px)';
+    } else { //for chrome and safari
+      divs[p].style['-webkit-transform'] = 'translate3d(0px, 0px, 0px)';
+    }
+  }
+}
 	
 	/* CAROUSEL POST
 
