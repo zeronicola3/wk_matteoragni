@@ -295,7 +295,7 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		$('.next-project').addClass('active');
 
-		var timeout  setTimeout(function(){
+		var timeout = setTimeout(function(){
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		}, 500);
 
