@@ -300,7 +300,7 @@ $(document).ready(function() {
 		var timeout = setTimeout(function(){
 
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
-			resetScrollPos(window);
+			resetScrollPos(document);
 			
 		}, 1000);
 
