@@ -293,7 +293,6 @@ $(document).ready(function() {
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		$('.next-project').css({overflow: 'visible'});
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
