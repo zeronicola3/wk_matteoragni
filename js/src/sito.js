@@ -289,7 +289,7 @@ $(document).ready(function() {
 
 	$('.next-project-button').on('click', function(event){
 		event.preventDefault();
-		$('.next-project').animate({ height: 'auto' });
+		$('.next-project').attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
