@@ -295,10 +295,10 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 		$('#contenuti').animate({ opacity: '0' });
-		
+		$('.next-project').addClass('active');
 		
 		var timeout = setTimeout(function(){
-			$('.next-project').addClass('active');
+			
 			$('#contenuti').slideToggle();
 		}, 1000);
 
