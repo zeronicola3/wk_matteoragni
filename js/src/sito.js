@@ -298,7 +298,7 @@ $(document).ready(function() {
 		
 		
 		var timeout = setTimeout(function(){
-			$(window).scrollTop =0
+			window.scrollTop =0;
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 			
