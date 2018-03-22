@@ -285,6 +285,12 @@ $(document).ready(function() {
 	    return false;
 	}
 
+
+
+	$('.next-project-button').on('click', function(){
+		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+	});
+
 	
 	/* CAROUSEL POST
 
