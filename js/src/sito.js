@@ -294,6 +294,9 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		$('.next-project').addClass('active');
+
+
+		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		//window.off( "scroll" );
 		
 		//$('.next-project').css('height', 'auto');
