@@ -297,7 +297,6 @@ $(document).ready(function() {
 
 		var timeout = setTimeout(function(){
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
-			window.scroll(0,0);
 		}, 500);
 
 		
