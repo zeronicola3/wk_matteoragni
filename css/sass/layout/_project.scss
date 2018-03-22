@@ -136,6 +136,9 @@
     max-height: 50vh;
     width: 100%;
 
+    &.animated {
+    	max-height: 150vh;
+    }
     &.active {
     	max-height: unset;
     }
