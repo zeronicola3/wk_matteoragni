@@ -294,7 +294,7 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		$('.next-project').addClass('active').;
+		$('.next-project').addClass('active');
 		
 		
 		var timeout = setTimeout(function(){
@@ -315,7 +315,7 @@ $(document).ready(function() {
 		//$('#contenuti').after(next_project)
 	});
 	
-	
+
 	function resetScrollPos(selector) {
 	  var divs = document.querySelectorAll(selector);
 	  for (var p = 0; p < divs.length; p++) {
