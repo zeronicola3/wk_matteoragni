@@ -294,11 +294,11 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
+		$('.next-project').addClass('active');
+		resetScrollPos('.next-project');
 		var timeout = setTimeout(function(){
-			$('.next-project').addClass('active');
-			resetScrollPos('.next-project');
+			$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		}, 1000);
 
 		
