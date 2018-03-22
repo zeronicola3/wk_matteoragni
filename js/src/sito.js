@@ -303,7 +303,8 @@ $(document).ready(function() {
 		}, 700);
 
 		var timeout2 = setTimeout(function(){
-			$('.next-project').removeClass('next-project').addClass('current-project');
+			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+				.attr('id', 'contenuti');
 		}, 1000);
 		//window.off( "scroll" );
 		
