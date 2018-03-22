@@ -293,13 +293,13 @@ $(document).ready(function() {
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
+
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		$('.next-project').addClass('active');
 		
 		
-		//var timeout = setTimeout(function(){
-			
-		//}, 1000);
+		var timeout = setTimeout(function(){
+			$('.next-project').addClass('active');
+		}, 1000);
 
 		
 		//window.off( "scroll" );
