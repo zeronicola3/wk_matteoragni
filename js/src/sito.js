@@ -298,8 +298,9 @@ $(document).ready(function() {
 		
 		
 		var timeout = setTimeout(function(){
-			$('#contenuti').animate({ opacity: '0' }).slideToggle();
 			resetScrollPos('.next-project');
+			$('#contenuti').animate({ opacity: '0' }).slideToggle();
+			
 		}, 1000);
 
 		
