@@ -299,7 +299,7 @@ $(document).ready(function() {
 		
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
-		}, 300);
+		}, 600);
 
 		
 		//window.off( "scroll" );
