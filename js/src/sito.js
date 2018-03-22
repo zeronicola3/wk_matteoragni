@@ -299,6 +299,7 @@ $(document).ready(function() {
 		
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
+			$('#contenuti').slideToggle();
 		}, 1000);
 
 		
