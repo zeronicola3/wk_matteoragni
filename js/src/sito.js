@@ -295,8 +295,11 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		$('.next-project').addClass('active');
 
+		var timeout  setTimeout(function(){
+			$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		}, 500)
 
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		
 		//window.off( "scroll" );
 		
 		//$('.next-project').css('height', 'auto');
