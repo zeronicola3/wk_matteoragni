@@ -294,10 +294,10 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		$('.next-project').addClass('active');
-		window.scroll(0,0);
 
 		var timeout = setTimeout(function(){
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
+			window.scroll(0,0);
 		}, 500);
 
 		
