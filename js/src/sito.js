@@ -296,9 +296,10 @@ $(document).ready(function() {
 
 		
 		$('.next-project').addClass('active');
-		resetScrollPos('.next-project');
+		
 		var timeout = setTimeout(function(){
 			$('#contenuti').animate({ opacity: '0' }).slideToggle();
+			resetScrollPos('.next-project');
 		}, 1000);
 
 		
