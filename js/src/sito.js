@@ -289,8 +289,9 @@ $(document).ready(function() {
 
 	$('.next-project-button').on('click', function(event){
 		event.preventDefault();
-		$('.next-project').css({overflow: 'visible'});//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
+		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		$('.next-project').css({overflow: 'visible'});
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
 		//var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
