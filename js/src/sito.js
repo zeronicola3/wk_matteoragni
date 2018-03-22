@@ -298,7 +298,7 @@ $(document).ready(function() {
 		
 		
 		var timeout = setTimeout(function(){
-			$('.next-project').removeClass('.next-project').addClass('current-project');
+			$('.next-project'),addClass('active').removeClass('.next-project').addClass('current-project');
 		}, 700);
 
 		
