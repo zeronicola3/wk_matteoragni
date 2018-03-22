@@ -50,7 +50,7 @@
 
     <div class="next-project">
         <?php $post = get_post($next_project->ID); 
-            setup_postdata($post);
+            setup_postdata($next_project->ID);
         ?>
         <?php include get_template_directory() . '/assets/single-project-content.php'; ?>
     </div>
