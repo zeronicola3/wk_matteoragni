@@ -4,7 +4,7 @@
 	</div>
 
     <div class="next-project">
-
+        <?php $post = get_post($next_project->ID); ?>
     </div>
 
 
