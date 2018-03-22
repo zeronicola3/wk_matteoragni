@@ -11,5 +11,4 @@
 
     <?php include get_template_directory() . '/assets/next-project-block.php'; ?>
 
-
 <?php get_footer(); ?>
