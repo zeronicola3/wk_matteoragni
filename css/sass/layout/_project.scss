@@ -133,12 +133,10 @@
 
 .next-project {
     overflow-y: hidden;
-    height: 50vh;
+    max-height: 50vh;
     width: 100%;
 
     &.active {
     	height: auto;
-    	position: fixed;
-    	top: 0;
     }
 }
