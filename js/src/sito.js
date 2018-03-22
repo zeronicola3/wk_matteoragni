@@ -292,8 +292,9 @@ $(document).ready(function() {
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		window.off( "scroll" );
 		$('.next-project').addClass('active');
+		window.off( "scroll" );
+		
 		//$('.next-project').css('height', 'auto');
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
