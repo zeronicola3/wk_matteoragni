@@ -297,7 +297,7 @@ $(document).ready(function() {
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
-		}, 500);
+		}, 1000);
 
 		
 		//window.off( "scroll" );
