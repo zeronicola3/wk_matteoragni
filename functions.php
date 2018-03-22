@@ -861,4 +861,39 @@ add_filter( 'attachment_fields_to_save', 'be_attachment_field_credit_save', 10, 
 
 
 
+
+function get_next_project($data, $year, $project) {
+    reset($data);
+
+    //$next_year = current($data);
+    $key_year = key($data);
+
+    while($key_year != $year){
+
+        $next_year = next($data);
+        $key_year = key($data);
+    }
+
+    $data_year = current($data);
+    
+    reset($data_year);
+
+    $key_project = key($data_year);
+
+    while($project != $key_project){
+        $next_project = next($data_year);
+        $key_project = key($data_year);
+    }
+
+
+    if(next($data_year) == null){
+        $next_year = next($data);
+        $data_year = current($data);
+        reset($data_year);
+        return current($data_year);
+    } else {
+        return current($data_year);
+    }
+}
+
 ?>
