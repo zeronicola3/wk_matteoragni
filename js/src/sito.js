@@ -292,7 +292,7 @@ $(document).ready(function() {
 		event.stopPropagation();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		$('.next-project').addClass('active');
 		//window.off( "scroll" );
 		
