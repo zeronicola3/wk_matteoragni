@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="contenuti">
+	<div id="contenuti" class="current-project">
 		<div class="wp_content">
 	<?php if ( have_posts() ) :
                 // Start the Loop.
@@ -126,7 +126,7 @@
 
 
 
-                   // print_r(get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name));
+                   print_r(get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name));
 
                     ?>
 
@@ -136,4 +136,6 @@
         ?>
     	</div>
 	</div>
+
+
 <?php get_footer(); ?>
