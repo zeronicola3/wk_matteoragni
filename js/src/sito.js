@@ -296,12 +296,13 @@ $(document).ready(function() {
 
 		$('.next-project').addClass('animated');
 
+		var timeout2 = setTimeout(function(){
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		
+		}, 300);
 		
 		var timeout = setTimeout(function(){
 			$('.next-project').removeClass('animated').addClass('active');
-		}, 700);
+		}, 1000);
 
 		
 		//window.off( "scroll" );
