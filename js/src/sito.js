@@ -291,7 +291,8 @@ $(document).ready(function() {
 		event.preventDefault();
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		$('.next-project').css('height', 'auto').scrollTo(0,0);
+		window.scrollTo(0,0);
+		$('.next-project').css('height', 'auto');
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
 		//var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
