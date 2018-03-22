@@ -293,7 +293,6 @@ $(document).ready(function() {
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 		$('.next-project').css('height', 'auto');
-				window.scrollTo(0,0);
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
 		//var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
