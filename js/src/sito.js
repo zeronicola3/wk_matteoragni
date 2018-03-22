@@ -290,6 +290,14 @@ $(document).ready(function() {
 	$('.next-project-button').on('click', function(event){
 		event.preventDefault();
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		$('#contenuti').detach();
+		$('.next-project').attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
+
+		var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
+		var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
+		
+		$('#contenuti').append(next_button);
+		$('#contenuti').after(next_project)
 	});
 
 	

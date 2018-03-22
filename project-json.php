@@ -102,9 +102,7 @@ function secondary_project_content_without_img($project) {
 
 					<?php
 					foreach ($projects as $key => $project) { ?>
-						
 						<?php
-
 						if($project['is_secondary']) {
 							// Check per progetti 
 							if($project['img_urls'] == "") { 
