@@ -1,7 +1,5 @@
 <div class="wp_content">
-	<?php if ( have_posts() ) :
-        // Start the Loop.
-        while ( have_posts() ) : the_post();
+	<?php 
 
             $client_name = $client_link = $client_id = $connected = "";
             $meta = get_post_meta( $post->ID ); 
@@ -83,11 +81,4 @@
                 
             </div>
 
-
-            
-
-<?php   
-        endwhile;
-    endif;
-?>
 </div>
