@@ -124,7 +124,7 @@
 
 
 
-           $next_project = get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name));
+           $next_project = get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name);
 
             ?>
 
