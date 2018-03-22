@@ -137,6 +137,6 @@
     width: 100%;
 
     &.active {
-    	max-height: auto !important;
+    	max-height: unset;
     }
 }
