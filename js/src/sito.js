@@ -298,7 +298,7 @@ $(document).ready(function() {
 		$('.next-project').addClass('active');
 		
 		var timeout = setTimeout(function(){
-			
+			window.scrollTop('slow');
 			$('#contenuti').slideToggle();
 		}, 1000);
 
