@@ -287,7 +287,8 @@ $(document).ready(function() {
 
 
 
-	$('.next-project-button').on('click', function(){
+	$('.next-project-button').on('click', function(event){
+		event.preventDefault();
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 	});
 
