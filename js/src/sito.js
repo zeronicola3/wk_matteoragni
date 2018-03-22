@@ -315,16 +315,7 @@ $(document).ready(function() {
 		//$('#contenuti').after(next_project)
 	});
 	
-	function resetScrollPos(selector) {
-	  var divs = document.querySelectorAll(selector);
-	  for (var p = 0; p < divs.length; p++) {
-	    if (Boolean(divs[p].style.transform)) { //for IE(10) and firefox
-	      divs[p].style.transform = 'translate3d(0px, 0px, 0px)';
-	    } else { //for chrome and safari
-	      divs[p].style['-webkit-transform'] = 'translate3d(0px, 0px, 0px)';
-	    }
-	  }
-	}
+	
 	
 	/* CAROUSEL POST
 
@@ -356,4 +347,13 @@ $(document).ready(function() {
 });	/* FINE DOCUMENT READY */
 
 
-
+function resetScrollPos(selector) {
+	  var divs = document.querySelectorAll(selector);
+	  for (var p = 0; p < divs.length; p++) {
+	    if (Boolean(divs[p].style.transform)) { //for IE(10) and firefox
+	      divs[p].style.transform = 'translate3d(0px, 0px, 0px)';
+	    } else { //for chrome and safari
+	      divs[p].style['-webkit-transform'] = 'translate3d(0px, 0px, 0px)';
+	    }
+	  }
+	}
