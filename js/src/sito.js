@@ -290,7 +290,7 @@ $(document).ready(function() {
 	$('.next-project-button').on('click', function(event){
 		event.preventDefault();
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		$('#contenuti').animate({ opacity: '0' }).slideToggle().remove();
 		//$('.next-project').css({overflow: 'visible'});
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
