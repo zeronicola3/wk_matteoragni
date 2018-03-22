@@ -295,6 +295,7 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		$('.next-project').css({max-height: '100vh'});
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
 		}, 1000);
