@@ -932,7 +932,6 @@ function webkolm_ajax_next_project() {
     include get_template_directory() . '/assets/single-project-block.php'; 
     
 
-
     return;
     //die();
     
