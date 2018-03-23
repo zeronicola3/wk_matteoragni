@@ -6,7 +6,7 @@ $permalink = "";
 
  <!-- Templates -->
     <script id="ce-banner-html" type="text/plain">
-      <p class="cookie-text"><?php _e('Questo sito si avvale di cookie tecnici necessari al suo funzionamento. Chiudendo questo banner, scorrendo questa pagina o proseguendo la navigazione in altra maniera, acconsenti al loro uso.','webkolm'); ?>
+      <p class="cookie-text"><?php _e('Test','webkolm'); ?>
       <a href="<?= $permalink ?>" class="ce-law"><?php _e('Leggi la Policy','cookie-law'); ?></a></p>
       <p class="cookie-botton">
          <a href="#" class="ce-accept"><?php _e('ACCETTO','cookie-law');?></a>
