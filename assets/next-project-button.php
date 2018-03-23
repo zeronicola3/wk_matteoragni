@@ -8,4 +8,4 @@ wp_reset_postdata();
 
 ?>
 
-<div class="wrapper next-project-button">Next project: <a href=""><?php echo $next_project['title']; ?></a></div>
+<div class="wrapper next-project-button">Related project: <a href=""><?php echo $next_project['title']; ?></a></div>
