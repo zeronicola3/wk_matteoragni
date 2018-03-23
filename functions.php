@@ -28,7 +28,15 @@ function wp_get_attachment( $attachment_id ) {
     );
 }
 
+// PER L'UTILIZZO DI  ajaxurl IN sito.js
+add_action('wp_head', 'webkolm_ajaxurl');
 
+function webkolm_ajaxurl() {
+
+   echo '<script type="text/javascript">
+           var ajaxurl = "' . admin_url('admin-ajax.php') . '";
+         </script>';
+}
 
 // GENERATORE E PARSER PER JSON TIMELINE
 include 'assets/timeline_functions.php';
