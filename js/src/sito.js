@@ -339,7 +339,7 @@ $(document).ready(function() {
 		    
 			    // SE LA RICERCA NON VA A BUON FINE
 			    if( result === 'error' ) {
-				    
+				   console.log('click2'); 
 			    
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
