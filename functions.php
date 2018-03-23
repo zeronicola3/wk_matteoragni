@@ -906,6 +906,22 @@ function get_next_project($data, $year, $project) {
 
 
 
+/*** TAXONOMIES ***/
+
+add_action( 'init', 'create_project_type_tax' );
+
+function create_project_type_tax() {
+    register_taxonomy(
+        'project_type',
+        'project',
+        array(
+            'label' => __( 'Project Type' ),
+            'public' => true,
+            'rewrite' => 'slug',
+            'hierarchical' => true,
+        )
+    );
+}
 
 
 
