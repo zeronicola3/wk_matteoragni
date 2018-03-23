@@ -929,8 +929,7 @@ function webkolm_ajax_next_project() {
     $post = get_post($next_project['ID']); 
     setup_postdata( $post ); 
 
-    include get_template_directory() . '/assets/single-project-block.php'; 
-    
+    get_template_part( '/assets/single-project-block'); 
 
     return;
     //die();
