@@ -896,4 +896,42 @@ function get_next_project($data, $year, $project) {
     }
 }
 
+
+
+
+
+
+/**** SWITCH PROFILO ****/
+
+function webkolm_ajax_next_project($project_id) {
+
+    global $post;
+
+    $post = get_post($project_id);
+
+    $data = parse_json_file(); 
+
+    $year = get_post_meta( $project_id, 'webkolm_project_year', false ); 
+
+    $next_project = get_next_project($data, $year, $post->post_name);
+
+    $post = get_post($next_project['ID']); 
+    setup_postdata( $post );  ?>
+    
+    <div class="next_project" data-id="<?php echo $post->ID; ?>">
+    <?php
+    include get_template_directory() . '/assets/single-project-content.php'; 
+    
+    include get_template_directory() . '/assets/next-project-button.php'; 
+    ?>
+    </div>
+    <?php
+    
+    die();
+    
+}
+
+add_action( 'wp_ajax_webkolm_ajax_next_project', 'webkolm_ajax_next_project' );
+add_action( 'wp_ajax_nopriv_webkolm_ajax_next_project', 'webkolm_ajax_next_project' );
+
 ?>

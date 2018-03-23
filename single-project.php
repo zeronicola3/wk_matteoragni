@@ -1,11 +1,14 @@
 <?php get_header(); ?>
-	<div id="contenuti" class="current-project">
-		<?php 
-        $post = get_queried_object();
 
+<?php 
+        $post = get_queried_object(); ?>
+	<div id="contenuti" class="current-project" data-id="<?php echo $post->ID; ?>">
+		
+    <?php
         include get_template_directory() . '/assets/single-project-content.php'; 
 
-        include get_template_directory() . '/assets/next-project-button.php'; ?>
+        include get_template_directory() . '/assets/next-project-button.php'; 
+    ?>
 
 	</div>
 

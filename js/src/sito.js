@@ -294,18 +294,22 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
+		var project_id = $('#contenuti').attr('data-id');
+
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
 		
 		var timeout = setTimeout(function(){
 			$('.next-project').addClass('active');
-			
 		}, 700);
 
 		var timeout2 = setTimeout(function(){
 			$('#contenuti').remove();
 			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
-				.attr('id', 'contenuti');
+				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+
+			load_next_project(project_id);
+
 		}, 1000);
 		//window.off( "scroll" );
 		
@@ -317,6 +321,33 @@ $(document).ready(function() {
 		//$('#contenuti').append(next_button);
 		//$('#contenuti').after(next_project)
 	});
+
+
+    // FUNZIONE PER LANCIO DELLA RICERCA DINAMICA
+	function load_next_project(project_id) {
+
+        // RICHIESTA AJAX PER SEARCH
+	    $.ajax({
+		    
+		    type: 'post',
+		    url: ajaxurl, 
+		    data: {
+			    action: 'webkolm_ajax_next_project',
+			    project: project_id
+		    },
+		    success: function( result ) {
+		    
+			    // SE LA RICERCA NON VA A BUON FINE
+			    if( result === 'error' ) {
+				    
+			    
+			    // SE LA RICERCA VA A BUON FINE
+			    } else {			    	
+			    	$('#contenuti').after(result);
+			    }
+		    }
+	    });
+    }
 	
 
 	/* CAROUSEL POST
