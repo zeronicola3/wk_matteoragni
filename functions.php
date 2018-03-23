@@ -929,7 +929,7 @@ function webkolm_ajax_next_project() {
     $post = get_post($next_project['ID']); 
     setup_postdata( $post ); 
 
-    
+    echo "test1";
 
     return get_template_part( '/assets/single-project-block');
     //die();
