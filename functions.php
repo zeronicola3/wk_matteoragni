@@ -920,24 +920,24 @@ function webkolm_ajax_next_project() {
 
     echo $project_id;
 
-    $project = get_post($project_id);
-
-    $data = parse_json_file(); 
-
-    $year = get_post_meta( $project_id, 'webkolm_project_year', false ); 
-
-    $next_project = get_next_project($data, $year, $project->post_name);
-
-    print_r($next_project);
-/*
-    $post = get_post($next_project['ID']); 
+    $post = get_post($project_id);
     setup_postdata( $post ); 
+    //$data = parse_json_file(); 
+
+    //$year = get_post_meta( $project_id, 'webkolm_project_year', false ); 
+
+    //$next_project = get_next_project($data, $year, $project->post_name);
+
+   // print_r($next_project);
+
+//    $post = get_post($next_project['ID']); 
+  //  setup_postdata( $post ); 
 
     echo "test1";
 
-    return get_template_part( '/assets/single-project-block');
+    include get_template_directory() . '/assets/next-project-block.php';
     //die();
-    */
+    
 
     die();
 }
