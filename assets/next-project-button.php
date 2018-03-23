@@ -22,7 +22,7 @@ foreach ($connected as $conn) {
 
 //print_r($conn);
 
-echo $conn->ID;
+//echo $conn->ID;
 
 wp_reset_postdata();
 
