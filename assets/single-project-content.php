@@ -15,8 +15,7 @@
 
 
 
-    $connected1 = p2p_type('projects_to_projects')->set_direction( 'to' )->get_connected( get_the_ID() );
-   $connected1 = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
+   $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $post->ID );
 
     foreach ($connected1 as $conn1) {
         print_r($conn);
