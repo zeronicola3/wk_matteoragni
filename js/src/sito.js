@@ -344,7 +344,7 @@ $(document).ready(function() {
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
 			    	console.log('click');
-			    	$('#contenuti').html(result);
+			    	$('#contenuti').after(result);
 			    }
 		    }
 	    });
