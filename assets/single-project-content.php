@@ -12,16 +12,6 @@
         $client_name = $conn->post_title;
         $client_link = $conn->webkolm_client_link;
     }
-
-
-
-   $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $post->ID );
-
-    foreach ($connected1 as $conn1) {
-        print_r($conn);
-        echo $conn1->ID;
-        echo $conn1->post_title;
-    }
     
 
     ?>
@@ -96,3 +86,15 @@
 
 </div>
 
+<?php 
+    
+    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $post->ID );
+
+     foreach ($connected1 as $conn1) {
+         print_r($conn);
+         echo $conn1->ID;
+         echo $conn1->post_title;
+     }
+
+
+?>
