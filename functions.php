@@ -935,6 +935,10 @@ function webkolm_ajax_next_project() {
 
     echo "test1";
 
+    $data = parse_json_file(); 
+
+    $next_project = get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name);
+
     include get_template_directory() . '/assets/next-project-block.php';
     //die();
     
