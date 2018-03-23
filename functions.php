@@ -918,6 +918,8 @@ function webkolm_ajax_next_project() {
         // PRENDO LA STRINGA DA CERCARE
     $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
+    echo $project_id;
+
     $post = get_post($project_id);
 
     $data = parse_json_file(); 
