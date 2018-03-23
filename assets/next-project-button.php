@@ -1,6 +1,15 @@
 <?php 
         
-$data = parse_json_file(); 
+$connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( $post->ID );
+
+
+print_r($connected);
+
+/*foreach ($connected as $conn) {
+    $client_id = $conn->ID;
+    $client_name = $conn->post_title;
+    $client_link = $conn->webkolm_client_link;
+}*/
 
 $next_project = get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name);
 
