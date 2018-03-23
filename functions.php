@@ -933,7 +933,7 @@ function webkolm_ajax_next_project() {
     
     include get_template_directory() . '/assets/next-project-button.php'; 
 
-    return $output;
+    return;
     //die();
     
 }
