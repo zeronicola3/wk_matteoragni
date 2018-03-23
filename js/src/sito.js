@@ -336,10 +336,10 @@ $(document).ready(function() {
 			    project: project_id
 		    },
 		    success: function( result ) {
-		    
+		    	console.log('click2'); 
 			    // SE LA RICERCA NON VA A BUON FINE
 			    if( result === 'error' ) {
-				   console.log('click2'); 
+				   
 			    
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
