@@ -23,19 +23,30 @@ body [class*='col-'] {
 	margin: 0 auto;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	@include mq($from:tablet){
-	width: 90%;
-	max-width: 1250px;
+		width: 100%;
+		max-width: 1060px;
+		margin-right: 0;
+		margin-left: 0;
+		overflow: hidden;
+
 	}
 }
 
 .vc_column_container>.vc_column-inner {
     box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 50px;
     width: 100%;
+
+    @include mq($from:tablet){
+    	//padding-right: 95px !important;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    }
 }
 
 .wk_linkedcolumn {

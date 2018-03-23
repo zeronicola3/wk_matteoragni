@@ -1,5 +1,5 @@
 <nav class="onlymobile">
-  <a href="#" class="mobile-menu" data-action="toggleMenu"><span class="fa fa-bars" data-action="toggleMenu"></span></a>
+  <a class="mobile-menu" data-action="toggleMenu"><span class="fa fa-bars" data-action="toggleMenu"></span></a>
   <div class="nav_wrapper">
     <?php 
     /*  MENU MOBILE  */

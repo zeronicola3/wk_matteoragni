@@ -28,6 +28,7 @@ $(document).ready(function() {
             var imageName = images[i].src.substr(0, images[i].src.length - 4);
             imageName += "@x2" + imageType;
 
+
             //rename image
             images[i].src = imageName;
           }
@@ -45,10 +46,11 @@ $(document).ready(function() {
 		
 		/* PER SMARTPHONE */
 		
-		
 		/* TASTO PER APERTURA MENU */
 		$("a.mobile-menu").on('click', function (){
 		  $('body').toggleClass('nav-open');
+		  $("body").toggleClass("bloccoscroll");
+	      $("html").toggleClass("bloccoscroll");
 		});
 		
 		$("nav.onlymobile .menu").on('click', 'li a', function(){
@@ -69,12 +71,44 @@ $(document).ready(function() {
 		});
 		
 		$("nav.onlymobile .menu li.current-menu-ancestor > a").addClass("attivo");
-	} 
+
+		var lastScrollTop = 0;
+		var header=$("header");
+
+		// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+		window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+			var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+
+			if(st > 70){
+				if (st > lastScrollTop ){
+				console.log('down');
+
+				// downscroll code
+				if(!header.hasClass("disattivo")){
+					header.addClass("disattivo");
+				}
+			} else {
+				// upscroll code
+				console.log('up');
+				if(header.hasClass("disattivo")){
+					header.removeClass("disattivo");
+				}
+			}
+
+			}else{
+				if(header.hasClass("disattivo")){
+					header.removeClass("disattivo");
+				}
+			}
+			lastScrollTop = st;
+		}, false);
+
+	}
 
 	/* SLIDER SITO */
 
-	if($(".gallery-container").length > 0){
-		$('.gallery-container').flexslider({
+	if($(".project-cover-gallery").length > 0){
+		$('.project-cover-gallery').flexslider({
 		    animation: "fade",
 		    animationLoop: true,
 		    slideshow: true,
@@ -86,6 +120,13 @@ $(document).ready(function() {
 
 		});
 	}
+
+
+	$('#contenuti').waypoint(function(direction) {
+		$("header").toggleClass('active', direction === 'down');
+	}, {
+	    offset: '-1' // 
+	});
 
 
 	/* CAROUSEL POST

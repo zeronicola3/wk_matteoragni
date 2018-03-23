@@ -6,10 +6,10 @@ html {
 	overflow-y: scroll;
 }
 
-html.bloccoscroll { overflow-y:hidden; }
+html.bloccoscroll { overflow: hidden; }
 
 html, body {
-	@mixin testo_uno {font-family: 'Work Sans', sans-serif;}
+	@mixin testo_uno {font-family: 'Poppins', sans-serif;}
 	font-size:13px;
 	line-height: 1.5em;
 	letter-spacing: 0.03em;
@@ -18,16 +18,16 @@ html, body {
 	font-weight: 400;
 	max-width: 100%;
 	@include transition(all, .4s, ease);
-	@include mq($from:tablet){font-size:14px;}
 	@include mq($from:tablet){font-size:15px;}
-	@include mq($from:tablet){font-size:16px;}
+	@include mq($from:desktop){font-size:16px;}
+	@include mq($from:wide){font-size:18px;}
 }
 
 body {
 	padding-top: 48px;
 
 	@include mq($from:tablet){
-		padding-top: 4em;
+		padding-top: 90px;
 	}
 
 	&:after, &:before{
@@ -47,8 +47,14 @@ body {
 	}
 }
 
+
 body.bloccoscroll {
-  overflow: hidden;
+    overflow: hidden;
+
+}
+
+body.notouch.bloccoscroll {
+    position: absolute;
 }
 
 /* CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI --- CONTENUTI  */
@@ -56,10 +62,11 @@ body.bloccoscroll {
 #contenuti {
 	position: relative;
 	z-index: 3;
-	width:100%;
-	float:left;
-	background:$color_2; 
-	margin-top:0;
+	width: 100%;
+	float: left;
+	background: $color_2; 
+	margin-top: 0;
+	overflow: hidden;
 }
 
 .wrapper {

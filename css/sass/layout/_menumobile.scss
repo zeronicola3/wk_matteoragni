@@ -1,11 +1,11 @@
 /* MENUMOBILE:SCSS */
 
 // Variabili colori menu' mobile
-$sfondo_nav:$color_1;
-$color_nav:$bianco;
+$sfondo_nav:$color_2;
+$color_nav:$nero;
 $ombra_nav:$nerochiaro;
-$bottone_bk:$color_1;
-$bottone_color:$bianco;
+$bottone_bk:$bianco;
+$bottone_color:$nero;
 
 /* STILE DEL MENU DI APERTURA DEL MENU */
 
@@ -19,6 +19,7 @@ a.mobile-menu {
 	z-index:99999;
 	color:$bottone_color;
 	background-color:$sfondo_nav;
+	opacity: 1 !important;
 	
 	span {
 		display:block;

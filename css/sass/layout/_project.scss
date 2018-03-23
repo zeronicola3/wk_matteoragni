@@ -1,0 +1,117 @@
+.project-cover {
+	margin-bottom: 60px;
+
+	img {
+		width: 100%;
+	}
+}
+
+
+.project-cover-gallery {
+    height: 50vh;
+    margin-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+
+    @include mq($from: tablet) {
+   		height: calc(100vh - 90px);
+    }
+
+    ul.slides {
+        position: absolute;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+    }
+
+    ul.slides li.slideimg {
+    	width: 100%;
+	    position: absolute;
+        height: 100%;
+       // background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.project-container {
+	@include flex-parent;
+	align-items: flex-start;
+	line-height: 1.3em;
+
+	.project-col {
+		@include flex-child;
+		height: auto;
+		margin-bottom: 50px;
+
+		@include mq($from: tablet) {
+			margin-bottom: 100px;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		&:first-child::before {
+			content: " ";
+			height: 5px;
+			width: 100%;
+			display: block;
+			background-color: $nero;
+		}
+	}
+
+	[class*=wkcol-] {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.wkcol-12 {
+		padding: 0;
+	}
+
+	.project-content .vc_column-inner  {
+		@include mq($to: mobile) {
+			padding-right: 0 !important;
+		}
+	}
+
+	.project-header {
+		font-size: 1.25rem;
+		line-height: 1.4em;
+
+		.project-title {
+			margin: 0;
+			font-weight: bold;
+			margin-top: 10px;
+
+		}
+	}
+
+	.project-prizes {
+		font-weight: bold;
+		text-decoration: underline;
+		font-size: 1.25rem;
+		line-height: 1.4em;
+		margin-top: 12px;
+	}
+
+	.project-content {
+		margin-bottom: 50px;
+		line-height: 1.35em;
+		width: 100% !important;
+		margin-right: 0;
+		margin-left: 0;
+
+		@include mq($from: tablet) {
+			margin-bottom: 0;
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	.project-content-eng {
+		line-height: 1.35em;
+		font-style: italic;
+	}
+}

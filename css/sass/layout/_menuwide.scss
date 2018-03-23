@@ -3,29 +3,43 @@
 /* MENU DESKTOP */
 nav.nomobile {
 
-	background-color: $color_1;
+	background-color: $color_2;
 
 	ul#menu_wide {
-		text-align: center;
-		margin-top: 20px;
-		display: inline-block;
+	    position: absolute;
+	    right: 0;
+	    padding: 0;
+	    margin: 0;
+	    top: 50%;
+	    transform: translateY(-50%);
 
 		li {
 			display: inline-block;
 			position: relative;
 			float: left;
+			margin-left:50px;
 
 			a {
 				font-size: 13px;
-				color: $color_2;
+				color: $color_1;
 				letter-spacing: 0.1em;
 				word-spacing: 0.3em;
 				text-transform: uppercase;
 				padding-bottom: 7px;
-				padding-left: 4px;
-				padding-right: 4px;
-				margin-left:25px;
-				margin-right: 25px; 
+				font-weight: bold;
+			}
+
+			a::after {
+				content: " ";
+				position: absolute;
+				width: 0%;
+				bottom: 0;
+				height: 2px;
+				background-color: $nero;
+				display: inline-block;
+				left: 0;
+				opacity: 1;
+				@include transition;
 			}
 
 			ul.sub-menu {
@@ -58,7 +72,10 @@ nav.nomobile {
 		/* ATTIVO VOCI */
 			
 		li.current-menu-item a, li.current-page-item a,  li.current-menu-parent > a {
-			border-bottom: 1px solid $nerochiaro;
+			&::after {
+				width: 100%;
+				@include transition;
+			}
 			ul.sub-menu { opacity: 1;}
 		}
 
@@ -72,4 +89,9 @@ nav.nomobile {
 	}
 
 	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { height: 65px; opacity: 1; }
+}
+
+.notouch ul#menu_wide li a:hover::after {
+	width: 100%;
+	@include transition;
 }
