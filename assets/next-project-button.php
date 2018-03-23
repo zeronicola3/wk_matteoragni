@@ -18,7 +18,9 @@ foreach ($connected as $conn) {
     $number ++;
 }
 
-print_r($conn);
+//print_r($conn);
+
+echo $conn->ID;
 
 wp_reset_postdata();
 
