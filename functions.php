@@ -936,6 +936,8 @@ function webkolm_ajax_next_project() {
     return get_template_part( '/assets/single-project-block');
     //die();
     */
+
+    die();
 }
 
 add_action( 'wp_ajax_webkolm_ajax_next_project', 'webkolm_ajax_next_project' );
