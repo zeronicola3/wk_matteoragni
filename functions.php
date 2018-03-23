@@ -918,30 +918,16 @@ function webkolm_ajax_next_project() {
         // PRENDO LA STRINGA DA CERCARE
     $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
-    echo $project_id;
-
-    $post = get_post($project_id);
+    $post = get_post($project_id); 
     setup_postdata( $post ); 
-    //$data = parse_json_file(); 
+    ?>
+    <div class="next-project" data-id="<?php echo $post->ID; ?>">
+        <?php include get_template_directory() . '/assets/single-project-content.php'; 
+        
+        include get_template_directory() . '/assets/next-project-button.php'; ?>
+    </div>
 
-    //$year = get_post_meta( $project_id, 'webkolm_project_year', false ); 
-
-    //$next_project = get_next_project($data, $year, $project->post_name);
-
-   // print_r($next_project);
-
-//    $post = get_post($next_project['ID']); 
-  //  setup_postdata( $post ); 
-
-    echo "test1";
-
-    $data = parse_json_file(); 
-
-    $next_project = get_next_project($data, $meta['webkolm_project_year']['0'], $post->post_name);
-
-    include get_template_directory() . '/assets/next-project-block.php';
-    //die();
-    
+    <?php
 
     die();
 }
