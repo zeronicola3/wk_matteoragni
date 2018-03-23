@@ -344,7 +344,7 @@ $(document).ready(function() {
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
 			    	console.log('click');
-			    	$('.current-project').after(result);
+			    	//$('.current-project').after(result);
 			    }
 		    }
 	    });
