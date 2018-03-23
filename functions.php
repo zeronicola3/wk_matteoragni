@@ -919,16 +919,16 @@ function webkolm_ajax_next_project() {
     $next_project = get_next_project($data, $year, $post->post_name);
 
     $post = get_post($next_project['ID']); 
-    setup_postdata( $post );  ?>
+    setup_postdata( $post ); 
     
-    <div class="next_project" data-id="<?php echo $post->ID; ?>">
-    <?php
+    echo '<div class="next_project" data-id="' . $post->ID .'">';
+
     include get_template_directory() . '/assets/single-project-content.php'; 
     
     include get_template_directory() . '/assets/next-project-button.php'; 
-    ?>
-    </div>
-    <?php
+
+    echo '</div>';
+
     
     die();
     
