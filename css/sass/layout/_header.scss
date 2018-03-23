@@ -61,6 +61,11 @@ header.disattivo {
     		@include transition;
     	}
 
+    	#payoff {
+    		transform: scale(1.34);
+			transform-origin: left;
+    	}
+
     	#barra rect {
     		height: 2px;
     		@include transition;
