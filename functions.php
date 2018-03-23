@@ -929,16 +929,16 @@ function webkolm_ajax_next_project() {
     $post = get_post($next_project['ID']); 
     setup_postdata( $post ); 
     
-    echo '<div class="next_project" data-id="' . $post->ID .'">';
+    $output = '<div class="next_project" data-id="' . $post->ID .'">';
 
-    include get_template_directory() . '/assets/single-project-content.php'; 
+    $output .= include get_template_directory() . '/assets/single-project-content.php'; 
     
-    include get_template_directory() . '/assets/next-project-button.php'; 
+    $output .= include get_template_directory() . '/assets/next-project-button.php'; 
 
-    echo '</div>';
+    $output .= '</div>';
 
-    
-    die();
+    return $output;
+    //die();
     
 }
 
