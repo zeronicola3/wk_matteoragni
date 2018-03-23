@@ -903,9 +903,12 @@ function get_next_project($data, $year, $project) {
 
 /**** SWITCH PROFILO ****/
 
-function webkolm_ajax_next_project($project_id) {
+function webkolm_ajax_next_project() {
 
     global $post;
+
+        // PRENDO LA STRINGA DA CERCARE
+    $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
     $post = get_post($project_id);
 
