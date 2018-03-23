@@ -9,9 +9,11 @@ $number = 0;
 
 foreach ($connected as $conn) {
 
-    if($number > 0){
+    /*if($number > 0){
     	break;
     }
+*/
+    print_r($conn);
 
     $next_project = $conn;
 
