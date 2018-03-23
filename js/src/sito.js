@@ -308,11 +308,11 @@ $(document).ready(function() {
 			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
 				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
 
-			
+			load_next_project(project_id);
 
 		}, 1000);
 		//window.off( "scroll" );
-		//load_next_project(project_id);
+		
 		//$('.next-project').css('height', 'auto');
 		
 		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
@@ -344,7 +344,7 @@ $(document).ready(function() {
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
 			    	console.log('click');
-			    	//$('.current-project').after(result);
+			    	$('#contenuti').after(result);
 			    }
 		    }
 	    });
