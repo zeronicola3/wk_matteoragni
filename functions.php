@@ -919,15 +919,17 @@ function webkolm_ajax_next_project() {
     $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
     echo $project_id;
-/*
-    $post = get_post($project_id);
+
+    $project = get_post($project_id);
 
     $data = parse_json_file(); 
 
     $year = get_post_meta( $project_id, 'webkolm_project_year', false ); 
 
-    $next_project = get_next_project($data, $year, $post->post_name);
+    $next_project = get_next_project($data, $year, $project->post_name);
 
+    print_r($next_project);
+/*
     $post = get_post($next_project['ID']); 
     setup_postdata( $post ); 
 
