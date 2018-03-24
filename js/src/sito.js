@@ -290,7 +290,6 @@ $(document).ready(function() {
 
 	$('.next-project-button').on('click', function(event){
 		event.preventDefault();
-		event.stopPropagation();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
