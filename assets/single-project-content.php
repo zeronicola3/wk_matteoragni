@@ -78,8 +78,9 @@
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
             <?php 
-            $content = strip_shortcodes($post->post_content);
-            echo apply_filters('the_content', $content); 
+            $content = apply_filters('wpautop', get_the_content());
+            $content = str_replace(']]>', ']]>', $content);
+            echo $content;
             ?>
         </div>
         
