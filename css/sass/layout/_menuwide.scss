@@ -49,6 +49,7 @@ nav.nomobile {
 			    position: absolute;
 			    transform: translateX(-50%);
 				opacity: 0;
+				left: 50%;
 				@include transition();
 
 				li {
