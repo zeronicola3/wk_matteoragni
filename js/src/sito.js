@@ -327,7 +327,7 @@ $(document).ready(function() {
 
     // FUNZIONE PER LANCIO DELLA RICERCA DINAMICA
 	function load_next_project(project_id) {
-		console.log('dentro');
+		console.log(project_id);
         // RICHIESTA AJAX PER SEARCH
 	    $.ajax({
 		    
