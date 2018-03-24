@@ -21,13 +21,9 @@ function primary_project_content($project) { ?>
 		get_post($project['cliente']);
 	?>
 
-	
-	<h5 class="timeline-item-title">
-		<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
-			<?php echo $project['title']; ?>
-		</a>
-	</h5>
-	
+	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
+		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> ">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
@@ -58,9 +54,9 @@ function primary_project_content($project) { ?>
 
 function secondary_project_content($project) { ?>
 	
-	
-	<h5 class="timeline-item-title"><a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>"><?php echo $project['title']; ?></a></h5>
-	
+	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
+		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
 			<style>
