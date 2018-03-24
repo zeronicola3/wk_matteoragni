@@ -48,10 +48,6 @@ div#mover {
 
 .timeline-block {
 	position: relative;
-
-	@include mq($from: tablet){
-		margin: 50vh 0;
-	}
 }
 
 .timeline-item {
