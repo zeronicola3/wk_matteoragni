@@ -934,14 +934,14 @@ function webkolm_ajax_next_project() {
     // PRENDO LA STRINGA DA CERCARE
     $project_id = sanitize_text_field( $_POST[ 'next_project' ] );
 
-    echo $project_id;
+    //echo $project_id;
 
 
-    //$connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $project_id );
+    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $project_id );
 
 
 
-   /* wp_reset_postdata();
+    wp_reset_postdata();
 
     foreach ($connected1 as $conn1) {
         echo $conn1->ID;
@@ -950,7 +950,7 @@ function webkolm_ajax_next_project() {
 
     $post = get_post($conn1->ID);
 
-    setup_postdata($post); */
+    setup_postdata($post); 
 
 
     die();
