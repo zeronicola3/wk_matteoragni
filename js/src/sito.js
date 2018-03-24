@@ -190,13 +190,15 @@ $(document).ready(function() {
 			var screenCenter = st + ((screenheight*2)/3);
 			var lastItem = $(".timeline-year-box.active").last();
 			var nextItem = $(lastItem).next();
-			if(nextItem){
-				var curTop = $(nextItem).offset();
+			var curTop = $(nextItem).offset();
+
+			if(curTop != undefined){
+				if(curTop.top <= screenCenter){
+					$(nextItem).addClass('active');
+				}
 			}
 
-			if(curTop.top <= screenCenter){
-				$(nextItem).addClass('active');
-			}
+			
 /*
 			var lasttop = $(lastItem + ' a .timeline-item-title').offset();
 			if(lasttop.top == screenCenter){
