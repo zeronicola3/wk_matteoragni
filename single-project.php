@@ -5,13 +5,11 @@
 	<div id="contenuti" class="current-project" data-id="<?php echo $post->ID; ?>">
 		
     <?php
-        include get_template_directory() . '/assets/single-project-content.php'; 
-
-        include get_template_directory() . '/assets/next-project-button.php'; 
+        get_template_part('assets/single-project-content'); 
     ?>
 
 	</div>
 
-    <?php include get_template_directory() . '/assets/next-project-block.php'; ?>
+    <?php  get_template_part('assets/next-project-block'); ?>
 
 <?php get_footer(); ?>
