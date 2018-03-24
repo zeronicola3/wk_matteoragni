@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php 
-        $post = get_queried_object(); ?>
+    $post = get_queried_object(); ?>
 	<div id="contenuti" class="current-project" data-id="<?php echo $post->ID; ?>">
 		
     <?php
@@ -10,6 +10,9 @@
 
 	</div>
 
-    <?php  get_template_part('assets/next-project-block'); ?>
+    <?php  
+    if($post->ID != get_queried_object()->ID) {
+        get_template_part('assets/next-project-block');
+    } ?>
 
 <?php get_footer(); ?>

@@ -78,7 +78,7 @@
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
             <?php 
-            //render_VC_content(get_the_content());
+            render_VC_content(get_the_content());
             ?>
         </div>
         
@@ -101,7 +101,7 @@
         //echo $conn1->post_title;
     } 
 
-    if($conn1->ID != $current_id){
+    if($conn1->ID != ""){
         $post = get_post($conn1->ID);
         setup_postdata($post); ?>
 

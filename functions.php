@@ -948,11 +948,13 @@ function webkolm_ajax_next_project() {
         //echo $conn1->post_title;
     } 
 
-    $post = get_post($conn1->ID);
+    if($conn->ID != "") {
+        $post = get_post($conn1->ID);
+        setup_postdata($post); 
+        include get_template_directory() . '/assets/next-project-block.php';
+    }
 
-    setup_postdata($post); 
-
-    include get_template_directory() . '/assets/next-project-block.php';
+    
 
     die();
 }
@@ -969,7 +971,7 @@ function render_VC_content($content) {
     WPBMap::addAllMappedShortcodes();
 
     $content = apply_filters('the_content', $content);
-    
+
     echo $content;
 }
 
