@@ -78,7 +78,7 @@
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
             <?php 
-            render_VC_content(get_the_content());
+            //render_VC_content(get_the_content());
             ?>
         </div>
         
