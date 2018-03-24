@@ -796,7 +796,7 @@ function projects_to_projects() {
         'name' => 'projects_to_projects',
         'from' => 'project',
         'to' => 'project',
-        'reciprocal' => true,
+        'reciprocal' => false,
     ) );
 }
 add_action( 'p2p_init', 'projects_to_projects' );
@@ -934,16 +934,23 @@ function webkolm_ajax_next_project() {
         // PRENDO LA STRINGA DA CERCARE
     $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
-    $post = get_post($project_id); 
-    setup_postdata( $post ); 
-    ?>
-    <div class="next-project" data-id="<?php echo $post->ID; ?>">
-        <?php include get_template_directory() . '/assets/single-project-content.php'; 
-        
-        include get_template_directory() . '/assets/next-project-button.php'; ?>
-    </div>
+    echo $project_id;
 
-    <?php
+    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $project_id );
+
+
+
+   /* wp_reset_postdata();
+
+    foreach ($connected1 as $conn1) {
+        echo $conn1->ID;
+        echo $conn1->post_title;
+    } 
+
+    $post = get_post($conn1->ID);
+
+    setup_postdata($post); */
+
 
     die();
 }

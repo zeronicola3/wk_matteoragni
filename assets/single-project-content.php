@@ -87,14 +87,20 @@
 </div>
 
 <?php 
-    echo $post->ID;
-    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $post->ID );
+   
+    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( get_the_ID() );
 
-     foreach ($connected1 as $conn1) {
-         print_r($conn);
-         echo $conn1->ID;
-         echo $conn1->post_title;
-     }
+    wp_reset_postdata();
 
+    foreach ($connected1 as $conn1) {
+        //echo $conn1->ID;
+        //echo $conn1->post_title;
+    } 
 
-?>
+    $post = get_post($conn1->ID);
+
+    setup_postdata($post);
+
+    ?>
+
+    <div class="wrapper next-project-button">Related project: <a href=""><?php echo $post->post_title; ?></a></div>

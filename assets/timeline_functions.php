@@ -37,6 +37,7 @@ function get_projects_by_year($year){
 
 	$meta_query_args = array(
 		'post_type' => 'project',
+		'posts_per_page' => -1,
 		'meta_query' => array(   
 			array(
 				'key'     => 'webkolm_project_year',
