@@ -35,6 +35,10 @@
 		opacity: .7;
 		cursor: unset;
 	}
+
+	&.only-title:hover {
+		font-weight: 300;
+	}
 }
 
 div#mover {
