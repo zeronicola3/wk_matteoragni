@@ -70,6 +70,7 @@ function get_projects_by_year($year){
 	    		'year' => $year,
 	    		'img_urls' => get_images($post->ID),
 	    		'clienti' => get_clients($post->ID),
+	    		'type' => get_project_type($post->ID);
 	    	);
 
 	    endwhile;
@@ -78,6 +79,12 @@ function get_projects_by_year($year){
 	return $project;
 }
 
+
+function get_project_type($post_id) {
+	global $post;
+
+	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'slug'); );
+}
 
 
 function get_clients($post_id){
