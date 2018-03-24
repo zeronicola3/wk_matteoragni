@@ -43,16 +43,12 @@ nav.nomobile {
 			}
 
 			ul.sub-menu {
-				position: absolute;
-				text-align: left;
-				padding: 0px;
-				padding-left: 0px;
-				padding-top: 0px;
-				height: 0;
-				top:30px;
-				width: 100%;
+				width: auto;
+			    overflow-x: visible;
+			    display: flex;
+			    position: absolute;
+			    transform: translateX(50%);
 				opacity: 0;
-				overflow: hidden;
 				@include transition();
 
 				li {
@@ -93,11 +89,6 @@ nav.nomobile {
 	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { 
 			opacity: 1; 
 			height: auto;
-		    width: auto;
-		    overflow-x: visible;
-		    display: flex;
-		    position: absolute;
-		    transform: translateX(50%);
 	}
 }
 
