@@ -77,7 +77,11 @@
         </div>
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
-            <?php echo do_shortcode("$post->post_content"); ?>
+            <?php 
+            $content = strip_shortcodes(get_the_content());
+            $content = apply_filters('the_content', $content); 
+            echo $content;
+            ?>
         </div>
         
     </div>
