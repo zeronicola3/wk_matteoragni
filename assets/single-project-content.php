@@ -65,10 +65,10 @@
             <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a></span>
         <?php } ?>
         <?php if($meta['webkolm_project_year']['0'] != ""){ ?>
-            <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
+            <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?><br></span>
         <?php } ?>
         <?php if($meta['webkolm_designer']['0'] != ""){ ?>
-            <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
+            <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?></span>
         <?php } ?>
         </div>
         <div class="wkcol-1"></div>
