@@ -960,4 +960,19 @@ function webkolm_ajax_next_project() {
 add_action( 'wp_ajax_webkolm_ajax_next_project', 'webkolm_ajax_next_project' );
 add_action( 'wp_ajax_nopriv_webkolm_ajax_next_project', 'webkolm_ajax_next_project' );
 
+
+
+
+function render_VC_content($content) {
+    global $post;
+
+    WPBMap::addAllMappedShortcodes();
+
+    $content = apply_filters('the_content', $content);
+    echo $content;
+
+}
+
+
+
 ?>
