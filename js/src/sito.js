@@ -296,6 +296,7 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 		var project_id = $('.next_project').attr('data-id');
+		console.log(project_id);
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
