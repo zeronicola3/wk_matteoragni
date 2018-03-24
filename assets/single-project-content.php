@@ -89,8 +89,10 @@
 </div>
 
 <?php 
+
+    $current_id = get_the_ID();
    
-    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( get_the_ID() );
+    $connected1 = p2p_type( 'projects_to_projects')->set_direction( 'to' )->get_connected( $current_id );
 
     wp_reset_postdata();
 
@@ -99,9 +101,10 @@
         //echo $conn1->post_title;
     } 
 
-    $post = get_post($conn1->ID);
-
-    setup_postdata($post);
+    if($conn1->ID != $current_id){
+        $post = get_post($conn1->ID);
+        setup_postdata($post);
+    }
 
     ?>
 
