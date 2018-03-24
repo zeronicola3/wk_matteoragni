@@ -83,7 +83,7 @@ function get_projects_by_year($year){
 function get_project_type($post_id) {
 	global $post;
 
-	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'slug'); );
+	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'slug') );
 
 	echo $term;
 }
