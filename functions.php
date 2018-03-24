@@ -931,7 +931,7 @@ function webkolm_ajax_next_project() {
 
     global $post;
 
-        // PRENDO LA STRINGA DA CERCARE
+    // PRENDO LA STRINGA DA CERCARE
     $project_id = sanitize_text_field( $_POST[ 'project' ] );
 
     return $project_id;
