@@ -61,14 +61,14 @@
     <div class="project-container wrapper">
         <div class="project-col wkcol-5 project-header">
             <h4 class="project-title"><?php the_title(); ?></h4>
-        <?php if($meta['webkolm_designer']['0'] != ""){ ?>
-            <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
-        <?php } ?>
         <?php if($client_id != ""){ ?>
             <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a><br></span>
         <?php } ?>
         <?php if($meta['webkolm_project_year']['0'] != ""){ ?>
             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
+        <?php } ?>
+        <?php if($meta['webkolm_designer']['0'] != ""){ ?>
+            <span class="project-designer"><?php echo $meta['webkolm_designer']['0']; ?><br></span>
         <?php } ?>
         </div>
         <div class="wkcol-1"></div>
