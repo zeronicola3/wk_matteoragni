@@ -9,6 +9,7 @@
 	@include mq($from: tablet){
 		margin-left: 20%;
     	width: auto;
+    	cursor: pointer;
 	}
 
 	&:hover {
