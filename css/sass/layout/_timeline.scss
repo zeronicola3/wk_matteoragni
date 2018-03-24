@@ -4,6 +4,7 @@
 	text-transform: none;
 	font-weight: 300;
 	line-height: 30px;
+	display: table;
 	
 	@include mq($from: tablet){
 		margin-left: 20%;
