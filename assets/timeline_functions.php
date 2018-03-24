@@ -85,9 +85,9 @@ function get_project_type($post_id) {
 
 	global $post;
 
-	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'names') );
+	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'all') );
 
-	return $term[0];
+	return $term[0]['term_slug'];
 }
 
 
