@@ -296,7 +296,6 @@ $(document).ready(function() {
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
 		var project_id = $('.next-project').attr('data-id');
-		console.log(project_id);
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
@@ -338,14 +337,12 @@ $(document).ready(function() {
 			    next_project: project_id
 		    },
 		    success: function( result ) {
-		    	console.log('click2'); 
 			    // SE LA RICERCA NON VA A BUON FINE
 			    if( result === 'error' ) {
 				   
 			    
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
-			    	console.log(result);
 			    	$('#contenuti').after(result);
 			    }
 		    }
