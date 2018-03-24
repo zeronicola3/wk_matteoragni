@@ -80,7 +80,6 @@
             <?php 
             WPBMap::addAllMappedShortcodes();
             $content = apply_filters('the_content', get_the_content());
-            $content = str_replace(']]>', ']]>', $content);
             echo $content;
             ?>
         </div>
