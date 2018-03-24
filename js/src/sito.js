@@ -190,7 +190,9 @@ $(document).ready(function() {
 			var screenCenter = st + ((screenheight*2)/3);
 			var lastItem = $(".timeline-year-box.active").last();
 			var nextItem = $(lastItem).next();
-			var curTop = $(nextItem).offset();
+			if(nextItem){
+				var curTop = $(nextItem).offset();
+			}
 
 			if(curTop.top <= screenCenter){
 				$(nextItem).addClass('active');
