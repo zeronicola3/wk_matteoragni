@@ -944,8 +944,8 @@ function webkolm_ajax_next_project() {
     wp_reset_postdata();
 
     foreach ($connected1 as $conn1) {
-        echo $conn1->ID;
-        echo $conn1->post_title;
+        //echo $conn1->ID;
+        //echo $conn1->post_title;
     } 
 
     $post = get_post($conn1->ID);
