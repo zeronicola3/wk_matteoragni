@@ -85,7 +85,10 @@ function secondary_project_content($project) { ?>
 
 
 function secondary_project_content_without_img($project) {
-	echo '<h5 class="timeline-item-title only-title">'. $project['title'] .'</h5>';
+	echo '
+	<a class="timeline-title-box" >
+		<h5 class="timeline-item-title only-title">'. $project['title'] .'</h5>
+	</a>';
 }	
 
 ?>
