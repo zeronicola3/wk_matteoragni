@@ -78,9 +78,7 @@
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
             <?php 
-            WPBMap::addAllMappedShortcodes();
-            $content = apply_filters('the_content', get_the_content());
-            echo $content;
+            render_VC_content(get_the_content());
             ?>
         </div>
         
