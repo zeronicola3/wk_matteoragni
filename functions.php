@@ -932,7 +932,7 @@ function webkolm_ajax_next_project() {
     global $post;
 
     // PRENDO LA STRINGA DA CERCARE
-    $project_id = $_POST[ 'project' ];
+    $project_id = $_POST[ 'project_id' ];
 
     return $project_id;
 
