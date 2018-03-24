@@ -78,6 +78,7 @@
         <div class="wkcol-1"></div>
         <div class="project-col project-content wkcol-12">
             <?php 
+            WPBMap::addAllMappedShortcodes();
             $content = apply_filters('the_content', get_the_content());
             $content = str_replace(']]>', ']]>', $content);
             echo $content;
