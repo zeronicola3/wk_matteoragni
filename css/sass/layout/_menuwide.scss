@@ -76,7 +76,16 @@ nav.nomobile {
 				width: 100%;
 				@include transition;
 			}
-			ul.sub-menu { opacity: 1;}
+			ul.sub-menu { 
+				height: auto;
+			    width: auto;
+			    opacity: 1;
+			    overflow-x: visible;
+			    display: flex;
+			    position: absolute;
+			    transform: translateX(-50%);
+				opacity: 1;
+			}
 		}
 
 		li:hover {
