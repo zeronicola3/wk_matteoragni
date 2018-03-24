@@ -295,7 +295,7 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		var project_id = $('.next_project').data('id');
+		var project_id = $('.next_project').data("id");
 		console.log(project_id);
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
