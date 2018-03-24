@@ -103,9 +103,10 @@
 
     if($conn1->ID != $current_id){
         $post = get_post($conn1->ID);
-        setup_postdata($post);
-    }
+        setup_postdata($post); ?>
 
-    ?>
+        <div class="wrapper next-project-button">Related project: <a href=""><?php echo $post->post_title; ?></a></div>
 
-    <div class="wrapper next-project-button">Related project: <a href=""><?php echo $post->post_title; ?></a></div>
+    <?php } ?>
+
+    
