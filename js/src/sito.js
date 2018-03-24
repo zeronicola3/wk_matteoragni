@@ -327,7 +327,6 @@ $(document).ready(function() {
 	function load_next_project(project_id) {
         // RICHIESTA AJAX PER SEARCH
 	    $.ajax({
-		    
 		    type: 'post',
 		    url: ajaxurl, 
 		    data: {
