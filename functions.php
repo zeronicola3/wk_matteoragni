@@ -969,8 +969,8 @@ function render_VC_content($content) {
     WPBMap::addAllMappedShortcodes();
 
     $content = apply_filters('the_content', $content);
+    
     echo $content;
-
 }
 
 
