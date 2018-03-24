@@ -22,7 +22,7 @@ function primary_project_content($project) { ?>
 	?>
 
 	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
-		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+		<h5 class="timeline-item-title title-image-page"><?php echo $project['title']; ?></h5>
 	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> ">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
@@ -55,7 +55,7 @@ function primary_project_content($project) { ?>
 function secondary_project_content($project) { ?>
 	
 	<a class="timeline-title-box" data-title="<?php echo $project['slug']; ?>">
-		<h5 class="timeline-item-title"><?php echo $project['title']; ?></h5>
+		<h5 class="timeline-item-title title-image"><?php echo $project['title']; ?></h5>
 	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?>">
 		<div class="timeline-item-img <?php echo $project['slug']; ?>">
@@ -85,7 +85,7 @@ function secondary_project_content($project) { ?>
 
 
 function secondary_project_content_without_img($project) {
-	echo '<h5 class="timeline-item-title">'. $project['title'] .'</h5>';
+	echo '<h5 class="timeline-item-title only-title">'. $project['title'] .'</h5>';
 }	
 
 ?>
