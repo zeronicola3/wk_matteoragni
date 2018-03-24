@@ -77,12 +77,6 @@ nav.nomobile {
 				@include transition;
 			}
 			ul.sub-menu { 
-				height: auto;
-			    width: auto;
-			    overflow-x: visible;
-			    display: flex;
-			    position: absolute;
-			    transform: translateX(-50%);
 				opacity: 1;
 			}
 		}
@@ -96,7 +90,15 @@ nav.nomobile {
 		}
 	}
 
-	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { height: 65px; opacity: 1; }
+	ul#menu_wide li.menu-item-has-children:hover > .sub-menu { 
+		height: 65px; opacity: 1; 
+			height: auto;
+		    width: auto;
+		    overflow-x: visible;
+		    display: flex;
+		    position: absolute;
+		    transform: translateX(-50%);
+	}
 }
 
 .notouch ul#menu_wide li a:hover::after {
