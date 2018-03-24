@@ -335,7 +335,7 @@ $(document).ready(function() {
 		    url: ajaxurl, 
 		    data: {
 			    action: 'webkolm_ajax_next_project',
-			    project_id: project_id
+			    next_project: project_id
 		    },
 		    success: function( result ) {
 		    	console.log('click2'); 
