@@ -86,7 +86,7 @@ function get_project_type($post_id) {
 
 	$term = wp_get_post_terms( $post_id, 'project_type', array('fields' => 'names') );
 
-	return $term;
+	return 'test';
 }
 
 
