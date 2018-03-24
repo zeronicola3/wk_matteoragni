@@ -62,7 +62,7 @@
         <div class="project-col wkcol-5 project-header">
             <h4 class="project-title"><?php the_title(); ?></h4>
         <?php if($client_id != ""){ ?>
-            <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a><br></span>
+            <span class="project-client"><a href="<?php echo $client_link; ?>"><?php echo $client_name; ?></a></span>
         <?php } ?>
         <?php if($meta['webkolm_project_year']['0'] != ""){ ?>
             <span class="project-year"><?php echo $meta['webkolm_project_year']['0']; ?></span>
