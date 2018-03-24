@@ -47,7 +47,7 @@ nav.nomobile {
 			    overflow-x: visible;
 			    display: flex;
 			    position: absolute;
-			    transform: translateX(50%);
+			    transform: translateX(-50%);
 				opacity: 0;
 				@include transition();
 
