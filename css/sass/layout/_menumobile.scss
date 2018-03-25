@@ -191,14 +191,10 @@ nav.onlymobile{
 					@include arrow("up", $color_nav);
 				}
 			}
-
-			& > a {
-				display: inline-block;
-			}
 		}
 
 	} /* UL */
-	ul li.current-menu-item a {
+	ul li.current-menu-item {
 		&::after {width: 100%; @include transition;}
 	}
 	
