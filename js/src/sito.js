@@ -339,15 +339,6 @@ $(document).ready(function() {
 			
 
 		}, 1000);
-		//window.off( "scroll" );
-		
-		//$('.next-project').css('height', 'auto');
-		
-		//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
-		//var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
-		
-		//$('#contenuti').append(next_button);
-		//$('#contenuti').after(next_project)
 	});
 
 
