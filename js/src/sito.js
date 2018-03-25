@@ -314,7 +314,7 @@ $(document).ready(function() {
 
 
 
-	$('.next-project-button a').on('click', function(event){
+	$('.next-project-button a, .next-project-button').on('click', function(event){
 		event.preventDefault();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
@@ -330,7 +330,7 @@ $(document).ready(function() {
 
 	function change_project(){
 		var project_id = $('.next-project').attr('data-id');
-		
+
 		$('#contenuti').remove();
 			
 		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
