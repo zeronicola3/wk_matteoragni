@@ -371,7 +371,7 @@ $(document).ready(function() {
     }
 
 
-    $(document).on('click', ".current-project .project-gallery", function() {
+    $(document).on('click', ".current-project .project-gallery .slides li", function() {
     	$('.flexslider').flexslider('next');
     } );
 		
