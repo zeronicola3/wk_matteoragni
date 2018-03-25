@@ -199,7 +199,8 @@ nav.onlymobile{
 	}
 	ul li.current-menu-item a {
 		position: absolute;
-		width: 100%;
+		width: 100vw;
+
 		&::after {width: 100%; @include transition;}
 	}
 	
