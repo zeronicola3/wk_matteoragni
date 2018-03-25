@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     background-color: $color_1;
-    color: $color_2;
+    color: $nero;
     font-size: 1em;
     z-index: 99999;
     font-size: 12px;
@@ -23,6 +23,7 @@
     }
 
     .cookie-botton {
+        display: none;
         padding: 0 1em;
         a { margin: 0 auto; }
     }
