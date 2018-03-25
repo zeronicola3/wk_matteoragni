@@ -363,6 +363,8 @@ $(document).ready(function() {
 			    	if(pageurl!=window.location){
 			    		window.history.pushState({path:pageurl},'',pageurl);
 			    	}
+
+			    	$('.next-project').fadeIn();
 			    }
 		    }
 	    });
