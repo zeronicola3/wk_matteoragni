@@ -16,7 +16,7 @@
 
     ?>
 
-    <div class="project-gallery project-gallery-<?php echo $elem_number; ?>">
+    <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?>">
         <ul class="slides">
         <?php
             $numslide=1;
