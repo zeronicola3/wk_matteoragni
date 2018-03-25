@@ -320,30 +320,24 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
+		var project_id = $('.next-project').attr('data-id');
 
-		async.waterfall([
-			// A list of functions
-			function(){
-			  	$('#contenuti').animate({ opacity: '0' }).slideToggle();
-			  	
-			  	var timeout = setTimeout(function(){
-			  		$('.next-project').addClass('active');
-			  	}, 700);
-			},
-			function(){
-				var project_id = $('.next-project').attr('data-id');
-			  	$('#contenuti').remove();
-				$(".next-project .project-gallery").flexslider('play');
-				$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
-					.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		
+		
+		var timeout = setTimeout(function(){
+			$('.next-project').addClass('active');
+		}, 700);
 
-				load_next_project(project_id);
-			}
-		],    
-		function(err, results){
-		// Optional final callback will get results for all prior functions
-		});
+		var timeout2 = setTimeout(function(){
+			$('#contenuti').remove();
+			$(".next-project .project-gallery").flexslider('play');
+			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
 
+			load_next_project(project_id);
+
+		}, 1000);
 		//window.off( "scroll" );
 		
 		//$('.next-project').css('height', 'auto');
