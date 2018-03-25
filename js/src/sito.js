@@ -70,7 +70,7 @@ $(document).ready(function() {
 			}
 		});
 		
-		$("nav.onlymobile .menu li.current-menu-ancestor > a").addClass("attivo");
+		$("nav.onlymobile .menu li.current-menu-ancestor ").addClass("attivo");
 
 		var lastScrollTop = 0;
 		var header=$("header");
