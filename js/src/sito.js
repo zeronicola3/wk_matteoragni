@@ -320,8 +320,6 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		var project_id = $('.next-project').attr('data-id');
-
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
 		
@@ -338,6 +336,7 @@ $(document).ready(function() {
 		//$('#contenuti').append(next_button);
 		//$('#contenuti').after(next_project)
 	}, function(){
+		var project_id = $('.next-project').attr('data-id');
 		$('#contenuti').remove();
 		$(".next-project .project-gallery").flexslider('play');
 		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
