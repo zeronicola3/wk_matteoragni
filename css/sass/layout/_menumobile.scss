@@ -215,13 +215,7 @@ nav.onlymobile{
 
 }
 
-ul.menu-menu-mobile li a::after {
-	@include mq($to: tablet){
-		position: absolute;
-	    right: 20px;
-	    top: 12px;
-	}
-}
+
 ul.sub-menu {
 	@include mq($to: tablet){
 		top: 0 !important;
@@ -239,5 +233,13 @@ ul.sub-menu {
 			right: unset;
 			top: unset;
 		}
+	}
+}
+
+ul.menu-menu-mobile li a::after {
+	@include mq($to: tablet){
+		position: absolute;
+	    right: 20px;
+	    top: 12px;
 	}
 }
