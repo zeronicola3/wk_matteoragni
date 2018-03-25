@@ -320,22 +320,35 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
+
+		async.waterfall([
+			// A list of functions
+			function(){
+			  	$('#contenuti').animate({ opacity: '0' }).slideToggle();
+			  	
+			  	var timeout = setTimeout(function(){
+			  		$('.next-project').addClass('active');
+			  	}, 700);
+			},
+			function(){
+			  	$('#contenuti').remove();
+				$(".next-project .project-gallery").flexslider('play');
+				$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+					.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+
+				load_next_project(project_id);
+			}
+		],    
+			function(err, results){
+			// Optional final callback will get results for all prior functions
+			});
+
 		var project_id = $('.next-project').attr('data-id');
 
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
-		
-		var timeout = setTimeout(function(){
-			$('.next-project').addClass('active');
-		}, 700);
 
 		var timeout2 = setTimeout(function(){
-			$('#contenuti').remove();
-			$(".next-project .project-gallery").flexslider('play');
-			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
-				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
-
-			load_next_project(project_id);
+			
 
 		}, 1000);
 		//window.off( "scroll" );
