@@ -334,13 +334,14 @@ $(document).ready(function() {
 		$('#contenuti').detach();
 			
 		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project').attr('id', 'contenuti');
-		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id));
+
+		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id, pageurl));
 
 	}
 
 
     // FUNZIONE PER LANCIO DELLA RICERCA DINAMICA
-	function load_next_project(project_id) {
+	function load_next_project(project_id, pageurl) {
         // RICHIESTA AJAX PER SEARCH
 	    $.ajax({
 		    type: 'post',
@@ -357,6 +358,10 @@ $(document).ready(function() {
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
 			    	$('#contenuti').after(result);
+			    	//to change the browser URL to the given link location
+			    	if(pageurl!=window.location){
+			    		window.history.pushState({path:pageurl},'',pageurl);
+			    	}
 			    }
 		    }
 	    });
