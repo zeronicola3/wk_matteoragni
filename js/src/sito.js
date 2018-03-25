@@ -369,7 +369,12 @@ $(document).ready(function() {
 		    }
 	    });
     }
-	
+
+
+    $(document).on('click', ".current-project .project-gallery", function() {
+    	$('.flexslider').flexslider('next');
+    } );
+		
 
 	/* CAROUSEL POST
 
