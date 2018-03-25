@@ -79,7 +79,7 @@ function secondary_project_content($project) { ?>
 			<span class="project-client"><?php echo $project['description']; ?></span>
 			<?php 
 			}
-			if($project['clienti'][0] != ""){ ?>
+			if($project['clienti'][0]['title'] != ""){ ?>
 			<span class="project-client"><?php echo $project['clienti'][0]['title']; ?></span><br>
 			<?php } ?>
 			<span class="project-client"><?php echo $project['year']; ?></span>
