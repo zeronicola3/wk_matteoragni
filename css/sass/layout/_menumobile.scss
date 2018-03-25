@@ -225,4 +225,11 @@ ul.sub-menu {
 	@include mq($to: tablet){
 		top: 0 !important;
 	}
+
+	li a {
+		@include mq($to: tablet){
+			top: 0;
+			right: unset;
+		}
+	}
 }
