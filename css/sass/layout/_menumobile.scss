@@ -232,18 +232,4 @@ nav.onlymobile ul.sub-menu {
 	@include mq($to: tablet){
 		top: 0 !important;
 	}
-
-	li a {
-		@include mq($to: tablet){
-			display: inline-block !important;
-
-		}
-	}
-
-	li a::after {
-		@include mq($to: tablet){
-			right: unset;
-			top: unset;
-		}
-	}
 }
