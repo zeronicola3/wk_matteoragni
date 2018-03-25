@@ -86,7 +86,7 @@ div#mover {
 		width: 100%;
 		height: 0;
 		padding-top: 64%; 
-		margin-top: 20px;
+		margin-top: 40px;
 
 		@include mq($from: tablet){
 			margin-top: 0;
