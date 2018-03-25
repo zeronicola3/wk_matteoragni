@@ -8,11 +8,8 @@
     z-index: 99999;
     font-size: 12px;
     @include transition(0.7s);
-    @include flex-parent;
-    justify-content: flex-start;
 
     p { 
-        @include flex-child;
         position: relative;
     }
 
