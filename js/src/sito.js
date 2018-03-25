@@ -281,7 +281,7 @@ $(document).ready(function() {
 		$('.next-project .project-gallery').flexslider({
 		    animation: "fade",
 		    animationLoop: true,
-		    slideshow: true,
+		    slideshow: false,
 		    animationSpeed: 100,
 		    slideshowSpeed : "2500",
 		    pauseOnHover: true,
