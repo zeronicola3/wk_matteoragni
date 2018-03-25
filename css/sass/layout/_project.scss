@@ -80,6 +80,11 @@
 		font-size: 1.25rem;
 		line-height: 1.4em;
 
+		@include mq($to: tablet){
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 		.project-title {
 			margin: 0;
 			font-weight: bold;
