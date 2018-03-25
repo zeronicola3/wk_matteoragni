@@ -228,8 +228,12 @@ ul.sub-menu {
 
 	li a {
 		@include mq($to: tablet){
-			top: 0;
-			right: unset;
+			display: inline-block;
+
+			&::after {
+				right: unset;
+				top: unset;
+			}
 		}
 	}
 }
