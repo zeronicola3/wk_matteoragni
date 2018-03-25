@@ -278,6 +278,10 @@ $(document).ready(function() {
 	}
 
 
+	if($(".next-project .project-gallery").length > 0){
+		$(".next-project .project-gallery").flexslider('stop');
+	}
+
 
 	$('#contenuti').waypoint(function(direction) {
 		$("header").toggleClass('active', direction === 'down');
