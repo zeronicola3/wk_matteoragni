@@ -331,7 +331,7 @@ $(document).ready(function() {
 	function change_project(){
 		var project_id = $('.next-project').attr('data-id');
 
-//		$('#contenuti').remove();
+		$('#contenuti').detach();
 			
 		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project').attr('id', 'contenuti');
 		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id));
