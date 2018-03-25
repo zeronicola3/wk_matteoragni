@@ -331,6 +331,7 @@ $(document).ready(function() {
 			  	}, 700);
 			},
 			function(){
+				var project_id = $('.next-project').attr('data-id');
 			  	$('#contenuti').remove();
 				$(".next-project .project-gallery").flexslider('play');
 				$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
@@ -339,18 +340,10 @@ $(document).ready(function() {
 				load_next_project(project_id);
 			}
 		],    
-			function(err, results){
-			// Optional final callback will get results for all prior functions
-			});
+		function(err, results){
+		// Optional final callback will get results for all prior functions
+		});
 
-		var project_id = $('.next-project').attr('data-id');
-
-		
-
-		var timeout2 = setTimeout(function(){
-			
-
-		}, 1000);
 		//window.off( "scroll" );
 		
 		//$('.next-project').css('height', 'auto');
