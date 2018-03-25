@@ -330,12 +330,14 @@ $(document).ready(function() {
 		}, 700);
 
 		var timeout2 = setTimeout(function(){
-			$('#contenuti').remove();
-			$(".next-project .project-gallery").flexslider('play');
-			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
-				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+			$('#contenuti').remove(function(){
+				$(".next-project .project-gallery").flexslider('play');
+				$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+					.attr('id', 'contenuti', load_next_project(project_id));
+			});
+			//.after('<div class="next-project"></div>');
 
-			load_next_project(project_id);
+			
 
 		}, 1000);
 		//window.off( "scroll" );
