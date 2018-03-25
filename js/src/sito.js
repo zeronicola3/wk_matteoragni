@@ -330,7 +330,8 @@ $(document).ready(function() {
 		}, 700);
 
 		var timeout2 = setTimeout(function(){
-			$('#contenuti').remove(function(){
+			$('#contenuti').remove();
+			(function(){
 				$(".next-project .project-gallery").flexslider('play');
 				$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
 					.attr('id', 'contenuti', load_next_project(project_id));
