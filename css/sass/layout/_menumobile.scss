@@ -225,7 +225,7 @@ ul.menu-menu-mobile li a::after {
 }
 
 
-ul.sub-menu {
+nav.onlymobile ul.sub-menu {
 	@include mq($to: tablet){
 		top: 0 !important;
 	}
