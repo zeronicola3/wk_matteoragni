@@ -168,7 +168,7 @@ nav.onlymobile{
 		
 		li.menu-item-has-children > a {
 
-			display: inline-block;
+			display: inline-block !important;
 
 			&:after { 
 				float:right;
