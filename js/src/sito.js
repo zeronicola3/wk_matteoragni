@@ -255,7 +255,7 @@ $(document).ready(function() {
 		    pauseOnHover: true,
 		    multipleKeyboard: true,
 		    keyboard: true,
-		    controlNav: false, 
+		    controlNav: true, 
 
 		});
 	}
