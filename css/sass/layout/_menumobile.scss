@@ -230,10 +230,13 @@ ul.sub-menu {
 		@include mq($to: tablet){
 			display: inline-block !important;
 
-			&::after {
-				right: unset;
-				top: unset;
-			}
+		}
+	}
+
+	li a::after {
+		@include mq($to: tablet){
+			right: unset;
+			top: unset;
 		}
 	}
 }
