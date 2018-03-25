@@ -216,7 +216,7 @@ nav.onlymobile{
 }
 
 
-ul.menu-menu-mobile li a::after {
+ul.menu-menu-mobile > li > a::after {
 	@include mq($to: tablet){
 		position: absolute;
 	    right: 20px;
