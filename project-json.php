@@ -4,8 +4,6 @@
  *
  */
 
-update_projects_json();
-
 get_header(); ?>
 
 <div id="contenuti">
