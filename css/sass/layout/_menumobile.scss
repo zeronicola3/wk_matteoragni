@@ -195,6 +195,11 @@ nav.onlymobile{
 
 	} /* UL */
 	ul li.current-menu-item {
+		position: relative;
+	}
+	ul li.current-menu-item a {
+		position: absolute;
+		width: 100%;
 		&::after {width: 100%; @include transition;}
 	}
 	
@@ -205,7 +210,7 @@ nav.onlymobile{
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li > a { background:lighten($sfondo_nav,20%); }
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu > li > a { background:lighten($sfondo_nav,30%); }
 
-	ul#menu-principale > li > ul.sub-menu > li.current-menu-item { color:$color_nav; &::after {width: 100%; @include transition;} }
+	ul#menu-principale > li > ul.sub-menu > li.current-menu-item > a { color:$color_nav; &::after {width: 100%; @include transition;} }
 	
 	ul#menu-principale > li > ul.sub-menu > li > ul.sub-menu > li.current-menu-item > a { color:$color_nav; background: lighten($sfondo_nav, 50%);}
 	
