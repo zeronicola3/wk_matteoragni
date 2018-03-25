@@ -7,10 +7,12 @@ li.flex-nav-prev {
     width: 20%;
     height: 100%;
     left: 0;
+    position: absolute;
 }
 
 li.flex-nav-next {
     width: 20%;
     height: 100%;
     right: 0;
+    position: absolute;
 }
