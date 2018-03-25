@@ -168,13 +168,14 @@ nav.onlymobile{
 		
 		li.menu-item-has-children > a {
 
+			display: inline-block;
 
 			&:after { 
 				float:right;
 				margin-right:5%;
 				padding-top:0px;
 				content: '';
-				display: inline-block;
+				display: block;
 				width: 10px;
 				height: 10px;
 				position: absolute;
