@@ -170,7 +170,7 @@ nav.onlymobile{
 			position: relative;
 		}
 
-		li.menu-item-has-children a {
+		li.menu-item-has-children > a {
 			&:before { 
 				float:right;
 				margin-right:5%;
@@ -199,7 +199,7 @@ nav.onlymobile{
 
 	} /* UL */
 	ul li.current-menu-item a {
-		//&::after {width: 100%; @include transition;}
+		&::after {width: 100%; @include transition;}
 	}
 	
 
