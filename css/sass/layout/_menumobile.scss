@@ -137,6 +137,10 @@ nav.onlymobile{
    	 			font-size: .875rem;
    	 			position: relative;
 
+   	 			@include mq($to: tablet){
+   	 				display: block;
+   	 			}
+
    	 			&::after {
    	 				content: " ";
    	 				height: 2px;
@@ -145,6 +149,12 @@ nav.onlymobile{
    	 				@include transition;
    	 				display: block;
     				position: absolute;
+
+    				@include mq($to: tablet){
+    					position: absolute;
+					    right: 20px;
+					    top: 12px;
+    				}
    	 			}
 			}	
 			/*
