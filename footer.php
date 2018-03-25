@@ -20,7 +20,7 @@
                 <div class="footer-box">
                     
                     <span class="footer-p-iva">dati obbligatori p. iva? </span>
-                    <span class="footer-p-iva">credit: <a href="mailto:">CREDITS</a> </span>
+                    <span class="footer-credit">credit: <a href="mailto:">CREDITS</a> </span>
                     <span class="cookies"><a href="#">cookie</a></span>
 
                 </div>
