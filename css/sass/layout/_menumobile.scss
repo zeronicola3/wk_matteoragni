@@ -122,7 +122,7 @@ nav.onlymobile{
 		& > li {
 			list-style: none;
 			
-			> a  {
+			a  {
 				display: inline-block;
 			    width: auto;
 				color:$color_nav;
@@ -136,10 +136,6 @@ nav.onlymobile{
 			    text-transform: uppercase;
    	 			font-size: .875rem;
    	 			position: relative;
-
-   	 			@include mq($to: tablet){
-   	 				display: block;
-   	 			}
 
    	 			&::after {
    	 				content: " ";
