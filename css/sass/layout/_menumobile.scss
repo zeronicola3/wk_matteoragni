@@ -170,7 +170,7 @@ nav.onlymobile{
 
 			display: inline-block !important;
 
-			&:after { 
+			&:before { 
 				float:right;
 				margin-right:5%;
 				padding-top:0px;
@@ -184,12 +184,12 @@ nav.onlymobile{
 				@include arrow("down", $color_nav);
 			}
 			&.attivo {
-				&:after {
+				&:before {
 					@include arrow("up", $color_nav);
 				}
 			} 
 			&.aperto {
-				&:after {
+				&:before {
 					@include arrow("up", $color_nav);
 				}
 			} 
