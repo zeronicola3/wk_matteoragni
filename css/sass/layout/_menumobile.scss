@@ -167,7 +167,7 @@ nav.onlymobile{
 		& > li.current-menu-ancestor > ul { display:block; }
 		
 		li.menu-item-has-children {
-
+			position: relative;
 			&:before { 
 				float:right;
 				margin-right:5%;
