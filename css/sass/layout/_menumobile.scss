@@ -194,13 +194,7 @@ nav.onlymobile{
 		}
 
 	} /* UL */
-	ul li.current-menu-item {
-		position: relative;
-	}
 	ul li.current-menu-item a {
-		position: absolute;
-		width: 100vw;
-
 		&::after {width: 100%; @include transition;}
 	}
 	
