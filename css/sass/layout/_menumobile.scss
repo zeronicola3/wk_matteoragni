@@ -176,7 +176,7 @@ nav.onlymobile{
 				width: 10px;
 				height: 10px;
 				position: absolute;
-				right: 20px;
+				right: -40px;
 				top: 12px;
 				@include arrow("down", $color_nav);
 			}
