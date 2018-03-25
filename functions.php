@@ -948,9 +948,7 @@ function webkolm_ajax_next_project() {
         //echo $conn1->post_title;
     } 
 
-    echo $conn->ID;
-
-    if($conn->ID != "") {
+    if($conn1->ID != "") {
         $post = get_post($conn1->ID);
         setup_postdata($post); 
         include get_template_directory() . '/assets/next-project-block.php';
