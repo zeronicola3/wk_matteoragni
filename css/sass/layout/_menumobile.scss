@@ -168,29 +168,6 @@ nav.onlymobile{
 		
 		li.menu-item-has-children {
 			position: relative;
-			&:before { 
-				float:right;
-				margin-right:5%;
-				padding-top:0px;
-				content: '';
-				display: block;
-				width: 10px;
-				height: 10px;
-				position: absolute;
-				right: 20px;
-				top: 12px;
-				@include arrow("down", $color_nav);
-			}
-			&.attivo {
-				&:before {
-					@include arrow("up", $color_nav);
-				}
-			} 
-			&.aperto {
-				&:before {
-					@include arrow("up", $color_nav);
-				}
-			}
 		}
 
 		li.menu-item-has-children a {
