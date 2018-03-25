@@ -53,7 +53,7 @@ $(document).ready(function() {
 	      $("html").toggleClass("bloccoscroll");
 		});
 		
-		$("nav.onlymobile .menu").on('click', 'li', function(){
+		$("nav.onlymobile .menu").on('click', 'li a', function(){
 			var $this=$(this);
 			if($this.hasClass("attivo"))
 			{
@@ -70,7 +70,7 @@ $(document).ready(function() {
 			}
 		});
 		
-		$("nav.onlymobile .menu li.current-menu-ancestor ").addClass("attivo");
+		$("nav.onlymobile .menu li.current-menu-ancestor > a").addClass("attivo");
 
 		var lastScrollTop = 0;
 		var header=$("header");
