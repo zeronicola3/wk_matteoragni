@@ -190,7 +190,11 @@ nav.onlymobile{
 				&:before {
 					@include arrow("up", $color_nav);
 				}
-			} 
+			}
+
+			& > a {
+				display: inline-block;
+			}
 		}
 
 	} /* UL */
