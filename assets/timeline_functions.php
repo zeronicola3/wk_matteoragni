@@ -199,7 +199,11 @@ function parse_json_file(){
 }
 
 
+add_action( 'save_post_project', 'timeline_update' );
 
+function timeline_update() {
+    update_projects_json();
+}
 
 
 
