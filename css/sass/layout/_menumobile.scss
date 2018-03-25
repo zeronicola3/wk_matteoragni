@@ -166,7 +166,7 @@ nav.onlymobile{
 		/* MOSTRO SOTTOMENU SE ATTIVI */
 		& > li.current-menu-ancestor > ul { display:block; }
 		
-		li.menu-item-has-children > a {
+		li.menu-item-has-children {
 
 			&:before { 
 				float:right;
