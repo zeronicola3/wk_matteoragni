@@ -31,7 +31,7 @@ $permalink = "";
             iframeClass: 'ce-iframe',
             acceptClass: 'ce-accept',
             dismissClass: 'ce-dismiss',
-            bannerClass: 'ce-banner nascondibile',
+            bannerClass: 'ce-banner nascondibile wrapper',
             eventScroll: false,
             scrollOffset: 0,
             clickOutside: false,
