@@ -315,7 +315,7 @@ $(document).ready(function() {
 
 
 	$('.next-project-button a').on('click', function(event){
-		
+
 		event.preventDefault();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
@@ -336,7 +336,10 @@ $(document).ready(function() {
 		
 		//$('#contenuti').append(next_button);
 		//$('#contenuti').after(next_project)
-	}, function(){
+	}, function(event){
+
+		event.preventDefault();
+		
 		var project_id = $('.next-project').attr('data-id');
 		$('#contenuti').remove();
 		$(".next-project .project-gallery").flexslider('play');
