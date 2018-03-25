@@ -179,8 +179,8 @@ nav.onlymobile{
 				width: 10px;
 				height: 10px;
 				position: absolute;
-				right: unset;
-				top: unset;
+				right: 0;
+				top: 12px;
 				@include arrow("down", $color_nav);
 			}
 			&.attivo {
