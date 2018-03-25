@@ -10,3 +10,10 @@ footer#footer {
     background-color: $bianco;
     z-index: 9999999;
 }
+
+footer .wrapper .footer-box {
+	span {
+		font-size: .5625rem;
+		line-height: 1.2em;
+	}
+}
