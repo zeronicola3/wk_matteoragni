@@ -76,7 +76,9 @@ function secondary_project_content($project) { ?>
 		<div class="timeline-item-description">
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
 			<span class="project-client"><?php echo $project['description']; ?></span>
+			<?php if($project['clienti'][0] != ""){ ?>
 			<span class="project-client"><?php echo $project['clienti'][0]['title']; ?></span>
+			<?php } ?>
 			<span class="project-client"><?php echo $project['year']; ?></span>
 		</div>
 	</a>
