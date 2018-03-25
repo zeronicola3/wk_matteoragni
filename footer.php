@@ -1,6 +1,6 @@
 
         <!-- BLUEIMPGALLERY -->
-        <div id="singolo-overlay">
+        <!--div id="singolo-overlay">
             <div id="loader-singolo"></div>
         </div>
 
@@ -12,7 +12,7 @@
         	<a class="close">x</a>
             <a class="play-pause"></a>
             <ol class="indicator"></ol>
-        </div>
+        </div-->
 
         <footer id="footer">
             <div class="wrapper">
