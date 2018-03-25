@@ -948,6 +948,8 @@ function webkolm_ajax_next_project() {
         //echo $conn1->post_title;
     } 
 
+    echo $conn->ID;
+
     if($conn->ID != "") {
         $post = get_post($conn1->ID);
         setup_postdata($post); 
