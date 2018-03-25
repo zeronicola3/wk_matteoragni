@@ -42,8 +42,13 @@ function primary_project_content($project) { ?>
 		</div>
 		<div class="timeline-item-description">
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
+			<?php if($project['description'] != ""){ ?>
 			<span class="project-client"><?php echo $project['description']; ?></span>
-			<span class="project-client"><?php echo $project['clienti'][0]['title']; ?></span>
+			<?php 
+			}
+			if($project['clienti'][0]['title'] != ""){ ?>
+			<span class="project-client"><?php echo $project['clienti'][0]['title']; ?></span><br>
+			<?php } ?>
 			<span class="project-client"><?php echo $project['year']; ?></span>
 
 		</div>
