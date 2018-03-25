@@ -168,7 +168,6 @@ nav.onlymobile{
 		
 		li.menu-item-has-children > a {
 
-
 			&:before { 
 				float:right;
 				margin-right:5%;
@@ -178,7 +177,7 @@ nav.onlymobile{
 				width: 10px;
 				height: 10px;
 				position: absolute;
-				right: 0;
+				right: 20px;
 				top: 12px;
 				@include arrow("down", $color_nav);
 			}
