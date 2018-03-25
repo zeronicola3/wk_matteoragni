@@ -320,8 +320,6 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		var project_id = $('.next-project').attr('data-id');
-
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
 		var timeout = setTimeout(function(){
@@ -331,6 +329,8 @@ $(document).ready(function() {
 	});
 
 	function change_project(){
+		var project_id = $('.next-project').attr('data-id');
+		
 		$('#contenuti').remove();
 			
 		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
