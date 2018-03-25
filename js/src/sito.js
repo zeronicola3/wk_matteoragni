@@ -330,7 +330,7 @@ $(document).ready(function() {
 
 	function change_project(){
 		var project_id = $('.next-project').attr('data-id');
-		var pageurl = $('.next-project').attr('data-url');
+		var pageurl = $('.next-project').attr('data-link');
 
 		$('#contenuti').detach();
 			
