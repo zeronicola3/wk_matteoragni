@@ -5,12 +5,13 @@
 	font-weight: 300;
 	line-height: 30px;
 	display: table;
-	font-size: 1.125rem;
+	
 	
 	@include mq($from: tablet){
 		margin-left: 20%;
     	width: auto;
     	cursor: pointer;
+    	font-size: 1.125rem;
 	}
 
 	&:hover {
