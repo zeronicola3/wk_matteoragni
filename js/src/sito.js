@@ -331,9 +331,10 @@ $(document).ready(function() {
 
 		var timeout2 = setTimeout(function(){
 			$('#contenuti').remove();
-			$(".next-project .project-gallery").flexslider('play');
+			
 			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
 				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+			$(".current-project .project-gallery").flexslider('play');
 
 			load_next_project(project_id);
 
