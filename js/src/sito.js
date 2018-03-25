@@ -262,7 +262,7 @@ $(document).ready(function() {
 
 		/* SLIDER SITO */
 
-	if($(".current-project .project-gallery").length > 0){
+	if($(".project-gallery").length > 0){
 		$('.current-project .project-gallery').flexslider({
 		    animation: "fade",
 		    animationLoop: true,
@@ -277,20 +277,6 @@ $(document).ready(function() {
 		});
 	}
 
-	if($(".next-project .project-gallery").length > 0){
-		$('.next-project .project-gallery').flexslider({
-		    animation: "fade",
-		    animationLoop: true,
-		    slideshow: false,
-		    animationSpeed: 100,
-		    slideshowSpeed : "2500",
-		    pauseOnHover: true,
-		    multipleKeyboard: true,
-		    keyboard: true,
-		    controlNav: false, 
-
-		});
-	}
 
 
 	$('#contenuti').waypoint(function(direction) {
