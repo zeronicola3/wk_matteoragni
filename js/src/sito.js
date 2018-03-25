@@ -277,6 +277,21 @@ $(document).ready(function() {
 		});
 	}
 
+	if($(".next-project .project-gallery").length > 0){
+		$('.next-project .project-gallery').flexslider({
+		    animation: "fade",
+		    animationLoop: true,
+		    slideshow: true,
+		    animationSpeed: 100,
+		    slideshowSpeed : "2500",
+		    pauseOnHover: true,
+		    multipleKeyboard: true,
+		    keyboard: true,
+		    controlNav: false, 
+
+		});
+	}
+
 
 	$('#contenuti').waypoint(function(direction) {
 		$("header").toggleClass('active', direction === 'down');
