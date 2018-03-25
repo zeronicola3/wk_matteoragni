@@ -263,7 +263,7 @@ $(document).ready(function() {
 		/* SLIDER SITO */
 
 	if($(".project-gallery").length > 0){
-		$('.current-project .project-gallery').flexslider({
+		$('.project-gallery').flexslider({
 		    animation: "fade",
 		    animationLoop: true,
 		    slideshow: true,
