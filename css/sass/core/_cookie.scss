@@ -27,7 +27,7 @@
 
 }
 .nascondibile {
-    bottom: 0;
+    bottom: 24px;
     @include transition(0.7s);
 }
 .ce-accept, .ce-dismiss, .ce-disable{
