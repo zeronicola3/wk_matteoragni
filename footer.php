@@ -19,7 +19,7 @@
                 <!-- FOOTER CONTENT -->
                 <div class="footer-box">
                     
-                    <span class="footer-p-iva">dati obbligatori p. iva? </span>
+                    <span class="footer-p-iva">P.IVA 13476100154</span>
                     <span class="footer-credit">credit: <a href="mailto:">CREDITS</a> </span>
                     <span class="cookies"><a href="#">cookie</a></span>
 
