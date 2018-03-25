@@ -369,6 +369,41 @@ $(document).ready(function() {
 			    // SE LA RICERCA VA A BUON FINE
 			    } else {			    	
 			    	$('#contenuti').after(result);
+			    	$('.next-project-button a').on('click', function(event){
+						event.preventDefault();
+
+						//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
+						//$('#contenuti').animate({ opacity: '0' }).slideToggle();
+
+						var project_id = $('.next-project').attr('data-id');
+
+						$('#contenuti').animate({ opacity: '0' }).slideToggle();
+						
+						
+						var timeout = setTimeout(function(){
+							$('.next-project').addClass('active');
+						}, 700);
+
+						var timeout2 = setTimeout(function(){
+							$('#contenuti').remove();
+							
+							$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+								.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+							$(".current-project .project-gallery").flexslider('play', load_next_project(project_id));
+
+							
+
+						}, 1000);
+						//window.off( "scroll" );
+						
+						//$('.next-project').css('height', 'auto');
+						
+						//var next_button = 'include get_template_directory() . "/assets/next-project-button.php"; ?>';
+						//var next_project = '<?php include get_template_directory() . "/assets/next-project-block.php"; ?>';
+						
+						//$('#contenuti').append(next_button);
+						//$('#contenuti').after(next_project)
+					});
 			    }
 		    }
 	    });
