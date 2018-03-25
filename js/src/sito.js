@@ -324,22 +324,19 @@ $(document).ready(function() {
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
-		
 		var timeout = setTimeout(function(){
-			$('.next-project').addClass('active');
+			$('.next-project').addClass('active', change_project());
 		}, 700);
 
-		var timeout2 = setTimeout(function(){
-			$('#contenuti').remove();
-			
-			$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
-				.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
-			$(".current-project .project-gallery").flexslider('play', load_next_project(project_id));
-
-			
-
-		}, 1000);
 	});
+
+	function change_project(){
+		$('#contenuti').remove();
+			
+		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project')
+			.attr('id', 'contenuti');//.after('<div class="next-project"></div>');
+		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id));
+	}
 
 
     // FUNZIONE PER LANCIO DELLA RICERCA DINAMICA
