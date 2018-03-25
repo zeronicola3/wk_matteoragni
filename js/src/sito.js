@@ -53,7 +53,7 @@ $(document).ready(function() {
 	      $("html").toggleClass("bloccoscroll");
 		});
 		
-		$("nav.onlymobile .menu").on('click', 'li', function(){
+		$("nav.onlymobile .menu").on('click', 'li a', function(){
 			var $this=$(this);
 			if($this.hasClass("attivo"))
 			{
