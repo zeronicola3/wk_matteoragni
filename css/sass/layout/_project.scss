@@ -44,6 +44,11 @@
 		height: auto;
 		margin-bottom: 50px;
 
+		@include mq($to: tablet){
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 		@include mq($from: tablet) {
 			margin-bottom: 100px;
 		}
@@ -79,11 +84,6 @@
 	.project-header {
 		font-size: 1.25rem;
 		line-height: 1.4em;
-
-		@include mq($to: tablet){
-			padding-left: 0;
-			padding-right: 0;
-		}
 
 		.project-title {
 			margin: 0;
