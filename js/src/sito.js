@@ -315,6 +315,7 @@ $(document).ready(function() {
 
 
 	$('.next-project-button a').on('click', function(event){
+		
 		event.preventDefault();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
