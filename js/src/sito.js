@@ -391,12 +391,25 @@ $(document).ready(function() {
     });
 
 
-     $('.projects-object').on('click', function(event){
+     $('.projects-objects').on('click', function(event){
     	event.preventDefault();	
 
     	if($(".timeline-block")[0]){
-			$('.object.disattivato').removeClass('disattivato');
+			$('.objects.disattivato').removeClass('disattivato');
 			$('.spaces').addClass('disattivato');
+    	} else {
+    		var current_link = $(this + ' a').attr('href');
+    		window.location.href = current_link;
+    	}
+    });
+
+
+    $('.projects-spaces').on('click', function(event){
+    	event.preventDefault();	
+
+    	if($(".timeline-block")[0]){
+			$('.spaces.disattivato').removeClass('disattivato');
+			$('.objects').addClass('disattivato');
     	} else {
     		var current_link = $(this + ' a').attr('href');
     		window.location.href = current_link;
