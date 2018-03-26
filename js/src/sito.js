@@ -383,6 +383,8 @@ $(document).ready(function() {
     	if($(".timeline-block")[0]){
     		if($('.timeline-title-box.disattivato')[0]) {
     			$('.disattivato').removeClass('disattivato');
+    			$(this).siblings('.current-menu-item').removeClass('current-menu-item');
+    			$(this).addClass('current-menu-item');
     		}
     	} else {
     		var current_link =  $(this).children('a').attr('href');
