@@ -57,11 +57,7 @@
 a.ce-law { color: $nero; font-weight: bold;}
 
 .ce-dismiss,.ce-accept{
-    @include border-radius(5px);
     font-size: .8em;
-    right: 1em;
-    top: 1em;
-    background-color: #ccc;
     color: #333;
 }
 
