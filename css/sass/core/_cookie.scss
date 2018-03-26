@@ -1,6 +1,7 @@
 .ce-banner{
     position: fixed;
     bottom: 24px;
+    display: flex;
     left: 0;
     right: 0;
     color: $nero;
@@ -21,7 +22,7 @@
     }
 
     .cookie-botton {
-        display: none;
+        display: inline-block;
     }
 
 }
@@ -30,13 +31,9 @@
     @include transition(0.7s);
 }
 .ce-accept, .ce-dismiss, .ce-disable{
-    background-color: #333;
     color: #fff;
     text-decoration: none;
-    padding: .6em 1em;
     display: inline-block;
-    margin: 0 .5em;
-    padding: 10px;
 }
 
 .ce-disable{
