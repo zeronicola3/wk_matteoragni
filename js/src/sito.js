@@ -379,16 +379,15 @@ $(document).ready(function() {
 
     $('.projects-all').on('click', function(event){
     	event.preventDefault();	
-
+    	var current_link = $(this).children('a').attr('href');
     	if($(".timeline-block")[0]){
     		if($('.timeline-title-box.disattivato')[0]) {
     			$('.disattivato').removeClass('disattivato');
     		}
     		$(this).siblings('.current-menu-item').removeClass('current-menu-item');
     		$(this).addClass('current-menu-item');
+    		window.history.pushState("Projects", "projects - Matteo Ragni", current_link);
     	} else {
-    		var current_link =  $(this).children('a').attr('href');
-    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
@@ -396,15 +395,14 @@ $(document).ready(function() {
 
      $('.projects-objects').on('click', function(event){
     	event.preventDefault();	
-
+    	var current_link = $(this).children('a').attr('href');
     	if($(".timeline-block")[0]){
 			$('.objects.disattivato').removeClass('disattivato');
 			$('.spaces').addClass('disattivato');
 			$(this).siblings('.current-menu-item').removeClass('current-menu-item');
     		$(this).addClass('current-menu-item');
+    		window.history.pushState("Objects", "objects - Matteo Ragni", current_link);
     	} else {
-    		var current_link = $(this).children('a').attr('href');
-    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
@@ -412,15 +410,14 @@ $(document).ready(function() {
 
     $('.projects-spaces').on('click', function(event){
     	event.preventDefault();	
-
+    	var current_link = $(this).children('a').attr('href');
     	if($(".timeline-block")[0]){
 			$('.spaces.disattivato').removeClass('disattivato');
 			$('.objects').addClass('disattivato');
 			$(this).siblings('.current-menu-item').removeClass('current-menu-item');
     		$(this).addClass('current-menu-item');
+    		window.history.pushState("Spaces", "spaces - Matteo Ragni", current_link);
     	} else {
-    		var current_link =  $(this).children('a').attr('href');
-    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
