@@ -15,16 +15,15 @@
         </div-->
 
         <footer id="footer">
-            <div class="wrapper">
-                <!-- FOOTER CONTENT -->
-                <div class="footer-box">
-                    
-                    <span class="footer-p-iva">P.IVA 13476100154</span>
-                    <span class="footer-credit"><a href="#">credits</a> </span>
-                    <span class="cookies"><a href="#">cookie</a></span>
+            <!-- FOOTER CONTENT -->
+            <div class="footer-box">
+                
+                <span class="footer-p-iva">P.IVA 13476100154</span>
+                <span class="footer-credit"><a href="#">credits</a> </span>
+                <span class="cookies"><a href="#">cookie</a></span>
 
-                </div>
             </div>
+
         </footer> 
 
         <!-- CSS -->
