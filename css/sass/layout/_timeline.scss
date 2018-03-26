@@ -158,12 +158,9 @@ div#mover {
 
 .timeline-title-box {
 	@include transition;
-	opacity: 1;
-	visibility: visible;
 }
 
 .timeline-title-box.disattivato {
 	@include transition;
-	opacity: 0;
-	visibility: hidden;
+	display: none;
 }
