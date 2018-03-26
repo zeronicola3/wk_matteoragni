@@ -395,8 +395,8 @@ $(document).ready(function() {
     	event.preventDefault();	
 
     	if($(".timeline-block")[0]){
-			$('.objects.disattivato').removeClass('disattivato');
-			$('.spaces').addClass('disattivato');
+			$('.objects.disattivato').fadeIn();
+			$('.spaces').fadeOut();
     	} else {
     		var current_link = $(this + ' a').attr('href');
     		window.location.href = current_link;
@@ -408,8 +408,8 @@ $(document).ready(function() {
     	event.preventDefault();	
 
     	if($(".timeline-block")[0]){
-			$('.spaces.disattivato').removeClass('disattivato');
-			$('.objects').addClass('disattivato');
+			$('.spaces.disattivato').fadeIn();
+			$('.objects').fadeOut();
     	} else {
     		var current_link = $(this + ' a').attr('href');
     		window.location.href = current_link;
