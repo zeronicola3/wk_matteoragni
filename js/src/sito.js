@@ -381,8 +381,23 @@ $(document).ready(function() {
     	event.preventDefault();	
 
     	if($(".timeline-block")[0]){
+    		if($('.timeline-title-box.disattivato')[0]) {
+    			$('.disattivato').removeClass('disattivato');
+    		}
+    	} else {
+    		var current_link = $(this + ' a').attr('href');
+    		window.location.href = current_link;
+    	}
+    });
+
+
+     $('.projects-object').on('click', function(event){
+    	event.preventDefault();	
+
+    	if($(".timeline-block")[0]){
     		if($('.timeline-title-box.disattivato')[0])
-    		$('.disattivato').fadeIn();
+    		$('.disattivato').removeClass('disattivato');
+
     	} else {
     		var current_link = $(this + ' a').attr('href');
     		window.location.href = current_link;
