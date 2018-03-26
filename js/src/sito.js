@@ -386,6 +386,7 @@ $(document).ready(function() {
     		}
     	} else {
     		var current_link = $(this + ' a').attr('href');
+    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
@@ -399,6 +400,7 @@ $(document).ready(function() {
 			$('.spaces').addClass('disattivato');
     	} else {
     		var current_link = $(this + ' a').attr('href');
+    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
@@ -412,6 +414,7 @@ $(document).ready(function() {
 			$('.objects').addClass('disattivato');
     	} else {
     		var current_link = $(this + ' a').attr('href');
+    		console.log(current_link);
     		window.location.href = current_link;
     	}
     });
