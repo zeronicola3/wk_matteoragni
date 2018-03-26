@@ -385,7 +385,7 @@ $(document).ready(function() {
     			$('.disattivato').removeClass('disattivato');
     		}
     	} else {
-    		var current_link = $(this + ' a').attr('href');
+    		var current_link =  $(this).children('a').attr('href');
     		console.log(current_link);
     		window.location.href = current_link;
     	}
@@ -413,7 +413,7 @@ $(document).ready(function() {
 			$('.spaces.disattivato').removeClass('disattivato');
 			$('.objects').addClass('disattivato');
     	} else {
-    		var current_link = $(this + ' a').attr('href');
+    		var current_link =  $(this).children('a').attr('href');
     		console.log(current_link);
     		window.location.href = current_link;
     	}
