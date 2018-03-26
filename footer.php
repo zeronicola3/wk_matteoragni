@@ -1,4 +1,4 @@
-</div>
+</div>  
         <!-- BLUEIMPGALLERY -->
         <!--div id="singolo-overlay">
             <div id="loader-singolo"></div>
@@ -14,16 +14,17 @@
             <ol class="indicator"></ol>
         </div-->
 
-        <footer id="footer" class="wrapper no-limitated">
-            <!-- FOOTER CONTENT -->
-            <div class="footer-box">
-                
-                <span class="footer-p-iva">P.IVA 13476100154</span>
-                <span class="footer-credit"><a href="#">credits</a> </span>
-                <span class="cookies"><a href="#">cookie</a></span>
+        <footer id="footer" >
+            <div class="wrapper no-limitated">
+                <!-- FOOTER CONTENT -->
+                <div class="footer-box">
+                    
+                    <span class="footer-p-iva">P.IVA 13476100154</span>
+                    <span class="footer-credit"><a href="#">credits</a> </span>
+                    <span class="cookies"><a href="#">cookie</a></span>
 
+                </div>
             </div>
-
         </footer> 
 
         <!-- CSS -->
