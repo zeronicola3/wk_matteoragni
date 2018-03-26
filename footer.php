@@ -14,7 +14,7 @@
             <ol class="indicator"></ol>
         </div-->
 
-        <footer id="footer">
+        <footer id="footer" class="wrapper no-limitated">
             <!-- FOOTER CONTENT -->
             <div class="footer-box">
                 
