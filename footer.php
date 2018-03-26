@@ -1,4 +1,4 @@
-
+</div>
         <!-- BLUEIMPGALLERY -->
         <!--div id="singolo-overlay">
             <div id="loader-singolo"></div>
