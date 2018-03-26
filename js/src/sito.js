@@ -383,9 +383,9 @@ $(document).ready(function() {
     	if($(".timeline-block")[0]){
     		if($('.timeline-title-box.disattivato')[0]) {
     			$('.disattivato').removeClass('disattivato');
-    			window.history.pushState({path:pageurl},'','projects');
-
     		}
+    		$(this).siblings('.current-menu-item').removeClass('current-menu-item');
+    		$(this).addClass('current-menu-item');
     	} else {
     		var current_link =  $(this).children('a').attr('href');
     		console.log(current_link);
@@ -400,7 +400,8 @@ $(document).ready(function() {
     	if($(".timeline-block")[0]){
 			$('.objects.disattivato').removeClass('disattivato');
 			$('.spaces').addClass('disattivato');
-			window.history.pushState({path:pageurl},'','objects');
+			$(this).siblings('.current-menu-item').removeClass('current-menu-item');
+    		$(this).addClass('current-menu-item');
     	} else {
     		var current_link = $(this).children('a').attr('href');
     		console.log(current_link);
@@ -415,7 +416,8 @@ $(document).ready(function() {
     	if($(".timeline-block")[0]){
 			$('.spaces.disattivato').removeClass('disattivato');
 			$('.objects').addClass('disattivato');
-			window.history.pushState({path:pageurl},'','spaces');
+			$(this).siblings('.current-menu-item').removeClass('current-menu-item');
+    		$(this).addClass('current-menu-item');
     	} else {
     		var current_link =  $(this).children('a').attr('href');
     		console.log(current_link);
