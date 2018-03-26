@@ -397,7 +397,6 @@ $(document).ready(function() {
     	if($(".timeline-block")[0]){
 			$('.object.disattivato').removeClass('disattivato');
 			$('.spaces').addClass('disattivato');
-
     	} else {
     		var current_link = $(this + ' a').attr('href');
     		window.location.href = current_link;
