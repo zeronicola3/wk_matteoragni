@@ -374,6 +374,20 @@ $(document).ready(function() {
     $(document).on('click', ".current-project .project-gallery .slides li", function() {
     	$('.current-project .project-gallery').flexslider('next');
     } );
+
+
+
+    $('.projects-all').on('click', function(event){
+    	event.preventDefault();	
+
+    	if($(".timeline-block")[0]){
+    		if($('.timeline-title-box.disattivato')[0])
+    		$('.disattivato').fadeIn();
+    	} else {
+    		var current_link = $(this + ' a').attr('href');
+    		window.location.href = current_link;
+    	}
+    });
 		
 
 	/* CAROUSEL POST
