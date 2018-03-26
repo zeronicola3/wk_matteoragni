@@ -399,7 +399,7 @@ $(document).ready(function() {
 			$('.objects.disattivato').removeClass('disattivato');
 			$('.spaces').addClass('disattivato');
     	} else {
-    		var current_link = $(this).children().attr('href');
+    		var current_link = $(this).children('a').attr('href');
     		console.log(current_link);
     		window.location.href = current_link;
     	}
