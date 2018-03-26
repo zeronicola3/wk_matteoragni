@@ -32,7 +32,7 @@
     @include transition(0.7s);
 }
 .ce-accept, .ce-dismiss, .ce-disable{
-    color: #fff;
+    color: $nero;
     text-decoration: none;
     display: inline-block;
 }
