@@ -1,7 +1,7 @@
 <?php 
 // ID PAGINA DELLA POLICY
-$permalink = "";
-//$permalink=get_permalink( icl_object_id(54, 'page', false) );
+
+$permalink=get_permalink( 2144 );
 ?>
 
  <!-- Templates -->

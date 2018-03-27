@@ -20,8 +20,8 @@
                 <div class="footer-box">
                     
                     <span class="footer-p-iva">P.IVA 13476100154</span>
-                    <span class="footer-credit"><a href="#">credits</a> </span>
-                    <span class="cookies"><a href="#">cookie</a></span>
+                    <span class="footer-credit"><a href="<?php echo get_the_permalink(2142); ?>">credits & policy</a> </span>
+                    <span class="cookies"><a href="<?php echo get_the_permalink(2144); ?>">cookie</a></span>
 
                 </div>
             </div>
