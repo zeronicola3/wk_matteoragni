@@ -32,7 +32,7 @@ get_header(); ?>
                             'meta_key'     => 'webkolm_homepage_post_box',
                             'meta_value'   => 'yes',
                             'meta_compare' => 'LIKE',
-                            'order' => 'rand'
+                            'orderby' => 'rand'
                         );
 
                         $query = new WP_Query($args);
