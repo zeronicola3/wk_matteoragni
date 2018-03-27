@@ -11,7 +11,7 @@
 		margin-left: 20%;
     	width: auto;
     	cursor: pointer;
-    	font-size: 1.125rem;
+    	font-size: 1rem;
 	}
 
 	&:hover {
@@ -149,7 +149,7 @@ div#mover {
    		text-decoration: underline;
 
    		@include mq($from: tablet){
-   			font-size: 1.25rem;
+   			font-size: 1rem;
    			line-height: 1.4em;
    		}
    }
