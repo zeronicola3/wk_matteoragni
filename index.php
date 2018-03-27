@@ -28,10 +28,11 @@ get_header(); ?>
 
                         $args = array(
                             'post_type'  => 'project',
-                            'posts_per_page' => 4,
+                            'posts_per_page' => 5,
                             'meta_key'     => 'webkolm_homepage_post_box',
                             'meta_value'   => 'yes',
                             'meta_compare' => 'LIKE',
+                            'order' => 'rand'
                         );
 
                         $query = new WP_Query($args);
