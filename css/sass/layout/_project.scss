@@ -39,6 +39,7 @@
 	@include flex-parent;
 	align-items: flex-start;
 	line-height: 1.3em;
+	margin-bottom: 100px;
 
 	.project-col {
 		@include flex-child;
