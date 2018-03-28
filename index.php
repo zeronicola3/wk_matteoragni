@@ -98,8 +98,10 @@ get_header(); ?>
     </div>
 
     <?php 
-    if($is_flagged_page){
-        the_content();
-    } ?>
+    if($is_flagged_page){ ?>
+    <div class="wrapper">
+        <?php the_content(); ?>
+    </div>
+    <?php } ?>
 </div>
 <?php get_footer(); ?>
