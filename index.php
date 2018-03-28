@@ -32,9 +32,9 @@ get_header(); ?>
                             'posts_per_page' => '5',
                             'meta_query' => array(
                                 array(
-                                    'meta_key'     => 'webkolm_homepage_post_box',
-                                    'meta_value'   => 'yes',
-                                    'meta_compare' => 'LIKE',
+                                    'key'     => 'webkolm_homepage_post_box',
+                                    'value'   => 'yes',
+                                    'compare' => 'LIKE',
                                 ),
                             ),
                         );
