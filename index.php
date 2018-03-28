@@ -30,9 +30,13 @@ get_header(); ?>
                             'orderby' => 'rand',
                             'post_type'  => 'project',
                             'posts_per_page' => '5',
-                            'meta_key'     => 'webkolm_homepage_post_box',
-                            'meta_value'   => 'yes',
-                            'meta_compare' => 'LIKE',
+                            'meta_query' => array(
+                                array(
+                                    'meta_key'     => 'webkolm_homepage_post_box',
+                                    'meta_value'   => 'yes',
+                                    'meta_compare' => 'LIKE',
+                                ),
+                            ),
                         );
 
                         $query = new WP_Query($args);
