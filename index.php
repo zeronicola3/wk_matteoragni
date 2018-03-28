@@ -30,6 +30,7 @@ get_header(); ?>
                             'orderby' => 'rand',
                             'post_type'  => 'project',
                             'posts_per_page' => '5',
+                            'ignore_custom_sort' => true,
                             'meta_query' => array(
                                 array(
                                     'key'     => 'webkolm_homepage_post_box',
