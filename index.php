@@ -96,5 +96,9 @@ get_header(); ?>
         ?>
         </ul>
     </div>
+
+    <?php if($is_flagged_page){
+        the_content();
+    } ?>
 </div>
 <?php get_footer(); ?>
