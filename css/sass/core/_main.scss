@@ -67,6 +67,7 @@ body.notouch.bloccoscroll {
 	background: $color_2; 
 	margin-top: 0;
 	overflow: hidden;
+	min-height: calc(100vh - 90px);
 }
 
 .wrapper {
