@@ -27,9 +27,9 @@ get_header(); ?>
                     if ( !$query->have_posts() ) {
 
                         $args = array(
+                            'orderby' => 'rand',
                             'post_type'  => 'project',
                             'posts_per_page' => '5',
-                            'orderby' => 'rand',
                             'meta_key'     => 'webkolm_homepage_post_box',
                             'meta_value'   => 'yes',
                             'meta_compare' => 'LIKE',
