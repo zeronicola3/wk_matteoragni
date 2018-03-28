@@ -28,7 +28,7 @@ get_header(); ?>
 
                         $args = array(
                             'post_type'  => 'project',
-                            'posts_per_page' => -1,
+                            'posts_per_page' => '5',
                             'orderby' => 'rand',
                             'meta_key'     => 'webkolm_homepage_post_box',
                             'meta_value'   => 'yes',
