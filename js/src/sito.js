@@ -296,9 +296,22 @@ $(document).ready(function() {
 
 			    	$('.next-project').fadeIn();
 
-			    	$(document).on('click', ".current-project .project-gallery .slides li", function() {
-			    		$('.current-project .project-gallery').flexslider('play').flexslider('next');
-			    	} );
+			    	/* SLIDER SITO */
+
+			    	if($(".project-gallery").length > 0){
+			    		$('.project-gallery').flexslider({
+			    		    animation: "fade",
+			    		    animationLoop: true,
+			    		    slideshow: false,
+			    		    animationSpeed: 100,
+			    		    slideshowSpeed : "2500",
+			    		    pauseOnHover: true,
+			    		    multipleKeyboard: true,
+			    		    keyboard: true,
+			    		    controlNav: false, 
+
+			    		});
+			    	}
 			    }
 		    }
 	    });
