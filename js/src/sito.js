@@ -302,6 +302,7 @@ $(document).ready(function() {
 	    });
 
 	    request.done(function() { 
+	    	console.log('slider');
 	    	if($(".project-gallery").length > 0){
 	    		$('.project-gallery').flexslider({
 	    		    animation: "fade",
