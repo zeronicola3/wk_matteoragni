@@ -12,6 +12,10 @@ footer#footer {
 }
 
 footer .footer-box {
+    display: flex;
+    justify-content: space-between;
+
+
 	span {
 		font-size: .75rem;
 		line-height: 1.2em;
