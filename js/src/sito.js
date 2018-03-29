@@ -295,6 +295,10 @@ $(document).ready(function() {
 			    	}
 
 			    	$('.next-project').fadeIn();
+
+			    	$(document).on('click', ".current-project .project-gallery .slides li", function() {
+			    		$('.current-project .project-gallery').flexslider('play').flexslider('next');
+			    	} );
 			    }
 		    }
 	    });
