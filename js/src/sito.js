@@ -274,7 +274,7 @@ $(document).ready(function() {
     // FUNZIONE PER LANCIO DELLA RICERCA DINAMICA
 	function load_next_project(project_id, pageurl) {
         // RICHIESTA AJAX PER SEARCH
-	    $.ajax({
+	    var request = $.ajax({
 		    type: 'post',
 		    url: ajaxurl, 
 		    data: {
@@ -297,23 +297,25 @@ $(document).ready(function() {
 			    	$('.next-project').fadeIn();
 
 			    	/* SLIDER SITO */
-
-			    	if($(".current-project .project-gallery").length > 0){
-			    		$('.current-project .project-gallery').flexslider({
-			    		    animation: "fade",
-			    		    animationLoop: true,
-			    		    slideshow: false,
-			    		    animationSpeed: 100,
-			    		    slideshowSpeed : "2500",
-			    		    pauseOnHover: true,
-			    		    multipleKeyboard: true,
-			    		    keyboard: true,
-			    		    controlNav: false, 
-
-			    		});
-			    	}
 			    }
 		    }
+	    });
+
+	    request.done(function() { 
+	    	if($(".current-project .project-gallery").length > 0){
+	    		$('.current-project .project-gallery').flexslider({
+	    		    animation: "fade",
+	    		    animationLoop: true,
+	    		    slideshow: false,
+	    		    animationSpeed: 100,
+	    		    slideshowSpeed : "2500",
+	    		    pauseOnHover: true,
+	    		    multipleKeyboard: true,
+	    		    keyboard: true,
+	    		    controlNav: false, 
+
+	    		});
+	    	}
 	    });
     }
 
