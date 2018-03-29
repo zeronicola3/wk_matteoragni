@@ -12,7 +12,7 @@ get_header(); ?>
 
 <?php
 
-function primary_project_content($project) { ?>
+function primary_project_content($project, $lazy) { ?>
 
 
 	<?php 
@@ -23,20 +23,16 @@ function primary_project_content($project) { ?>
 		<h5 class="timeline-item-title title-image-page"><?php echo $project['title']; ?></h5>
 	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> ">
-		<div class="timeline-item-img <?php echo $project['slug']; ?>">
-			<style>
+		<div class="timeline-item-img <?php echo $project['slug']; if($lazy){ ?> lazy" data-src="<?php echo $project['img_urls']['medium']; }?>">
+			<?php 
+			if(!$lazy){ ?>
+				<style>
 
-				.timeline-item-img.<?php echo $project['slug']; ?> {
-					background-image: url('<?php echo $project['img_urls']['medium']; ?>');
-				}
-
-				@media (min-width: 768px) {  
-	                .timeline-item-img.<?php echo $project['slug']; ?> {
-						background-image: url('<?php echo $project['img_urls']['large']; ?>');
+					.timeline-item-img.<?php echo $project['slug']; ?> {
+						background-image: url('<?php echo $project['img_urls']['medium']; ?>');
 					}
-	            }
-	            
-			</style>
+				</style>
+			<?php } ?>
 		</div>
 		<div class="timeline-item-description">
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
@@ -55,26 +51,24 @@ function primary_project_content($project) { ?>
 <?php } 
 
 
-function secondary_project_content($project) { ?>
+function secondary_project_content($project, $lazy) { ?>
 	
 	<a class="timeline-title-box <?php echo $project['type']; ?>" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title title-image"><?php echo $project['title']; ?></h5>
 	</a>
 	<a class="timeline-item <?php echo $project['slug']; ?>">
-		<div class="timeline-item-img <?php echo $project['slug']; ?>">
-			<style>
+		<div class="timeline-item-img <?php echo $project['slug']; if($lazy){?> lazy" data-src="<?php echo $project['img_urls']['medium']; }?>">
 
-				.timeline-item-img.<?php echo $project['slug']; ?> {
-					background-image: url('<?php echo $project['img_urls']['medium']; ?>');
-				}
+			<?php 
+			if(!$lazy){ ?>
+				<style>
 
-				@media (min-width: 768px) {  
-	                .timeline-item-img .<?php echo $project['slug']; ?> {
-						background-image: url('<?php echo $project['img_urls']['large']; ?>');
+					.timeline-item-img.<?php echo $project['slug']; ?> {
+						background-image: url('<?php echo $project['img_urls']['medium']; ?>');
 					}
-	            }
-	            
-			</style>
+				</style>
+			<?php } ?>
+			
 		</div>
 		<div class="timeline-item-description">
 			<h4 class="project-title"><?php echo $project['title']; ?></h4>
@@ -112,6 +106,11 @@ function secondary_project_content_without_img($project) {
 					<h4><?php echo $year; ?></h4>
 
 					<?php
+					$attiva_lazy = true;
+					if($number<=1){
+						$attiva_lazy = false;
+					}
+
 					foreach ($projects as $key => $project) { ?>
 						<?php
 						if($project['is_secondary']) {
@@ -119,10 +118,10 @@ function secondary_project_content_without_img($project) {
 							if($project['img_urls'] == "") { 
 								secondary_project_content_without_img($project);
 							} else { 
-								secondary_project_content($project);
+								secondary_project_content($project, $attiva_lazy);
 							} 
 						} else {
-							primary_project_content($project);
+							primary_project_content($project, $attiva_lazy);
 						}
 						?>
 
