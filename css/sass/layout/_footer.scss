@@ -12,16 +12,24 @@ footer#footer {
 }
 
 footer .footer-box {
-    display: flex;
-    justify-content: space-between;
-
+    @include mq($to: tablet){
+        display: flex;
+        justify-content: space-between;
+    }
 
 	span {
+
+
 		font-size: .75rem;
 		line-height: 1.2em;
 		margin-left: 50px;
         float: right;
         line-height: 24px;
+
+        @include mq($to: tablet){
+            font-size: .6rem;
+            margin-left: 0;
+        }
 	}
 
 
