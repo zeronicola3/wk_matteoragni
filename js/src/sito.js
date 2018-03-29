@@ -13,6 +13,8 @@ function is_touch_device() {
 }
 	  
 $(document).ready(function() {
+
+	 $('.lazy').Lazy();
     	
 	// OTTIMIZZAZIONE PER RETINA */
 	
