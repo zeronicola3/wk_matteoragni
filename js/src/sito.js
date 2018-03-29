@@ -322,7 +322,7 @@ $(document).ready(function() {
 
 
     $(document).on('click', ".current-project .project-gallery .slides li", function() {
-    	$('.current-project .project-gallery').flexslider('play').flexslider('next');
+    	$('.current-project .project-gallery').flexslider('next');
     } );
 
 
