@@ -33,10 +33,11 @@
 
         <!-- JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
         <!-- <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> -->
         <script type="text/javascript" src="<?php echo bloginfo( 'stylesheet_directory' );?>/js/theme.js"></script>
 
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
+
 
         <?php get_template_part( 'cookie' ); ?>
 
