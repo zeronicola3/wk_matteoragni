@@ -302,8 +302,8 @@ $(document).ready(function() {
 	    });
 
 	    request.done(function() { 
-	    	if($(".current-project .project-gallery").length > 0){
-	    		$('.current-project .project-gallery').flexslider({
+	    	if($(".project-gallery").length > 0){
+	    		$('.project-gallery').flexslider({
 	    		    animation: "fade",
 	    		    animationLoop: true,
 	    		    slideshow: false,
