@@ -6,10 +6,14 @@
     right: 0;
     color: $grigio;
     text-transform: uppercase;
-    font-size: 1em;
     z-index: 99999;
-    font-size: 12px;
     @include transition(0.7s);
+    font-size: 9px;
+    line-height: 1.5em;
+
+    @include mq($from: tablet){
+        font-size: 12px;
+    }
 
     p { 
         position: relative;
