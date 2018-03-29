@@ -158,7 +158,15 @@
 	}
 }
 
-
+body .project-gallery {
+	.slides li {
+		cursor: auto;
+		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
+	}
+	.flex-direction-nav{
+		display: none !important;
+	}
+}
 
 .next-project {
     overflow-y: hidden;
@@ -183,14 +191,6 @@
 
 
 
-body .project-gallery {
-	.slides li {
-		cursor: auto;
-		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
-	}
-	.flex-direction-nav{
-		display: none !important;
-	}
-}
+
 
 
