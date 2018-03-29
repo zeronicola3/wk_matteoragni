@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="contenuti">
-	<div class="wrapper wrapper-page">
+	<div class="wrapper">
 		<div class="wp_content">
 
         <?php
