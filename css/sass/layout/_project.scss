@@ -171,6 +171,10 @@
     &.active {
     	max-height: unset;
     }
+
+    .project-gallery .flex-direction-nav {
+    	display: none !important;
+    }
 }
 
 
