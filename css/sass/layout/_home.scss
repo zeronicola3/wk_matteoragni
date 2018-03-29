@@ -5,6 +5,17 @@ li.flex-nav-prev {
     height: 100%;
     left: 0;
     position: absolute;
+    z-index: 9;
+
+    a {
+        display: block;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        cursor: auto;
+        cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right.png'), auto;
+    }
 }
 
 li.flex-nav-next {
@@ -19,6 +30,6 @@ li.flex-nav-next {
 		height: 100%;
 		top: 0;
 		cursor: auto;
-		cursor: url(../img/arrow_left.png), auto;
+		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
     }
 }
