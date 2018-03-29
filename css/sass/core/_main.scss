@@ -78,4 +78,9 @@ body.notouch.bloccoscroll {
 	&.no-limitated {
 		max-width: unset;
 	}
+
+	&.wrapper-page {
+	    margin-top: 100px;
+	    margin-bottom: 100px;
+	}
 }
