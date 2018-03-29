@@ -175,7 +175,14 @@
 
 
 
-body .project-gallery .flex-direction-nav{
-
-	display: none !important;
+body .project-gallery {
+	.slides li {
+		cursor: auto;
+		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
+	}
+	.flex-direction-nav{
+		display: none !important;
+	}
 }
+
+
