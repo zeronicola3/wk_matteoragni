@@ -46,7 +46,7 @@ header.disattivo {
     	height: 90px;
     }
 
-    & svg::before {
+    &::before {
 	    content: " ";
 	    display: block;
 	    width: 100%;
@@ -58,7 +58,7 @@ header.disattivo {
 
 
 	    @include mq($from: tablet){
-	    	top: 63%;
+	    	top: 62%;
 	    }
 	}
 
@@ -117,7 +117,7 @@ header.disattivo {
 
 header.active {
 
-	#logo_sito svg::before {
+	#logo_sito::before {
 		width: 0%;
 		@include transition;
 	}
