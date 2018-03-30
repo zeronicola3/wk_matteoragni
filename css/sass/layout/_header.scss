@@ -46,7 +46,7 @@ header.disattivo {
     	height: 90px;
     }
 
-    &::before {
+    & svg::before {
 	    content: " ";
 	    display: block;
 	    width: 100%;
@@ -117,7 +117,7 @@ header.disattivo {
 
 header.active {
 
-	#logo_sito::before {
+	#logo_sito svg::before {
 		width: 0%;
 		@include transition;
 	}
