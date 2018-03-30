@@ -52,9 +52,14 @@ header.disattivo {
 	    width: 100%;
 	    position: absolute;
 	    height: 2px;
-	    top: 62%;
+	    top: 75%;
 	    background: black;
 	    @include transition;
+
+
+	    @include mq($from: desktop){
+	    	top: 62%;
+	    }
 	}
 
 	svg { 
