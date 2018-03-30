@@ -49,7 +49,7 @@ header.disattivo {
     &::before {
 	    content: " ";
 	    display: block;
-	    width: 0%;
+	    width: 100%;
 	    position: absolute;
 	    height: 2px;
 	    top: 62%;
