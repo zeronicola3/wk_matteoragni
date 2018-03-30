@@ -12,8 +12,13 @@ li.flex-nav-prev {
         position: absolute;
         height: 100%;
         top: 0;
+        color: transparent;
         cursor: auto;
         cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right.png'), auto;
+
+        &::before {
+            display: none;
+        }
     }
 }
 
@@ -28,7 +33,12 @@ li.flex-nav-next {
 		position: absolute;
 		height: 100%;
 		top: 0;
+        color: transparent;
 		cursor: auto;
 		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
+
+        &::before {
+            display: none;
+        }
     }
 }
