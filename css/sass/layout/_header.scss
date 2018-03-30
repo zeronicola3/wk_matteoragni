@@ -46,6 +46,17 @@ header.disattivo {
     	height: 90px;
     }
 
+    &::before {
+	    content: " ";
+	    display: block;
+	    width: 0%;
+	    position: absolute;
+	    height: 2px;
+	    top: 62%;
+	    background: black;
+	    @include transition;
+	}
+
 	svg { 
 		overflow: visible;
 		display: inline-block;
@@ -101,6 +112,11 @@ header.disattivo {
 }
 
 header.active {
+
+	#logo_sito&::before {
+		width: 100%;
+		@include transition;
+	}
 
 	svg {
 		//@include transition;
