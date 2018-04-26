@@ -159,7 +159,7 @@
 }
 
 body .project-gallery {
-	.slides li {
+	.slides li.cursor-enabled {
 		cursor: auto;
 		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
 	}
