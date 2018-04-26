@@ -46,6 +46,7 @@ get_header(); ?>
                                 $array_id = explode(",", $ids[1]);
 
                                 $slide_class = "";
+                                echo sizeof($array_id);
                                 if(sizeof($array_id) > 1){
                                     $slide_class = " cursor-enabled ";
                                 }
