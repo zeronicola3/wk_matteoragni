@@ -27,6 +27,11 @@
                 preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
                 $array_id = explode(",", $ids[1]);
 
+                $slide_class = "";
+                if(sizeof($array_id) > 1){
+                    $slide_class = " cursor-enabled ";
+                }
+
                 
                 foreach ($array_id as &$item) {
                     $url_small = wp_get_attachment_image_src( $item, 'medium' );
@@ -35,7 +40,7 @@
                     $is_contain = (bool) get_post_meta( $item, 'image-bg-size', true );
                       
                     ?>
-                    <li class="project_slide-<?= $numslide; ?> slideimg">
+                    <li class="project_slide-<?= $numslide; ?> slideimg <?php echo $slide_class; ?>">
                         <style>
                             .project-gallery-<?php echo $elem_number; ?> .project_slide-<?= $numslide; ?> { 
                                 background-image:url('<?php echo $url_small['0'] ?>');
