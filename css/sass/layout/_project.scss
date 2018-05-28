@@ -58,14 +58,6 @@
 		p {
 			margin: 0;
 		}
-
-		&:first-child::before {
-			content: " ";
-			height: 2px;
-			width: 100%;
-			display: block;
-			background-color: $nero;
-		}
 	}
 
 	[class*=wkcol-] {
@@ -127,6 +119,16 @@
 		line-height: 1.35em;
 		font-style: italic;
 	}
+}
+
+.project-container.wrapper::before {
+    width: 100%;
+    content: " ";
+    display: block;
+    height: 3px;
+    background-color: black;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .homepage-gallery {
