@@ -9,7 +9,7 @@ html {
 html.bloccoscroll { overflow: hidden; }
 
 html, body {
-	@mixin testo_uno {font-family: 'NeutrifPro', sans-serif;}
+	@mixin testo_uno {font-family: 'NeutrifPro-Regular', sans-serif;}
 	font-size:13px;
 	line-height: 1.5em;
 	letter-spacing: 0.03em;

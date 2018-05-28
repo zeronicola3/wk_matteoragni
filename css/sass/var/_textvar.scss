@@ -6,7 +6,7 @@
 /* FONT PER LE ICONE */
 
 @font-face {
-	font-family: 'NeutrifPro';
+	font-family: 'NeutrifPro-Regular';
 	src: url('../font/neutrif-pro.eot');
 	src: url('../font/neutrif-pro.eot?#iefix') format('embedded-opentype'),
              url('../font/neutrif-pro.woff2') format('woff2'),
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-	font-family: 'NeutrifPro';
+	font-family: 'NeutrifPro-Light';
 	src: url('../font/neutrif-pro-light.eot');
 	src: url('../font/neutrif-pro-light.eot?#iefix') format('embedded-opentype'),
              url('../font/neutrif-pro-light.woff2') format('woff2'),
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-	font-family: 'NeutrifPro';
+	font-family: 'NeutrifPro-Bold';
 	src: url('../font/neutrif-pro-bold.eot');
 	src: url('../font/neutrif-pro-bold.eot?#iefix') format('embedded-opentype'),
              url('../font/neutrif-pro-bold.woff2') format('woff2'),
@@ -41,7 +41,7 @@
 	font-style: normal;
 }
 
-@mixin testo_uno {font-family: 'NeutrifPro', sans-serif;}
-@mixin testo_due {font-family: 'NeutrifPro', sans-serif;}
-@mixin testo_tre {font-family: 'NeutrifPro', sans-serif;}
+@mixin testo_uno {font-family: 'NeutrifPro-Regular', sans-serif;}
+@mixin testo_due {font-family: 'NeutrifPro-Regular', sans-serif;}
+@mixin testo_tre {font-family: 'NeutrifPro-Regular', sans-serif;}
 
