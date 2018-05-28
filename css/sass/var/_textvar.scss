@@ -7,7 +7,8 @@
 
 @font-face {
 	font-family: 'NeutrifPro-Regular';
-     url('../font/neutrif-pro.woff') format('woff'),
+	src: url('../font/neutrif-pro.woff') format('woff');
+
 	font-weight: normal;
 	font-style: normal;
 }
