@@ -30,7 +30,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes ">
 
   <!-- FONT LIB -->
-  <!--link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700" rel="stylesheet"-->
 
   <!-- JQUERY -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
