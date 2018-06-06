@@ -169,6 +169,11 @@ body .current-project .project-gallery {
 	.flex-direction-nav{
 		.flex-nav-prev, .flex-nav-next {
 			width: 50%;
+
+			a {
+				left: unset;
+				right: unset;
+			}
 		}
 	}
 }
