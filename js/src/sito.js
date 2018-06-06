@@ -110,7 +110,8 @@ $(document).ready(function() {
 			$(this).parent().toggleClass('active');
 		});
 
-		$('.timeline-title-box').on('click', function(){
+		$('.timeline-title-box').on('click', function(e){
+			e.preventDefault();
 			
 			$(".timeline-item.active").removeClass('active');
 
