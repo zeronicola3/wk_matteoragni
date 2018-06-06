@@ -122,7 +122,6 @@
 
     @media screen and (min-width: 600px) {
       #loader .slogan-container {
-        min-width: 500px;
       }
 
       #loader .slogan-container .slogan {
