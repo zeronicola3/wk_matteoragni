@@ -82,7 +82,7 @@
     });
 
     bar.animate(1.0, function() {
-        $('#loader').fadeOut();
+        //$('#loader').fadeOut();
     });
 
   </script>
