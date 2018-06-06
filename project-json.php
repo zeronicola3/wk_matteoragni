@@ -19,7 +19,7 @@ function primary_project_content($project, $lazy) { ?>
 		get_post($project['cliente']);
 	?>
 
-	<a class="timeline-title-box <?php echo $project['type']; ?>" data-title="<?php echo $project['slug']; ?>">
+	<a href="<?php echo $project['url']; ?>" class="timeline-title-box <?php echo $project['type']; ?>" data-title="<?php echo $project['slug']; ?>">
 		<h5 class="timeline-item-title title-image-page"><?php echo $project['title']; ?></h5>
 	</a>
 	<a href="<?php echo $project['url']; ?>" class="timeline-item <?php echo $project['slug']; ?> ">
@@ -88,7 +88,7 @@ function secondary_project_content($project, $lazy) { ?>
 
 function secondary_project_content_without_img($project) {
 	echo '
-	<a href="'. $project['url'] .'" class="timeline-title-box '. $project['type'] .'">
+	<a class="timeline-title-box '. $project['type'] .'">
 		<h5 class="timeline-item-title only-title">'. $project['title'] .'</h5>
 	</a>';
 }	
