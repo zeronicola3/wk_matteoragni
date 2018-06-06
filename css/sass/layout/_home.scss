@@ -16,6 +16,7 @@ li.flex-nav-prev {
         position: absolute;
         height: 100%;
         top: 0;
+        left: unset;
         color: transparent;
         cursor: auto;
         cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right.png'), auto;
@@ -37,6 +38,7 @@ li.flex-nav-next {
 		position: absolute;
 		height: 100%;
 		top: 0;
+        right: unset;
         color: transparent;
 		cursor: auto;
 		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
