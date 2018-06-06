@@ -88,7 +88,7 @@ function secondary_project_content($project, $lazy) { ?>
 
 function secondary_project_content_without_img($project) {
 	echo '
-	<a class="timeline-title-box '. $project['type'] .'">
+	<a href="'. $project['url'] .'" class="timeline-title-box '. $project['type'] .'">
 		<h5 class="timeline-item-title only-title">'. $project['title'] .'</h5>
 	</a>';
 }	
