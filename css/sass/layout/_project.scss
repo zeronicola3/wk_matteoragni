@@ -33,12 +33,6 @@
         background-repeat: no-repeat;
         background-color: white;
     }
-    .flex-direction-nav {
-    	display: block;
-    }
-    .flex-direction-nav .flex-nav-prev, .flex-direction-nav .flex-nav-next {
-    	width: 50%;
-    }
 }
 
 .project-container {
@@ -173,7 +167,9 @@ body .current-project .project-gallery {
 		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
 	}
 	.flex-direction-nav{
-		display: none !important;
+		.flex-nav-prev, .flex-nav-next {
+			width: 50%;
+		}
 	}
 }
 
