@@ -113,15 +113,12 @@ $(document).ready(function() {
 		$('.timeline-title-box').on('click', function(e){
 
 			e.preventDefault();
-			if($(".timeline-item.active").length > 0) {
-				var slug = $(this).attr('data-title');
-				$(".timeline-item." + slug).addClass('active');
-			} else {
-				$(".timeline-item.active").removeClass('active');
-			}
-			
 
+			$(".timeline-item.active").removeClass('active');
 
+			var slug = $(this).attr('data-title');
+
+			$(".timeline-item." + slug).addClass('active');
 		});
 
 	} else {
