@@ -122,10 +122,6 @@ $(document).ready(function() {
 				$(".timeline-item.active").removeClass('active');
 			}
 			
-
-			
-
-			
 		});
 
 	} else {
