@@ -113,12 +113,19 @@ $(document).ready(function() {
 		$('.timeline-title-box').on('click', function(e){
 
 			e.preventDefault();
-
-			$(".timeline-item.active").removeClass('active');
-
 			var slug = $(this).attr('data-title');
 
-			$(".timeline-item." + slug).addClass('active');
+			if(!$(".timeline-item." + slug).hasClass('active')){
+				$(".timeline-item.active").removeClass('active');
+				$(".timeline-item." + slug).addClass('active');
+			} else {
+				$(".timeline-item.active").removeClass('active');
+			}
+			
+
+			
+
+			
 		});
 
 	} else {
