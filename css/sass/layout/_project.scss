@@ -33,7 +33,9 @@
         background-repeat: no-repeat;
         background-color: white;
     }
-
+    .flex-direction-nav {
+    	display: block;
+    }
     .flex-direction-nav .flex-nav-prev, .flex-direction-nav .flex-nav-next {
     	width: 50%;
     }
