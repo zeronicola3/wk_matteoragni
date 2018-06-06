@@ -113,7 +113,7 @@ $(document).ready(function() {
 		$('.timeline-title-box').on('click', function(e){
 
 			e.preventDefault();
-			if($(".timeline-item.active").length) {
+			if($(".timeline-item.active").length > 0) {
 				var slug = $(this).attr('data-title');
 				$(".timeline-item." + slug).addClass('active');
 			} else {
