@@ -259,9 +259,9 @@ $(document).ready(function() {
 
 		$('#contenuti').animate({ opacity: '0' }).slideToggle();
 		
-		var timeout = setTimeout(function(){
+	/*	var timeout = setTimeout(function(){
 			$('.next-project').addClass('active', change_project());
-		}, 700);
+		}, 700); */
 
 	});
 
