@@ -257,7 +257,8 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
+		$('#contenuti').slideToggle();
 		
 	/*	var timeout = setTimeout(function(){
 			$('.next-project').addClass('active', change_project());
