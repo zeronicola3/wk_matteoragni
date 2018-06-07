@@ -263,6 +263,8 @@ $(document).ready(function() {
 			$('.next-project').addClass('active', change_project());
 		}, 700); */
 
+		
+
 	});
 
 	function change_project(){
