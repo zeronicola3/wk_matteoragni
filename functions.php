@@ -460,6 +460,15 @@ function webkolm_add_post_meta_boxes() {
     'default'         // Priority
   );
 
+  add_meta_box(
+    'webkolm_dark_image',      // Unique ID
+    esc_html__( 'Immagine scura', 'webkolm' ),    // Title
+    'webkolm_dark_image_box',   // Callback function
+    'project',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
 }
 
 
@@ -595,6 +604,20 @@ function webkolm_page_in_homepage_box( $object, $box ) { ?>
     
     <input class="widefat" type="checkbox" name="webkolm_page_in_homepage" id="webkolm_page_in_homepage" value="yes" <?php if ( isset ( $meta['webkolm_page_in_homepage'] ) ) checked( $meta['webkolm_page_in_homepage'][0], 'yes' ); ?> />
     <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_dark_image_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_dark_image_nonce' ); ?>
+  <?php $meta = get_post_meta( $object->ID ) ; ?>
+
+  <p>
+    
+    <input class="widefat" type="checkbox" name="webkolm_dark_image" id="webkolm_dark_image" value="yes" <?php if ( isset ( $meta['webkolm_dark_image'] ) ) checked( $meta['webkolm_dark_image'][0], 'yes' ); ?> />
+    <?php _e( "Immagine scura", 'webkolm' ); ?>
   </p>
 <?php }
 
@@ -738,7 +761,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage' );
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
