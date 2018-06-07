@@ -617,7 +617,7 @@ function webkolm_dark_image_box( $object, $box ) { ?>
   <p>
     
     <input class="widefat" type="checkbox" name="webkolm_dark_image" id="webkolm_dark_image" value="yes" <?php if ( isset ( $meta['webkolm_dark_image'] ) ) checked( $meta['webkolm_dark_image'][0], 'yes' ); ?> />
-    <?php _e( "Immagine scura", 'webkolm' ); ?>
+    <?php _e( "Frecce bianche per slideshow in homepage", 'webkolm' ); ?>
   </p>
 <?php }
 
