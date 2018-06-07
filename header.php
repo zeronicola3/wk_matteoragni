@@ -67,28 +67,28 @@
           <div id="progressbar"></div>
       </div>
   </div>
-<?php } ?>
+
 
   <script>
     // progressbar.js@1.0.0 version is used
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+    
+	    var bar = new ProgressBar.Line('#progressbar', {
+	      strokeWidth: 3,
+	      easing: 'easeInOut',
+	      duration: 1400,
+	      color: '#000',
+	      trailColor: '#FFF',
+	      trailWidth: 1,
+	      svgStyle: {width: '100%', height: '4px'}
+	    });
 
-    var bar = new ProgressBar.Line('#progressbar', {
-      strokeWidth: 3,
-      easing: 'easeInOut',
-      duration: 1400,
-      color: '#000',
-      trailColor: '#FFF',
-      trailWidth: 1,
-      svgStyle: {width: '100%', height: '4px'}
-    });
-
-    bar.animate(1.0, function() {
-        $('#loader').fadeOut();
-    });
+	    bar.animate(1.0, function() {
+	        $('#loader').fadeOut();
+	    });
 
   </script>
-
+<?php } ?>
 
   <style>
     #loader {
