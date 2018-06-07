@@ -29,7 +29,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-touch-fullscreen" content="YES">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes ">
-	 <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
+
 
   <!-- FONT LIB -->
 
@@ -72,7 +72,7 @@
   <script>
     // progressbar.js@1.0.0 version is used
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-    
+
 	    var bar = new ProgressBar.Line('#progressbar', {
 	      strokeWidth: 3,
 	      easing: 'easeInOut',
