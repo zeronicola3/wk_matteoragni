@@ -186,12 +186,6 @@ body .current-project .project-gallery {
     	max-height: 50vh;
     }
 
-    &.animated {
-    	max-height: 150vh;
-    }
-    &.active {
-    	max-height: unset;
-    }
 
     .project-gallery .flex-direction-nav {
     	display: none !important;
