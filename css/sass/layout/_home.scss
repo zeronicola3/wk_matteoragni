@@ -4,8 +4,18 @@
     cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/plus.png'), auto;
 }
 
-.project-cover-gallery ul.slides li.white a {
-    cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/plus_white.png'), auto;
+.project-cover-gallery['data-cursor=white'] {
+    ul.slides li a {
+        cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/plus_white.png'), auto;
+    }
+
+    .flex-direction-nav li.flex-nav-prev a {
+        cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right_white.png'), auto;
+    }
+
+    .flex-direction-nav li.flex-nav-next a {
+        cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left_white.png'), auto;
+    }
 }
 
 
