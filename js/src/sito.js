@@ -198,7 +198,7 @@ $(document).ready(function() {
 		    },
 		    before: function(){
 		    	var cursor_color = $('.flex-active-slide').attr('data-cursor');
-		    	$('.project-cover-gallery').attr('data-cursor', cursor_color);
+		    	$('.project-cover-gallery').data('cursor', cursor_color);
 		    },
 		    slideshowSpeed : "2500",
 		    pauseOnHover: true,
