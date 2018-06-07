@@ -188,6 +188,14 @@ $(document).ready(function() {
 		    animationLoop: true,
 		    slideshow: true,
 		    animationSpeed: 250,
+		    start: function(){
+		    	var cursor_color = $('.flex-active-slide').attr('data-cursor');
+		    	$('.project-cover-gallery').attr('data-cursor', cursor_color);
+		    },
+		    after: function(){
+		    	var cursor_color = $('.flex-active-slide').attr('data-cursor');
+		    	$('.project-cover-gallery').attr('data-cursor', cursor_color);
+		    },
 		    slideshowSpeed : "2500",
 		    pauseOnHover: true,
 		    multipleKeyboard: true,
@@ -251,20 +259,25 @@ $(document).ready(function() {
 
 
 
+	// NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- //
+
 	$(document).on('click','.next-project-button a, .next-project', function(event){
 		event.preventDefault();
 
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		
-	/*	var timeout = setTimeout(function(){
-			$('.next-project').addClass('active', change_project());
-		}, 700); */
 
-		
-
+		$('#contenuti').animate(
+			{ opacity: '0' },
+			{complete: function(){
+				$('.next-project').removeClass('limiti-altezza');
+				$('html,body').animate({scrollTop: $(this).offset().top-90});
+				$('#contenuti').stop().slideToggle(function(){
+					$('.next-project').addClass('active', change_project());
+				});
+		    }}
+		);
 	});
 
 	function change_project(){
@@ -272,9 +285,7 @@ $(document).ready(function() {
 		var pageurl = $('.next-project').attr('data-link');
 
 		$('#contenuti').detach();
-			
-		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project').attr('id', 'contenuti');
-
+		$('.next-project').removeClass('next-project').addClass('current-project').attr('id', 'contenuti');
 		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id, pageurl));
 
 	}
@@ -379,6 +390,9 @@ $(document).ready(function() {
     		window.location.href = current_link;
     	}
     });
+
+
+
 		
 
 	/* CAROUSEL POST

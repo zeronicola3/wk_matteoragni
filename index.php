@@ -64,9 +64,9 @@ get_header(); ?>
 
                             // SE immagine scura, allora frecce bianche
                             $is_dark_image = get_post_meta($item_id, 'webkolm_dark_image', true);
-                            $image_class = '';
+                            $cursor_color = 'black';
                             if($is_dark_image) {
-                                $image_class = ' white ';
+                                $cursor_color = 'white';
                             }
                             
 
@@ -77,7 +77,7 @@ get_header(); ?>
 
                             ?>
                             
-                                <li class="project_slide-<?php echo $numslide; ?> slideimg <?php echo $image_class; ?>">
+                                <li class="project_slide-<?php echo $numslide; ?> slideimg" data-cursor="<?php echo $cursor_color; ?>">
                                     <a href="<?php echo get_the_permalink(); ?>">
                                     </a>
                                     <style>
