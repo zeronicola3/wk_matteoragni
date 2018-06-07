@@ -258,6 +258,7 @@ $(document).ready(function() {
 	}
 
 
+	// NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- //
 
 	// NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- //
 
