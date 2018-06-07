@@ -179,9 +179,12 @@ body .current-project .project-gallery {
 }
 
 .next-project {
-    overflow-y: hidden;
-    max-height: 50vh;
     width: 100%;
+
+    &.limiti-altezza {
+	    overflow-y: hidden;
+    	max-height: 50vh;
+    }
 
     &.animated {
     	max-height: 150vh;
