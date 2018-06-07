@@ -250,6 +250,7 @@ $(document).ready(function() {
 	}
 
 
+	// NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- NEXT PROJECT --- //
 
 	$(document).on('click','.next-project-button a, .next-project', function(event){
 		event.preventDefault();
@@ -257,15 +258,17 @@ $(document).ready(function() {
 		//.attr('id', 'contenuti').removeClass('next-project').addClass('current-project');
 		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
 
-		//$('#contenuti').animate({ opacity: '0' }).slideToggle();
-		$('#contenuti').slideToggle();
-		
-	/*	var timeout = setTimeout(function(){
-			$('.next-project').addClass('active', change_project());
-		}, 700); */
 
-		
-
+		$('#contenuti').animate(
+			{ opacity: '0' },
+			{complete: function(){
+				$('.next-project').removeClass('limiti-altezza');
+				$('html,body').animate({scrollTop: $(this).offset().top-90});
+				$('#contenuti').stop().slideToggle(function(){
+					$('.next-project').addClass('active', change_project());
+				});
+		    }}
+		);
 	});
 
 	function change_project(){
@@ -273,9 +276,7 @@ $(document).ready(function() {
 		var pageurl = $('.next-project').attr('data-link');
 
 		$('#contenuti').detach();
-			
-		$('.next-project').removeClass('next-project').removeClass('active').addClass('current-project').attr('id', 'contenuti');
-
+		$('.next-project').removeClass('next-project').addClass('current-project').attr('id', 'contenuti');
 		$(".current-project .project-gallery").flexslider('play', load_next_project(project_id, pageurl));
 
 	}
