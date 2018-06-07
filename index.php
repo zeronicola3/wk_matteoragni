@@ -60,6 +60,14 @@ get_header(); ?>
                             } else {
                                 $image_id = get_post_meta($item_id, 'webkolm_featured_img_input', true);
                             }
+
+
+                            // SE immagine scura, allora frecce bianche
+                            $is_dark_image = get_post_meta($item_id, 'webkolm_dark_image', true);
+                            $image_class = '';
+                            if($is_dark_image) {
+                                $image_class = ' white ';
+                            }
                             
 
                             $url_small = wp_get_attachment_image_src( $image_id, 'medium' );
@@ -69,7 +77,7 @@ get_header(); ?>
 
                             ?>
                             
-                                <li class="project_slide-<?php echo $numslide; ?> slideimg">
+                                <li class="project_slide-<?php echo $numslide; ?> slideimg <?php echo $image_class; ?>">
                                     <a href="<?php echo get_the_permalink(); ?>">
                                     </a>
                                     <style>
