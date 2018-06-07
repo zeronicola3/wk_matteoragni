@@ -71,7 +71,7 @@
   <script>
     // progressbar.js@1.0.0 version is used
     // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-
+/*
     var bar = new ProgressBar.Line(progressbar, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -85,7 +85,7 @@
     bar.animate(1.0, function() {
         $('#loader').fadeOut();
     });
-
+*/
   </script>
 
 
