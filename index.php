@@ -6,7 +6,9 @@
 
 get_header(); ?>
 <div id="contenuti">
-    <?php $elem_number = rand(10,9999); ?>
+
+    <?php the_content(); ?>
+    <?php /* $elem_number = rand(10,9999); ?>
 		<div class="wp_content">
             <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?> homepage-gallery">
                 <ul class="slides">
@@ -110,6 +112,6 @@ get_header(); ?>
     <div class="wrapper">
         <?php the_content(); ?>
     </div>
-    <?php } ?>
+    <?php } */?>
 </div>
 <?php get_footer(); ?>
