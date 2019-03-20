@@ -60,6 +60,13 @@ function wk_slider_build() {
                         "value" => array( "top-left", "top-center", "top-right", "center-left", "center-center", "center-right", "bottom-left", "bottom-center", "bottom-right" ),
                         "description" => __( "Choose the alignment of the text", "webkolm" )
                     ),
+                    array(
+                        "type" => "colorpicker",
+                        "heading" => __( "Select text color", "webkolm" ),
+                        "param_name" => "wk_slide_text_color",
+                        "value" => "#fff",
+                        "description" => __( "Color for text, defualt is white", "webkolm" )
+                    ),
                 )
             )
         )
@@ -110,7 +117,7 @@ function wk_slider_func( $atts, $content = null ) {
         if($slide['wk_slide_title'] != ""){
             $slide_title = 
                 '<div class="testo_slide '.$slide['wk_slide_text_position'].'">
-                    <h1 class="slide-title">'. $slide['wk_slide_title'] .'</h1>
+                    <h1 class="slide-title" style="color:'.$slide['wk_slide_text_color'].'">'. $slide['wk_slide_title'] .'</h1>
                 </div>';
         }
 
