@@ -75,13 +75,17 @@ li.flex-nav-next {
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item { 
-    width: calc(33.33333% - 10px); 
+    width: c100%; 
     margin-bottom: 15px;
     height: 250px;
     background-color: #cacaca;
 
     @include mq($from: tablet){
         width: calc(50% - 7.5px);
+    }
+
+    @include mq($from: desktop){
+        width: calc(33.33333% - 10px); 
     }
 
     .tile-content {
