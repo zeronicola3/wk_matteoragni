@@ -808,10 +808,7 @@ body.home .wk-slider {
     		}
     	}
     	&.top-right {
-    		text-align: right;
-
     		@include mq($from:tablet){
-    			text-align: right;
     			right: 15px;
     			top: 15px;
     		}
@@ -836,9 +833,7 @@ body.home .wk-slider {
     		}
     	}
     	&.center-right {
-    		text-align: right;
     		@include mq($from:tablet){
-    			text-align: right;
     			right: 15px;
     			transform:translateY(-50%);
     			top: 50%;
@@ -862,9 +857,7 @@ body.home .wk-slider {
     		}
     	}
     	&.bottom-right {
-    		text-align: right;
     		@include mq($from:tablet){
-    			text-align: right;
     			bottom: 15px;
     			right: 15px;
     		}
