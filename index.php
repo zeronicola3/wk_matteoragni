@@ -122,7 +122,7 @@ get_header(); ?>
             $args = array(
                 'orderby' => 'rand',
                 'post_type'  => 'project',
-                'posts_per_page' => '5',
+                //'posts_per_page' => '5',
                 'ignore_custom_sort' => true,
                 'meta_query' => array(
                     array(
@@ -148,7 +148,7 @@ get_header(); ?>
                     <?php
                     $numslide++;
                 endwhile;
-            endif;
+            }
 
         ?>
 
