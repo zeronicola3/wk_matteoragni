@@ -149,7 +149,7 @@ get_header(); ?>
                     ?>
 
                     <div class="grid-item ">
-                        <a class="tile-content" style="background-image: url('<?php echo $url_small; ?>');">
+                        <a class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
                             <span class="tile-title"><?php the_title(); ?></span>
                         </a>
                     </div>
