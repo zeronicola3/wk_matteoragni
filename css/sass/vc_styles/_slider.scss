@@ -840,7 +840,7 @@
 
 
 body.home .wk-slider {
-    height: 70vh;
+    height: calc(100vh - 91px);
     margin-bottom: 60px;
     overflow: hidden;
     position: relative;
