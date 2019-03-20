@@ -63,3 +63,16 @@ li.flex-nav-next {
         }
     }
 }
+
+
+
+// GRIGLIA PROGETTI
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item { 
+    width: 33.3333%; 
+    margin-bottom: 10px;
+}
+/* 2 columns wide */
+.grid-item--width2 { width: 66.6666%; }

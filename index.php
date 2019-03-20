@@ -8,12 +8,6 @@ get_header(); ?>
 <div id="contenuti">
     <div class="wp_content">
     <?php the_content(); ?>
-
-    <div class="grid">
-        <div class="grid-sizer"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item grid-item--width2"></div>
-    </div>
     <?php /* $elem_number = rand(10,9999); ?>
 		<div class="wp_content">
             <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?> homepage-gallery">
@@ -119,6 +113,49 @@ get_header(); ?>
         <?php the_content(); ?>
     </div>
     <?php } */?>
+    </div>
+
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <?php 
+
+            $args = array(
+                'orderby' => 'rand',
+                'post_type'  => 'project',
+                'posts_per_page' => '5',
+                'ignore_custom_sort' => true,
+                'meta_query' => array(
+                    array(
+                        'key'     => 'webkolm_homepage_post_box',
+                        'value'   => 'yes',
+                        'compare' => 'LIKE',
+                    ),
+                ),
+            );
+
+            $query = new WP_Query($args);
+
+            if ( $query->have_posts() ) {
+
+                $numslide=1;
+                // Start the Loop.
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+
+                    <div class="grid-item">
+                        <?php the_title(); ?>
+                    </div>
+
+                    <?php
+                    $numslide++;
+                endwhile;
+            endif;
+
+        ?>
+
+    
+        
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2"></div>
     </div>
 </div>
 <?php get_footer(); ?>
