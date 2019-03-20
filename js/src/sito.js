@@ -393,7 +393,14 @@ $(document).ready(function() {
     });
 
 
-
+    $('.grid').isotope({
+	  itemSelector: '.grid-item',
+	  percentPosition: true,
+	  masonry: {
+		  columnWidth: 50,
+		  gutter: 10
+		}
+	});
 		
 
 	/* CAROUSEL POST
