@@ -142,8 +142,11 @@ get_header(); ?>
                 // Start the Loop.
                 while ( $query->have_posts() ) : $query->the_post(); ?>
 
-                    <div class="grid-item">
-                        <?php the_title(); ?>
+                    <div class="grid-item ">
+                        <a class="tile-content">
+                            <span class="tile-title"><?php the_title(); ?></span>
+                        </a>
+                        
                     </div>
 
                     <?php
