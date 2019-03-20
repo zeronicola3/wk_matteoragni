@@ -80,6 +80,10 @@ li.flex-nav-next {
     height: 250px;
     background-color: #cacaca;
 
+    @include mq($from: tablet){
+        width: calc(50% - 7.5px);
+    }
+
     .tile-content {
         display: block;
         width: 100%;
@@ -99,4 +103,8 @@ li.flex-nav-next {
 .grid-item--width2 { 
     width: calc(66.6666% - 5px); 
     height: 515px;
+
+    @include mq($from: tablet){
+
+    }
 }
