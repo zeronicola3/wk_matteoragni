@@ -8,6 +8,12 @@ get_header(); ?>
 <div id="contenuti">
     <div class="wp_content">
     <?php the_content(); ?>
+
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2"></div>
+    </div>
     <?php /* $elem_number = rand(10,9999); ?>
 		<div class="wp_content">
             <div class="project-cover-gallery project-cover-gallery-<?php echo $elem_number; ?> homepage-gallery">
