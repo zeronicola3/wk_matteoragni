@@ -45,7 +45,7 @@
         <?php 
             global $javascript_append;
 
-            echo "<script>" . $javascript_append . "</script>"; ?>
+            echo $javascript_append; ?>
 
     </body>
 </html>
