@@ -836,3 +836,35 @@
 		.flex-direction-nav li a.flex-next:hover {  left: inherit;}
 	}
 }
+
+
+
+body.home .wk-slider {
+    height: 70vh;
+    margin-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+
+    @include mq($from: tablet) {
+   		height: calc(100vh - 90px);
+    }
+
+    ul.slides {
+        position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translateX(-50%) translateY(-50%);
+	    width: calc(100% - 60px);
+	    height: calc(100% - 60px);
+    }
+
+    ul.slides li.slideimg {
+    	width: 100%;
+	    position: absolute;
+        height: 100%;
+       // background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+}
