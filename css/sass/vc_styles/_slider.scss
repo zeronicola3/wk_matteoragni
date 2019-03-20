@@ -142,90 +142,6 @@
 						font-size: 2em;
 					}
 				}
-
-
-
-				&.top-left {
-					text-align: left;
-
-					@include mq($from:tablet){
-						text-align: left;
-						left: 8vw;
-						top: 8vw;
-					}
-				}
-				&.top-center {
-					text-align: center;
-
-					@include mq($from:tablet){
-						text-align: center;
-						left: 50%;
-						transform:translateX(-50%);
-						top: 8vw;
-					}
-				}
-				&.top-right {
-					text-align: right;
-
-					@include mq($from:tablet){
-						text-align: right;
-						right: 8vw;
-						top: 8vw;
-					}
-				}
-				&.center-left {
-					text-align: left;
-
-					@include mq($from:tablet){
-						text-align: left;
-						left: 8vw;
-						transform:translateY(-50%);
-						top: 50%;
-					}
-				}
-				&.center-center {
-					text-align: center;
-					@include mq($from:tablet){
-						text-align: center;
-						left: 50%;
-						transform:translateX(-50%) translateY(-50%);
-						top: 50%;
-					}
-				}
-				&.center-right {
-					text-align: right;
-					@include mq($from:tablet){
-						text-align: right;
-						right: 8vw;
-						transform:translateY(-50%);
-						top: 50%;
-					}
-				}
-				&.bottom-left {
-					text-align: left;
-					@include mq($from:tablet){
-						text-align: left;
-						left: 8vw;
-						bottom: 8vw;
-					}
-				}
-				&.bottom-center {
-					text-align: center;
-					@include mq($from:tablet){
-						text-align: center;
-						left: 50%;
-						transform:translateX(-50%);
-						bottom: 8vw;
-					}
-				}
-				&.bottom-right {
-					text-align: right;
-					@include mq($from:tablet){
-						text-align: right;
-						bottom: 8vw;
-						right: 8vw;
-					}
-				}
 			}
 
 			.caption {
@@ -870,5 +786,88 @@ body.home .wk-slider {
 
     ul.slides li .testo_slide {
     	display: inline-block;
+    	position: absolute;
+
+    	&.top-left {
+    		text-align: left;
+
+    		@include mq($from:tablet){
+    			text-align: left;
+    			left: 8vw;
+    			top: 8vw;
+    		}
+    	}
+    	&.top-center {
+    		text-align: center;
+
+    		@include mq($from:tablet){
+    			text-align: center;
+    			left: 50%;
+    			transform:translateX(-50%);
+    			top: 8vw;
+    		}
+    	}
+    	&.top-right {
+    		text-align: right;
+
+    		@include mq($from:tablet){
+    			text-align: right;
+    			right: 8vw;
+    			top: 8vw;
+    		}
+    	}
+    	&.center-left {
+    		text-align: left;
+
+    		@include mq($from:tablet){
+    			text-align: left;
+    			left: 8vw;
+    			transform:translateY(-50%);
+    			top: 50%;
+    		}
+    	}
+    	&.center-center {
+    		text-align: center;
+    		@include mq($from:tablet){
+    			text-align: center;
+    			left: 50%;
+    			transform:translateX(-50%) translateY(-50%);
+    			top: 50%;
+    		}
+    	}
+    	&.center-right {
+    		text-align: right;
+    		@include mq($from:tablet){
+    			text-align: right;
+    			right: 8vw;
+    			transform:translateY(-50%);
+    			top: 50%;
+    		}
+    	}
+    	&.bottom-left {
+    		text-align: left;
+    		@include mq($from:tablet){
+    			text-align: left;
+    			left: 8vw;
+    			bottom: 8vw;
+    		}
+    	}
+    	&.bottom-center {
+    		text-align: center;
+    		@include mq($from:tablet){
+    			text-align: center;
+    			left: 50%;
+    			transform:translateX(-50%);
+    			bottom: 8vw;
+    		}
+    	}
+    	&.bottom-right {
+    		text-align: right;
+    		@include mq($from:tablet){
+    			text-align: right;
+    			bottom: 8vw;
+    			right: 8vw;
+    		}
+    	}
     }
 }
