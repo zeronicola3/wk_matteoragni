@@ -125,7 +125,7 @@ vc_add_param( 'vc_column_text', $attributes );
 
 global $javascript_append;
 //include("vc_templates/tiles.php");
-include("vc_templates/slider.php");
+include("vc_templates/wk_slider.php");
 //include("vc_templates/social_share.php");
 //include("vc_templates/instagram_feed.php");
 //include("vc_templates/wk_videoframe.php");
