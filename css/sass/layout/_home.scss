@@ -103,7 +103,6 @@ li.flex-nav-next {
 .grid-item--width2 { 
     width: 100%;
     height: 250px;
-    
 
     @include mq($from: tablet){
         height: 515px;
