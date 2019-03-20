@@ -101,10 +101,11 @@ li.flex-nav-next {
 }
 /* 2 columns wide */
 .grid-item--width2 { 
-    width: calc(66.6666% - 5px); 
+    width: 100%;
     height: 515px;
 
-    @include mq($from: tablet){
-        width: 100%; 
+    @include mq($from: desktop){
+        width: calc(66.6666% - 5px); 
+        height: 515px;
     }   
 }
