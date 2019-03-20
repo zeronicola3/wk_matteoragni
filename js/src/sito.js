@@ -398,7 +398,7 @@ $(document).ready(function() {
 	  percentPosition: true,
 	  masonry: {
 		  columnWidth: 50,
-		  gutter: 5
+		  gutter: 15
 		}
 	});
 		
