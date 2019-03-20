@@ -6,7 +6,7 @@
 
 get_header(); ?>
 <div id="contenuti">
-
+    <div class="wp_content">
     <?php the_content(); ?>
     <?php /* $elem_number = rand(10,9999); ?>
 		<div class="wp_content">
@@ -113,5 +113,6 @@ get_header(); ?>
         <?php the_content(); ?>
     </div>
     <?php } */?>
+    </div>
 </div>
 <?php get_footer(); ?>
