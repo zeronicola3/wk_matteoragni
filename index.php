@@ -115,7 +115,7 @@ get_header(); ?>
     <?php } */?>
     </div>
 
-    <div class="grid">
+    <div class="grid wp_content">
         <div class="grid-sizer"></div>
         <?php 
 
