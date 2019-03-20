@@ -117,6 +117,7 @@ get_header(); ?>
 
     <div class="grid">
         <div class="grid-sizer"></div>
+        <div class="grid-item"></div>
         <div class="grid-item grid-item--width2"></div>
         <?php 
 
@@ -155,7 +156,7 @@ get_header(); ?>
 
     
         
-        <div class="grid-item"></div>
+        
         
     </div>
 </div>
