@@ -75,7 +75,7 @@ li.flex-nav-next {
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item { 
-    width: 25%; 
+    width: calc(33.33333% - 10px); 
     margin-bottom: 15px;
     height: 250px;
     background-color: #cacaca;
