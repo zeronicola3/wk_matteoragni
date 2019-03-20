@@ -73,6 +73,8 @@ li.flex-nav-next {
 .grid-item { 
     width: 33.3333%; 
     margin-bottom: 10px;
+    padding-bottom: 64%;
+    height: 0;
 }
 /* 2 columns wide */
 .grid-item--width2 { width: 66.6666%; }
