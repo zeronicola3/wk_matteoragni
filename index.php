@@ -156,7 +156,7 @@ get_header(); ?>
     
         
         <div class="grid-item"></div>
-        <div class="grid-item grid-item--width2"></div>
+        
     </div>
 </div>
 <?php get_footer(); ?>
