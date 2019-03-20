@@ -397,7 +397,7 @@ $(document).ready(function() {
 	  itemSelector: '.grid-item',
 	  percentPosition: true,
 	  masonry: {
-		  columnWidth: 33.333,
+		  columnWidth: 25,
 		  gutter: 15
 		}
 	});
