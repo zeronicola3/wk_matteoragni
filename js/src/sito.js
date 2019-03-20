@@ -396,10 +396,10 @@ $(document).ready(function() {
     $('.grid').isotope({
 	  itemSelector: '.grid-item',
 	  percentPosition: true,
-	  masonry: {
-		  columnWidth: 25,
-		  gutter: 15
-		}
+  masonry: {
+    // use outer width of grid-sizer for columnWidth
+    columnWidth: '.grid-sizer'
+  }
 	});
 		
 
