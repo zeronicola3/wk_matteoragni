@@ -37,15 +37,15 @@
         <!-- <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> -->
         <script type="text/javascript" src="<?php echo bloginfo( 'stylesheet_directory' );?>/js/theme.js?v=2"></script>
 
-        <?php 
-            global $javascript_append;
-
-            echo "<script>" . $javascript_append . "</script>"; ?>
-
 
         <?php get_template_part( 'cookie' ); ?>
 
         <?php wp_footer();?> 
+
+        <?php 
+            global $javascript_append;
+
+            echo "<script>" . $javascript_append . "</script>"; ?>
 
     </body>
 </html>
