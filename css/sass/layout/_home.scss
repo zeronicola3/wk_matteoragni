@@ -105,6 +105,6 @@ li.flex-nav-next {
     height: 515px;
 
     @include mq($from: tablet){
-
-    }
+        width: 100%; 
+    }   
 }
