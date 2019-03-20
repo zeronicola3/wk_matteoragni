@@ -19,8 +19,9 @@
 
     ul.slides {
         position: absolute;
-	    left: 0;
-	    width: 100%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    width: calc(100% - 60px);
 	    height: 100%;
     }
 
