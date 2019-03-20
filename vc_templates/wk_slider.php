@@ -33,6 +33,12 @@ function wk_slider_build() {
                 // Note params is mapped inside param-group:
                 'params' => array(
                     array(
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => __( "Title", "webkolm" ),
+                        'param_name' => 'wk_slide_title',
+                    ),
+                    array(
                         "type" => "attach_image",
                         "holder" => "img",
                         "class" => "",
@@ -46,6 +52,13 @@ function wk_slider_build() {
                         'value' => '',
                         'heading' => __( "Image caption", "webkolm" ),
                         'param_name' => 'wk_slide_image_caption',
+                    ),
+                    array(
+                        "type" => "dropdown",
+                        "heading" => __( "Select text alignment", "webkolm" ),
+                        "param_name" => "wk_slide_text_position",
+                        "value" => array( "top-left", "top-center", "top-right", "center-left", "center-center", "center-right", "bottom-left", "bottom-center", "bottom-right" ),
+                        "description" => __( "Choose the alignment of the text", "webkolm" )
                     ),
                 )
             )
@@ -92,6 +105,15 @@ function wk_slider_func( $atts, $content = null ) {
 
         }
 
+        // CHECK SLIDE TITLE
+        $slide_title = "";
+        if($slide['wk_slide_title'] != ""){
+            $slide_title = 
+                '<div class="testo_slide '.$slide['wk_slide_text_position'].'">
+                    <h1 class="slide-title">'. $slide['wk_slide_title'] .'</h1>
+                </div>';
+        }
+
         $output.='
             
             <li class="slide-'.$id_slider.'-'.$numslide.'">
@@ -101,6 +123,7 @@ function wk_slider_func( $atts, $content = null ) {
                   @media (min-width: 1800px) {  .slideimg-'.$id_slider.'-'.$numslide.' { background-image:url('.$images.'); } }
                 </style>
                 <div class="slideimg-'.$id_slider.'-'.$numslide.' slideimg ' . $class_gradient . ' no-mobile">
+                    '.$slide_title.'
                     '.$caption.'
                 </div>
             </li>';
