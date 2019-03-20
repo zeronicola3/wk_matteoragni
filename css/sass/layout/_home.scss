@@ -68,6 +68,9 @@ li.flex-nav-next {
 
 // GRIGLIA PROGETTI
 
+.grid {
+    width: calc(100% - 60px);
+}
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item { 
