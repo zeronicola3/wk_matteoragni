@@ -79,6 +79,21 @@ li.flex-nav-next {
     margin-bottom: 15px;
     height: 250px;
     background-color: #cacaca;
+
+    .tile-content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .tile-content .tile-title {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
 }
 /* 2 columns wide */
 .grid-item--width2 { 
