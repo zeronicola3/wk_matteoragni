@@ -140,7 +140,13 @@ get_header(); ?>
 
                 $numslide=1;
                 // Start the Loop.
-                while ( $query->have_posts() ) : $query->the_post(); ?>
+                while ( $query->have_posts() ) : $query->the_post(); 
+
+                    $image_id = get_post_meta(get_the_ID(), 'webkolm_featured_img_input', true);
+                    $url_small = wp_get_attachment_image_src( $image_id, 'medium' );
+                    $url_big = wp_get_attachment_image_src( $image_id, 'large' );
+
+                    ?>
 
                     <div class="grid-item ">
                         <a class="tile-content">
