@@ -146,7 +146,6 @@ get_header(); ?>
                         <a class="tile-content">
                             <span class="tile-title"><?php the_title(); ?></span>
                         </a>
-                        
                     </div>
 
                     <?php

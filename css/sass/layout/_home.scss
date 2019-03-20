@@ -81,4 +81,7 @@ li.flex-nav-next {
     background-color: #cacaca;
 }
 /* 2 columns wide */
-.grid-item--width2 { width: calc(66.6666% - 5px); }
+.grid-item--width2 { 
+    width: calc(66.6666% - 5px); 
+    height: 500px;
+}
