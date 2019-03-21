@@ -166,7 +166,7 @@ get_header(); ?>
                     ?>
 
                     <div class="grid-item <?php echo $double_class; ?>">
-                        <a class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
+                        <a href="<?php echo get_the_permalink(); ?>" class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
                             <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?></span>
                         </a>
                     </div>
