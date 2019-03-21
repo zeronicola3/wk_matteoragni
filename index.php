@@ -155,9 +155,9 @@ get_header(); ?>
 
                     // SE immagine scura, allora frecce bianche
                     $is_double = get_post_meta(get_the_ID(), 'webkolm_double_box_home', true);
-                    $cursor_color = 'grid-item--width2';
+                    $double_class = '';
                     if($double) {
-                        $cursor_color = '.grid-item--width2';
+                        $double_class = ' grid-item--width2 ';
                     }
 
 
@@ -165,7 +165,7 @@ get_header(); ?>
 
                     ?>
 
-                    <div class="grid-item ">
+                    <div class="grid-item <?php echo $double_class; ?>">
                         <a class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
                             <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?></span>
                         </a>
