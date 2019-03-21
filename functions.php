@@ -469,6 +469,15 @@ function webkolm_add_post_meta_boxes() {
     'default'         // Priority
   );
 
+  add_meta_box(
+    'webkolm_double_box_home',      // Unique ID
+    esc_html__( 'Riquadro 2x2', 'webkolm' ),    // Title
+    'webkolm_double_box_home',   // Callback function
+    'project',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
 }
 
 
@@ -586,6 +595,11 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
     <input class="widefat" type="checkbox" name="webkolm_homepage_post_box" id="webkolm_homepage_post_box" value="yes" <?php if ( isset ( $meta['webkolm_homepage_post_box'] ) ) checked( $meta['webkolm_homepage_post_box'][0], 'yes' ); ?> />
     <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
     <br/><br/>
+
+    <input class="widefat" type="checkbox" name="webkolm_double_box_home" id="webkolm_double_box_home" value="yes" <?php if ( isset ( $meta['webkolm_double_box_home'] ) ) checked( $meta['webkolm_double_box_home'][0], 'yes' ); ?> />
+    <?php _e( "Riquadro 2x2", 'webkolm' ); ?>
+    <br/><br/>
+
     <input class="widefat" type="checkbox" name="webkolm_post_secondario" id="webkolm_post_secondario" value="yes" <?php if ( isset ( $meta['webkolm_post_secondario'] ) ) checked( $meta['webkolm_post_secondario'][0], 'yes' ); ?> />
     <?php _e( "Visibile solo in timeline", 'webkolm' ); ?><br/>
   </p>
