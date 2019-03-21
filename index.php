@@ -156,7 +156,7 @@ get_header(); ?>
                     // SE immagine scura, allora frecce bianche
                     $is_double = get_post_meta(get_the_ID(), 'webkolm_double_box_home', true);
                     $double_class = '';
-                    if($double) {
+                    if($is_double) {
                         $double_class = ' grid-item--width2 ';
                     }
 
