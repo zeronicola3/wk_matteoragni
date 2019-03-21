@@ -469,15 +469,6 @@ function webkolm_add_post_meta_boxes() {
     'default'         // Priority
   );
 
-  add_meta_box(
-    'webkolm_double_box_home',      // Unique ID
-    esc_html__( 'Riquadro 2x2', 'webkolm' ),    // Title
-    'webkolm_double_box_home',   // Callback function
-    'project',       // Admin page (or post type)
-    'side',         // Context
-    'default'         // Priority
-  );
-
 }
 
 
@@ -587,7 +578,7 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_homepage_post_box_nonce' ); ?>
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_post_secondario_nonce' ); ?>
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_double_box_home_nonce' ); ?>
-  
+
   <?php $meta = get_post_meta( $object->ID ) ;
 
   //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
