@@ -148,6 +148,7 @@ get_header(); ?>
 
                     // SE immagine scura, allora frecce bianche
                     $is_dark_image = get_post_meta($item_id, 'webkolm_dark_image', true);
+                    echo $is_dark_image;
                     $cursor_color = 'black';
                     if($is_dark_image) {
                         $cursor_color = 'white';
