@@ -586,6 +586,8 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
 
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_homepage_post_box_nonce' ); ?>
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_post_secondario_nonce' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_double_box_home' ); ?>
+  
   <?php $meta = get_post_meta( $object->ID ) ;
 
   //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
@@ -775,7 +777,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image' );
+    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
