@@ -121,7 +121,6 @@ get_header(); ?>
         <?php 
 
             $args = array(
-                'orderby' => 'rand',
                 'post_type'  => 'project',
                 //'posts_per_page' => '5',
                 'ignore_custom_sort' => true,
