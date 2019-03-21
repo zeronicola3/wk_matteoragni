@@ -146,11 +146,18 @@ get_header(); ?>
                     $url_small = wp_get_attachment_image_src( $image_id, 'medium' );
                     $url_big = wp_get_attachment_image_src( $image_id, 'large' );
 
+                    // SE immagine scura, allora frecce bianche
+                    $is_dark_image = get_post_meta($item_id, 'webkolm_dark_image', true);
+                    $cursor_color = 'black';
+                    if($is_dark_image) {
+                        $cursor_color = 'white';
+                    }
+
                     ?>
 
                     <div class="grid-item ">
                         <a class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
-                            <span class="tile-title"><?php the_title(); ?></span>
+                            <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?></span>
                         </a>
                     </div>
 
