@@ -147,8 +147,8 @@ get_header(); ?>
                     $url_big = wp_get_attachment_image_src( $image_id, 'large' );
 
                     // SE immagine scura, allora frecce bianche
-                    $is_dark_image = get_post_meta($item_id, 'webkolm_dark_image', true);
-                    echo $is_dark_image;
+                    $is_dark_image = get_post_meta(get_the_ID(), 'webkolm_dark_image', true);
+                    //echo $is_dark_image;
                     $cursor_color = 'black';
                     if($is_dark_image) {
                         $cursor_color = 'white';
