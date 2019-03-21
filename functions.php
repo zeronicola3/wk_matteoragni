@@ -586,7 +586,7 @@ function webkolm_checkboxes_box( $object, $box ) { ?>
 
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_homepage_post_box_nonce' ); ?>
   <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_post_secondario_nonce' ); ?>
-  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_double_box_home' ); ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_double_box_home_nonce' ); ?>
   
   <?php $meta = get_post_meta( $object->ID ) ;
 
