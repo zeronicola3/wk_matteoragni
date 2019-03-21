@@ -122,7 +122,7 @@ get_header(); ?>
 
             $args = array(
                 'post_type'  => 'project',
-                //'posts_per_page' => '5',
+                'posts_per_page' => '-1',
                 'ignore_custom_sort' => true,
                 'meta_query' => array(
                     array(
