@@ -153,6 +153,16 @@ get_header(); ?>
                         $cursor_color = 'white';
                     }
 
+                    // SE immagine scura, allora frecce bianche
+                    $is_double = get_post_meta(get_the_ID(), 'webkolm_double_box_home', true);
+                    $cursor_color = 'grid-item--width2';
+                    if($double) {
+                        $cursor_color = '.grid-item--width2';
+                    }
+
+
+                    
+
                     ?>
 
                     <div class="grid-item ">
