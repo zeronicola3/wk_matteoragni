@@ -123,5 +123,6 @@ li.flex-nav-next {
 
     @include mq($from: desktop){
         width: calc(66.6666% - 5px); 
+        height: 515px;
     }   
 }
