@@ -885,8 +885,7 @@ body.home .wk-slider {
 		}
 
 		@include mq($to: tablet){
-			bottom: -20px;
-			transform: translateY(100%);
+			display: block;
 
 			h1.slide-title {
 				color: black !important;

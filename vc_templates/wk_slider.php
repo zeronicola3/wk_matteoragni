@@ -116,8 +116,13 @@ function wk_slider_func( $atts, $content = null ) {
         $slide_title = "";
         if($slide['wk_slide_title'] != ""){
             $slide_title = 
-                '<div class="testo_slide '.$slide['wk_slide_text_position'].'">
+                '<div class="testo_slide '.$slide['wk_slide_text_position'].' nomobile">
                     <h1 class="slide-title" style="color:'.$slide['wk_slide_text_color'].'">'. $slide['wk_slide_title'] .'</h1>
+                </div>';
+
+            $slide_title_mobile = 
+                '<div class="testo_slide onlymobile">
+                    <h1 class="slide-title">'. $slide['wk_slide_title'] .'</h1>
                 </div>';
         }
 
@@ -133,6 +138,7 @@ function wk_slider_func( $atts, $content = null ) {
                     '.$slide_title.'
                     '.$caption.'
                 </div>
+                '. $slide_title_mobile .'
             </li>';
 
         $numslide++;
