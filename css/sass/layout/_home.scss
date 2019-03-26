@@ -69,8 +69,12 @@ li.flex-nav-next {
 // GRIGLIA PROGETTI
 
 .grid {
-    width: calc(100% - 60px);
+    width: 90%;
     margin: 0 auto;
+
+    @include mq($from: tablet){
+        width: calc(100% - 60px);
+    }
 }
 /* fluid 5 columns */
 .grid-sizer,
