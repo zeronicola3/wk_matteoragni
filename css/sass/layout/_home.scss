@@ -71,8 +71,10 @@ li.flex-nav-next {
 .grid {
     width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
 
     @include mq($from: tablet){
+        margin-top: 0;
         width: calc(100% - 60px);
     }
 }
