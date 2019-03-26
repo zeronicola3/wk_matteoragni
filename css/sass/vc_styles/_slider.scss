@@ -767,15 +767,15 @@ body.home .wk-slider {
 
     ul.slides {
         position: unset;
-	    left: 50%;
-	    top: 50%;
-	    transform: translateX(-50%) translateY(-50%);
 	    width: 90%;
 	    height: auto;
 
 	    @include mq($from: tablet) {
+	    	left: 50%;
+	    	top: 50%;
 	   		height: calc(100% - 60px);
 	   		width: calc(100% - 60px);
+	   		transform: translateX(-50%) translateY(-50%);
 	   		position: absolute;
 	    }
     }
