@@ -790,7 +790,7 @@ body.home .wk-slider {
 
         @include mq($to: tablet){
         	height: auto;
-        	position: auto;
+        	position: unset;
         }
     }
 
