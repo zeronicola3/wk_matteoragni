@@ -881,7 +881,11 @@ body.home .wk-slider {
 
 		@include mq($to: tablet){
 			bottom: -20px;
-			transform: translateY(-100%);
+			transform: translateY(100%);
+
+			h1 {
+				color: black;
+			}
 		}
     }
 }
