@@ -782,6 +782,16 @@ body.home .wk-slider {
         background-position: center;
         background-repeat: no-repeat;
         background-color: white;
+
+        @include mq($to: tablet){
+        	height: 50%;
+        }
+    }
+
+    ul.slides li a {
+    	@include mq($to: tablet){
+        	height: 100%;
+        }
     }
 
     ul.slides li .testo_slide {
@@ -867,6 +877,11 @@ body.home .wk-slider {
 			margin: 0;
 			text-transform: uppercase;
 			font-size: 2.6rem;
+		}
+
+		@include mq($to: tablet){
+			bottom: -20px;
+			transform: translateY(-100%);
 		}
     }
 }
