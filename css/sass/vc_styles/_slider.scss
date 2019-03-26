@@ -774,7 +774,7 @@ body.home .wk-slider {
 	    height: 90%;
 
 	    @include mq($from: tablet) {
-	   		 width: calc(100% - 30px);
+	   		 width: calc(100% - 40px);
 	    }
     }
 
