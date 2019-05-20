@@ -22,6 +22,7 @@
                     <span class="footer-p-iva">P.IVA 13476100154</span>
                     <span class="footer-credit"><a href="<?php echo get_the_permalink(2142); ?>">Credits</a> </span>
                     <span class="cookies"><a href="<?php echo get_the_permalink(2144); ?>">Privacy & Cookie Policy</a></span>
+                    <span class="timeline"><a href="<?php echo get_the_permalink(2260); ?>">Timeline</a></span>
 
                 </div>
             </div>
