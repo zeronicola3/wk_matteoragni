@@ -48,7 +48,7 @@ get_header(); ?>
                     $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
 
                     foreach ($connected as $conn) {
-                        if($conn->post_title != get_the_title())
+                        if(($conn->post_title != get_the_title()) && ($conn->post_title!=""))
                             $client_name = " - " . $conn->post_title;
                         else
                             $client_name = "";
