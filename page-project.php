@@ -16,13 +16,6 @@ get_header(); ?>
                 'ignore_custom_sort' => true,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key'     => 'webkolm_homepage_post_box',
-                        'value'   => 'yes',
-                        'compare' => 'LIKE',
-                    ),
-                ),
             );
 
             $query = new WP_Query($args);
