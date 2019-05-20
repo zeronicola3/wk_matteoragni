@@ -124,7 +124,7 @@ li.flex-nav-next {
 
     @include mq($from: tablet){
         width: calc(50% - 7.5px);
-        padding-top: calc(37.4% + 15px);
+        padding-top: 37.4%;
     }
 
     @include mq($from: desktop){
