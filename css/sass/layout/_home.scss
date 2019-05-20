@@ -93,7 +93,8 @@ li.flex-nav-next {
     }
 
     @include mq($from: desktop){
-        width: calc(33.33333% - 10px); 
+        width: calc(33.33333% - 10px);
+        padding-top: 24.93%;
     }
 
     .tile-content {
@@ -123,7 +124,7 @@ li.flex-nav-next {
 
     @include mq($from: tablet){
         width: calc(50% - 7.5px);
-        padding-top: calc(49.86% + 15px);
+        padding-top: calc(37.4% + 15px);
     }
 
     @include mq($from: desktop){
