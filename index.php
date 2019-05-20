@@ -160,14 +160,18 @@ get_header(); ?>
                         $double_class = ' grid-item--width2 ';
                     }
 
+                    $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
 
+                    foreach ($connected as $conn) {
+                        $client_name = $conn->post_title;
+                    }
                     
 
                     ?>
 
                     <div class="grid-item <?php echo $double_class; ?>">
                         <a href="<?php echo get_the_permalink(); ?>" class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
-                            <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?></span>
+                            <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?> - <?php echo $client_name; ?></span>
                         </a>
                     </div>
 
