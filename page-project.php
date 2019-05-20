@@ -44,13 +44,13 @@ get_header(); ?>
                         $cursor_color = 'white';
                     }
 
-                    // SE immagine scura, allora frecce bianche
+                    /* SE immagine scura, allora frecce bianche
                     $is_double = get_post_meta(get_the_ID(), 'webkolm_double_box_home', true);
                     $double_class = '';
                     if($is_double) {
                         $double_class = ' grid-item--width2 ';
-                    }
-
+                    } */
+                    $double_class = '';
                     ?>
 
                     <div class="grid-item <?php echo $double_class; ?>">
