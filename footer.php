@@ -61,7 +61,7 @@
 
                 'use strict';
 
-                var mainContainer = document.getElementById('container'),
+                var mainContainer = document.getElementById('contenuti'),
                     openCtrl = document.getElementById('btn-search'),
                     closeCtrl = document.getElementById('btn-search-close'),
                     searchContainer = document.querySelector('.search'),
