@@ -108,6 +108,12 @@ nav.nomobile {
 	    position: relative;
 	    top: 50%;
 	    transform: translateY(-50%);
+
+	    li {
+	    	width: 1em;
+	    	height: 1em;
+	    	background-color: black;
+	    }
 	}
 }
 
