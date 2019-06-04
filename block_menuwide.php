@@ -20,23 +20,23 @@
 		</a></li>
 		<li class="social-btn fb-btn">
 			<a href="https://www.facebook.com/Matteo-Ragni-Design-Studio-188257474554200/" target="_blank">
-				<!--svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="-267 390.2 60.7 60.7" enable-background="new -267 390.2 60.7 60.7" xml:space="preserve">
 				<g>
 					<path d="M-209.6,390.2h-54c-1.8,0-3.4,1.5-3.4,3.4v54c0,1.9,1.5,3.4,3.4,3.4h29.1v-23.5h-7.9v-9.2h7.9v-6.8
 						c0-7.8,4.8-12.1,11.8-12.1c3.4,0,6.2,0.3,7.1,0.4v8.2l-4.9,0c-3.8,0-4.5,1.8-4.5,4.5v5.9h9.1l-1.2,9.2h-7.9v23.5h15.5
 						c1.9,0,3.4-1.5,3.4-3.4v-54C-206.3,391.7-207.8,390.2-209.6,390.2z"/>
 				</g>
-				</svg-->
-				
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				</svg>
+
+				<!--svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="-249 372.8 96.1 96.1" enable-background="new -249 372.8 96.1 96.1" xml:space="preserve">
 				<g>
 					<path d="M-176.9,372.8l-12.5,0c-14,0-23.1,9.3-23.1,23.7v10.9H-225c-1.1,0-2,0.9-2,2v15.8c0,1.1,0.9,2,2,2h12.5v39.9
 						c0,1.1,0.9,2,2,2h16.4c1.1,0,2-0.9,2-2v-39.9h14.7c1.1,0,2-0.9,2-2l0-15.8c0-0.5-0.2-1-0.6-1.4c-0.4-0.4-0.9-0.6-1.4-0.6h-14.7
 						v-9.2c0-4.4,1.1-6.7,6.8-6.7l8.4,0c1.1,0,2-0.9,2-2v-14.7C-175,373.7-175.8,372.8-176.9,372.8z"/>
 				</g>
-				</svg>
+				</svg-->
 			</a>
 		</li>
 	</ul>
