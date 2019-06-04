@@ -19,7 +19,11 @@ nav.nomobile {
 			display: inline-block;
 			position: relative;
 			float: left;
-			margin-left:50px;
+			margin-left:20px;
+
+			@include mq($from: desktop){
+	    		margin-left: 50px;
+	    	}
 
 			&.hidden {
 				display: none;
