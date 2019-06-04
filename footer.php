@@ -44,7 +44,17 @@
 
         <!--    SEARCH    -->
         <div class="search">
-            <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form">
+                <svg version="1.1" id="Capa_1" class="icon icon--cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="-119 242.9 357 357" enable-background="new -119 242.9 357 357" xml:space="preserve">
+                <g>
+                    <g id="close">
+                        <polygon points="238,278.6 202.3,242.9 59.5,385.7 -83.3,242.9 -119,278.6 23.8,421.4 -119,564.2 -83.3,599.9 59.5,457.1 
+                            202.3,599.9 238,564.2 95.2,421.4        "/>
+                    </g>
+                </g>
+                </svg>
+            </button>
            <form role="search" method="get" class="search__form" action="<?php echo home_url( '/' ); ?>" >
                 <input class="search__input" name="s" type="search" placeholder="<?php _e('search', 'paolac');?>" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
                 <input type="hidden" name="post_type" value="product" />
