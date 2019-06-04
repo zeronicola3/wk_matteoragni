@@ -113,7 +113,10 @@ nav.nomobile {
 	    	width: 1em;
 	    	height: 1em;
 	    	background-color: black;
-	    	margin-left: 50px;
+	    	margin-left: 30px;
+	    	@include mq($from: desktop){
+	    		margin-left: 50px;
+	    	}
 	    }
 	}
 }
