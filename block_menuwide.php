@@ -9,7 +9,7 @@
         ); 
 ?>
 	<ul class="social-nav nomobile">
-		<li class="search-btn"><a href="">
+		<li class="search-btn"><a class="btn-search" href="">
 			<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 49.9 595.3 594.3" enable-background="new 0 49.9 595.3 594.3" xml:space="preserve">
 			<path d="M591.3,580.1L405.1,393.9c24.2-36.1,37.2-78.5,37.2-122.8c0-59.1-23-114.6-64.8-156.4c-41.8-41.8-97.3-64.8-156.4-64.8
