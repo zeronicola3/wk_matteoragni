@@ -326,7 +326,7 @@ header.active {
 	left: 10px;
 
 	svg * {
-		fill:$azzurro;
+		fill:$color_3;
 	}
 }
 
@@ -366,7 +366,7 @@ header.active {
 	}
 
 	&:hover svg{
-		fill:$azzurro !important;
+		fill:$color_3!important;
 	}
 }
 
@@ -395,7 +395,7 @@ header.active {
 
 .btn {
 	text-decoration: none;
-	color: $azzurro;
+	color: $color_3;
 	outline: none;
 }
 
@@ -448,7 +448,7 @@ header.active {
 	right: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba($azzurro,0.8);
+	background: rgba($color_3,0.8);
 }
 
 .rame .search::before {
