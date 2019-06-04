@@ -10,6 +10,7 @@
     @include transition(0.7s);
     font-size: 9px;
     line-height: 1.5em;
+    
 
     @include mq($from: tablet){
         font-size: 12px;
@@ -32,7 +33,7 @@
 
 }
 .nascondibile {
-    bottom: 24px;
+    bottom: calc(15px - .75em);
     @include transition(0.7s);
 }
 .ce-accept, .ce-dismiss, .ce-disable{
