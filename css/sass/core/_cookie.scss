@@ -10,7 +10,7 @@
     @include transition(0.7s);
     font-size: 9px;
     line-height: 1.5em;
-    
+
 
     @include mq($from: tablet){
         font-size: 12px;
@@ -24,7 +24,11 @@
     .cookie-text {
         height: 100%;
         text-align: justify; 
-        padding-left: 30px;
+        padding-left: 20px;
+
+        @include mq($from: tablet){
+            padding-left: 30px;
+        }
     }
 
     .cookie-botton {
@@ -33,8 +37,11 @@
 
 }
 .nascondibile {
-    bottom: calc(15px - .75em);
+    bottom: 24px;
     @include transition(0.7s);
+    @include mq($from: tablet){
+        bottom: calc(15px - .75em);
+    }
 }
 .ce-accept, .ce-dismiss, .ce-disable{
     color: $nero;
