@@ -4,11 +4,14 @@
 nav.nomobile {
 
 	background-color: $color_2;
-	display: flex !important;
+	display: none !important;
 	position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    @include mq($from: tablet){
+    	display: flex !important;
+    }
 
 	ul#menu_wide {
 	    position: relative;
