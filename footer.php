@@ -41,6 +41,71 @@
         <script type="text/javascript" src="<?php echo bloginfo( 'stylesheet_directory' );?>/js/theme.js?v=2"></script>
 
 
+
+        <!--    SEARCH    -->
+        <div class="search">
+            <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+           <form role="search" method="get" class="search__form" action="<?php echo home_url( '/' ); ?>" >
+                <input class="search__input" name="s" type="search" placeholder="<?php _e('search', 'paolac');?>" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <input type="hidden" name="post_type" value="product" />
+                <span class="search__info"><?php _e('Hit enter to search or ESC to close', 'paolac');?></span>
+            </form>
+        </div><!-- /search -->
+
+        <script type="text/javascript">
+            /**
+             * GESTIONE SEARCH
+             */
+
+            ;(function(window) {
+
+                'use strict';
+
+                var mainContainer = document.getElementById('container'),
+                    openCtrl = document.getElementById('btn-search'),
+                    closeCtrl = document.getElementById('btn-search-close'),
+                    searchContainer = document.querySelector('.search'),
+                    inputSearch = searchContainer.querySelector('.search__input'),
+                    bordoDx = document.getElementById('bordodx'),
+                    bordoSx = document.getElementById('bordosx');
+
+                function init() {
+                    initEvents();   
+                }
+
+                function initEvents() {
+                    openCtrl.addEventListener('click', openSearch);
+                    closeCtrl.addEventListener('click', closeSearch);
+                    document.addEventListener('keyup', function(ev) {
+                        // escape key.
+                        if( ev.keyCode == 27 ) {
+                            closeSearch();
+                        }
+                    });
+                }
+
+                function openSearch() {
+                    console.log('click');
+                    mainContainer.classList.add('main-wrap--move');
+                    searchContainer.classList.add('search--open');
+                    setTimeout(function() {
+                        inputSearch.focus();
+                    }, 600);
+                }
+
+                function closeSearch() {
+                    mainContainer.classList.remove('main-wrap--move');
+                    searchContainer.classList.remove('search--open');
+                    inputSearch.blur();
+                    inputSearch.value = '';
+                }
+
+                init();
+
+            })(window);
+        </script>
+
+
         <?php get_template_part( 'cookie' ); ?>
 
         <?php wp_footer();?> 
