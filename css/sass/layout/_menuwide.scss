@@ -123,7 +123,6 @@ nav.nomobile {
 	    li {
 	    	width: 1em;
 	    	height: 1em;
-	    	background-color: black;
 	    	margin-left: 30px;
 	    	@include mq($from: desktop){
 	    		margin-left: 50px;
