@@ -5,6 +5,10 @@ nav.nomobile {
 
 	background-color: $color_2;
 	display: flex !important;
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
 
 	ul#menu_wide {
 	    position: relative;
