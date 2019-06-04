@@ -18,7 +18,10 @@
 	s72.3-161.2,161.2-161.2s161.2,72.3,161.2,161.2S310,432.3,221.1,432.3z"/>
 </svg>
 		</a></li>
-		<li class="social-btn fb-btn"><a href="" ></a></li>
-		<li class="social-btn fb-btn"><a href="" class="social-btn fb-btn"></a></li>
+		<li class="social-btn fb-btn">
+			<a href="https://www.facebook.com/Matteo-Ragni-Design-Studio-188257474554200/" target="_blank">
+				
+			</a>
+		</li>
 	</ul>
 </nav>
