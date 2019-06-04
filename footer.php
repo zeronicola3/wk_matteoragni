@@ -23,6 +23,8 @@
                     <span class="footer-credit"><a href="<?php echo get_the_permalink(2142); ?>">Credits</a> </span>
                     <span class="cookies"><a href="<?php echo get_the_permalink(2144); ?>">Privacy & Cookie Policy</a></span>
                     <span class="timeline"><a href="<?php echo get_the_permalink(2260); ?>">Timeline</a></span>
+                    <span class="instagram"><a href="https://www.instagram.com/matteoragni_designstudio">instagram</a></span>
+                    <span class="facebook"><a href="https://www.facebook.com/Matteo-Ragni-Design-Studio-188257474554200/">facebook</a></span>
 
                 </div>
             </div>
