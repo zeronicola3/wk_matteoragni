@@ -33,13 +33,17 @@ nav.nomobile {
 			}
 
 			a {
-				font-size: 13px;
+				font-size: 12px;
 				color: $color_1;
 				letter-spacing: 0.1em;
 				word-spacing: 0.3em;
 				text-transform: uppercase;
 				padding-bottom: 7px;
 				font-weight: bold;
+
+				@include mq($from: desktop){
+					font-size: 13px;
+				}
 			}
 
 			a::after {
