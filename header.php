@@ -62,7 +62,7 @@
 
 </head>
 
-<body class="<?php if(is_front_page()){ echo 'home';} ?>">
+<body id="container" class="<?php if(is_front_page()){ echo 'home';} ?>">
 
 <?php if(is_front_page()){ ?>
   <div id="loader">
@@ -150,6 +150,6 @@
     </div>
 
     
-      <!-- MENU MOBILE -->
-      <?php include("block_menumobile.php"); ?>
+    <!-- MENU MOBILE -->
+    <?php include("block_menumobile.php"); ?>
   </header>
