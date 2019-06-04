@@ -8,9 +8,9 @@
           )
         ); 
 ?>
-</nav>
-<nav class="social-nav nomobile">
-	<a href="" class="search-btn"></a>
-	<a href="" class="social-btn fb-btn"></a>
-	<a href="" class="social-btn fb-btn"></a>
+	<ul class="social-nav nomobile">
+		<li class="search-btn"><a href=""></a></li>
+		<li class="social-btn fb-btn"><a href="" ></a></li>
+		<li class="social-btn fb-btn"><a href="" class="social-btn fb-btn"></a></li>
+	</ul>
 </nav>
