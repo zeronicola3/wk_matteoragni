@@ -20,7 +20,14 @@
 		</a></li>
 		<li class="social-btn fb-btn">
 			<a href="https://www.facebook.com/Matteo-Ragni-Design-Studio-188257474554200/" target="_blank">
-				
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="-267 390.2 60.7 60.7" enable-background="new -267 390.2 60.7 60.7" xml:space="preserve">
+				<g>
+					<path d="M-209.6,390.2h-54c-1.8,0-3.4,1.5-3.4,3.4v54c0,1.9,1.5,3.4,3.4,3.4h29.1v-23.5h-7.9v-9.2h7.9v-6.8
+						c0-7.8,4.8-12.1,11.8-12.1c3.4,0,6.2,0.3,7.1,0.4v8.2l-4.9,0c-3.8,0-4.5,1.8-4.5,4.5v5.9h9.1l-1.2,9.2h-7.9v23.5h15.5
+						c1.9,0,3.4-1.5,3.4-3.4v-54C-206.3,391.7-207.8,390.2-209.6,390.2z"/>
+				</g>
+				</svg>
 			</a>
 		</li>
 	</ul>
