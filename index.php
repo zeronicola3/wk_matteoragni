@@ -203,7 +203,7 @@ get_header(); ?>
 
             $args = array(
                 'post_type'  => 'project',
-                'posts_per_page' => 3,
+                'posts_per_page' => -1,
                 'ignore_custom_sort' => true,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
@@ -235,13 +235,6 @@ get_header(); ?>
                         $cursor_color = 'white';
                     }
 
-                    // SE immagine scura, allora frecce bianche
-                    $is_double = get_post_meta(get_the_ID(), 'webkolm_double_box_home', true);
-                    $double_class = '';
-                    if($is_double) {
-                        $double_class = ' grid-item--width2 ';
-                    }
-
                     $connected = p2p_type( 'projects_to_client' )->set_direction( 'to' )->get_connected( get_the_ID() );
 
                     foreach ($connected as $conn) {
@@ -254,7 +247,7 @@ get_header(); ?>
 
                     ?>
 
-                    <div class="grid-item <?php echo $double_class; ?>">
+                    <div class="grid-item">
                         <a href="<?php echo get_the_permalink(); ?>" class="tile-content" style="background-image: url('<?php echo $url_small[0]; ?>');">
                             <span class="tile-title" style="color:<?php echo $cursor_color; ?>;"><?php the_title(); ?><?php echo $client_name; ?></span>
                         </a>
