@@ -115,7 +115,8 @@ get_header(); ?>
     <?php } */?>
     </div>
 
-    
+    <?php $selected_posts = array(); ?>
+
     <div class="wrapper solo-padding"><h3 class="titoletto-home">SELECTED PROJECTS</h3></div>
     <div class="grid">
         <div class="grid-sizer"></div>
@@ -181,6 +182,8 @@ get_header(); ?>
                     </div>
 
                     <?php
+                    array_push($selected_posts,get_the_ID());
+
                     $numslide++;
                 endwhile;
             }
@@ -207,13 +210,7 @@ get_header(); ?>
                 'ignore_custom_sort' => true,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key'     => 'webkolm_homepage_post_box',
-                        'value'   => 'yes',
-                        'compare' => 'LIKE',
-                    ),
-                ),
+                'post_not_in' => 
             );
 
             $query = new WP_Query($args);
