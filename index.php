@@ -195,7 +195,7 @@ get_header(); ?>
 </div>
 
 <div class="wrapper solo-padding">
-    <h3 class="titoletto-home">VIEW ALL PROJECTS ></h3>
+    <h3 class="titoletto-home">VIEW ALL PROJECTS</h3>
 </div>
     <div class="grid">
         <div class="grid-sizer"></div>
