@@ -452,6 +452,15 @@ function webkolm_add_post_meta_boxes() {
   );
 
   add_meta_box(
+    'webkolm_cliente_in_stories',      // Unique ID
+    esc_html__( 'Post settings', 'webkolm' ),    // Title
+    'webkolm_cliente_in_stories_box',   // Callback function
+    'client',       // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
     'webkolm_featured_img_input',      // Unique ID
     esc_html__( 'Immagine per slider homepage', 'webkolm' ),    // Title
     'webkolm_featured_img_box',   // Callback function
@@ -611,6 +620,22 @@ function webkolm_page_in_homepage_box( $object, $box ) { ?>
     
     <input class="widefat" type="checkbox" name="webkolm_page_in_homepage" id="webkolm_page_in_homepage" value="yes" <?php if ( isset ( $meta['webkolm_page_in_homepage'] ) ) checked( $meta['webkolm_page_in_homepage'][0], 'yes' ); ?> />
     <?php _e( "Evidenza in homepage", 'webkolm' ); ?>
+  </p>
+<?php }
+
+
+// Display the post meta box.
+function webkolm_cliente_in_stories_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_cliente_in_stories_nonce' ); ?>
+  <?php $meta = get_post_meta( $object->ID ) ;
+
+  //$bg_color = ( isset( $meta['webkolm_background_color'][0] ) ) ? $meta['webkolm_background_color'][0] : ''; ?>
+
+  <p>
+    
+    <input class="widefat" type="checkbox" name="webkolm_cliente_in_stories" id="webkolm_cliente_in_stories" value="yes" <?php if ( isset ( $meta['webkolm_cliente_in_stories'] ) ) checked( $meta['webkolm_cliente_in_stories'][0], 'yes' ); ?> />
+    <?php _e( "Cliente nelle stories", 'webkolm' ); ?>
   </p>
 <?php }
 
