@@ -85,6 +85,6 @@ body.home #contenuti {
 
 	&.solo-padding {
 		max-width: unset;
-		padding: 0 30px;
+		idth: calc(100% - 60px);
 	}
 }
