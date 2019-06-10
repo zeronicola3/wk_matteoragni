@@ -116,8 +116,8 @@ get_header(); ?>
     </div>
 
     
+    <div class="wrapper"><h3>SELECTED PROJECTS</h3></div>
     <div class="grid">
-        <h3>SELECTED PROJECTS</h3>
         <div class="grid-sizer"></div>
         <?php 
 
