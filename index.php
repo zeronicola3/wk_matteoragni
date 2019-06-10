@@ -116,7 +116,7 @@ get_header(); ?>
     </div>
 
     
-    <div class="wrapper solo-padding"><h3>SELECTED PROJECTS</h3></div>
+    <div class="wrapper solo-padding"><h3 class="titoletto-home">SELECTED PROJECTS</h3></div>
     <div class="grid">
         <div class="grid-sizer"></div>
         <?php 
