@@ -198,7 +198,7 @@ get_header(); ?>
 </div>
 
 <div class="wrapper solo-padding">
-    <h3 class="titoletto-home">VIEW ALL PROJECTS</h3>
+    <h3 class="titoletto-home"><a href="<?php echo get_the_permalink(12); ?>">VIEW ALL PROJECTS</a></h3>
 </div>
     <div class="grid">
         <div class="grid-sizer"></div>
