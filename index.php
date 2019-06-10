@@ -115,13 +115,15 @@ get_header(); ?>
     <?php } */?>
     </div>
 
+    
     <div class="grid">
+        <h3>SELECTED PROJECTS</h3>
         <div class="grid-sizer"></div>
         <?php 
 
             $args = array(
                 'post_type'  => 'project',
-                'posts_per_page' => -1,
+                'posts_per_page' => 3,
                 'ignore_custom_sort' => true,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
