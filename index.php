@@ -210,7 +210,7 @@ get_header(); ?>
                 'ignore_custom_sort' => true,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
-                'post_not_in' => $selected_posts
+                'post_:not_in' => $selected_posts
             );
 
             $query = new WP_Query($args);
