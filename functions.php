@@ -368,7 +368,7 @@ function wk_create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array('title', 'thumbnail')
+      'supports' => array('title', 'thumbnail', 'editor')
     )
   );
 }
@@ -407,10 +407,10 @@ function webkolm_add_post_meta_boxes() {
   );
 
   add_meta_box(
-    'webkolm_prizes',      // Unique ID
-    esc_html__( 'Prizes', 'webkolm' ),    // Title
-    'webkolm_prizes_meta_box',   // Callback function
-    'project',       // Admin page (or post type)
+    'webkolm_client_eng',      // Unique ID
+    esc_html__( 'English content', 'webkolm' ),    // Title
+    'webkolm_client_eng_meta_box',   // Callback function
+    'client',       // Admin page (or post type)
     'normal',         // Context
     'default'         // Priority
   );
@@ -526,12 +526,12 @@ function webkolm_gallery_meta_box( $object, $box ) {
 <?php }
 
 // Display the post meta box.
-function webkolm_prizes_meta_box( $object, $box ) { 
+function webkolm_client_eng_meta_box( $object, $box ) { 
 
-    wp_nonce_field( basename( __FILE__ ), 'webkolm_prizes_nonce' ); ?>
+    wp_nonce_field( basename( __FILE__ ), 'webkolm_client_eng_nonce' ); ?>
 
-    <?php $content = get_post_meta($object->ID, 'webkolm_prizes_test', true); 
-            $editor_id = "webkolm_prizes_id";
+    <?php $content = get_post_meta($object->ID, 'webkolm_client_eng_test', true); 
+            $editor_id = "webkolm_client_eng_id";
     ?>
 
   <p>
@@ -554,8 +554,8 @@ function wysiwyg_save_meta(){
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
 
         // PRIZES
-        $editor_id = 'webkolm_prizes_id';
-        $meta_key = 'webkolm_prizes_test';
+        $editor_id = 'webkolm_client_eng_id';
+        $meta_key = 'webkolm_client_eng_test';
 
         if(isset($_REQUEST[$editor_id]))
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
@@ -793,7 +793,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_prizes', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home', 'webkolm_cliente_in_stories' );
+    $metas = array('webkolm_project_year','webkolm_client_eng', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home', 'webkolm_cliente_in_stories' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
