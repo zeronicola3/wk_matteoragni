@@ -792,6 +792,7 @@ function webkolm_post_meta_boxes_setup() {
 
 function webkolm_save_metas($post_id, $post) {
 
+
     $metas = array('webkolm_project_year','webkolm_client_eng', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home', 'webkolm_cliente_in_stories' );
 
     // Get the post type object. 
