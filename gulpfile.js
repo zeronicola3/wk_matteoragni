@@ -158,18 +158,18 @@ gulp.task('push-changes', function (cb) {
 });
 
 gulp.task('default', function () {
-  gulp.watch(['./*.php','./img/*', './assets/*'], ['changed']);
-  gulp.watch(['./css/sass/*.scss','./css/sass/**/*.scss'], ['sass','changed']);
-  gulp.watch('./js/src/*.js', ['uglify','changed']);
+  //gulp.watch(['./*.php','./img/*', './assets/*'], ['changed']);
+  gulp.watch(['./css/sass/*.scss','./css/sass/**/*.scss'], ['sass'/*,'changed'*/]);
+  gulp.watch('./js/src/*.js', ['uglify'/*,'changed'*/]);
 
 });
 
 gulp.task('changed', function(callback) {
   runSequence(
       //'deploy',
-      'commit-changes',                              // <---
-      'pull',                                        // <---    INIBITORE COMMIT
-      'push-changes',                                // <---
+      //'commit-changes',                              // <---
+      //'pull',                                        // <---    INIBITORE COMMIT
+      //'push-changes',                                // <---
 
     function (error) {
       if (error) {

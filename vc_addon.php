@@ -129,7 +129,7 @@ include("vc_templates/wk_slider.php");
 //include("vc_templates/social_share.php");
 //include("vc_templates/instagram_feed.php");
 //include("vc_templates/wk_videoframe.php");
-//include("vc_templates/wk_pulsante.php");
+include("vc_templates/wk_pulsante.php");
 //include("vc_templates/vc_fullwidth_text.php");
 //include("vc_templates/vc_news.php");
 //include("vc_templates/vc_slider_cta.php");

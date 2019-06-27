@@ -88,3 +88,68 @@ body.home #contenuti {
 		width: calc(100% - 60px);
 	}
 }
+
+
+
+
+
+/* ANIMAZIONE MODULI */
+
+.module {
+	opacity: 0 !important;
+	@include transition();
+  transform: translateY(13%);
+}
+
+.module:nth-child(odd){
+  transform: translateY(7%);
+}
+
+
+.come-in {
+	opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 2s;
+  //animation: come-in 2s ease forwards;
+}
+.come-in:nth-child(odd) {
+  transition-delay: .3s; 
+}
+
+
+/* eventuali elementi da fare apparire in ritardo *
+
+.come-in .lento {
+	opacity: 0;
+  /*transform: translateY(0);
+  animation: come-in 5s ease forwards;
+}
+
+*/
+
+
+.already-visible {
+ /*transform: translateY(0);*/
+  transition: all 2s;
+  //animation: none;
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+}
+
+#singolo-overlay .module {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.posizione_testosotto .module {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
+@keyframes come-in {
+  to { 
+  	/*transform: translateY(0);*/ 
+  	opacity: 1;
+  }
+}

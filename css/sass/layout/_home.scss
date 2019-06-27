@@ -1,5 +1,5 @@
 /* HOMEPAGE */
-
+/*
 .project-cover-gallery ul.slides li a {
     cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/plus.png'), auto;
 }
@@ -17,7 +17,7 @@
         cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left_white.png'), auto;
     }
 }
-
+*/
 
 li.flex-nav-prev {
     width: 20%;
@@ -34,7 +34,7 @@ li.flex-nav-prev {
         left: unset;
         color: transparent;
         cursor: auto;
-        cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right.png'), auto;
+        //cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_right.png'), auto;
 
         &::before {
             display: none;
@@ -56,7 +56,7 @@ li.flex-nav-next {
         right: unset;
         color: transparent;
 		cursor: auto;
-		cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
+		//cursor: url('http://webkolm-dev.tk/wp-content/themes/wk_matteoragni_dev/img/arrow_left.png'), auto;
 
         &::before {
             display: none;
@@ -85,7 +85,6 @@ li.flex-nav-next {
     margin-bottom: 15px;
     height: 0px;
     padding-top: 74.8%;
-    background-color: #cacaca;
 
     @include mq($from: tablet){
         width: calc(50% - 7.5px);
@@ -106,16 +105,72 @@ li.flex-nav-next {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
+
+        &::before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: transparent;
+            @include transition;
+        }
     }
 
     .tile-content .tile-title {
+        max-width: 90%;
+        max-height: 90%;
         position: absolute;
         bottom: 5px;
         left: 10px;
         font-size: 1rem;
+        line-height: 1.3em;
         font-weight: 600;
+        color: black;
+
+        @include mq($from: desktop){
+            font-size: 1.1rem;
+        }
+
+        .tile-client {
+            display: block;
+            font-weight: 100;
+        }
+
+        &.white-text {
+            color: white;
+        }
     }
 }
+
+.notouch .grid-item .tile-content .tile-title {
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    text-align: center;
+    @include transition;
+
+    .tile-client {
+        margin-top: .5em;
+    }
+
+    &.white-text {
+        color: black;
+    }
+}
+
+.notouch .grid-item .tile-content:hover {
+    &::before {
+        background-color: rgba(255,255,255,.8);
+        @include transition;
+    }
+    .tile-title {
+        opacity: 1;
+        @include transition;
+    }
+}
+
 /* 2 columns wide */
 .grid-item--width2 { 
     width: 100%;
@@ -135,6 +190,3 @@ li.flex-nav-next {
 }
 
 
-.home .wk-slider ul.flex-direction-nav {
-    display: none !important;
-}

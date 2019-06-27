@@ -67,6 +67,12 @@ function wk_slider_build() {
                         "value" => "#fff",
                         "description" => __( "Color for text, defualt is white", "webkolm" )
                     ),
+                   array(
+                        "type" => "checkbox",
+                        "heading" => __( "Elementi di navigazione bianchi", "webkolm" ),
+                        "param_name" => "wk_nav_color",
+                        "value" => "",
+                    ),
                 )
             )
         )
@@ -104,6 +110,10 @@ function wk_slider_func( $atts, $content = null ) {
         $images_big = wp_get_attachment_image_src($slide['wk_slide_image'], 'large')[0];
         $images = wp_get_attachment_image_src($slide['wk_slide_image'], 'full')[0];
 
+        if (!empty($atts['wk_capitalize'])) {
+            $color_classes .= ' wk_nav_bianco ';
+        } 
+
         // CHECK CAPTION
         $caption="";
         if($slide['wk_slide_image_caption']!=""){
@@ -128,7 +138,7 @@ function wk_slider_func( $atts, $content = null ) {
 
         $output.='
             
-            <li class="slide-'.$id_slider.'-'.$numslide.'">
+            <li class="slide-'.$id_slider.'-'.$numslide.' '.$color_classes.'">
                 <style>
                   .slideimg-'.$id_slider.'-'.$numslide.' { background-image:url('.$images_small.');}
                   @media (min-width: 768px) {  .slideimg-'.$id_slider.'-'.$numslide.' { background-image:url('.$images_big.'); } }

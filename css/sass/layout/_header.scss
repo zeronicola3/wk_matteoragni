@@ -263,7 +263,7 @@ header.active {
 .search {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 }
@@ -275,11 +275,12 @@ header.active {
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	overflow: scroll;
 }
 
 .search::before {
 	content: '';
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
@@ -302,6 +303,7 @@ header.active {
 
 .search__form {
 	margin: 5em 0;
+	display: flex;
 }
 
 .search__input {
@@ -414,6 +416,7 @@ header.active {
 
 .search {
 	pointer-events: none;
+
 }
 
 .search--open {
@@ -435,8 +438,8 @@ header.active {
 	transition: opacity 0.5s;
 	top:30px;
 	right: 50px;
-	width: 30px;
-    height: 30px;
+	width: 20px;
+    height: 20px;
     z-index: 9;
 
 	svg {
@@ -483,5 +486,52 @@ header.active {
 	.btn--search-close {
 		font-size: 1.25em;
 	}
+}
+
+input.search__input {
+    width: 90%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.search__btn {
+    z-index: 999;
+    margin-left: 8px;
+    background-color: white;
+    border: 1px solid black;
+    color: transparent;
+    width: calc(1.3em + 20px);
+    height: calc(1.3em + 20px);
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    @include transition;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 45%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    input[type="submit"] {
+	    width: calc(1.3em + 20px);
+	    height: calc(1.3em + 20px);
+	    background-color: transparent;
+	    border: 0;
+	    position: relative;
+	    left: 0;
+	    top: 0;
+	    padding: 0;
+	}
+}
+
+.search--open .search__btn {
+	opacity: 1;
+    visibility: visible;
+    @include transition;
 }
 

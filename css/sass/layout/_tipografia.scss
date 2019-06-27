@@ -151,3 +151,31 @@ h6 {
 	
 }
 
+
+.wk-pulsante {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: .875rem;
+
+    &::after {
+	    width: 0%;
+	    height: 2px;
+	    content: " ";
+	    position: absolute;
+	    background-color: black;
+	    bottom: 0;
+	    left: 0;
+	    @include transition;
+	}
+}
+
+.notouch .wk-pulsante:hover {
+	&::after {
+		width: 100%;
+		@include transition;
+	}
+}
+

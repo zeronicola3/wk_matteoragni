@@ -1,0 +1,100 @@
+//============ STORIES
+
+.wk-stories .wk-client-cover {
+	width: 100%;
+	
+	@include mq($from: desktop){
+		width: 33.33333%;
+	}
+
+	.wk-client-img {
+		background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    padding-top: 64%;
+	    width: 100%;
+	}
+}
+
+.wk-stories .wkcol-8 {
+	width: 100%;
+
+	@include mq($from: desktop){
+		width: 66.666%;
+	}
+}
+
+.wk-stories .wk-client-content {
+
+	.wk-content-eng {
+		opacity: .5;
+		text-align: justify;
+		@include mq($to: tablet){
+			margin-left: 0;
+		}
+	}
+
+	.wk-content-ita {
+		text-align: justify;
+		@include mq($to: tablet){
+			margin-right: 0;
+		}
+	}
+
+    @include mq($from: tablet){
+    	display: flex;
+    	justify-content: space-between;
+    	padding: 25px 0;
+
+    	.wk-content-ita {
+    		margin-right: 15px;
+		    width: calc(50% - 15px);
+    	}
+
+    	.wk-content-eng {
+    		margin-left: 15px;
+		    width: calc(50% - 15px);
+    	}
+    }
+}
+
+.wk-stories h3 {
+	margin: 0;
+}
+
+.wk-stories span.wk-client-year {
+    width: 100%;
+    display: block;
+    position: relative;
+	
+	&::after {
+		width: 108%;
+	    content: " ";
+	    height: 3px;
+	    background-color: black;
+	    position: relative;
+	    display: block;
+	    left: -8%;
+	    margin: 5px 0;
+	}    
+}
+
+//=======  GRIGLIA
+
+.wk-stories .wk-stories-grid {
+	width: calc(100% - 30px);
+	margin: 30px auto 0 auto;
+
+	.grid-item, .grid-sizer {
+		width: 100%;
+
+		@include mq($from: tablet){
+			width: calc(50% - 15px);
+			margin-bottom: 30px;
+		}
+		@include mq($from: desktop){
+			width: calc(33.33333% - 20px);
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -125,6 +125,29 @@ body [class*='col-'] {
 	}
 }
 
+
+
+.wrap_pulsante {
+	&.wk_align_center {
+		text-align: center;
+	}
+	&.wk_align_left {
+		text-align: left;
+	}
+	&.wk_align_right {
+		text-align: right;
+	}
+
+	a.wk-pulsante {
+	    
+	    display: inline-block;
+	    position: relative;
+	    @include transition;
+	}
+}
+
+
+
 @import "../vc_styles/videoframe";
 @import "../vc_styles/instagram_feed";
 @import "../vc_styles/social_share";

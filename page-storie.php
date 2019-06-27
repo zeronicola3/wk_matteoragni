@@ -4,11 +4,7 @@
  *
  */
 get_header(); ?>
-<div id="contenuti">
-    <div class="wp_content">
-    <?php the_content(); ?>
-
-    </div>
+<div id="contenuti" class="wk-stories">
     
     <?php 
 
@@ -37,18 +33,41 @@ get_header(); ?>
 
                 $image_id = get_post_thumbnail_id(get_the_ID());
                 $url_small = wp_get_attachment_image_src( $image_id, 'medium' )[0];
-                $url_big = wp_get_attachment_image_src( $image_id, 'large' )[0]; ?>
+                //$url_big = wp_get_attachment_image_src( $image_id, 'large' )[0]; 
 
-                <div class="wkrow">
-                    <div class="wkcol-4">
-                        <img src="<?php echo $url_big;?>"/>
+                $id_rand = rand(0,99999999);
+
+                // anno
+                $year = get_post_meta(get_the_ID(), 'webkolm_project_year', true); ?>
+
+                <div class="wkrow wk-single-story wk-story-<?php echo $id_rand; ?>" data-id="<?php echo $id_rand; ?>">
+                    <div class="wkcol-4 wk-client-cover">
+                        <div class="wk-client-img">
+                            <style>
+                                .wk-story-<?php echo $id_rand; ?> .wk-client-img {
+                                    background-image: url('<?php echo $url_small; ?>');
+                                }
+                            </style>
+                        </div>
                     </div>
-                    <div class="wkcol-4">
-                        <?php the_content(); ?>
+                    <div class="wkcol-8">
+                        <h3 class="wk-client-title"><?php the_title(); ?></h3>
+                        <span class="wk-client-year"><?php echo $year; ?></span>
+                        <div class="wk-client-content">
+                            <div class="wk-content-ita">
+                                <?php the_content(); ?>
+                                <a class="wk-pulsante">Scopri di più</a>
+                            </div>
+                            <div class="wk-content-eng">
+                                <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'webkolm_client_eng_test', true)); ?>
+                                <a class="wk-pulsante">Discover more</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="wkcol-4">
-                        <?php print_r(get_post_meta(get_the_ID(), 'webkolm_client_eng_test', true)); ?>
-                    </div>
+                </div>
+                <div class="wk-stories-grid" id="<?php echo $id_rand; ?>">
+                    <div class="grid-sizer"></div>
+                    <?php include 'block_progetti_cliente.php'; ?>
                 </div>
                 <?php
 

@@ -11,10 +11,77 @@ function is_touch_device() {
       || (navigator.msMaxTouchPoints > 0));
  //navigator.msMaxTouchPoints for microsoft IE backwards compatibility
 }
+
+
+(function($) {
+
+  /**
+   * Copyright 2012, Digital Fusion
+   * Licensed under the MIT license.
+   * http://teamdf.com/jquery-plugins/license/
+   *
+   * @author Sam Sehnert
+   * @desc A small plugin that checks whether elements are within
+   *     the user visible viewport of a web browser.
+   *     only accounts for vertical position, not horizontal.
+*/
+
+  $.fn.visible = function(partial) {
+    
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+    
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+  };
+    
+})(jQuery);
+
+var win = $(window);
+var allMods = $(".module");
+
+allMods.each(function(i, el) {
+  var el = $(el);
+  if (el.visible(true)) {
+    el.addClass("already-visible"); 
+  } 
+});
+
+win.scroll(function(event) {
+  
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.delay(500).addClass("come-in"); 
+    } 
+  });
+  
+});   
 	  
 $(document).ready(function() {
 
-	 $('.lazy').Lazy();
+
+	$('.lazy').Lazy();
+
+	$('.home .wk-slider .flex-control-nav li a').each(function( index ) {
+	  	var item_content = $( this ).html();
+	  	$(this).text(item_content + " / " + $('.home .wk-slider .flex-control-nav li a').length);
+	});
+
+	$('.home .wk-slider .slides li').each(function( index ) {
+	  	if($(this).hasClass('wk_nav_bianco')){
+	  		var current_element = $('.home .wk-slider .flex-control-nav li a')[index];
+	  		$(current_element).addClass(" bianco ");
+	  	}
+	  	
+	});
+
     	
 	// OTTIMIZZAZIONE PER RETINA */
 	
@@ -400,6 +467,25 @@ $(document).ready(function() {
 		  columnWidth: '.grid-sizer',
 		  gutter: 15
 		}
+	});
+
+	$('.wk-stories-grid').isotope({
+	  itemSelector: '.grid-item',
+	  percentPosition: true,
+	  masonry: {
+		  columnWidth: '.grid-sizer',
+		  gutter: 30
+		}
+	});
+
+
+	$('.wk-stories-grid').hide();
+
+	$('.wk-single-story .wk-pulsante').on('click', function(){
+		var story_id = $(this).parents('.wk-single-story').attr('data-id');
+		$('.wk-stories-grid#' + story_id).slideToggle('slow', function() {
+         	$('.wk-stories-grid#' + story_id).toggleClass('active');
+    	});
 	});
 		
 

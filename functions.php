@@ -392,7 +392,7 @@ function webkolm_add_post_meta_boxes() {
     'webkolm_project_year',      // Unique ID
     esc_html__( 'Year', 'webkolm' ),    // Title
     'webkolm_project_year_meta_box',   // Callback function
-    'project',         // Admin page (or post type)
+    array('project','client'),         // Admin page (or post type)
     'side',         // Context
     'default'      // Priority
   );
