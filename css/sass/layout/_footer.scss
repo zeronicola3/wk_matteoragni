@@ -8,19 +8,20 @@ footer#footer {
     position: relative;
     bottom: 0;
     background-color: $bianco;
-    z-index: 9999999;
+    z-index: 9;
     margin-bottom: 15px;
 }
 
 footer .footer-box {
     @include mq($to: tablet){
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
     }
 
 	span {
-
-
+        font-weight: 100;
 		font-size: .75rem;
 		line-height: 1.2em;
 		margin-left: 30px;
@@ -30,6 +31,13 @@ footer .footer-box {
         @include mq($to: tablet){
             font-size: .6rem;
             margin-left: 0;
+            padding: 0 10px;
+
+            &.footer-p-iva {
+                width: 100%;
+                text-align: center;
+                padding: 0 5px;
+            }
         }
 	}
 

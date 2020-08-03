@@ -36,9 +36,15 @@
 
 
   <!-- FONT LIB -->
-
+<link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/animation.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/fontello-codes.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/fontello-embedded.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/fontello-ie7-codes.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/fontello-ie7.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo bloginfo( 'stylesheet_directory' );?>/css/fontello.css" />
   <!-- JQUERY -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
   <!-- FAVICON -->
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo bloginfo( 'stylesheet_directory' ); ?>/img/favicon.ico">
@@ -141,7 +147,7 @@
   <header>
     <div class="wrapper no-limitated">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="logo_sito" class="titolo_sito">
-            <?php get_template_part('img/svg/matteoragni_logo.svg'); ?>
+            <?php get_template_part('img/svg/matteoragni_logo2.svg'); ?>
       </a>
 
       <!-- MENU WIDE -->

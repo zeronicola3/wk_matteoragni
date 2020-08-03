@@ -22,8 +22,13 @@
 	    left: 50%;
 	    top: 50%;
 	    transform: translateX(-50%) translateY(-50%);
-	    width: calc(100% - 60px);
-	    height: calc(100% - 60px);
+	    width: 90%;
+    	height: inherit;
+	    @include mq($from: tablet){
+	    	width: calc(100% - 60px);
+	    	height: calc(100% - 60px);
+	    }
+
     }
 
     ul.slides li.slideimg {
@@ -34,6 +39,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-color: white;
+        background-size: contain;
     }
 }
 
@@ -129,8 +135,12 @@
     display: block;
     height: 3px;
     background-color: black;
-    margin-left: 15px;
-    margin-right: 15px;
+
+    @include mq($from: tablet){
+	    margin-left: 15px;
+    	margin-right: 15px;
+    }
+
 }
 
 .homepage-gallery {
@@ -163,6 +173,7 @@
 	}
 }
 
+
 body .current-project .project-gallery {
 	.slides li.cursor-enabled {
 		cursor: auto;
@@ -172,11 +183,34 @@ body .current-project .project-gallery {
 		.flex-nav-prev, .flex-nav-next {
 			width: 50%;
 
+
 			a {
 				left: unset;
 				right: unset;
+				cursor: pointer;
+			}
+
+			a::before {
+				display: none;
 			}
 		}
+	}
+
+	.flex-control-nav {
+	    bottom: 0px;
+	    z-index: 9999999999;
+	}
+
+	.flex-control-paging li a {
+	    width: 8px;
+	    height: 8px;
+	    background: #e4e4e4;
+	    box-shadow: none;
+	    border-radius: 16px;
+
+	    &.flex-active {
+	    	background-color: black;
+	    }
 	}
 }
 
@@ -186,6 +220,7 @@ body .current-project .project-gallery {
     &.limiti-altezza {
 	    overflow-y: hidden;
     	max-height: 50vh;
+	    margin-bottom: 10px;
     }
 
 

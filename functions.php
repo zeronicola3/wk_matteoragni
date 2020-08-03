@@ -407,10 +407,28 @@ function webkolm_add_post_meta_boxes() {
   );
 
   add_meta_box(
+    'webkolm_titolo_stories',      // Unique ID
+    esc_html__( 'Titolo stories', 'webkolm' ),    // Title
+    'webkolm_titolo_stories_meta_box',   // Callback function
+    'page',         // Admin page (or post type)
+    'normal',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
     'webkolm_client_eng',      // Unique ID
     esc_html__( 'English content', 'webkolm' ),    // Title
     'webkolm_client_eng_meta_box',   // Callback function
-    'client',       // Admin page (or post type)
+    array('client', 'page'),       // Admin page (or post type)
+    'normal',         // Context
+    'default'         // Priority
+  );
+
+  add_meta_box(
+    'webkolm_prizes',      // Unique ID
+    esc_html__( 'Prizes', 'webkolm' ),    // Title
+    'webkolm_prizes_meta_box',   // Callback function
+    'project',       // Admin page (or post type)
     'normal',         // Context
     'default'         // Priority
   );
@@ -462,7 +480,7 @@ function webkolm_add_post_meta_boxes() {
 
   add_meta_box(
     'webkolm_featured_img_input',      // Unique ID
-    esc_html__( 'Immagine per slider homepage', 'webkolm' ),    // Title
+    esc_html__( 'Immagine per griglia', 'webkolm' ),    // Title
     'webkolm_featured_img_box',   // Callback function
     'project',       // Admin page (or post type)
     'side',         // Context
@@ -492,6 +510,18 @@ function webkolm_project_year_meta_box( $object, $box ) { ?>
     <label for="webkolm_project_year"><?php _e( "Year", 'webkolm' ); ?></label>
     <br />
     <input type="text" name="webkolm_project_year" id="webkolm_project_year" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_project_year', true ) ); ?>" size="30" />
+  </p>
+<?php }
+
+// Display the post meta box.
+function webkolm_titolo_stories_meta_box( $object, $box ) { ?>
+
+  <?php wp_nonce_field( basename( __FILE__ ), 'webkolm_titolo_stories_nonce' ); ?>
+
+  <p>
+    <label for="webkolm_titolo_stories"><?php _e( "Titolo stories", 'webkolm' ); ?></label>
+    <br />
+    <input type="text" name="webkolm_titolo_stories" id="webkolm_titolo_stories" value="<?php echo esc_attr( get_post_meta( $object->ID, 'webkolm_titolo_stories', true ) ); ?>" size="30" />
   </p>
 <?php }
 
@@ -542,6 +572,23 @@ function webkolm_client_eng_meta_box( $object, $box ) {
 <?php }
 
 
+// Display the post meta box.
+function webkolm_prizes_meta_box( $object, $box ) { 
+
+    wp_nonce_field( basename( __FILE__ ), 'webkolm_prizes_nonce' ); ?>
+
+    <?php $content = get_post_meta($object->ID, 'webkolm_prizes_test', true); 
+            $editor_id = "webkolm_prizes_id";
+    ?>
+
+  <p>
+    <?php wp_editor( $content, $editor_id); ?>
+
+
+  </p>
+<?php }
+
+
 
 add_action('save_post', 'wysiwyg_save_meta');
 function wysiwyg_save_meta(){
@@ -554,6 +601,13 @@ function wysiwyg_save_meta(){
                 update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
 
         // PRIZES
+        $editor_id = 'webkolm_prizes_id';
+        $meta_key = 'webkolm_prizes_test';
+
+        if(isset($_REQUEST[$editor_id]))
+                update_post_meta($_REQUEST['post_ID'], $meta_key, $_REQUEST[$editor_id]);
+
+
         $editor_id = 'webkolm_client_eng_id';
         $meta_key = 'webkolm_client_eng_test';
 
@@ -793,7 +847,7 @@ function webkolm_post_meta_boxes_setup() {
 function webkolm_save_metas($post_id, $post) {
 
 
-    $metas = array('webkolm_project_year','webkolm_client_eng', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home', 'webkolm_cliente_in_stories' );
+    $metas = array('webkolm_project_year','webkolm_client_eng', 'webkolm_designer', 'webkolm_client_link', 'webkolm_homepage_post_box', 'webkolm_post_secondario', 'webkolm_featured_img_input', 'webkolm_page_in_homepage', 'webkolm_dark_image', 'webkolm_double_box_home', 'webkolm_cliente_in_stories', 'webkolm_titolo_stories' );
 
     // Get the post type object. 
     $post_type = get_post_type_object( $post->post_type );
@@ -862,6 +916,7 @@ function projects_to_client() {
         'from' => 'client',
         'to' => 'project',
         'reciprocal' => true,
+        'sortable' => 'any',
     ) );
 }
 add_action( 'p2p_init', 'projects_to_client' );
@@ -1030,6 +1085,14 @@ function render_VC_content($content) {
     echo $content;
 }
 
+
+function binaryfork_limit_posts_per_archive_page() {
+    if ( is_archive () || is_category() ) {
+        $limit = -1;
+        set_query_var('posts_per_archive_page', $limit);
+    }
+}
+add_filter('pre_get_posts', 'binaryfork_limit_posts_per_archive_page');
 
 
 ?>

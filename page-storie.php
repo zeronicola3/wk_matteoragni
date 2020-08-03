@@ -5,6 +5,24 @@
  */
 get_header(); ?>
 <div id="contenuti" class="wk-stories">
+    <div class="wkrow wk-single-story wk-story-<?php echo $id_rand; ?>" data-id="<?php echo $id_rand; ?>">
+        <div class="wkcol-4 wk-client-cover">
+            <div class="wk-client-img">
+            </div>
+        </div>
+        <div class="wkcol-8">
+            <h3 class="wk-client-title"><?php echo get_post_meta(get_the_ID(), 'webkolm_titolo_stories', true); ?></h3>
+            <span class="wk-client-year"></span>
+            <div class="wk-client-content">
+                <div class="wk-content-ita">
+                    <?php the_content(); ?>
+                </div>
+                <div class="wk-content-eng">
+                    <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'webkolm_client_eng_test', true)); ?>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <?php 
 
@@ -56,16 +74,15 @@ get_header(); ?>
                         <div class="wk-client-content">
                             <div class="wk-content-ita">
                                 <?php the_content(); ?>
-                                <a class="wk-pulsante">Scopri di più</a>
+                                <a class="wk-pulsante">Discover more</a>
                             </div>
                             <div class="wk-content-eng">
                                 <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'webkolm_client_eng_test', true)); ?>
-                                <a class="wk-pulsante">Discover more</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="wk-stories-grid" id="<?php echo $id_rand; ?>">
+                <div class="grid grid-storie" id="<?php echo $id_rand; ?>">
                     <div class="grid-sizer"></div>
                     <?php include 'block_progetti_cliente.php'; ?>
                 </div>

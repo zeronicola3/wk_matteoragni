@@ -39,7 +39,7 @@ gulp.task('fetch', function(){
 
 gulp.task('deploy', function() {
 //* Dirs and Files to sync
-  rsyncPaths = ['sass','assets', 'css', 'font', 'img', 'js', './*.php', './style.css'];
+  rsyncPaths = ['**/*', './*.php', './style.css', './assets/timeline.json'];
 // Default options for rsync in staging side
   rsyncConf = {
     progress: true,

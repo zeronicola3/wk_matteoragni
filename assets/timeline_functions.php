@@ -179,7 +179,7 @@ function generate_projects_json() {
  **/
 function update_projects_json(){
 
-    $fp = fopen(__DIR__ . '/timeline.json', 'w');
+    $fp = fopen('/srv/users/serverpilot/apps/matteoragni/public/JSON/timeline.json', 'w');
     $data = generate_projects_json();
     fwrite($fp, $data);
     fclose($fp);
@@ -191,7 +191,7 @@ function update_projects_json(){
  **/
 function parse_json_file(){
     // Read JSON file
-    $json = file_get_contents(__DIR__ . '/timeline.json');
+    $json = file_get_contents('/srv/users/serverpilot/apps/matteoragni/public/JSON/timeline.json');
     //Decode JSON
     $json_data = json_decode($json,true);
 
